@@ -107,7 +107,7 @@ function generateHtml(data) {
     
     .header {
       background: var(--bg2); border-bottom: 1px solid var(--border);
-      padding: 1.5rem 2rem; position: sticky; top: 0; z-index: 100;
+      padding: 1.5rem 2rem; position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     }
     .header-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
@@ -124,6 +124,7 @@ function generateHtml(data) {
     .nav {
       background: var(--bg2); border-bottom: 1px solid var(--border);
       padding: 0.75rem 2rem; overflow-x: auto; white-space: nowrap;
+      position: fixed; top: var(--header-h, 64px); left: 0; right: 0; z-index: 99;
     }
     .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; gap: 0.5rem; }
     .nav-link {
@@ -209,6 +210,7 @@ function generateHtml(data) {
   </header>
   
   <nav class="nav"><div class="nav-inner">${navLinks}</div></nav>
+  <div class="toolbar-spacer"></div>
   
   <main class="main">
     ${categoryCards}
@@ -236,6 +238,21 @@ function generateHtml(data) {
     // Restore theme preference
     const saved = localStorage.getItem('theme');
     if (saved) document.documentElement.setAttribute('data-theme', saved);
+    
+    // Measure header+nav and set spacer height
+    function fixLayout() {
+      const header = document.querySelector('.header');
+      const nav = document.querySelector('.nav');
+      const spacer = document.querySelector('.toolbar-spacer');
+      if (header && nav && spacer) {
+        const hh = header.offsetHeight;
+        document.documentElement.style.setProperty('--header-h', hh + 'px');
+        spacer.style.height = (hh + nav.offsetHeight) + 'px';
+        document.documentElement.style.scrollPaddingTop = (hh + nav.offsetHeight + 16) + 'px';
+      }
+    }
+    fixLayout();
+    window.addEventListener('resize', fixLayout);
     
     // Handle archive date param
     const params = new URLSearchParams(window.location.search);
