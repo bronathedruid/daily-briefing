@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Briefing — 2026-03-25</title>
+  <style>
+    :root {
+      --bg: #0d1117; --bg2: #161b22; --bg3: #21262d;
+      --fg: #e6edf3; --fg2: #8b949e; --fg3: #484f58;
+      --accent: #58a6ff; --accent2: #3fb950; --accent3: #d29922;
+      --border: #30363d; --radius: 8px;
+      --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --mono: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    [data-theme="light"] {
+      --bg: #ffffff; --bg2: #f6f8fa; --bg3: #eaeef2;
+      --fg: #1f2328; --fg2: #656d76; --fg3: #8b949e;
+      --accent: #0969da; --accent2: #1a7f37; --accent3: #9a6700;
+      --border: #d0d7de;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--fg); font-family: var(--font); line-height: 1.5; }
+    
+    .header {
+      background: var(--bg2); border-bottom: 1px solid var(--border);
+      padding: 1.5rem 2rem; position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    }
+    .header-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .header h1 { font-size: 1.4rem; font-weight: 700; }
+    .header h1 span { color: var(--accent); }
+    .header-meta { color: var(--fg2); font-size: 0.85rem; display: flex; gap: 1.5rem; align-items: center; }
+    .header-meta .stat { font-weight: 600; color: var(--accent2); }
+    
+    .theme-toggle {
+      background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius);
+      color: var(--fg); padding: 0.4rem 0.8rem; cursor: pointer; font-size: 0.85rem;
+    }
+    
+    .nav {
+      background: var(--bg2); border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem; overflow-x: auto; white-space: nowrap;
+    }
+    .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; gap: 0.5rem; }
+    .nav-link {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      padding: 0.4rem 0.8rem; border-radius: var(--radius);
+      background: var(--bg3); color: var(--fg2); text-decoration: none;
+      font-size: 0.8rem; transition: all 0.2s;
+    }
+    .nav-link:hover { color: var(--fg); background: var(--border); }
+    .nav-count { background: var(--bg); padding: 0.1rem 0.4rem; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+    
+    .main { max-width: 1400px; margin: 0 auto; padding: 1.5rem 2rem; }
+    
+    .category {
+      margin-bottom: 2rem; background: var(--bg2); border: 1px solid var(--border);
+      border-radius: var(--radius); overflow: hidden;
+    }
+    .category h2 {
+      padding: 1rem 1.25rem; background: var(--bg3); border-bottom: 1px solid var(--border);
+      font-size: 1.05rem; display: flex; align-items: center; gap: 0.5rem;
+    }
+    .count {
+      background: var(--accent); color: var(--bg); padding: 0.1rem 0.5rem;
+      border-radius: 10px; font-size: 0.75rem; margin-left: auto;
+    }
+    
+    .articles { padding: 0.5rem; }
+    .article {
+      padding: 0.75rem; border-radius: 6px; transition: background 0.15s;
+    }
+    .article:hover { background: var(--bg3); }
+    .article + .article { border-top: 1px solid var(--border); }
+    .article-header { display: flex; align-items: flex-start; gap: 0.5rem; }
+    .article-title { color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.95rem; flex: 1; }
+    .article-title:hover { text-decoration: underline; }
+    .score {
+      background: var(--bg3); color: var(--fg2); padding: 0.1rem 0.4rem;
+      border-radius: 4px; font-size: 0.7rem; font-family: var(--mono); flex-shrink: 0;
+    }
+    .article-meta { display: flex; gap: 1rem; margin-top: 0.25rem; font-size: 0.8rem; color: var(--fg2); }
+    .source { font-weight: 500; }
+    .snippet { color: var(--fg2); font-size: 0.85rem; margin-top: 0.3rem; line-height: 1.4; }
+    
+    .archive {
+      margin-top: 2rem; padding: 1.5rem; background: var(--bg2);
+      border: 1px solid var(--border); border-radius: var(--radius);
+    }
+    .archive h3 { margin-bottom: 0.75rem; font-size: 0.95rem; color: var(--fg2); }
+    .archive-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .archive-link {
+      padding: 0.3rem 0.7rem; background: var(--bg3); color: var(--fg2);
+      border-radius: var(--radius); text-decoration: none; font-size: 0.8rem;
+      font-family: var(--mono);
+    }
+    .archive-link:hover { color: var(--accent); }
+    
+    .footer {
+      text-align: center; padding: 2rem; color: var(--fg3); font-size: 0.8rem;
+      border-top: 1px solid var(--border); margin-top: 2rem;
+    }
+    .footer a { color: var(--fg2); }
+    
+    @media (max-width: 768px) {
+      .header { padding: 1rem; }
+      .nav { padding: 0.5rem 1rem; }
+      .main { padding: 1rem; }
+      .nav-label { display: none; }
+      .header-meta { font-size: 0.75rem; gap: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <h1>📰 Daily <span>Briefing</span></h1>
+      <div class="header-meta">
+        <span>2026-03-25</span>
+        <span><span class="stat">99</span> articles</span>
+        <span>Updated Mar 25, 11:37 AM</span>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
+      </div>
+    </div>
+  </header>
+  
+  <nav class="nav"><div class="nav-inner"><a href="#ai-models" class="nav-link">🤖<span class="nav-label">AI Models &amp; Releases</span><span class="nav-count">15</span></a><a href="#government-policy" class="nav-link">🏛️<span class="nav-label">Government &amp; Policy</span><span class="nav-count">8</span></a><a href="#security" class="nav-link">🔐<span class="nav-label">Cybersecurity</span><span class="nav-count">15</span></a><a href="#coding-agents" class="nav-link">🛠️<span class="nav-label">Coding Agents &amp; AI Tools</span><span class="nav-count">15</span></a><a href="#marketing-seo" class="nav-link">📈<span class="nav-label">Marketing &amp; SEO</span><span class="nav-count">15</span></a><a href="#space-rockets" class="nav-link">🚀<span class="nav-label">Space &amp; Rockets</span><span class="nav-count">15</span></a><a href="#devops" class="nav-link">⚙️<span class="nav-label">DevOps &amp; Platform Engineering</span><span class="nav-count">15</span></a><a href="#powershell" class="nav-link">💠<span class="nav-label">PowerShell &amp; Automation</span><span class="nav-count">1</span></a></div></nav>
+  
+  <main class="main">
+    
+      <section class="category" id="ai-models">
+        <h2>🤖 AI Models &amp; Releases <span class="count">15</span></h2>
+        <div class="articles">
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arxiv.org/abs/2603.22446" target="_blank" rel="noopener" class="article-title">Sparse but Critical: A Token-Level Analysis of Distributional Shifts in RLVR Fine-Tuning of LLMs</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">arXiv cs.AI (new)</span>
+          <span class="time">8h ago</span>
+        </div>
+        <p class="snippet">arXiv:2603.22446v1 Announce Type: cross 
+Abstract: Reinforcement learning with verifiable rewards (RLVR) has significantly improved reasoning in large language models (LLMs), yet the token-level mecha…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arxiv.org/abs/2603.22755" target="_blank" rel="noopener" class="article-title">KALAVAI: Predicting When Independent Specialist Fusion Works -- A Quantitative Model for Post-Hoc Cooperative LLM Training</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">arXiv cs.AI (new)</span>
+          <span class="time">8h ago</span>
+        </div>
+        <p class="snippet">arXiv:2603.22755v1 Announce Type: cross 
+Abstract: Independently trained domain specialists can be fused post-hoc into a single model that outperforms any individual specialist, and the gain is predic…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arxiv.org/abs/2510.15994" target="_blank" rel="noopener" class="article-title">MCP Security Bench (MSB): Benchmarking Attacks Against Model Context Protocol in LLM Agents</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">arXiv cs.AI (new)</span>
+          <span class="time">8h ago</span>
+        </div>
+        <p class="snippet">arXiv:2510.15994v2 Announce Type: replace-cross 
+Abstract: The Model Context Protocol (MCP) standardizes how large language model (LLM) agents discover, describe, and call external tools. While MCP un…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arxiv.org/abs/2410.12164" target="_blank" rel="noopener" class="article-title">Table-LLM-Specialist: Language Model Specialists for Tables using Iterative Generator-Validator Fine-tuning</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">arXiv cs.CL (NLP)</span>
+          <span class="time">8h ago</span>
+        </div>
+        <p class="snippet">arXiv:2410.12164v2 Announce Type: replace 
+Abstract: Language models such as GPT and Llama have shown remarkable ability on diverse natural language tasks, yet their performance on complex table tasks…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.theverge.com/ai-artificial-intelligence/899677/openai-google-gemini-ai-shopping-features" target="_blank" rel="noopener" class="article-title">ChatGPT and Gemini are fighting to be the AI bot that sells you stuff</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">The Verge AI</span>
+          <span class="time">18h ago</span>
+        </div>
+        <p class="snippet">The AI-powered shopping rivalry is heating up as Google and OpenAI launch new features to help you buy things while interacting with their chatbots. Now, Google is teaming up with Gap Inc to allow its…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arxiv.org/abs/2603.22305" target="_blank" rel="noopener" class="article-title">CN-Buzz2Portfolio: A Chinese-Market Dataset and Benchmark for LLM-Based Macro and Sector Asset Allocation from Daily Trending Financial News</a>
+          <span class="score" title="Relevance score">11</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">arXiv cs.AI (new)</span>
+          <span class="time">8h ago</span>
+        </div>
+        <p class="snippet">arXiv:2603.22305v1 Announce Type: cross 
+Abstract: Large Language Models (LLMs) are rapidly transitioning from static Natural Language Processing (NLP) tasks including sentiment analysis and event ext…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arxiv.org/abs/2603.22651" target="_blank" rel="noopener" class="article-title">Benchmarking Multi-Agent LLM Architectures for Financial Document Processing: A Comparative Study of Orchestration Patterns, Cost-Accuracy Tradeoffs and Production Scaling Strategies</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">arXiv cs.AI (new)</span>
+          <span class="time">8h ago</span>
+        </div>
+        <p class="snippet">arXiv:2603.22651v1 Announce Type: new 
+Abstract: The adoption of large language models (LLMs) for structured information extraction from financial documents has accelerated rapidly, yet production dep…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arxiv.org/abs/2603.22777" target="_blank" rel="noopener" class="article-title">AgriPestDatabase-v1.0: A Structured Insect Dataset for Training Agricultural Large Language Model</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">arXiv cs.AI (new)</span>
+          <span class="time">8h ago</span>
+        </div>
+        <p class="snippet">arXiv:2603.22777v1 Announce Type: new 
+Abstract: Agricultural pest management increasingly relies on timely and accurate access to expert knowledge, yet high quality labeled data and continuous expert…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arxiv.org/abs/2603.22942" target="_blank" rel="noopener" class="article-title">Optimizing Small Language Models for NL2SQL via Chain-of-Thought Fine-Tuning</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">arXiv cs.AI (new)</span>
+          <span class="time">8h ago</span>
+        </div>
+        <p class="snippet">arXiv:2603.22942v1 Announce Type: new 
+Abstract: Translating Natural Language to SQL (NL2SQL) remains a critical bottleneck for democratization of data in enterprises. Although Large Language Models (…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arxiv.org/abs/2603.22943" target="_blank" rel="noopener" class="article-title">PersonalQ: Select, Quantize, and Serve Personalized Diffusion Models for Efficient Inference</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">arXiv cs.AI (new)</span>
+          <span class="time">8h ago</span>
+        </div>
+        <p class="snippet">arXiv:2603.22943v1 Announce Type: new 
+Abstract: Personalized text-to-image generation lets users fine-tune diffusion models into repositories of concept-specific checkpoints, but serving these reposi…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arxiv.org/abs/2603.23292" target="_blank" rel="noopener" class="article-title">LLM Olympiad: Why Model Evaluation Needs a Sealed Exam</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">arXiv cs.AI (new)</span>
+          <span class="time">8h ago</span>
+        </div>
+        <p class="snippet">arXiv:2603.23292v1 Announce Type: new 
+Abstract: Benchmarks and leaderboards are how NLP most often communicates progress, but in the LLM era they are increasingly easy to misread. Scores can reflect …</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arxiv.org/abs/2603.22303" target="_blank" rel="noopener" class="article-title">Sample Transform Cost-Based Training-Free Hallucination Detector for Large Language Models</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">arXiv cs.AI (new)</span>
+          <span class="time">8h ago</span>
+        </div>
+        <p class="snippet">arXiv:2603.22303v1 Announce Type: cross 
+Abstract: Hallucinations in large language models (LLMs) remain a central obstacle to trustworthy deployment, motivating detectors that are accurate, lightweig…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arxiv.org/abs/2603.22324" target="_blank" rel="noopener" class="article-title">DAQ: Delta-Aware Quantization for Post-Training LLM Weight Compression</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">arXiv cs.AI (new)</span>
+          <span class="time">8h ago</span>
+        </div>
+        <p class="snippet">arXiv:2603.22324v1 Announce Type: cross 
+Abstract: We introduce Delta-Aware Quantization (DAQ), a data-free post-training quantization framework that preserves the knowledge acquired during post-train…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arxiv.org/abs/2603.22376" target="_blank" rel="noopener" class="article-title">AI Co-Scientist for Ranking: Discovering Novel Search Ranking Models alongside LLM-based AI Agents with Cloud Computing Access</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">arXiv cs.AI (new)</span>
+          <span class="time">8h ago</span>
+        </div>
+        <p class="snippet">arXiv:2603.22376v1 Announce Type: cross 
+Abstract: Recent advances in AI agents for software engineering and scientific discovery have demonstrated remarkable capabilities, yet their application to de…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arxiv.org/abs/2603.22479" target="_blank" rel="noopener" class="article-title">Cognitive Training for Language Models: Towards General Capabilities via Cross-Entropy Games</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">arXiv cs.AI (new)</span>
+          <span class="time">8h ago</span>
+        </div>
+        <p class="snippet">arXiv:2603.22479v1 Announce Type: cross 
+Abstract: Defining a constructive process to build general capabilities for language models in an automatic manner is considered an open problem in artificial …</p>
+      </div>
+    </div>
+      </section>
+    
+      <section class="category" id="government-policy">
+        <h2>🏛️ Government &amp; Policy <span class="count">8</span></h2>
+        <div class="articles">
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arstechnica.com/tech-policy/2026/03/trump-fcc-prohibits-import-and-sale-of-new-wi-fi-routers-made-outside-us/" target="_blank" rel="noopener" class="article-title">FCC imposes sweeping ban on foreign-made routers, affecting all new models</a>
+          <span class="score" title="Relevance score">9</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Ars Technica Policy</span>
+          <span class="time">16h ago</span>
+        </div>
+        <p class="snippet">Trump admin to decide which router makers get exemptions from FCC import ban.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.eff.org/deeplinks/2026/03/digital-hopes-real-power-reflecting-legacy-arab-spring-0" target="_blank" rel="noopener" class="article-title">Digital Hopes, Real Power: Reflecting on the Legacy of the Arab Spring</a>
+          <span class="score" title="Relevance score">8</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">EFF Deeplinks</span>
+          <span class="time">1h ago</span>
+        </div>
+        <p class="snippet">This is the first installment of a blog series reflecting on the global digital legacy of the 2011 Arab uprisings.
+A new generation of protesters, raised on social media and often fluent in the tools …</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arstechnica.com/tech-policy/2026/03/trump-made-opposing-government-spying-cool-again-effs-departing-chief-says/" target="_blank" rel="noopener" class="article-title">Electronic Frontier Foundation to swap leaders as AI, ICE fights escalate</a>
+          <span class="score" title="Relevance score">8</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Ars Technica Policy</span>
+          <span class="time">15h ago</span>
+        </div>
+        <p class="snippet">Public interest in government tech abuses is peaking. EFF's new leader plans to build on that.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.eff.org/press/releases/nicole-ozer-named-electronic-frontier-foundations-executive-director" target="_blank" rel="noopener" class="article-title">Nicole Ozer Named as Electronic Frontier Foundation’s Executive Director</a>
+          <span class="score" title="Relevance score">8</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">EFF Deeplinks</span>
+          <span class="time">15h ago</span>
+        </div>
+        <p class="snippet">Ozer, With Decades of Experience in Technology and Civil Liberties Law, Will Succeed Cindy Cohn as Organization’s Leader 
+
+
+
+SAN FRANCISCO – Nicole Ozer has been appointed as executive director of the…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arstechnica.com/tech-policy/2026/03/all-of-doges-work-could-be-undone-as-lawsuit-against-musk-proceeds/" target="_blank" rel="noopener" class="article-title">All of DOGE’s work could be undone as lawsuit against Musk proceeds</a>
+          <span class="score" title="Relevance score">8</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Ars Technica Policy</span>
+          <span class="time">18h ago</span>
+        </div>
+        <p class="snippet">Musk’s X posts bragging about DOGE may trigger reversals of its biggest wins.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.eff.org/deeplinks/2026/03/uk-politicians-continue-miss-point-latest-social-media-ban-proposal" target="_blank" rel="noopener" class="article-title">UK Politicians Continue to Miss the Point in Latest Social Media Ban Proposal</a>
+          <span class="score" title="Relevance score">8</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">EFF Deeplinks</span>
+          <span class="time">22h ago</span>
+        </div>
+        <p class="snippet">The UK is moving forward with its efforts to ban social media for young people. Ahead of this week’s House of Lords debate on the topic, we’re getting you situated with a primer on what’s been happeni…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arstechnica.com/tech-policy/2026/03/intuit-beats-ftc-in-court-ending-restrictions-on-free-turbotax-ads/" target="_blank" rel="noopener" class="article-title">Intuit beats FTC in court, ending restrictions on &quot;free&quot; TurboTax ads</a>
+          <span class="score" title="Relevance score">8</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Ars Technica Policy</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">Biden-era punishment tossed; Intuit now has more friendly regulators under Trump.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://arstechnica.com/tech-policy/2026/03/as-teens-await-sentencing-for-nudifying-girls-parents-aim-to-sue-school/" target="_blank" rel="noopener" class="article-title">As teens await sentencing for nudifying girls, parents aim to sue school</a>
+          <span class="score" title="Relevance score">8</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Ars Technica Policy</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">Teens will be sentenced Wednesday after admitting to creating AI CSAM.</p>
+      </div>
+    </div>
+      </section>
+    
+      <section class="category" id="security">
+        <h2>🔐 Cybersecurity <span class="count">15</span></h2>
+        <div class="articles">
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.securityweek.com/us-prisons-russian-access-broker-for-aiding-ransomware-attacks/" target="_blank" rel="noopener" class="article-title">US Prisons Russian Access Broker for Aiding Ransomware Attacks</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Security Week</span>
+          <span class="time">2h ago</span>
+        </div>
+        <p class="snippet">Aleksei Volkov has been sentenced to 81 months in prison for his role in Yanluowang ransomware attacks. 
+The post US Prisons Russian Access Broker for Aiding Ransomware Attacks appeared first on Secur…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.bleepingcomputer.com/news/security/russian-man-sentenced-for-operating-botnet-used-in-ransomware-attacks/" target="_blank" rel="noopener" class="article-title">Manager of botnet used in ransomware attacks gets 2 years in prison</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">BleepingComputer</span>
+          <span class="time">3h ago</span>
+        </div>
+        <p class="snippet">A Russian national has been sentenced to two years in prison after admitting that the phishing botnet he managed was used to launch BitPaymer ransomware attacks against 72 U.S. companies. [...]</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://thehackernews.com/2026/03/tax-search-ads-deliver-screenconnect.html" target="_blank" rel="noopener" class="article-title">Tax Search Ads Deliver ScreenConnect Malware Using Huawei Driver to Disable EDR</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">The Hacker News</span>
+          <span class="time">19h ago</span>
+        </div>
+        <p class="snippet">A large-scale malvertising campaign active since January 2026 has been observed targeting U.S.-based individuals searching for tax-related documents to serve rogue installers for ConnectWise ScreenCon…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://thehackernews.com/2026/03/the-hidden-cost-of-cybersecurity.html" target="_blank" rel="noopener" class="article-title">The Hidden Cost of Cybersecurity Specialization: Losing Foundational Skills</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">The Hacker News</span>
+          <span class="time">1d ago</span>
+        </div>
+        <p class="snippet">Cybersecurity has changed fast. Roles are more specialized, and tooling is more advanced. On paper, this should make organizations more secure. But in practice, many teams struggle with the same basic…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://thehackernews.com/2026/03/us-sentences-russian-hacker-to-675.html" target="_blank" rel="noopener" class="article-title">U.S. Sentences Russian Hacker to 6.75 Years for Role in $9M Ransomware Damage</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">The Hacker News</span>
+          <span class="time">1d ago</span>
+        </div>
+        <p class="snippet">A 26-year-old Russian citizen has been sentenced in the U.S. to 6.75 years (81 months) in prison for his role in assisting major cybercrime groups, including the Yanluowang ransomware crew, in conduct…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://thehackernews.com/2026/03/citrix-urges-patching-critical.html" target="_blank" rel="noopener" class="article-title">Citrix Urges Patching Critical NetScaler Flaw Allowing Unauthenticated Data Leaks</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">The Hacker News</span>
+          <span class="time">1d ago</span>
+        </div>
+        <p class="snippet">Citrix has released security updates to address two vulnerabilities in NetScaler ADC and NetScaler Gateway, including a critical flaw that could be exploited to leak sensitive data from the applicatio…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.bleepingcomputer.com/news/security/mazda-discloses-security-breach-exposing-employee-and-partner-data/" target="_blank" rel="noopener" class="article-title">Mazda discloses security breach exposing employee and partner data</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">BleepingComputer</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">Mazda Motor Corporation (Mazda) announced that information belonging to its employees and business partners had been exposed in a security incident detected last December. [...]</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://thehackernews.com/2026/03/north-korean-hackers-abuse-vs-code-auto.html" target="_blank" rel="noopener" class="article-title">North Korean Hackers Abuse VS Code Auto-Run Tasks to Deploy StoatWaffle Malware</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">The Hacker News</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">The North Korean threat actors behind the Contagious Interview campaign, also tracked as WaterPlum, have been attributed to a malware family tracked as StoatWaffle that's distributed via malicious Mic…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://krebsonsecurity.com/2026/03/canisterworm-springs-wiper-attack-targeting-iran/" target="_blank" rel="noopener" class="article-title">‘CanisterWorm’ Springs Wiper Attack Targeting Iran</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Krebs on Security</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">A financially motivated data theft and extortion group is attempting to inject itself into the Iran war, unleashing a worm that spreads through poorly secured cloud services and wipes data on infected…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html" target="_blank" rel="noopener" class="article-title">We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">The Hacker News</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">AWS Bedrock is Amazon's platform for building AI-powered applications. It gives developers access to foundation models and the tools to connect those models directly to enterprise data and systems. Th…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://thehackernews.com/2026/03/fcc-bans-new-foreign-made-routers-over.html" target="_blank" rel="noopener" class="article-title">FCC Bans New Foreign-Made Routers Over Supply Chain and Cyber Risk Concerns</a>
+          <span class="score" title="Relevance score">11</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">The Hacker News</span>
+          <span class="time">4h ago</span>
+        </div>
+        <p class="snippet">The U.S. Federal Communications Commission (FCC) said on Monday that it was banning the import of new, foreign-made consumer routers, citing &quot;unacceptable&quot; risks to cyber and national security.
+The ac…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.bleepingcomputer.com/news/security/fcc-bans-new-routers-made-outside-the-usa-over-security-risks/" target="_blank" rel="noopener" class="article-title">FCC bans new routers made outside the USA over security risks</a>
+          <span class="score" title="Relevance score">11</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">BleepingComputer</span>
+          <span class="time">15h ago</span>
+        </div>
+        <p class="snippet">The Federal Communications Commission has updated its Covered List to include all consumer routers made in foreign countries, banning the sale of new models in the U.S. [...]</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.securityweek.com/rsac-2026-conference-announcements-summary-day-1/" target="_blank" rel="noopener" class="article-title">RSAC 2026 Conference Announcements Summary (Day 1)</a>
+          <span class="score" title="Relevance score">11</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Security Week</span>
+          <span class="time">20h ago</span>
+        </div>
+        <p class="snippet">A summary of the announcements made by vendors on the first day of the RSAC 2026 Conference.
+The post RSAC 2026 Conference Announcements Summary (Day 1) appeared first on SecurityWeek.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.darkreading.com/endpoint-security/ransomware-new-era-moving-ai-speed" target="_blank" rel="noopener" class="article-title">Ransomware's New Era: Moving at AI Speed</a>
+          <span class="score" title="Relevance score">11</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Dark Reading</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">Threat actors bypass security tools and use AI to launch faster ransomware attacks that exploit valid credentials and target data.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.bleepingcomputer.com/news/security/tp-link-warns-users-to-patch-critical-router-auth-bypass-flaw/" target="_blank" rel="noopener" class="article-title">TP-Link warns users to patch critical router auth bypass flaw</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">BleepingComputer</span>
+          <span class="time">just now</span>
+        </div>
+        <p class="snippet">TP-Link has patched several vulnerabilities in its Archer NX router series, including a critical-severity flaw that may allow attackers to bypass authentication and upload new firmware. [...]</p>
+      </div>
+    </div>
+      </section>
+    
+      <section class="category" id="coding-agents">
+        <h2>🛠️ Coding Agents &amp; AI Tools <span class="count">15</span></h2>
+        <div class="articles">
+      <div class="article">
+        <div class="article-header">
+          <a href="https://simonwillison.net/2026/Mar/24/auto-mode-for-claude-code/#atom-everything" target="_blank" rel="noopener" class="article-title">Auto mode for Claude Code</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Simon Willison</span>
+          <span class="time">12h ago</span>
+        </div>
+        
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://github.blog/changelog/2026-03-24-manage-copilot-coding-agent-repository-access-via-the-api" target="_blank" rel="noopener" class="article-title">Manage Copilot coding agent repository access via the API</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">GitHub Changelog</span>
+          <span class="time">16h ago</span>
+        </div>
+        <p class="snippet">Organization owners who want to manage Copilot coding agent access at scale can now do so programmatically with the new Copilot coding agent management REST APIs, available in public preview.…
+The pos…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://github.blog/ai-and-ml/github-copilot/building-ai-powered-github-issue-triage-with-the-copilot-sdk/" target="_blank" rel="noopener" class="article-title">Building AI-powered GitHub issue triage with the Copilot SDK</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">GitHub Blog</span>
+          <span class="time">20h ago</span>
+        </div>
+        <p class="snippet">Learn how to integrate the Copilot SDK into a React Native app to generate AI-powered issue summaries, with production patterns for graceful degradation and caching.
+The post Building AI-powered GitHu…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://simonwillison.net/2026/Mar/24/package-managers-need-to-cool-down/#atom-everything" target="_blank" rel="noopener" class="article-title">Package Managers Need to Cool Down</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Simon Willison</span>
+          <span class="time">14h ago</span>
+        </div>
+        
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://simonwillison.net/2026/Mar/24/christopher-mims/#atom-everything" target="_blank" rel="noopener" class="article-title">Quoting Christopher Mims</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Simon Willison</span>
+          <span class="time">15h ago</span>
+        </div>
+        
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://github.blog/changelog/2026-03-24-ask-copilot-to-make-changes-to-any-pull-request" target="_blank" rel="noopener" class="article-title">Ask @copilot to make changes to any pull request</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">GitHub Changelog</span>
+          <span class="time">16h ago</span>
+        </div>
+        <p class="snippet">You can now mention @copilot in any pull request to ask Copilot to make changes. You can ask @copilot to: Fix failing GitHub Actions workflows: @copilot Fix the failing tests…
+The post Ask @copilot to…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://simonwillison.net/2026/Mar/24/malicious-litellm/#atom-everything" target="_blank" rel="noopener" class="article-title">Malicious litellm_init.pth in litellm 1.82.8 — credential stealer</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Simon Willison</span>
+          <span class="time">21h ago</span>
+        </div>
+        
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://simonwillison.net/2026/Mar/24/streaming-experts/#atom-everything" target="_blank" rel="noopener" class="article-title">Streaming experts</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Simon Willison</span>
+          <span class="time">1d ago</span>
+        </div>
+        
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://simonwillison.net/2026/Mar/23/neurotica/#atom-everything" target="_blank" rel="noopener" class="article-title">Quoting Neurotica</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Simon Willison</span>
+          <span class="time">2d ago</span>
+        </div>
+        
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://simonwillison.net/2026/Mar/23/datasette-files/#atom-everything" target="_blank" rel="noopener" class="article-title">datasette-files 0.1a2</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Simon Willison</span>
+          <span class="time">2d ago</span>
+        </div>
+        
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://github.blog/changelog/2026-03-23-gemini-3-1-pro-is-now-available-in-jetbrains-ides-xcode-and-eclipse" target="_blank" rel="noopener" class="article-title">Gemini 3.1 Pro is now available in JetBrains IDEs, Xcode, and Eclipse</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">GitHub Changelog</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">Gemini 3.1 Pro is available in public preview to Copilot Enterprise, Copilot Business, Copilot Pro, and Copilot Pro+. You’ll now be able to access the model in GitHub Copilot Chat…
+The post Gemini 3.1…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://simonwillison.net/2026/Mar/23/david-abram/#atom-everything" target="_blank" rel="noopener" class="article-title">Quoting David Abram</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Simon Willison</span>
+          <span class="time">2d ago</span>
+        </div>
+        
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://github.blog/security/application-security/github-expands-application-security-coverage-with-ai-powered-detections/" target="_blank" rel="noopener" class="article-title">GitHub expands application security coverage with AI‑powered detections</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">GitHub Blog</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">CodeQL and AI‑powered detections work together in GitHub Code Security to identify vulnerabilities across more languages and frameworks.
+The post GitHub expands application security coverage with AI‑p…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.latent.space/p/ainews-apples-war-on-slop" target="_blank" rel="noopener" class="article-title">[AINews] Apple's War on Slop</a>
+          <span class="score" title="Relevance score">9</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Latent Space</span>
+          <span class="time">5h ago</span>
+        </div>
+        <p class="snippet">a quiet day lets us reflect on the End of Sora, LiteLLM, AI2, and other not so happy news.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.latent.space/p/ainews-dreamer-joins-meta-superintelligence" target="_blank" rel="noopener" class="article-title">[AINews] Dreamer joins Meta Superintelligence Labs — 9 month retro of Personal Superintelligence</a>
+          <span class="score" title="Relevance score">9</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Latent Space</span>
+          <span class="time">1d ago</span>
+        </div>
+        <p class="snippet">By now we’re pretty used to LS Pod guests going on to great success, but today’s news is fast for even us - Nat and Alex at MSL have execuhired Dreamer just days after we shipped their pod, barely 11 …</p>
+      </div>
+    </div>
+      </section>
+    
+      <section class="category" id="marketing-seo">
+        <h2>📈 Marketing &amp; SEO <span class="count">15</span></h2>
+        <div class="articles">
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.searchenginejournal.com/seo-2-0-how-content-marketing-drives-visibility-in-ai-search/570308/" target="_blank" rel="noopener" class="article-title">SEO 2.0: How Content Marketing Drives Visibility in AI Search via @sejournal, @hethr_campbell</a>
+          <span class="score" title="Relevance score">16</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Search Engine Journal</span>
+          <span class="time">1d ago</span>
+        </div>
+        <p class="snippet">Join our on-demand webinar to understand the intersection of AI and SEO. Learn how to leverage AI for improved search results.
+The post SEO 2.0: How Content Marketing Drives Visibility in AI Search ap…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.searchenginejournal.com/zero-party-data-how-to-use-first-party-insights-to-power-intent-based-content-strategy/568189/" target="_blank" rel="noopener" class="article-title">How Zero-Party &amp; First-Party Data Can Fuel Your Intent-Based SEO Strategy via @sejournal, @rio_seo</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Search Engine Journal</span>
+          <span class="time">1h ago</span>
+        </div>
+        <p class="snippet">Marketing leaders are grounding SEO in zero- and first-party data to better align content with real-world customer behavior and needs.
+The post How Zero-Party &amp; First-Party Data Can Fuel Your Intent-B…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.searchenginejournal.com/is-your-website-ready-for-ai-search-a-practical-audit-for-cmos/570413/" target="_blank" rel="noopener" class="article-title">Is Your Website Ready for AI Search? A Practical Audit for CMOs via @sejournal, @lorenbaker</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Search Engine Journal</span>
+          <span class="time">4h ago</span>
+        </div>
+        <p class="snippet">Is your website ready for the AI-powered search revolution? Discover practical insights on adapting your CMS for modern needs.
+The post Is Your Website Ready for AI Search? A Practical Audit for CMOs …</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://searchengineland.com/seos-biggest-threat-in-2026-your-own-organization-472281" target="_blank" rel="noopener" class="article-title">SEO’s biggest threat in 2026? Your own organization</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Search Engine Land</span>
+          <span class="time">21h ago</span>
+        </div>
+        <p class="snippet">From AI overreliance to fragmented data and poor collaboration, internal issues are quietly undermining SEO performance. Here’s what to fix.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.searchenginejournal.com/research-you-are-an-expert-prompts-can-damage-factual-accuracy/570397/" target="_blank" rel="noopener" class="article-title">Research Shows Where Persona Prompting Works And When It Backfires via @sejournal, @martinibuster</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Search Engine Journal</span>
+          <span class="time">23h ago</span>
+        </div>
+        <p class="snippet">Research finds that persona prompts &quot;reliably damage&quot; factual accuracy in certain kinds of tasks but work well in others.
+The post Research Shows Where Persona Prompting Works And When It Backfires ap…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.searchenginejournal.com/google-responds-to-error-that-causes-old-branding-to-persist-in-serps/570315/" target="_blank" rel="noopener" class="article-title">Google Responds To Error That Causes Old Branding To Persist In SERPs via @sejournal, @martinibuster</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Search Engine Journal</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">Google's John Mueller responds to a question about search results that display outdated branding for a site that rebranded over ten years ago.
+The post Google Responds To Error That Causes Old Brandin…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.searchenginejournal.com/strategies-that-can-survive-ai-search-in-2026-what-i-shared-at-sej-live/570260/" target="_blank" rel="noopener" class="article-title">3 Strategies That Can Survive AI Search In 2026: What I Shared At SEJ Live via @sejournal, @theshelleywalsh</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Search Engine Journal</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">Stop chasing rankings and start building visibility that matters with three practical strategies for SEO in 2026.
+The post 3 Strategies That Can Survive AI Search In 2026: What I Shared At SEJ Live ap…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://searchengineland.com/google-releases-march-2026-spam-update-472411" target="_blank" rel="noopener" class="article-title">Google releases March 2026 spam update</a>
+          <span class="score" title="Relevance score">11</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Search Engine Land</span>
+          <span class="time">16h ago</span>
+        </div>
+        <p class="snippet">Google says this is a standard spam update. It’s rolling out across all languages and locations and may take only a few days.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://searchengineland.com/the-first-party-data-illusion-471996" target="_blank" rel="noopener" class="article-title">The first-party data illusion by AtData</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Search Engine Land</span>
+          <span class="time">1h ago</span>
+        </div>
+        <p class="snippet">Marketers focus on first-party data promised control. But ownership didn’t solve identity accuracy, activity visibility or customer truth.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.searchenginejournal.com/google-adds-ai-bot-labels-to-forum-qa-structured-data/570425/" target="_blank" rel="noopener" class="article-title">Google Adds AI &amp; Bot Labels To Forum, Q&amp;A Structured Data via @sejournal, @MattGSouthern</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Search Engine Journal</span>
+          <span class="time">16h ago</span>
+        </div>
+        <p class="snippet">Google updated its Discussion Forum and Q&amp;A Page structured data docs with new properties, including a way to label AI- and machine-generated content. 
+The post Google Adds AI &amp; Bot Labels To Forum, Q…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.searchenginejournal.com/google-begins-rolling-out-the-march-2026-spam-update/570428/" target="_blank" rel="noopener" class="article-title">Google Begins Rolling Out The March 2026 Spam Update via @sejournal, @MattGSouthern</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Search Engine Journal</span>
+          <span class="time">16h ago</span>
+        </div>
+        <p class="snippet">Google started rolling out the March 2026 spam update. The update applies globally and to all languages, with rollout taking a few days.
+The post Google Begins Rolling Out The March 2026 Spam Update a…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://searchengineland.com/reddit-collection-ads-deal-overlays-shopify-472399" target="_blank" rel="noopener" class="article-title">Reddit introduces collection ads, deal overlays, Shopify integration</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Search Engine Land</span>
+          <span class="time">17h ago</span>
+        </div>
+        <p class="snippet">Reddit is launching new Dynamic Product Ad formats and a Shopify integration to help retailers tap into the platform's audience.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://searchengineland.com/ai-citations-favor-listicles-articles-product-pages-study-472364" target="_blank" rel="noopener" class="article-title">AI citations favor listicles, articles, product pages: Study</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Search Engine Land</span>
+          <span class="time">19h ago</span>
+        </div>
+        <p class="snippet">Study of 75,000 AI answers shows listicles, articles and product pages drive 52% of citations, with intent deciding what gets cited.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://searchengineland.com/google-is-tightening-political-content-rules-for-shopping-ads-starting-april-16-472367" target="_blank" rel="noopener" class="article-title">Google is tightening political content rules for Shopping ads starting April 16</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Search Engine Land</span>
+          <span class="time">19h ago</span>
+        </div>
+        <p class="snippet">Google will soon require merchants running Shopping ads featuring certain political content to verify their accounts as election advertisers.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://searchengineland.com/chatgpt-citations-domains-study-472349" target="_blank" rel="noopener" class="article-title">ChatGPT citations favor a small group of domains: Study</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Search Engine Land</span>
+          <span class="time">20h ago</span>
+        </div>
+        <p class="snippet">ChatGPT pulls 6x more pages than it cites, concentrating visibility among ~30 domains and favoring topic-wide coverage, study finds.</p>
+      </div>
+    </div>
+      </section>
+    
+      <section class="category" id="space-rockets">
+        <h2>🚀 Space &amp; Rockets <span class="count">15</span></h2>
+        <div class="articles">
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.space.com/space-exploration/artemis/1-week-away-nasa-gearing-up-to-launch-artemis-2-astronauts-around-the-moon-on-april-1" target="_blank" rel="noopener" class="article-title">1 week away! NASA gearing up to launch Artemis 2 astronauts around the moon on April 1</a>
+          <span class="score" title="Relevance score">19</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Space.com</span>
+          <span class="time">2h ago</span>
+        </div>
+        <p class="snippet">The launch of the first crewed moon mission since the Apollo era is just a week away! NASA is preparing to launch its Artemis 2 flight on April 1.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://spacenews.com/space-development-agency-slows-satellite-launches-to-focus-on-on-orbit-performance/" target="_blank" rel="noopener" class="article-title">Space Development Agency slows satellite launches to focus on on-orbit performance</a>
+          <span class="score" title="Relevance score">19</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">SpaceNews</span>
+          <span class="time">19h ago</span>
+        </div>
+        <p class="snippet">The agency’s acting director says checkout, orbit-raising and network testing are pacing the program
+The post Space Development Agency slows satellite launches to focus on on-orbit performance appeare…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.space.com/space-exploration/launches-spacecraft/rocket-lab-electron-launch-european-space-agency-celeste-navigation-satellites" target="_blank" rel="noopener" class="article-title">Watch Rocket Lab launch Europe's 1st 2 'Celeste' navigation satellites early March 25</a>
+          <span class="score" title="Relevance score">17</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Space.com</span>
+          <span class="time">16h ago</span>
+        </div>
+        <p class="snippet">Rocket Lab will launch the first two satellites for Europe's Celeste navigation constellation early Wednesday morning (March 25), and you can watch the action live.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.nasaspaceflight.com/2026/03/launch-preview-032326/" target="_blank" rel="noopener" class="article-title">Launch Preview: Russia to debut Soyuz-5; Falcon 9 and Atlas V to launch internet satellites</a>
+          <span class="score" title="Relevance score">17</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">NASASpaceflight</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">The United States, Russia, China, New Zealand, and Norway are all set to host launches…
+The post Launch Preview: Russia to debut Soyuz-5; Falcon 9 and Atlas V to launch internet satellites appeared fi…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://spacenews.com/space-force-adds-cyber-units-to-guard-rocket-launches/" target="_blank" rel="noopener" class="article-title">Space Force adds cyber units to guard rocket launches</a>
+          <span class="score" title="Relevance score">17</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">SpaceNews</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">‘Cyber defense’ squadrons at Cape Canaveral and Vandenberg reflect growing concern over malicious hacks
+The post Space Force adds cyber units to guard rocket launches appeared first on SpaceNews.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://spacenews.com/orbitsiq-global-announces-breakthrough-in-space-based-iot-connectivity/" target="_blank" rel="noopener" class="article-title">OrbitsIQ Global Announces Breakthrough in Space-Based IoT Connectivity</a>
+          <span class="score" title="Relevance score">15</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">SpaceNews</span>
+          <span class="time">17h ago</span>
+        </div>
+        <p class="snippet">Washington, D.C., March 24, 2026 – OrbitsIQ Global (OIQ), an innovator in AI-driven secure connectivity across terrestrial and satellite networks, today announced a major technological milestone achie…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://spacenews.com/arianespace-to-launch-katalyst-servicing-spacecraft/" target="_blank" rel="noopener" class="article-title">Arianespace to launch Katalyst servicing spacecraft</a>
+          <span class="score" title="Relevance score">15</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">SpaceNews</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">Katalyst Space Technologies will launch a geosynchronous orbit servicing spacecraft on an Ariane 6 in 2027.
+The post Arianespace to launch Katalyst servicing spacecraft appeared first on SpaceNews.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.nasa.gov/solar-system/moon/nasas-water-hunting-tool-will-help-scout-moons-south-pole/" target="_blank" rel="noopener" class="article-title">NASA’s Water-Hunting Tool Will Help Scout Moon’s South Pole</a>
+          <span class="score" title="Relevance score">14</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">NASA Breaking News</span>
+          <span class="time">22h ago</span>
+        </div>
+        <p class="snippet">NASA is joining international partners to hunt for ice on the Moon in support of future human exploration. The agency is providing a water-detecting instrument, the Neutron Spectrometer System (NSS), …</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.space.com/space-exploration/artemis/nasa-announcing-update-to-artemis-moon-plans-today-watch-it-live" target="_blank" rel="noopener" class="article-title">NASA announcing update to Artemis moon plans today: Watch it live</a>
+          <span class="score" title="Relevance score">14</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">Space.com</span>
+          <span class="time">1d ago</span>
+        </div>
+        <p class="snippet">NASA will hold a series of events today (March 24) that update us on the agency's plans for the moon and more, and you can watch them live.</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://spacenews.com/nasa-proposes-new-strategy-for-commercial-space-stations/" target="_blank" rel="noopener" class="article-title">NASA proposes new strategy for commercial space stations</a>
+          <span class="score" title="Relevance score">13</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">SpaceNews</span>
+          <span class="time">1h ago</span>
+        </div>
+        <p class="snippet">NASA, concerned about slow development of commercial markets, is considering revamping its strategy for supporting the creation of commercial space stations to succeed the International Space Station.…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://spacenews.com/parsons-unveils-new-satellite-antenna-aimed-at-military-market/" target="_blank" rel="noopener" class="article-title">Parsons unveils new satellite antenna aimed at military market</a>
+          <span class="score" title="Relevance score">13</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">SpaceNews</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">Hybrid antenna developed by Parsons and Raven Defense combines a six-meter parabolic dish with an electronically steered phased-array feed
+The post Parsons unveils new satellite antenna aimed at milit…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.nasa.gov/image-article/nasa-pc-12-aircraft-makes-move-to-support-flight-research-across-agency/" target="_blank" rel="noopener" class="article-title">NASA PC-12 Aircraft Makes Move to Support Flight Research Across Agency</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">NASA Breaking News</span>
+          <span class="time">14h ago</span>
+        </div>
+        <p class="snippet">A NASA Pilatus PC-12 aircraft will now be based at NASA’s Armstrong Flight Research Center in Edwards, California, in order to support flight research efforts across the agency. The PC-12 was acquired…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://spacenews.com/geopolitical-shifts-bring-opportunities-and-headaches-for-satellite-execs/" target="_blank" rel="noopener" class="article-title">Geopolitical shifts bring opportunities and headaches for satellite execs</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">SpaceNews</span>
+          <span class="time">15h ago</span>
+        </div>
+        <p class="snippet">A shifting geopolitical landscape is driving huge business opportunities for satcoms but also bringing new supply chain and regulatory challenges, industry executives said March 24 at the Satellite Co…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.nasa.gov/learning-resources/3-ways-students-can-get-involved-with-artemis/" target="_blank" rel="noopener" class="article-title">3 Ways Students Can Get Involved With Artemis</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">NASA Breaking News</span>
+          <span class="time">15h ago</span>
+        </div>
+        <p class="snippet">NASA’s Artemis program will establish a sustainable lunar presence, unlock new scientific discoveries, and develop technologies for spaceflight to Mars and beyond – and students can help shape this ne…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.nasa.gov/aeronautics/nasa-selects-finalists-in-student-aircraft-maintenance-competition/" target="_blank" rel="noopener" class="article-title">NASA Selects Finalists in Student Aircraft Maintenance Competition</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">NASA Breaking News</span>
+          <span class="time">15h ago</span>
+        </div>
+        <p class="snippet">Editor’s note: This advisory was updated on March 24, 2026, to update the finalists list. NASA has selected seven student teams as finalists in the 2026 Gateways to Blue Skies Competition, giving them…</p>
+      </div>
+    </div>
+      </section>
+    
+      <section class="category" id="devops">
+        <h2>⚙️ DevOps &amp; Platform Engineering <span class="count">15</span></h2>
+        <div class="articles">
+      <div class="article">
+        <div class="article-header">
+          <a href="https://devops.com/ai-didnt-break-your-devops-pipeline-your-process-was-already-rotten/" target="_blank" rel="noopener" class="article-title">AI Didn’t Break Your DevOps Pipeline, Your Process was Already Rotten</a>
+          <span class="score" title="Relevance score">12</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">DevOps.com</span>
+          <span class="time">1d ago</span>
+        </div>
+        <p class="snippet">AI isn’t breaking your DevOps pipeline; it’s exposing the flaws you’ve ignored for years. Learn how automated decision-making accelerates process decay, amplifies noisy signals, and reveals the owners…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.cncf.io/announcements/2026/03/25/cncf-welcomes-21-new-silver-members-as-global-demand-surges-for-observability-ai-and-secure-cloud-native-infrastructure/" target="_blank" rel="noopener" class="article-title">CNCF Welcomes 21 New Silver Members As Global Demand Surges for Observability, AI, and Secure Cloud Native Infrastructure</a>
+          <span class="score" title="Relevance score">11</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">CNCF Blog</span>
+          <span class="time">4h ago</span>
+        </div>
+        <p class="snippet">New global members join CNCF reflecting the rise of enterprise demand for scalable, cost-efficient cloud native technologies KUBECON + CLOUDNATIVECON EUROPE, AMSTERDAM—25 MARCH, 2025—The Cloud Native …</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://thenewstack.io/ai2-launches-molmoweb-an-open-source-web-agent/" target="_blank" rel="noopener" class="article-title">Ai2 launches MolmoWeb, an open-source web agent</a>
+          <span class="score" title="Relevance score">11</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">The New Stack</span>
+          <span class="time">20h ago</span>
+        </div>
+        <p class="snippet">AI agents that can browse the web and complete tasks on behalf of their users have gotten significantly better over
+The post Ai2 launches MolmoWeb, an open-source web agent appeared first on The New S…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.cncf.io/announcements/2026/03/24/cloud-native-computing-foundation-announces-kyvernos-graduation/" target="_blank" rel="noopener" class="article-title">Cloud Native Computing Foundation Announces Kyverno’s Graduation</a>
+          <span class="score" title="Relevance score">11</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">CNCF Blog</span>
+          <span class="time">1d ago</span>
+        </div>
+        <p class="snippet">Kyverno reaches graduation after demonstrating broad enterprise adoption as platform teams adopt declarative governance Key Highlights: KUBECON + CLOUDNATIVECON NORTH EUROPE, AMSTERDAM, The Netherland…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://devops.com/why-investing-in-devops-platforms-pays-off-for-businesses/" target="_blank" rel="noopener" class="article-title">Why Investing in DevOps Platforms Pays off for Businesses</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">DevOps.com</span>
+          <span class="time">4h ago</span>
+        </div>
+        <p class="snippet">Explore why 80% of organizations are adopting Internal Developer Platforms (IDPs) by 2026. From reducing setup time by 40% to mitigating $9,000-per-minute downtime costs, discover the undeniable ROI o…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://devops.com/embedded-devops-bridging-the-gap-between-firmware-and-modern-delivery/" target="_blank" rel="noopener" class="article-title">Embedded DevOps: Bridging the Gap Between Firmware and Modern Delivery</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">DevOps.com</span>
+          <span class="time">5h ago</span>
+        </div>
+        <p class="snippet">Embedded software development has traditionally followed a different rhythm than mainstream software engineering.  Hardware availability drives schedules. Validation cycles are longer. Releases are de…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://devops.com/localstack-revamps-cli-for-emulating-aws-cloud-services-on-local-machines/" target="_blank" rel="noopener" class="article-title">LocalStack Revamps CLI for Emulating AWS Cloud Services on Local Machines</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">DevOps.com</span>
+          <span class="time">17h ago</span>
+        </div>
+        <p class="snippet">LocalStack at the KubeCon + CloudNativeCon Europe conference this week unveiled a revamped command line interface (CLI), dubbed 1stk, for its framework that enables emulations of Amazon Web Services (…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://thenewstack.io/broadcom-velero-cncf-kubernetes/" target="_blank" rel="noopener" class="article-title">Broadcom donates Velero to CNCF — and it could reshape how Kubernetes users handle backup and disaster recovery</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">The New Stack</span>
+          <span class="time">20h ago</span>
+        </div>
+        <p class="snippet">Broadcom VMware announced on Monday that it will donate Velero to the CNCF sandbox project, a move the company describes
+The post Broadcom donates Velero to CNCF — and it could reshape how Kubernetes …</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://thenewstack.io/llm-d-cncf-kubernetes-inference/" target="_blank" rel="noopener" class="article-title">IBM, Red Hat, and Google just donated a Kubernetes blueprint for LLM inference to the CNCF</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">The New Stack</span>
+          <span class="time">20h ago</span>
+        </div>
+        <p class="snippet">The marriage of Kubernetes and AI has arrived in llm‑d, a replicable Kubernetes blueprint to deploy inference stacks for any
+The post IBM, Red Hat, and Google just donated a Kubernetes blueprint for L…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://thenewstack.io/ai-generated-code-invisible/" target="_blank" rel="noopener" class="article-title">Kubernetes co-founder Brendan Burns: AI-generated code will become as invisible as assembly</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">The New Stack</span>
+          <span class="time">21h ago</span>
+        </div>
+        <p class="snippet">For this edition of The New Stack Makers, I sat down with Brendan Burns, one of the co-founders of Kubernetes,
+The post Kubernetes co-founder Brendan Burns: AI-generated code will become as invisible …</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://devops.com/are-ai-agents-the-future-of-devops-automation/" target="_blank" rel="noopener" class="article-title">Are AI Agents the Future of DevOps Automation?</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">DevOps.com</span>
+          <span class="time">1d ago</span>
+        </div>
+        <p class="snippet">DevOps has changed fast in the last decade. Scripts became pipelines. Pipelines became platforms. Now, AI agents in DevOps automation are leading the next wave.  Today’s cloud systems are complex. Tea…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://devops.com/critical-cloud-becomes-the-worlds-first-powered-by-datadog-partner/" target="_blank" rel="noopener" class="article-title">Critical Cloud Becomes the World’s First “Powered by Datadog” Partner</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">DevOps.com</span>
+          <span class="time">1d ago</span>
+        </div>
+        <p class="snippet">Cardiff, Wales, 24th March 2026, CyberNewswire</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://www.cncf.io/announcements/2026/03/24/cncf-and-slashdata-report-finds-platform-engineering-tools-maturing-as-organizations-prepare-for-ai-driven-infrastructure/" target="_blank" rel="noopener" class="article-title">CNCF and SlashData Report Finds Platform Engineering Tools Maturing as Organizations Prepare for AI-Driven Infrastructure</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">CNCF Blog</span>
+          <span class="time">1d ago</span>
+        </div>
+        <p class="snippet">New CNCF Technology Radar survey shows which cloud native tools developers view as mature and ready for broad adoption Key Highlights: AMSTERDAM, KUBECON + CLOUDNATIVECON EUROPE– March 24, 2026 – The …</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://thenewstack.io/pihole-docker-network-adblocking/" target="_blank" rel="noopener" class="article-title">How to deploy Pi-Hole with Docker and stop ads on every device on your LAN</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">The New Stack</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">How do you block ads? Most people install various and sundry ad-blocking software on their computers or add browser extensions
+The post How to deploy Pi-Hole with Docker and stop ads on every device o…</p>
+      </div>
+    
+      <div class="article">
+        <div class="article-header">
+          <a href="https://thenewstack.io/claude-computer-use/" target="_blank" rel="noopener" class="article-title">Claude can now open apps, click buttons, and complete tasks on your Mac — but Anthropic says risks remain</a>
+          <span class="score" title="Relevance score">8</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">The New Stack</span>
+          <span class="time">just now</span>
+        </div>
+        <p class="snippet">Anthropic has released an update to Claude Code and Claude Cowork that brings computer-use capabilities to macOS desktops, enabling autonomous
+The post Claude can now open apps, click buttons, and com…</p>
+      </div>
+    </div>
+      </section>
+    
+      <section class="category" id="powershell">
+        <h2>💠 PowerShell &amp; Automation <span class="count">1</span></h2>
+        <div class="articles">
+      <div class="article">
+        <div class="article-header">
+          <a href="https://powershell.org/2026/03/the-powershell-podcast-from-school-it-intern-to-systems-architect-with-chris-thomas/" target="_blank" rel="noopener" class="article-title">The PowerShell Podcast From School IT Intern to Systems Architect with Chris Thomas</a>
+          <span class="score" title="Relevance score">10</span>
+        </div>
+        <div class="article-meta">
+          <span class="source">PowerShell.org</span>
+          <span class="time">2d ago</span>
+        </div>
+        <p class="snippet">K-12 IT veteran Chris Thomas joins The PowerShell Podcast to share his 26-year journey in educational technology, from a high school IT internship to becoming an Endpoint Cloud Systems Architect …</p>
+      </div>
+    </div>
+      </section>
+    
+    
+    
+  </main>
+  
+  <footer class="footer">
+    <p>Auto-generated by <a href="https://github.com/bronathedruid/daily-briefing">daily-briefing</a> · 
+    Powered by RSS feeds & GitHub Actions · Built for Alan</p>
+  </footer>
+  
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+    // Restore theme preference
+    const saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+    
+    // Handle archive date param
+    const params = new URLSearchParams(window.location.search);
+    const dateParam = params.get('date');
+    if (dateParam) {
+      // Could fetch historical data if needed
+      console.log('Viewing archive:', dateParam);
+    }
+  </script>
+</body>
+</html>

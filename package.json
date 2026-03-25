@@ -1,0 +1,18 @@
+{
+  "name": "daily-briefing",
+  "version": "1.0.0",
+  "description": "Automated daily news dashboard — AI, security, marketing, space, policy",
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch-news.mjs",
+    "build": "node scripts/generate-site.mjs",
+    "update": "npm run fetch && npm run build"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0",
+    "marked": "^15.0.0",
+    "sanitize-html": "^2.14.0"
+  },
+  "devDependencies": {},
+  "license": "MIT"
+}
