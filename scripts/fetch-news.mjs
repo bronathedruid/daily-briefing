@@ -167,7 +167,9 @@ async function main() {
   console.log(`✅ Saved data/latest.json`);
 }
 
-main().catch(err => {
+main().then(() => {
+  process.exit(0);
+}).catch(err => {
   console.error('Fatal:', err);
   process.exit(1);
 });
