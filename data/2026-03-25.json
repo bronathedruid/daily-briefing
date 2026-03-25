@@ -1,12 +1,20 @@
 {
   "date": "2026-03-25",
-  "generated": "2026-03-25T11:53:14.238Z",
+  "generated": "2026-03-25T16:46:36.155Z",
   "categories": {
     "ai-models": {
       "label": "🤖 AI Models & Releases",
       "emoji": "🤖",
       "count": 15,
       "articles": [
+        {
+          "title": "Build with Lyria 3, our newest music generation model",
+          "link": "https://blog.google/innovation-and-ai/technology/developers-tools/lyria-3-developers/",
+          "date": "2026-03-25T16:00:00.000Z",
+          "snippet": "Lyria 3 is now available in paid preview through the Gemini API and for testing in Google AI Studio.",
+          "source": "Google AI Blog",
+          "score": 13
+        },
         {
           "title": "Sparse but Critical: A Token-Level Analysis of Distributional Shifts in RLVR Fine-Tuning of LLMs",
           "link": "https://arxiv.org/abs/2603.22446",
@@ -64,6 +72,22 @@
           "score": 11
         },
         {
+          "title": "Lyria 3 Pro: Create longer tracks in more",
+          "link": "https://deepmind.google/blog/lyria-3-pro-create-longer-tracks-in-more/",
+          "date": "2026-03-25T16:01:39.000Z",
+          "snippet": "Introducing Lyria 3 Pro, which unlocks longer tracks with structural awareness. We’re also bringing Lyria to more Google products and surfaces.",
+          "source": "Google DeepMind",
+          "score": 10
+        },
+        {
+          "title": "Lyria 3 Pro: Create longer tracks in more Google products",
+          "link": "https://blog.google/innovation-and-ai/technology/ai/lyria-3-pro/",
+          "date": "2026-03-25T16:00:00.000Z",
+          "snippet": "We are bringing Lyria 3 to the tools where professionals work and create every day.",
+          "source": "Google AI Blog",
+          "score": 10
+        },
+        {
           "title": "Anthropic’s Claude Code gets ‘safer’ auto mode",
           "link": "https://www.theverge.com/ai-artificial-intelligence/900201/anthropic-claude-code-auto-mode",
           "date": "2026-03-25T11:39:46.000Z",
@@ -102,30 +126,6 @@
           "snippet": "arXiv:2603.22943v1 Announce Type: new \nAbstract: Personalized text-to-image generation lets users fine-tune diffusion models into repositories of concept-specific checkpoints, but serving these repositories efficiently is difficult for two reasons: natural-language requests are often ambiguous and c",
           "source": "arXiv cs.AI",
           "score": 10
-        },
-        {
-          "title": "LLM Olympiad: Why Model Evaluation Needs a Sealed Exam",
-          "link": "https://arxiv.org/abs/2603.23292",
-          "date": "2026-03-25T04:00:00.000Z",
-          "snippet": "arXiv:2603.23292v1 Announce Type: new \nAbstract: Benchmarks and leaderboards are how NLP most often communicates progress, but in the LLM era they are increasingly easy to misread. Scores can reflect benchmark-chasing, hidden evaluation choices, or accidental exposure to test content -- not just bro",
-          "source": "arXiv cs.AI",
-          "score": 10
-        },
-        {
-          "title": "Sample Transform Cost-Based Training-Free Hallucination Detector for Large Language Models",
-          "link": "https://arxiv.org/abs/2603.22303",
-          "date": "2026-03-25T04:00:00.000Z",
-          "snippet": "arXiv:2603.22303v1 Announce Type: cross \nAbstract: Hallucinations in large language models (LLMs) remain a central obstacle to trustworthy deployment, motivating detectors that are accurate, lightweight, and broadly applicable. Since an LLM with a prompt defines a conditional distribution, we argue",
-          "source": "arXiv cs.AI",
-          "score": 10
-        },
-        {
-          "title": "DAQ: Delta-Aware Quantization for Post-Training LLM Weight Compression",
-          "link": "https://arxiv.org/abs/2603.22324",
-          "date": "2026-03-25T04:00:00.000Z",
-          "snippet": "arXiv:2603.22324v1 Announce Type: cross \nAbstract: We introduce Delta-Aware Quantization (DAQ), a data-free post-training quantization framework that preserves the knowledge acquired during post-training. Standard quantization objectives minimize reconstruction error but are agnostic to the base mod",
-          "source": "arXiv cs.AI",
-          "score": 10
         }
       ]
     },
@@ -134,6 +134,14 @@
       "emoji": "🏛️",
       "count": 15,
       "articles": [
+        {
+          "title": "👓 Who's Really Watching What Smartglasses See? | EFFector 38.6",
+          "link": "https://www.eff.org/deeplinks/2026/03/whos-really-watching-what-smartglasses-see-effector-385",
+          "date": "2026-03-25T15:38:35.000Z",
+          "snippet": "After years of tech industry experiments, smartglasses with embedded cameras and microphones have finally gone mainstream. And, disturbingly, sometimes it's not just their owners who are watching what these devices record. In this week's EFFector newsletter, we're taking a closer look at the privacy",
+          "source": "EFF Deeplinks",
+          "score": 10
+        },
         {
           "title": "Digital Hopes, Real Power: Reflecting on the Legacy of the Arab Spring",
           "link": "https://www.eff.org/deeplinks/2026/03/digital-hopes-real-power-reflecting-legacy-arab-spring-0",
@@ -183,6 +191,38 @@
           "score": 9
         },
         {
+          "title": "Meta loses trial after arguing child exploitation was “inevitable” on its apps",
+          "link": "https://arstechnica.com/tech-policy/2026/03/meta-loses-trial-after-arguing-child-exploitation-was-inevitable-on-its-apps/",
+          "date": "2026-03-25T14:46:43.000Z",
+          "snippet": "Meta plans to appeal as it faces down two other child safety trials.",
+          "source": "Ars Technica Policy",
+          "score": 8
+        },
+        {
+          "title": "Apple begins age checks in the UK with latest iOS update",
+          "link": "https://arstechnica.com/tech-policy/2026/03/apple-begins-age-checks-in-the-uk-with-latest-ios-update/",
+          "date": "2026-03-25T14:08:32.000Z",
+          "snippet": "Move follows government pressure on smartphone makers to do more to protect children online.",
+          "source": "Ars Technica Policy",
+          "score": 8
+        },
+        {
+          "title": "OpenAI shutting down video generator Sora",
+          "link": "https://thehill.com/policy/technology/5799879-openai-sora-video-app-shutdown/",
+          "date": "2026-03-25T13:49:58.000Z",
+          "snippet": "OpenAI announced Tuesday it will shut down its AI-powered video generator app Sora, but it did not provide further details on the decision.  “We’re saying goodbye to Sora. To everyone who created with Sora shared it, and built community around it: thank you,” the company wrote Tuesday on the social",
+          "source": "The Hill Tech",
+          "score": 8
+        },
+        {
+          "title": "'White noise on steroids': Aurora City Council passes noise restrictions on data centers as residents clamor for change",
+          "link": "https://thehill.com/policy/technology/5799867-white-noise-on-steroids-aurora-city-council-passes-noise-restrictions-on-data-centers-as-residents-clamor-for-change/",
+          "date": "2026-03-25T13:42:02.000Z",
+          "snippet": "The City of Aurora is set to vote on regulations governing existing data centers within the municipality, addressing concerns over noise, water, energy use, pollution, and the lack of public engagement in the site selection and construction process.",
+          "source": "The Hill Tech",
+          "score": 8
+        },
+        {
           "title": "Lawmakers ramp up fight against sports betting on prediction markets",
           "link": "https://thehill.com/business/5798917-sports-betting-prediction-markets-cftc/",
           "date": "2026-03-25T10:00:00.000Z",
@@ -213,46 +253,6 @@
           "snippet": "Public interest in government tech abuses is peaking. EFF's new leader plans to build on that.",
           "source": "Ars Technica Policy",
           "score": 8
-        },
-        {
-          "title": "Ocasio-Cortez: Prediction markets' latest moves to block insider trading 'absolutely not enough'",
-          "link": "https://thehill.com/homenews/house/5798669-prediction-markets-insider-trading-ocasio-cortez/",
-          "date": "2026-03-24T19:57:10.000Z",
-          "snippet": "Rep. Alexandria Ocasio-Cortez (D-N.Y.) said prediction markets’ latest moves to restrict insider trading are “absolutely not enough” in a Monday post on social media. “Just on the policy piece alone, there are SO many individuals - staff, advisors, consultants, cabinet secretaries, spouses, and more",
-          "source": "The Hill Tech",
-          "score": 8
-        },
-        {
-          "title": "Melania Trump hosts world counterparts and tech reps to discuss children, education and technology",
-          "link": "https://thehill.com/homenews/administration/melania-trump-technology-education/",
-          "date": "2026-03-24T18:40:58.000Z",
-          "snippet": "WASHINGTON (AP) — Melania Trump on Tuesday called on nations to work together to improve access to education and technology for children around the world, delivering her plea as she addressed a gathering of her counterparts from more than 40 countries. The first lady's Fostering the Future Together",
-          "source": "The Hill Tech",
-          "score": 8
-        },
-        {
-          "title": "Judge refuses to drop lawsuit over Musk role as Trump adviser",
-          "link": "https://thehill.com/regulation/court-battles/5798636-judge-musk-lawsuit-trump-adviser-role/",
-          "date": "2026-03-24T18:36:49.000Z",
-          "snippet": "A federal judge on Monday determined a lawsuit against Elon Musk for his former advisory role in the Trump administration’s so-called Department of Government Efficiency (DOGE) can move forward.  US District Judge Tanya Chutkan issued a memo Monday tossing out a dismissal request from the federal go",
-          "source": "The Hill Tech",
-          "score": 8
-        },
-        {
-          "title": "All of DOGE’s work could be undone as lawsuit against Musk proceeds",
-          "link": "https://arstechnica.com/tech-policy/2026/03/all-of-doges-work-could-be-undone-as-lawsuit-against-musk-proceeds/",
-          "date": "2026-03-24T17:17:34.000Z",
-          "snippet": "Musk’s X posts bragging about DOGE may trigger reversals of its biggest wins.",
-          "source": "Ars Technica Policy",
-          "score": 8
-        },
-        {
-          "title": "Kara Swisher says she refuses to work for Paramount if it takes over CNN",
-          "link": "https://thehill.com/media/5798195-kara-swisher-cnn-exit/",
-          "date": "2026-03-24T17:11:39.000Z",
-          "snippet": "Journalist Kara Swisher on Monday said she will leave CNN if Paramount buys Warner Bros. Discovery and takes over the network. \"I don't think they'll be good owners, I don't,\" she told reporter and Syracuse University professor Margaret Talev at an awards ceremony. \"I think they've already shown sev",
-          "source": "The Hill Tech",
-          "score": 8
         }
       ]
     },
@@ -261,6 +261,62 @@
       "emoji": "🔐",
       "count": 15,
       "articles": [
+        {
+          "title": "Russian Hacker Sentenced to 2 Years for TA551 Botnet-Driven Ransomware Attacks",
+          "link": "https://thehackernews.com/2026/03/russian-hacker-sentenced-to-2-years-for.html",
+          "date": "2026-03-25T11:52:00.000Z",
+          "snippet": "The U.S. Department of Justice (DoJ) said a Russian national has been sentenced to two years in prison for managing a botnet that was used to launch ransomware attacks against U.S. companies.\nIlya Angelov, 40, of Tolyatti, Russia, was also fined $100,000. Angelov, who went by the online aliases \"mil",
+          "source": "The Hacker News",
+          "score": 14
+        },
+        {
+          "title": "CSA Launches CSAI Foundation for AI Security",
+          "link": "https://www.darkreading.com/cloud-security/csa-launches-csai-ai-security",
+          "date": "2026-03-24T22:34:28.000Z",
+          "snippet": "The Cloud Security Alliance creates a dedicated nonprofit to govern autonomous AI agent ecosystems through risk intelligence and certification.",
+          "source": "Dark Reading",
+          "score": 13
+        },
+        {
+          "title": "GlassWorm Malware Uses Solana Dead Drops to Deliver RAT and Steal Browser, Crypto Data",
+          "link": "https://thehackernews.com/2026/03/glassworm-malware-uses-solana-dead.html",
+          "date": "2026-03-25T14:26:00.000Z",
+          "snippet": "Cybersecurity researchers have flagged a new evolution of the GlassWorm campaign that delivers a multi-stage framework capable of comprehensive data theft and installing a remote access trojan (RAT), which deploys an information-stealing Google Chrome extension masquerading as an offline version of",
+          "source": "The Hacker News",
+          "score": 12
+        },
+        {
+          "title": "AI Speeds Attacks, But Identity Remains Cybersecurity’s Weakest Link",
+          "link": "https://www.securityweek.com/ai-speeds-attacks-but-identity-remains-cybersecuritys-weakest-link/",
+          "date": "2026-03-25T14:15:00.000Z",
+          "snippet": "PwC finds AI is amplifying speed and scale of attacks, as identity theft evolves into a cybercriminal supply chain.\nThe post AI Speeds Attacks, But Identity Remains Cybersecurity’s Weakest Link appeared first on SecurityWeek.",
+          "source": "Security Week",
+          "score": 12
+        },
+        {
+          "title": "iOS, macOS 26.4 Roll Out With Fresh Security Patches",
+          "link": "https://www.securityweek.com/ios-macos-26-4-roll-out-with-fresh-security-updates/",
+          "date": "2026-03-25T13:29:17.000Z",
+          "snippet": "Apple released security fixes for older devices as well, in iOS 18.7.7, iPadOS 18.7.7, macOS Sequoia 15.7.5, and macOS Sonoma 14.8.5.\nThe post iOS, macOS 26.4 Roll Out With Fresh Security Patches appeared first on SecurityWeek.",
+          "source": "Security Week",
+          "score": 12
+        },
+        {
+          "title": "AI-Native Security Is a Must to Counter AI-Based Attacks",
+          "link": "https://www.darkreading.com/cybersecurity-operations/ai-native-security-counter-attacks",
+          "date": "2026-03-25T12:26:14.000Z",
+          "snippet": "Attacks by artificial intelligence agents are a reality. Experts at Nvidia's GTC conference say defenders need to use the same tools to fight them off.",
+          "source": "Dark Reading",
+          "score": 12
+        },
+        {
+          "title": "The Kill Chain Is Obsolete When Your AI Agent Is the Threat",
+          "link": "https://thehackernews.com/2026/03/the-kill-chain-is-obsolete-when-your-ai.html",
+          "date": "2026-03-25T11:58:00.000Z",
+          "snippet": "In September 2025, Anthropic disclosed that a state-sponsored threat actor used an AI coding agent to execute an autonomous cyber espionage campaign against 30 global targets. The AI handled 80-90% of tactical operations on its own, performing reconnaissance, writing exploit code, and attempting lat",
+          "source": "The Hacker News",
+          "score": 12
+        },
         {
           "title": "US Prisons Russian Access Broker for Aiding Ransomware Attacks",
           "link": "https://www.securityweek.com/us-prisons-russian-access-broker-for-aiding-ransomware-attacks/",
@@ -310,14 +366,6 @@
           "score": 12
         },
         {
-          "title": "Mazda discloses security breach exposing employee and partner data",
-          "link": "https://www.bleepingcomputer.com/news/security/mazda-discloses-security-breach-exposing-employee-and-partner-data/",
-          "date": "2026-03-23T22:12:52.000Z",
-          "snippet": "Mazda Motor Corporation (Mazda) announced that information belonging to its employees and business partners had been exposed in a security incident detected last December. [...]",
-          "source": "BleepingComputer",
-          "score": 12
-        },
-        {
           "title": "North Korean Hackers Abuse VS Code Auto-Run Tasks to Deploy StoatWaffle Malware",
           "link": "https://thehackernews.com/2026/03/north-korean-hackers-abuse-vs-code-auto.html",
           "date": "2026-03-23T18:09:00.000Z",
@@ -326,60 +374,12 @@
           "score": 12
         },
         {
-          "title": "‘CanisterWorm’ Springs Wiper Attack Targeting Iran",
-          "link": "https://krebsonsecurity.com/2026/03/canisterworm-springs-wiper-attack-targeting-iran/",
-          "date": "2026-03-23T15:43:04.000Z",
-          "snippet": "A financially motivated data theft and extortion group is attempting to inject itself into the Iran war, unleashing a worm that spreads through poorly secured cloud services and wipes data on infected systems that use Iran's time zone or have Farsi set as the default language.",
-          "source": "Krebs on Security",
-          "score": 12
-        },
-        {
-          "title": "We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them",
-          "link": "https://thehackernews.com/2026/03/we-found-eight-attack-vectors-inside.html",
-          "date": "2026-03-23T11:55:00.000Z",
-          "snippet": "AWS Bedrock is Amazon's platform for building AI-powered applications. It gives developers access to foundation models and the tools to connect those models directly to enterprise data and systems. That connectivity is what makes it powerful – but it’s also what makes Bedrock a target.\nWhen an AI ag",
-          "source": "The Hacker News",
-          "score": 12
-        },
-        {
-          "title": "FCC Bans New Foreign-Made Routers Over Supply Chain and Cyber Risk Concerns",
-          "link": "https://thehackernews.com/2026/03/fcc-bans-new-foreign-made-routers-over.html",
-          "date": "2026-03-25T07:11:00.000Z",
-          "snippet": "The U.S. Federal Communications Commission (FCC) said on Monday that it was banning the import of new, foreign-made consumer routers, citing \"unacceptable\" risks to cyber and national security.\nThe action was designed to safeguard Americans and the underlying communications networks the country reli",
-          "source": "The Hacker News",
-          "score": 11
-        },
-        {
-          "title": "FCC bans new routers made outside the USA over security risks",
-          "link": "https://www.bleepingcomputer.com/news/security/fcc-bans-new-routers-made-outside-the-usa-over-security-risks/",
-          "date": "2026-03-24T20:41:30.000Z",
-          "snippet": "The Federal Communications Commission has updated its Covered List to include all consumer routers made in foreign countries, banning the sale of new models in the U.S. [...]",
-          "source": "BleepingComputer",
-          "score": 11
-        },
-        {
-          "title": "RSAC 2026 Conference Announcements Summary (Day 1)",
-          "link": "https://www.securityweek.com/rsac-2026-conference-announcements-summary-day-1/",
-          "date": "2026-03-24T15:57:12.000Z",
-          "snippet": "A summary of the announcements made by vendors on the first day of the RSAC 2026 Conference.\nThe post RSAC 2026 Conference Announcements Summary (Day 1) appeared first on SecurityWeek.",
-          "source": "Security Week",
-          "score": 11
-        },
-        {
-          "title": "Ransomware's New Era: Moving at AI Speed",
-          "link": "https://www.darkreading.com/endpoint-security/ransomware-new-era-moving-ai-speed",
-          "date": "2026-03-23T21:40:37.000Z",
-          "snippet": "Threat actors bypass security tools and use AI to launch faster ransomware attacks that exploit valid credentials and target data.",
+          "title": "SANS: Top 5 Most Dangerous New Attack Techniques to Watch",
+          "link": "https://www.darkreading.com/threat-intelligence/sans-most-dangerous-attack-techniques",
+          "date": "2026-03-25T14:40:33.000Z",
+          "snippet": "For the first time, SANS Institute's five top attack techniques all have one thing in common – AI.",
           "source": "Dark Reading",
           "score": 11
-        },
-        {
-          "title": "TP-Link warns users to patch critical router auth bypass flaw",
-          "link": "https://www.bleepingcomputer.com/news/security/tp-link-warns-users-to-patch-critical-router-auth-bypass-flaw/",
-          "date": "2026-03-25T11:11:00.000Z",
-          "snippet": "TP-Link has patched several vulnerabilities in its Archer NX router series, including a critical-severity flaw that may allow attackers to bypass authentication and upload new firmware. [...]",
-          "source": "BleepingComputer",
-          "score": 10
         }
       ]
     },
@@ -389,9 +389,25 @@
       "count": 15,
       "articles": [
         {
+          "title": "openclaw 2026.3.24",
+          "link": "https://github.com/openclaw/openclaw/releases/tag/v2026.3.24",
+          "date": "2026-03-25T16:35:52.000Z",
+          "snippet": "Breaking\nChanges\nGateway/OpenAI compatibility: add /v1/models and /v1/embeddings, and forward explicit model overrides through /v1/chat/completions and /v1/responses for broader client and RAG compatibility. Thanks @vincentkoc.\nAgents/tools: make /tools show the tools the current agent can actually",
+          "source": "OpenClaw Releases",
+          "score": 12
+        },
+        {
+          "title": "openclaw 2026.3.24-beta.2",
+          "link": "https://github.com/openclaw/openclaw/releases/tag/v2026.3.24-beta.2",
+          "date": "2026-03-25T14:46:36.000Z",
+          "snippet": "Fixes\nOutbound media/local files: align outbound media access with the configured fs policy so host-local files and inbound-media paths keep sending when workspaceOnly is off, while strict workspace-only agents remain sandboxed.\nRuntime/install: lower the supported Node 22 floor to 22.14+ while cont",
+          "source": "OpenClaw Releases",
+          "score": 12
+        },
+        {
           "title": "openclaw 2026.3.24-beta.1",
           "link": "https://github.com/openclaw/openclaw/releases/tag/v2026.3.24-beta.1",
-          "date": "2026-03-25T11:42:28.000Z",
+          "date": "2026-03-25T12:28:28.000Z",
           "snippet": "2026.3.24-beta.1\nBreaking\nChanges\nGateway/OpenAI compatibility: add /v1/models and /v1/embeddings, and forward explicit model overrides through /v1/chat/completions and /v1/responses for broader client and RAG compatibility. Thanks @vincentkoc.\nAgents/tools: make /tools show the tools the current ag",
           "source": "OpenClaw Releases",
           "score": 12
@@ -445,10 +461,10 @@
           "score": 10
         },
         {
-          "title": "Ask @copilot to make changes to any pull request",
+          "title": "Ask @copilot to make changes to a pull request",
           "link": "https://github.blog/changelog/2026-03-24-ask-copilot-to-make-changes-to-any-pull-request",
           "date": "2026-03-24T20:08:03.000Z",
-          "snippet": "You can now mention @copilot in any pull request to ask Copilot to make changes. You can ask @copilot to: Fix failing GitHub Actions workflows: @copilot Fix the failing tests…\nThe post Ask @copilot to make changes to any pull request appeared first on The GitHub Blog.",
+          "snippet": "You can now mention @copilot in pull requests to ask Copilot to make changes. You can ask @copilot to: Fix failing GitHub Actions workflows: @copilot Fix the failing tests Address…\nThe post Ask @copilot to make changes to a pull request appeared first on The GitHub Blog.",
           "source": "GitHub Changelog",
           "score": 10
         },
@@ -491,22 +507,6 @@
           "snippet": "",
           "source": "Simon Willison",
           "score": 10
-        },
-        {
-          "title": "datasette-files 0.1a2",
-          "link": "https://simonwillison.net/2026/Mar/23/datasette-files/#atom-everything",
-          "date": "2026-03-23T23:06:38.000Z",
-          "snippet": "",
-          "source": "Simon Willison",
-          "score": 10
-        },
-        {
-          "title": "Gemini 3.1 Pro is now available in JetBrains IDEs, Xcode, and Eclipse",
-          "link": "https://github.blog/changelog/2026-03-23-gemini-3-1-pro-is-now-available-in-jetbrains-ides-xcode-and-eclipse",
-          "date": "2026-03-23T21:11:48.000Z",
-          "snippet": "Gemini 3.1 Pro is available in public preview to Copilot Enterprise, Copilot Business, Copilot Pro, and Copilot Pro+. You’ll now be able to access the model in GitHub Copilot Chat…\nThe post Gemini 3.1 Pro is now available in JetBrains IDEs, Xcode, and Eclipse appeared first on The GitHub Blog.",
-          "source": "GitHub Changelog",
-          "score": 10
         }
       ]
     },
@@ -522,6 +522,14 @@
           "snippet": "Join our on-demand webinar to understand the intersection of AI and SEO. Learn how to leverage AI for improved search results.\nThe post SEO 2.0: How Content Marketing Drives Visibility in AI Search appeared first on Search Engine Journal.",
           "source": "Search Engine Journal",
           "score": 16
+        },
+        {
+          "title": "Half Your Traffic Left. The SEO Industry Sent Thoughts and Frameworks",
+          "link": "https://www.searchenginejournal.com/half-your-traffic-left-the-seo-industry-sent-thoughts-and-frameworks/570380/",
+          "date": "2026-03-25T13:30:38.000Z",
+          "snippet": "Nearly half of publisher search traffic has disappeared post-AI Overviews, raising urgent questions about how content gets funded next.\nThe post Half Your Traffic Left. The SEO Industry Sent Thoughts and Frameworks appeared first on Search Engine Journal.",
+          "source": "Search Engine Journal",
+          "score": 12
         },
         {
           "title": "How Zero-Party & First-Party Data Can Fuel Your Intent-Based SEO Strategy via @sejournal, @rio_seo",
@@ -564,12 +572,12 @@
           "score": 12
         },
         {
-          "title": "3 Strategies That Can Survive AI Search In 2026: What I Shared At SEJ Live via @sejournal, @theshelleywalsh",
-          "link": "https://www.searchenginejournal.com/strategies-that-can-survive-ai-search-in-2026-what-i-shared-at-sej-live/570260/",
-          "date": "2026-03-23T14:00:47.000Z",
-          "snippet": "Stop chasing rankings and start building visibility that matters with three practical strategies for SEO in 2026.\nThe post 3 Strategies That Can Survive AI Search In 2026: What I Shared At SEJ Live appeared first on Search Engine Journal.",
-          "source": "Search Engine Journal",
-          "score": 12
+          "title": "12 SEO Techniques to Boost Your Visibility and Traffic [2026]",
+          "link": "https://www.semrush.com/blog/seo-techniques/",
+          "date": "2026-03-25T11:32:00.000Z",
+          "snippet": "Learn 12 proven SEO techniques for 2026, including how to optimize for AI search, fix technical issues, and earn brand mentions that boost visibility.",
+          "source": "SEMrush Blog",
+          "score": 10
         },
         {
           "title": "Google Adds AI & Bot Labels To Forum, Q&A Structured Data via @sejournal, @MattGSouthern",
@@ -580,10 +588,10 @@
           "score": 10
         },
         {
-          "title": "Google Begins Rolling Out The March 2026 Spam Update via @sejournal, @MattGSouthern",
+          "title": "Google’s March 2026 Spam Update Is Already Complete via @sejournal, @MattGSouthern",
           "link": "https://www.searchenginejournal.com/google-begins-rolling-out-the-march-2026-spam-update/570428/",
           "date": "2026-03-24T19:38:20.000Z",
-          "snippet": "Google started rolling out the March 2026 spam update. The update applies globally and to all languages, with rollout taking a few days.\nThe post Google Begins Rolling Out The March 2026 Spam Update appeared first on Search Engine Journal.",
+          "snippet": "Google has finished rolling out the March 2026 spam update. The update applies globally and to all languages, with rollout taking a few days.\nThe post Google’s March 2026 Spam Update Is Already Complete appeared first on Search Engine Journal.",
           "source": "Search Engine Journal",
           "score": 10
         },
@@ -626,14 +634,6 @@
           "snippet": "Bing's AI Performance dashboard now maps grounding queries to cited pages, letting you connect AI citation data to specific URLs on your site.\nThe post Bing AI Dashboard Maps Grounding Queries To Cited Pages appeared first on Search Engine Journal.",
           "source": "Search Engine Journal",
           "score": 10
-        },
-        {
-          "title": "7 Google Ads Shortcuts Every PPC Manager Should Be Using via @sejournal, @brookeosmundson",
-          "link": "https://www.searchenginejournal.com/google-ads-shortcuts-every-ppc-manager-should-be-using/568045/",
-          "date": "2026-03-23T12:00:05.000Z",
-          "snippet": "Save time in Google Ads using seven practical shortcuts that simplify workflows and highlight optimization opportunities.\nThe post 7 Google Ads Shortcuts Every PPC Manager Should Be Using appeared first on Search Engine Journal.",
-          "source": "Search Engine Journal",
-          "score": 10
         }
       ]
     },
@@ -667,10 +667,10 @@
           "score": 19
         },
         {
-          "title": "Watch Rocket Lab launch Europe's 1st 2 'Celeste' navigation satellites early March 25",
+          "title": "Rocket Lab launch of Europe's 1st 2 'Celeste' navigation satellites scrubbed due to weather",
           "link": "https://www.space.com/space-exploration/launches-spacecraft/rocket-lab-electron-launch-european-space-agency-celeste-navigation-satellites",
           "date": "2026-03-24T20:00:00.000Z",
-          "snippet": "Rocket Lab will launch the first two satellites for Europe's Celeste navigation constellation early Wednesday morning (March 25), and you can watch the action live.",
+          "snippet": "Rocket Lab had planned to launch the first two satellites for Europe's Celeste navigation constellation early Wednesday morning (March 25), but Mother Nature didn't cooperate.",
           "source": "Space.com",
           "score": 17
         },
@@ -691,12 +691,12 @@
           "score": 15
         },
         {
-          "title": "Arianespace to launch Katalyst servicing spacecraft",
-          "link": "https://spacenews.com/arianespace-to-launch-katalyst-servicing-spacecraft/",
-          "date": "2026-03-23T15:30:00.000Z",
-          "snippet": "Katalyst Space Technologies will launch a geosynchronous orbit servicing spacecraft on an Ariane 6 in 2027.\nThe post Arianespace to launch Katalyst servicing spacecraft appeared first on SpaceNews.",
-          "source": "SpaceNews",
-          "score": 15
+          "title": "NASA-ISRO Satellite Captures Pacific Northwest Through Clouds",
+          "link": "https://www.nasa.gov/missions/nisar/nasa-isro-satellite-captures-pacific-northwest-through-clouds/",
+          "date": "2026-03-25T15:51:39.000Z",
+          "snippet": "Seattle and Portland, Oregon, are among the cloudiest cities in the United States. But that infamous cloud cover is no match for the U.S.-Indian Earth satellite NISAR (NASA-ISRO Synthetic Aperture Radar), which is designed to peer straight through clouds. Doing so allows scientists to study the Paci",
+          "source": "NASA Breaking News",
+          "score": 14
         },
         {
           "title": "NASA kills lunar space station to focus on ambitious Moon base",
@@ -712,14 +712,6 @@
           "date": "2026-03-24T18:52:39.000Z",
           "snippet": "In a significant NASA announcement, Administrator Jared Isaacman and agency leaders outlined plans for a…\nThe post NASA unveils Space Reactor-1 Freedom mission to Mars in 2028 appeared first on NASASpaceFlight.com.",
           "source": "NASASpaceflight",
-          "score": 14
-        },
-        {
-          "title": "NASA’s Water-Hunting Tool Will Help Scout Moon’s South Pole",
-          "link": "https://www.nasa.gov/solar-system/moon/nasas-water-hunting-tool-will-help-scout-moons-south-pole/",
-          "date": "2026-03-24T13:59:00.000Z",
-          "snippet": "NASA is joining international partners to hunt for ice on the Moon in support of future human exploration. The agency is providing a water-detecting instrument, the Neutron Spectrometer System (NSS), to the Lunar Polar Exploration (LUPEX) mission led by JAXA (Japan Aerospace Exploration Agency) and",
-          "source": "NASA Breaking News",
           "score": 14
         },
         {
@@ -747,19 +739,27 @@
           "score": 13
         },
         {
-          "title": "NASA outlines ambitious $20 billion plan for moon base",
-          "link": "https://spaceflightnow.com/2026/03/25/nasa-outlines-ambitious-20-billion-plan-for-moon-base/",
-          "date": "2026-03-25T00:56:20.000Z",
-          "snippet": "Along with plans for a moon base, senior NASA managers also outlined work to develop nuclear power systems for use on the moon and Mars to keep astronauts, habitats and other equipment warm while providing the electricity needed for research, construction and daily operations.",
-          "source": "Spaceflight Now",
+          "title": "NASA Awards Astrophysics Postdoctoral Fellowships for 2026",
+          "link": "https://science.nasa.gov/missions/hubble/nasa-awards-astrophysics-postdoctoral-fellowships-for-2026/",
+          "date": "2026-03-25T16:00:08.000Z",
+          "snippet": "The highly competitive NASA Hubble Fellowship Program (NHFP) recently named 24 new fellows to its 2026 class. The NHFP enables outstanding postdoctoral scientists to pursue independent research in any area of NASA Astrophysics, using theory, observations, simulations, experimentation, or instrument",
+          "source": "NASA Breaking News",
           "score": 12
         },
         {
-          "title": "NASA PC-12 Aircraft Makes Move to Support Flight Research Across Agency",
-          "link": "https://www.nasa.gov/image-article/nasa-pc-12-aircraft-makes-move-to-support-flight-research-across-agency/",
-          "date": "2026-03-24T21:49:35.000Z",
-          "snippet": "A NASA Pilatus PC-12 aircraft will now be based at NASA’s Armstrong Flight Research Center in Edwards, California, in order to support flight research efforts across the agency. The PC-12 was acquired in 2022 by NASA’s Glenn Research Center in Cleveland for use in advanced technology development. Th",
-          "source": "NASA Breaking News",
+          "title": "Infinity Avionics Unveils Aquila: The Next-Generation Space Imaging Solution for Complex Orbital Operations",
+          "link": "https://spacenews.com/infinity-avionics-unveils-aquila-the-next-generation-space-imaging-solution-for-complex-orbital-operations/",
+          "date": "2026-03-25T14:00:00.000Z",
+          "snippet": "CANBERRA, Australia: Infinity Avionics, a leader in smart vision systems for the NewSpace economy, announced today the full commercial availability of Aquila. Following a standout debut at IAC Sydney, the […]\nThe post Infinity Avionics Unveils Aquila: The Next-Generation Space Imaging Solution for C",
+          "source": "SpaceNews",
+          "score": 12
+        },
+        {
+          "title": "Musk wants to go to the moon. But how will he build his ‘self-growing city’?",
+          "link": "https://spacenews.com/musk-wants-to-go-to-the-moon-but-how-will-he-build-his-self-growing-city/",
+          "date": "2026-03-25T13:00:00.000Z",
+          "snippet": "It goes without saying that we shouldn’t take everything Elon Musk says too seriously. There are whole websites dedicated to those times when he has ‘talked the talk’ but failed to ‘walk the walk’ — as well as those times when he has been factually untrue. But his latest claim, which is that he will",
+          "source": "SpaceNews",
           "score": 12
         }
       ]
@@ -776,6 +776,14 @@
           "snippet": "AI agents that can browse the web and complete tasks on behalf of their users have gotten significantly better over\nThe post Ai2 launches MolmoWeb, an open-source web agent appeared first on The New Stack.",
           "source": "The New Stack",
           "score": 13
+        },
+        {
+          "title": "Your Kubernetes isn’t ready for AI workloads, and drift is the reason",
+          "link": "https://thenewstack.io/ai-workloads-kubernetes-infrastructure-drift/",
+          "date": "2026-03-25T15:43:43.000Z",
+          "snippet": "If you’re a platform engineering leader managing Kubernetes at scale, a new pressure has entered the room. The business wants\nThe post Your Kubernetes isn’t ready for AI workloads, and drift is the reason appeared first on The New Stack.",
+          "source": "The New Stack",
+          "score": 12
         },
         {
           "title": "Broadcom donates Velero to CNCF — and it could reshape how Kubernetes users handle backup and disaster recovery",
@@ -818,12 +826,44 @@
           "score": 12
         },
         {
-          "title": "How to deploy Pi-Hole with Docker and stop ads on every device on your LAN",
-          "link": "https://thenewstack.io/pihole-docker-network-adblocking/",
-          "date": "2026-03-23T14:44:36.000Z",
-          "snippet": "How do you block ads? Most people install various and sundry ad-blocking software on their computers or add browser extensions\nThe post How to deploy Pi-Hole with Docker and stop ads on every device on your LAN appeared first on The New Stack.",
+          "title": "Fivetran donates its SQLMesh data transformation framework to the Linux Foundation",
+          "link": "https://thenewstack.io/fivetran-donates-sqlmesh-lf/",
+          "date": "2026-03-25T14:39:39.000Z",
+          "snippet": "Fivetran, the company best known for its data movement platform, on Wednesday announced that it would donate SQLMesh, its open\nThe post Fivetran donates its SQLMesh data transformation framework to the Linux Foundation appeared first on The New Stack.",
           "source": "The New Stack",
-          "score": 12
+          "score": 10
+        },
+        {
+          "title": "HPE’s AI agents cut root cause analysis time in half",
+          "link": "https://thenewstack.io/hpe-agentic-ai-ops-burnout/",
+          "date": "2026-03-25T14:14:19.000Z",
+          "snippet": "Operational fatigue, in the face of increasing complexity and risks, is a real problem. Can partnerships with skills-based AI agents\nThe post HPE’s AI agents cut root cause analysis time in half appeared first on The New Stack.",
+          "source": "The New Stack",
+          "score": 10
+        },
+        {
+          "title": "Akuity Adds Ability to Customize Kargo Pipelines",
+          "link": "https://devops.com/akuity-adds-ability-to-customize-kargo-pipelines/",
+          "date": "2026-03-25T14:11:06.000Z",
+          "snippet": "Akuity this week at the KubeCon + CloudNativeCon Europe conference revealed it has added an ability to customize the steps used to promote applications into a production environment using a Kargo orchestration engine it developed to manage software using a GitOps workflow. Company CEO Hong Wang said",
+          "source": "DevOps.com",
+          "score": 10
+        },
+        {
+          "title": "Why online stores keep showing the wrong products — and why tensors fix it",
+          "link": "https://thenewstack.io/tensor-ranking-product-discovery/",
+          "date": "2026-03-25T13:00:00.000Z",
+          "snippet": "If I search for “black running shoes for winter,” marksandspencer.com finds me a lovely pair of lace-up boots…for women. In\nThe post Why online stores keep showing the wrong products — and why tensors fix it appeared first on The New Stack.",
+          "source": "The New Stack",
+          "score": 10
+        },
+        {
+          "title": "OpenClaw’s biggest security flaw is why Jentic Mini exists",
+          "link": "https://thenewstack.io/openclaw-is-a-security-mess-jentic-wants-to-fix-it/",
+          "date": "2026-03-25T12:00:00.000Z",
+          "snippet": "OpenClaw changed everything. The open-source AI agent, which went from zero to 247,000 GitHub stars in 60 days, finally delivered on\nThe post OpenClaw’s biggest security flaw is why Jentic Mini exists appeared first on The New Stack.",
+          "source": "The New Stack",
+          "score": 10
         },
         {
           "title": "Claude can now open apps, click buttons, and complete tasks on your Mac — but Anthropic says risks remain",
@@ -848,53 +888,13 @@
           "snippet": "Explore why 80% of organizations are adopting Internal Developer Platforms (IDPs) by 2026. From reducing setup time by 40% to mitigating $9,000-per-minute downtime costs, discover the undeniable ROI of platform engineering, \"golden paths,\" and built-in DevSecOps.",
           "source": "DevOps.com",
           "score": 10
-        },
-        {
-          "title": "Embedded DevOps: Bridging the Gap Between Firmware and Modern Delivery",
-          "link": "https://devops.com/embedded-devops-bridging-the-gap-between-firmware-and-modern-delivery/",
-          "date": "2026-03-25T06:57:59.000Z",
-          "snippet": "Embedded software development has traditionally followed a different rhythm than mainstream software engineering.  Hardware availability drives schedules. Validation cycles are longer. Releases are deliberate. Documentation is extensive. For good reason, embedded systems often operate in safety-crit",
-          "source": "DevOps.com",
-          "score": 10
-        },
-        {
-          "title": "LocalStack Revamps CLI for Emulating AWS Cloud Services on Local Machines",
-          "link": "https://devops.com/localstack-revamps-cli-for-emulating-aws-cloud-services-on-local-machines/",
-          "date": "2026-03-24T18:21:41.000Z",
-          "snippet": "LocalStack at the KubeCon + CloudNativeCon Europe conference this week unveiled a revamped command line interface (CLI), dubbed 1stk, for its framework that enables emulations of Amazon Web Services (AWS) environments to be run on a local machine. The CLI in version 3 of the AWS 2026 edition of the",
-          "source": "DevOps.com",
-          "score": 10
-        },
-        {
-          "title": "WebAssembly could solve AI agents’ most dangerous security gap",
-          "link": "https://thenewstack.io/webassembly-sandboxing-ai-agents/",
-          "date": "2026-03-24T16:01:42.000Z",
-          "snippet": "AI agent-generated code poses an often-overlooked threat: the possibility that an agent will generate unchecked, potentially lethal commands. Think of\nThe post WebAssembly could solve AI agents’ most dangerous security gap appeared first on The New Stack.",
-          "source": "The New Stack",
-          "score": 10
-        },
-        {
-          "title": "PwC’s AI agents are now your consultants — whether you’re ready or not",
-          "link": "https://thenewstack.io/pwcs-ai-agents-are-now-your-consultants-whether-youre-ready-or-not/",
-          "date": "2026-03-24T13:00:00.000Z",
-          "snippet": "PwC is putting its AI agents directly in front of clients and cutting out the traditional back-and-forth with consultants as\nThe post PwC’s AI agents are now your consultants — whether you’re ready or not appeared first on The New Stack.",
-          "source": "The New Stack",
-          "score": 10
-        },
-        {
-          "title": "Exton Linux’s light version will “enlighten” you",
-          "link": "https://thenewstack.io/exton-linuxs-light-version-will-enlighten-you/",
-          "date": "2026-03-24T12:43:25.000Z",
-          "snippet": "I’ve been using Linux for a very, very long time. My Linux usage goes way back to the days of\nThe post Exton Linux’s light version will “enlighten” you appeared first on The New Stack.",
-          "source": "The New Stack",
-          "score": 10
         }
       ]
     },
     "powershell": {
       "label": "💠 PowerShell & Automation",
       "emoji": "💠",
-      "count": 6,
+      "count": 4,
       "articles": [
         {
           "title": "Windows 11 Out‑of‑Band Update Fixes Microsoft Account Sign‑In Issues",
@@ -913,34 +913,18 @@
           "score": 10
         },
         {
-          "title": "The PowerShell Podcast From School IT Intern to Systems Architect with Chris Thomas",
-          "link": "https://powershell.org/2026/03/the-powershell-podcast-from-school-it-intern-to-systems-architect-with-chris-thomas/",
-          "date": "2026-03-23T14:51:04.000Z",
-          "snippet": "K-12 IT veteran Chris Thomas joins The PowerShell Podcast to share his 26-year journey in educational technology, from a high school IT internship to becoming an Endpoint Cloud Systems Architect …",
-          "source": "PowerShell.org",
-          "score": 10
+          "title": "FCC Bans Foreign‑Manufactured Consumer Routers Over Security Risks",
+          "link": "https://petri.com/fcc-ban-foreign-consumer-routers-security-risks/",
+          "date": "2026-03-25T12:46:35.000Z",
+          "snippet": "The Federal Communications Commission (FCC) has imposed a ban on certain foreign-made consumer routers entering the United States, citing rising cybersecurity concerns. The regulator said the decision follows a series of attacks that targeted critical infrastructure. The FCC added foreign‑manufactur",
+          "source": "Petri IT",
+          "score": 8
         },
         {
           "title": "Microsoft Defender Enhances Identity Security with AI-Driven Threat Detection and Response",
           "link": "https://petri.com/microsoft-defender-ai-identity-security-update/",
           "date": "2026-03-24T20:15:05.000Z",
           "snippet": "As cyberattacks grow faster and more identity‑driven, Microsoft is enhancing how organizations defend their digital environments. At RSA 2026, the company announced major Microsoft Defender and Security Copilot updates to help organizations defend against the latest threats. Microsoft emphasizes tha",
-          "source": "Petri IT",
-          "score": 8
-        },
-        {
-          "title": "Microsoft Extends Unified RBAC to Sentinel With Row‑Level Access Controls",
-          "link": "https://petri.com/microsoft-sentinel-unified-rbac-row-level-access/",
-          "date": "2026-03-23T15:39:18.000Z",
-          "snippet": "Microsoft Sentinel is raising the bar for secure collaboration by adding support for Unified RBAC and row-level access controls. The update enables multiple teams to operate within a shared environment while maintaining strict governance, granular visibility, and streamlined management. “This new ca",
-          "source": "Petri IT",
-          "score": 8
-        },
-        {
-          "title": "CISA Warns Attackers Abused Microsoft Intune to Wipe Devices in Stryker Cyberattack",
-          "link": "https://petri.com/cisa-microsoft-intune-abuse-stryker-cyberattack/",
-          "date": "2026-03-23T13:45:50.000Z",
-          "snippet": "The Cybersecurity and Infrastructure Security Agency has issued a new alert urging organizations to harden their endpoint management systems after a recent cyberattack on Stryker exposed critical security gaps. The advisory highlights how weaknesses in administrative controls can be exploited to car",
           "source": "Petri IT",
           "score": 8
         }
