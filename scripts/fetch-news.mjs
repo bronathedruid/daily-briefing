@@ -15,7 +15,7 @@ const OUTPUT_DIR = join(ROOT, 'data');
 
 const MAX_AGE_HOURS = 48; // include articles from last 48h
 const MAX_ITEMS_PER_CATEGORY = 15;
-const FETCH_TIMEOUT_MS = 10000;
+const FETCH_TIMEOUT_MS = 15000;
 
 const parser = new Parser({
   timeout: FETCH_TIMEOUT_MS,
@@ -115,10 +115,11 @@ async function main() {
     console.log(`\n📡 ${cat.label}`);
     let allArticles = [];
 
-    // Fetch all feeds in parallel per category
+    // Fetch all feeds in parallel per category (with concurrency limit)
     const feedResults = await Promise.allSettled(
       cat.feeds.map(f => {
         console.log(`  → ${f.name}`);
+        if (f.type === 'hn-algolia') return fetchHNAlgolia(f);
         return fetchFeed(f);
       })
     );

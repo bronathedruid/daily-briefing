@@ -1,6 +1,6 @@
 {
   "date": "2026-03-25",
-  "generated": "2026-03-25T11:37:33.474Z",
+  "generated": "2026-03-25T11:46:28.425Z",
   "categories": {
     "ai-models": {
       "label": "🤖 AI Models & Releases",
@@ -8,11 +8,19 @@
       "count": 15,
       "articles": [
         {
+          "title": "Import AI 450: China's electronic warfare model; traumatized LLMs; and a scaling law for cyberattacks",
+          "link": "https://importai.substack.com/p/import-ai-450-chinas-electronic-warfare",
+          "date": "2026-03-23T12:31:45.000Z",
+          "snippet": "How will timeless minds value time?",
+          "source": "Import AI Newsletter",
+          "score": 14
+        },
+        {
           "title": "Sparse but Critical: A Token-Level Analysis of Distributional Shifts in RLVR Fine-Tuning of LLMs",
           "link": "https://arxiv.org/abs/2603.22446",
           "date": "2026-03-25T04:00:00.000Z",
           "snippet": "arXiv:2603.22446v1 Announce Type: cross \nAbstract: Reinforcement learning with verifiable rewards (RLVR) has significantly improved reasoning in large language models (LLMs), yet the token-level mechanisms underlying these improvements remain unclear. We present a systematic empirical study of RLVR'",
-          "source": "arXiv cs.AI (new)",
+          "source": "arXiv cs.AI",
           "score": 12
         },
         {
@@ -20,7 +28,7 @@
           "link": "https://arxiv.org/abs/2603.22755",
           "date": "2026-03-25T04:00:00.000Z",
           "snippet": "arXiv:2603.22755v1 Announce Type: cross \nAbstract: Independently trained domain specialists can be fused post-hoc into a single model that outperforms any individual specialist, and the gain is predictable: gain = 0.82 x divergence - 2.72 (R^2 = 0.856, n=6, 3-26% divergence). This enables practition",
-          "source": "arXiv cs.AI (new)",
+          "source": "arXiv cs.AI",
           "score": 12
         },
         {
@@ -28,7 +36,7 @@
           "link": "https://arxiv.org/abs/2510.15994",
           "date": "2026-03-25T04:00:00.000Z",
           "snippet": "arXiv:2510.15994v2 Announce Type: replace-cross \nAbstract: The Model Context Protocol (MCP) standardizes how large language model (LLM) agents discover, describe, and call external tools. While MCP unlocks broad interoperability, it also enlarges the attack surface by making tools first-class, compo",
-          "source": "arXiv cs.AI (new)",
+          "source": "arXiv cs.AI",
           "score": 12
         },
         {
@@ -52,15 +60,31 @@
           "link": "https://arxiv.org/abs/2603.22305",
           "date": "2026-03-25T04:00:00.000Z",
           "snippet": "arXiv:2603.22305v1 Announce Type: cross \nAbstract: Large Language Models (LLMs) are rapidly transitioning from static Natural Language Processing (NLP) tasks including sentiment analysis and event extraction to acting as dynamic decision-making agents in complex financial environments. However, the",
-          "source": "arXiv cs.AI (new)",
+          "source": "arXiv cs.AI",
           "score": 11
+        },
+        {
+          "title": "A New Framework for Evaluating Voice Agents (EVA)",
+          "link": "https://huggingface.co/blog/ServiceNow-AI/eva",
+          "date": "2026-03-24T02:01:52.000Z",
+          "snippet": "",
+          "source": "HuggingFace Blog",
+          "score": 11
+        },
+        {
+          "title": "Anthropic’s Claude Code gets ‘safer’ auto mode",
+          "link": "https://www.theverge.com/ai-artificial-intelligence/900201/anthropic-claude-code-auto-mode",
+          "date": "2026-03-25T11:39:46.000Z",
+          "snippet": "Anthropic has launched an \"auto mode\" for Claude Code, a new tool that lets AI make permissions-level decisions on users' behalf. The company says the feature offers vibe coders  a safer alternative between constant handholding or giving the model dangerous levels of autonomy. \nClaude Code is capabl",
+          "source": "The Verge AI",
+          "score": 10
         },
         {
           "title": "Benchmarking Multi-Agent LLM Architectures for Financial Document Processing: A Comparative Study of Orchestration Patterns, Cost-Accuracy Tradeoffs and Production Scaling Strategies",
           "link": "https://arxiv.org/abs/2603.22651",
           "date": "2026-03-25T04:00:00.000Z",
           "snippet": "arXiv:2603.22651v1 Announce Type: new \nAbstract: The adoption of large language models (LLMs) for structured information extraction from financial documents has accelerated rapidly, yet production deployments face fundamental architectural decisions with limited empirical guidance. We present a syst",
-          "source": "arXiv cs.AI (new)",
+          "source": "arXiv cs.AI",
           "score": 10
         },
         {
@@ -68,7 +92,7 @@
           "link": "https://arxiv.org/abs/2603.22777",
           "date": "2026-03-25T04:00:00.000Z",
           "snippet": "arXiv:2603.22777v1 Announce Type: new \nAbstract: Agricultural pest management increasingly relies on timely and accurate access to expert knowledge, yet high quality labeled data and continuous expert support remain limited, particularly for farmers operating in rural regions with unstable/no intern",
-          "source": "arXiv cs.AI (new)",
+          "source": "arXiv cs.AI",
           "score": 10
         },
         {
@@ -76,7 +100,7 @@
           "link": "https://arxiv.org/abs/2603.22942",
           "date": "2026-03-25T04:00:00.000Z",
           "snippet": "arXiv:2603.22942v1 Announce Type: new \nAbstract: Translating Natural Language to SQL (NL2SQL) remains a critical bottleneck for democratization of data in enterprises. Although Large Language Models (LLMs) like Gemini 2.5 and other LLMs have demonstrated impressive zero-shot capabilities, their high",
-          "source": "arXiv cs.AI (new)",
+          "source": "arXiv cs.AI",
           "score": 10
         },
         {
@@ -84,7 +108,7 @@
           "link": "https://arxiv.org/abs/2603.22943",
           "date": "2026-03-25T04:00:00.000Z",
           "snippet": "arXiv:2603.22943v1 Announce Type: new \nAbstract: Personalized text-to-image generation lets users fine-tune diffusion models into repositories of concept-specific checkpoints, but serving these repositories efficiently is difficult for two reasons: natural-language requests are often ambiguous and c",
-          "source": "arXiv cs.AI (new)",
+          "source": "arXiv cs.AI",
           "score": 10
         },
         {
@@ -92,7 +116,7 @@
           "link": "https://arxiv.org/abs/2603.23292",
           "date": "2026-03-25T04:00:00.000Z",
           "snippet": "arXiv:2603.23292v1 Announce Type: new \nAbstract: Benchmarks and leaderboards are how NLP most often communicates progress, but in the LLM era they are increasingly easy to misread. Scores can reflect benchmark-chasing, hidden evaluation choices, or accidental exposure to test content -- not just bro",
-          "source": "arXiv cs.AI (new)",
+          "source": "arXiv cs.AI",
           "score": 10
         },
         {
@@ -100,31 +124,7 @@
           "link": "https://arxiv.org/abs/2603.22303",
           "date": "2026-03-25T04:00:00.000Z",
           "snippet": "arXiv:2603.22303v1 Announce Type: cross \nAbstract: Hallucinations in large language models (LLMs) remain a central obstacle to trustworthy deployment, motivating detectors that are accurate, lightweight, and broadly applicable. Since an LLM with a prompt defines a conditional distribution, we argue",
-          "source": "arXiv cs.AI (new)",
-          "score": 10
-        },
-        {
-          "title": "DAQ: Delta-Aware Quantization for Post-Training LLM Weight Compression",
-          "link": "https://arxiv.org/abs/2603.22324",
-          "date": "2026-03-25T04:00:00.000Z",
-          "snippet": "arXiv:2603.22324v1 Announce Type: cross \nAbstract: We introduce Delta-Aware Quantization (DAQ), a data-free post-training quantization framework that preserves the knowledge acquired during post-training. Standard quantization objectives minimize reconstruction error but are agnostic to the base mod",
-          "source": "arXiv cs.AI (new)",
-          "score": 10
-        },
-        {
-          "title": "AI Co-Scientist for Ranking: Discovering Novel Search Ranking Models alongside LLM-based AI Agents with Cloud Computing Access",
-          "link": "https://arxiv.org/abs/2603.22376",
-          "date": "2026-03-25T04:00:00.000Z",
-          "snippet": "arXiv:2603.22376v1 Announce Type: cross \nAbstract: Recent advances in AI agents for software engineering and scientific discovery have demonstrated remarkable capabilities, yet their application to developing novel ranking models in commercial search engines remains unexplored. In this paper, we pre",
-          "source": "arXiv cs.AI (new)",
-          "score": 10
-        },
-        {
-          "title": "Cognitive Training for Language Models: Towards General Capabilities via Cross-Entropy Games",
-          "link": "https://arxiv.org/abs/2603.22479",
-          "date": "2026-03-25T04:00:00.000Z",
-          "snippet": "arXiv:2603.22479v1 Announce Type: cross \nAbstract: Defining a constructive process to build general capabilities for language models in an automatic manner is considered an open problem in artificial intelligence. Towards this, we consider the problem of building a curriculum of tasks that grows a m",
-          "source": "arXiv cs.AI (new)",
+          "source": "arXiv cs.AI",
           "score": 10
         }
       ]
@@ -132,8 +132,48 @@
     "government-policy": {
       "label": "🏛️ Government & Policy",
       "emoji": "🏛️",
-      "count": 8,
+      "count": 15,
       "articles": [
+        {
+          "title": "Digital Hopes, Real Power: Reflecting on the Legacy of the Arab Spring",
+          "link": "https://www.eff.org/deeplinks/2026/03/digital-hopes-real-power-reflecting-legacy-arab-spring-0",
+          "date": "2026-03-25T11:07:48.000Z",
+          "snippet": "This is the first installment of a blog series reflecting on the global digital legacy of the 2011 Arab uprisings.\nA new generation of protesters, raised on social media and often fluent in the tools of digital dissent, has taken to the streets in recent months and years. In Bangladesh, Iran, Togo,",
+          "source": "EFF Deeplinks",
+          "score": 10
+        },
+        {
+          "title": "Nicole Ozer Named as Electronic Frontier Foundation’s Executive Director",
+          "link": "https://www.eff.org/press/releases/nicole-ozer-named-electronic-frontier-foundations-executive-director",
+          "date": "2026-03-24T21:00:00.000Z",
+          "snippet": "Ozer, With Decades of Experience in Technology and Civil Liberties Law, Will Succeed Cindy Cohn as Organization’s Leader \n\n\n\nSAN FRANCISCO – Nicole Ozer has been appointed as executive director of the Electronic Frontier Foundation effective June 1. \nOzer is a legal expert on privacy and surveillanc",
+          "source": "EFF Deeplinks",
+          "score": 10
+        },
+        {
+          "title": "UK Politicians Continue to Miss the Point in Latest Social Media Ban Proposal",
+          "link": "https://www.eff.org/deeplinks/2026/03/uk-politicians-continue-miss-point-latest-social-media-ban-proposal",
+          "date": "2026-03-24T13:36:39.000Z",
+          "snippet": "The UK is moving forward with its efforts to ban social media for young people. Ahead of this week’s House of Lords debate on the topic, we’re getting you situated with a primer on what’s been happening and what it all means.\n\nWhat was the last vote about? \nOn 9 March, the House of Commons discussed",
+          "source": "EFF Deeplinks",
+          "score": 10
+        },
+        {
+          "title": "Why cutting Anthropic from government could be harder than expected",
+          "link": "https://thehill.com/policy/technology/5796781-trump-administration-ban-anthropic/",
+          "date": "2026-03-24T10:00:00.000Z",
+          "snippet": "The Trump administration will head to court this week to defend its decision to ban the federal government from using Anthropic products, but removing the technology itself may prove to be the bigger battle.  The public clash between the Pentagon and Anthropic is forcing the federal government to co",
+          "source": "The Hill Tech",
+          "score": 10
+        },
+        {
+          "title": "Meta found liable in New Mexico child safety trial",
+          "link": "https://thehill.com/policy/technology/5799252-meta-found-liable-children-safety/",
+          "date": "2026-03-24T23:08:54.000Z",
+          "snippet": "Meta was found liable by a jury in New Mexico on Tuesday for compromising children’s safety online.  The parent company for Instagram, Facebook and WhatsApp has been ordered to pay $375 million in damages for violating New Mexico’s Unfair Practices Act, which prohibits unfair, deceptive and misleadi",
+          "source": "The Hill Tech",
+          "score": 9
+        },
         {
           "title": "FCC imposes sweeping ban on foreign-made routers, affecting all new models",
           "link": "https://arstechnica.com/tech-policy/2026/03/trump-fcc-prohibits-import-and-sale-of-new-wi-fi-routers-made-outside-us/",
@@ -143,11 +183,27 @@
           "score": 9
         },
         {
-          "title": "Digital Hopes, Real Power: Reflecting on the Legacy of the Arab Spring",
-          "link": "https://www.eff.org/deeplinks/2026/03/digital-hopes-real-power-reflecting-legacy-arab-spring-0",
-          "date": "2026-03-25T11:07:48.000Z",
-          "snippet": "This is the first installment of a blog series reflecting on the global digital legacy of the 2011 Arab uprisings.\nA new generation of protesters, raised on social media and often fluent in the tools of digital dissent, has taken to the streets in recent months and years. In Bangladesh, Iran, Togo,",
-          "source": "EFF Deeplinks",
+          "title": "Lawmakers ramp up fight against sports betting on prediction markets",
+          "link": "https://thehill.com/business/5798917-sports-betting-prediction-markets-cftc/",
+          "date": "2026-03-25T10:00:00.000Z",
+          "snippet": "The political battle over sports betting on prediction markets is heating up as professional leagues dive deeper into the national gambling frenzy. Lawmakers in both parties are attempting to stifle the growing popularity of sports betting on prediction markets as a top Trump administration regulato",
+          "source": "The Hill Tech",
+          "score": 8
+        },
+        {
+          "title": "Judge says Pentagon’s Anthropic ban looks like 'attempt to cripple' company",
+          "link": "https://thehill.com/policy/technology/5799357-anthropic-challenges-pentagon-designation/",
+          "date": "2026-03-24T23:36:07.000Z",
+          "snippet": "A federal judge in California hammered the Pentagon on Tuesday for its decision to label Anthropic a supply chain risk, signalling skepticism over what she described as a “troubling” move from the federal government.  U.S. District Judge Rita Lin, based in San Francisco, suggested during Tuesday’s h",
+          "source": "The Hill Tech",
+          "score": 8
+        },
+        {
+          "title": "Anthropic's Claude used by Pentagon in war with Iran, official confirms",
+          "link": "https://thehill.com/policy/defense/5799136-claude-pentagon-iran-war/",
+          "date": "2026-03-24T21:39:42.000Z",
+          "snippet": "Anthropic’s signature AI model Claude is being used by the Pentagon during the U.S. military’s ongoing war against Iran, a Pentagon official confirmed Tuesday during a Senate subcommittee hearing.  Pentagon Chief Information Officer Kirsten A. Davies confirmed to Sen. Jack Reed (D-R.I.), the ranking",
+          "source": "The Hill Tech",
           "score": 8
         },
         {
@@ -159,11 +215,27 @@
           "score": 8
         },
         {
-          "title": "Nicole Ozer Named as Electronic Frontier Foundation’s Executive Director",
-          "link": "https://www.eff.org/press/releases/nicole-ozer-named-electronic-frontier-foundations-executive-director",
-          "date": "2026-03-24T21:00:00.000Z",
-          "snippet": "Ozer, With Decades of Experience in Technology and Civil Liberties Law, Will Succeed Cindy Cohn as Organization’s Leader \n\n\n\nSAN FRANCISCO – Nicole Ozer has been appointed as executive director of the Electronic Frontier Foundation effective June 1. \nOzer is a legal expert on privacy and surveillanc",
-          "source": "EFF Deeplinks",
+          "title": "Ocasio-Cortez: Prediction markets' latest moves to block insider trading 'absolutely not enough'",
+          "link": "https://thehill.com/homenews/house/5798669-prediction-markets-insider-trading-ocasio-cortez/",
+          "date": "2026-03-24T19:57:10.000Z",
+          "snippet": "Rep. Alexandria Ocasio-Cortez (D-N.Y.) said prediction markets’ latest moves to restrict insider trading are “absolutely not enough” in a Monday post on social media. “Just on the policy piece alone, there are SO many individuals - staff, advisors, consultants, cabinet secretaries, spouses, and more",
+          "source": "The Hill Tech",
+          "score": 8
+        },
+        {
+          "title": "Melania Trump hosts world counterparts and tech reps to discuss children, education and technology",
+          "link": "https://thehill.com/homenews/administration/melania-trump-technology-education/",
+          "date": "2026-03-24T18:40:58.000Z",
+          "snippet": "WASHINGTON (AP) — Melania Trump on Tuesday called on nations to work together to improve access to education and technology for children around the world, delivering her plea as she addressed a gathering of her counterparts from more than 40 countries. The first lady's Fostering the Future Together",
+          "source": "The Hill Tech",
+          "score": 8
+        },
+        {
+          "title": "Judge refuses to drop lawsuit over Musk role as Trump adviser",
+          "link": "https://thehill.com/regulation/court-battles/5798636-judge-musk-lawsuit-trump-adviser-role/",
+          "date": "2026-03-24T18:36:49.000Z",
+          "snippet": "A federal judge on Monday determined a lawsuit against Elon Musk for his former advisory role in the Trump administration’s so-called Department of Government Efficiency (DOGE) can move forward.  US District Judge Tanya Chutkan issued a memo Monday tossing out a dismissal request from the federal go",
+          "source": "The Hill Tech",
           "score": 8
         },
         {
@@ -175,27 +247,11 @@
           "score": 8
         },
         {
-          "title": "UK Politicians Continue to Miss the Point in Latest Social Media Ban Proposal",
-          "link": "https://www.eff.org/deeplinks/2026/03/uk-politicians-continue-miss-point-latest-social-media-ban-proposal",
-          "date": "2026-03-24T13:36:39.000Z",
-          "snippet": "The UK is moving forward with its efforts to ban social media for young people. Ahead of this week’s House of Lords debate on the topic, we’re getting you situated with a primer on what’s been happening and what it all means.\n\nWhat was the last vote about? \nOn 9 March, the House of Commons discussed",
-          "source": "EFF Deeplinks",
-          "score": 8
-        },
-        {
-          "title": "Intuit beats FTC in court, ending restrictions on \"free\" TurboTax ads",
-          "link": "https://arstechnica.com/tech-policy/2026/03/intuit-beats-ftc-in-court-ending-restrictions-on-free-turbotax-ads/",
-          "date": "2026-03-23T19:05:58.000Z",
-          "snippet": "Biden-era punishment tossed; Intuit now has more friendly regulators under Trump.",
-          "source": "Ars Technica Policy",
-          "score": 8
-        },
-        {
-          "title": "As teens await sentencing for nudifying girls, parents aim to sue school",
-          "link": "https://arstechnica.com/tech-policy/2026/03/as-teens-await-sentencing-for-nudifying-girls-parents-aim-to-sue-school/",
-          "date": "2026-03-23T17:19:49.000Z",
-          "snippet": "Teens will be sentenced Wednesday after admitting to creating AI CSAM.",
-          "source": "Ars Technica Policy",
+          "title": "Kara Swisher says she refuses to work for Paramount if it takes over CNN",
+          "link": "https://thehill.com/media/5798195-kara-swisher-cnn-exit/",
+          "date": "2026-03-24T17:11:39.000Z",
+          "snippet": "Journalist Kara Swisher on Monday said she will leave CNN if Paramount buys Warner Bros. Discovery and takes over the network. \"I don't think they'll be good owners, I don't,\" she told reporter and Syracuse University professor Margaret Talev at an awards ceremony. \"I think they've already shown sev",
+          "source": "The Hill Tech",
           "score": 8
         }
       ]
@@ -333,6 +389,14 @@
       "count": 15,
       "articles": [
         {
+          "title": "openclaw 2026.3.24-beta.1",
+          "link": "https://github.com/openclaw/openclaw/releases/tag/v2026.3.24-beta.1",
+          "date": "2026-03-25T11:42:28.000Z",
+          "snippet": "2026.3.24-beta.1\nBreaking\nChanges\nGateway/OpenAI compatibility: add /v1/models and /v1/embeddings, and forward explicit model overrides through /v1/chat/completions and /v1/responses for broader client and RAG compatibility. Thanks @vincentkoc.\nAgents/tools: make /tools show the tools the current ag",
+          "source": "OpenClaw Releases",
+          "score": 12
+        },
+        {
           "title": "Auto mode for Claude Code",
           "link": "https://simonwillison.net/2026/Mar/24/auto-mode-for-claude-code/#atom-everything",
           "date": "2026-03-24T23:57:33.000Z",
@@ -354,6 +418,14 @@
           "date": "2026-03-24T16:00:00.000Z",
           "snippet": "Learn how to integrate the Copilot SDK into a React Native app to generate AI-powered issue summaries, with production patterns for graceful degradation and caching.\nThe post Building AI-powered GitHub issue triage with the Copilot SDK appeared first on The GitHub Blog.",
           "source": "GitHub Blog",
+          "score": 12
+        },
+        {
+          "title": "openclaw 2026.3.22",
+          "link": "https://github.com/openclaw/openclaw/releases/tag/v2026.3.22",
+          "date": "2026-03-23T23:28:35.000Z",
+          "snippet": "2026.3.22\nBreaking\nPlugins/install: bare openclaw plugins install  now prefers ClawHub before npm for npm-safe names, and only falls back to npm when ClawHub does not have that package or version. Docs: https://docs.openclaw.ai/tools/clawhub\nBrowser/Chrome MCP: remove the legacy Chrome exte",
+          "source": "OpenClaw Releases",
           "score": 12
         },
         {
@@ -397,6 +469,22 @@
           "score": 10
         },
         {
+          "title": "2026.3.23",
+          "link": "https://github.com/openclaw/openclaw/releases/tag/v2026.3.23",
+          "date": "2026-03-24T04:04:27.000Z",
+          "snippet": "Breaking\nChanges\nModelStudio/Qwen: add standard (pay-as-you-go) DashScope endpoints for China and global Qwen API keys alongside the existing Coding Plan endpoints, and relabel the provider group to Qwen (Alibaba Cloud Model Studio). (#43878)\nUI/clarity: consolidate button primitives (btn--icon, btn",
+          "source": "OpenClaw Releases",
+          "score": 10
+        },
+        {
+          "title": "v2026.3.23-2",
+          "link": "https://github.com/openclaw/openclaw/releases/tag/v2026.3.23-2",
+          "date": "2026-03-24T03:06:46.000Z",
+          "snippet": "v2026.3.23-2",
+          "source": "OpenClaw Releases",
+          "score": 10
+        },
+        {
           "title": "Quoting Neurotica",
           "link": "https://simonwillison.net/2026/Mar/23/neurotica/#atom-everything",
           "date": "2026-03-23T23:31:45.000Z",
@@ -419,38 +507,6 @@
           "snippet": "Gemini 3.1 Pro is available in public preview to Copilot Enterprise, Copilot Business, Copilot Pro, and Copilot Pro+. You’ll now be able to access the model in GitHub Copilot Chat…\nThe post Gemini 3.1 Pro is now available in JetBrains IDEs, Xcode, and Eclipse appeared first on The GitHub Blog.",
           "source": "GitHub Changelog",
           "score": 10
-        },
-        {
-          "title": "Quoting David Abram",
-          "link": "https://simonwillison.net/2026/Mar/23/david-abram/#atom-everything",
-          "date": "2026-03-23T18:56:18.000Z",
-          "snippet": "",
-          "source": "Simon Willison",
-          "score": 10
-        },
-        {
-          "title": "GitHub expands application security coverage with AI‑powered detections",
-          "link": "https://github.blog/security/application-security/github-expands-application-security-coverage-with-ai-powered-detections/",
-          "date": "2026-03-23T16:00:00.000Z",
-          "snippet": "CodeQL and AI‑powered detections work together in GitHub Code Security to identify vulnerabilities across more languages and frameworks.\nThe post GitHub expands application security coverage with AI‑powered detections appeared first on The GitHub Blog.",
-          "source": "GitHub Blog",
-          "score": 10
-        },
-        {
-          "title": "[AINews] Apple's War on Slop",
-          "link": "https://www.latent.space/p/ainews-apples-war-on-slop",
-          "date": "2026-03-25T06:18:48.000Z",
-          "snippet": "a quiet day lets us reflect on the End of Sora, LiteLLM, AI2, and other not so happy news.",
-          "source": "Latent Space",
-          "score": 9
-        },
-        {
-          "title": "[AINews] Dreamer joins Meta Superintelligence Labs — 9 month retro of Personal Superintelligence",
-          "link": "https://www.latent.space/p/ainews-dreamer-joins-meta-superintelligence",
-          "date": "2026-03-24T06:50:57.000Z",
-          "snippet": "By now we’re pretty used to LS Pod guests going on to great success, but today’s news is fast for even us - Nat and Alex at MSL have execuhired Dreamer just days after we shipped their pod, barely 11 days after we recorded with them:",
-          "source": "Latent Space",
-          "score": 9
         }
       ]
     },
@@ -481,6 +537,14 @@
           "date": "2026-03-25T07:45:26.000Z",
           "snippet": "Is your website ready for the AI-powered search revolution? Discover practical insights on adapting your CMS for modern needs.\nThe post Is Your Website Ready for AI Search? A Practical Audit for CMOs appeared first on Search Engine Journal.",
           "source": "Search Engine Journal",
+          "score": 12
+        },
+        {
+          "title": "How One Fractional CMO Uses Semrush One to Layer SEO and AEO Into One Growth Strategy",
+          "link": "https://www.semrush.com/blog/fractional-cmo-drives-visibility-with-semrush-one/",
+          "date": "2026-03-24T16:00:00.000Z",
+          "snippet": "Learn how David Haas helped Frenos grow from near-zero visibility to 18% in six months using a practical SEO and AI strategy.",
+          "source": "SEMrush Blog",
           "score": 12
         },
         {
@@ -570,14 +634,6 @@
           "snippet": "Google will soon require merchants running Shopping ads featuring certain political content to verify their accounts as election advertisers.",
           "source": "Search Engine Land",
           "score": 10
-        },
-        {
-          "title": "ChatGPT citations favor a small group of domains: Study",
-          "link": "https://searchengineland.com/chatgpt-citations-domains-study-472349",
-          "date": "2026-03-24T15:58:14.000Z",
-          "snippet": "ChatGPT pulls 6x more pages than it cites, concentrating visibility among ~30 domains and favoring topic-wide coverage, study finds.",
-          "source": "Search Engine Land",
-          "score": 10
         }
       ]
     },
@@ -603,19 +659,19 @@
           "score": 19
         },
         {
-          "title": "Watch Rocket Lab launch Europe's 1st 2 'Celeste' navigation satellites early March 25",
-          "link": "https://www.space.com/space-exploration/launches-spacecraft/rocket-lab-electron-launch-european-space-agency-celeste-navigation-satellites",
-          "date": "2026-03-24T20:00:00.000Z",
-          "snippet": "Rocket Lab will launch the first two satellites for Europe's Celeste navigation constellation early Wednesday morning (March 25), and you can watch the action live.",
-          "source": "Space.com",
-          "score": 17
-        },
-        {
           "title": "Launch Preview: Russia to debut Soyuz-5; Falcon 9 and Atlas V to launch internet satellites",
           "link": "https://www.nasaspaceflight.com/2026/03/launch-preview-032326/",
           "date": "2026-03-23T21:50:46.000Z",
           "snippet": "The United States, Russia, China, New Zealand, and Norway are all set to host launches…\nThe post Launch Preview: Russia to debut Soyuz-5; Falcon 9 and Atlas V to launch internet satellites appeared first on NASASpaceFlight.com.",
           "source": "NASASpaceflight",
+          "score": 19
+        },
+        {
+          "title": "Watch Rocket Lab launch Europe's 1st 2 'Celeste' navigation satellites early March 25",
+          "link": "https://www.space.com/space-exploration/launches-spacecraft/rocket-lab-electron-launch-european-space-agency-celeste-navigation-satellites",
+          "date": "2026-03-24T20:00:00.000Z",
+          "snippet": "Rocket Lab will launch the first two satellites for Europe's Celeste navigation constellation early Wednesday morning (March 25), and you can watch the action live.",
+          "source": "Space.com",
           "score": 17
         },
         {
@@ -641,6 +697,22 @@
           "snippet": "Katalyst Space Technologies will launch a geosynchronous orbit servicing spacecraft on an Ariane 6 in 2027.\nThe post Arianespace to launch Katalyst servicing spacecraft appeared first on SpaceNews.",
           "source": "SpaceNews",
           "score": 15
+        },
+        {
+          "title": "NASA kills lunar space station to focus on ambitious Moon base",
+          "link": "https://arstechnica.com/space/2026/03/nasa-kills-lunar-space-station-to-focus-on-ambitious-moon-base/",
+          "date": "2026-03-24T19:01:58.000Z",
+          "snippet": "\"Everyone wants to be on the surface.\"",
+          "source": "Ars Technica Space",
+          "score": 14
+        },
+        {
+          "title": "NASA unveils Space Reactor-1 Freedom mission to Mars in 2028",
+          "link": "https://www.nasaspaceflight.com/2026/03/nasa-sr1-freedom-mars-2028/",
+          "date": "2026-03-24T18:52:39.000Z",
+          "snippet": "In a significant NASA announcement, Administrator Jared Isaacman and agency leaders outlined plans for a…\nThe post NASA unveils Space Reactor-1 Freedom mission to Mars in 2028 appeared first on NASASpaceFlight.com.",
+          "source": "NASASpaceflight",
+          "score": 14
         },
         {
           "title": "NASA’s Water-Hunting Tool Will Help Scout Moon’s South Pole",
@@ -675,34 +747,18 @@
           "score": 13
         },
         {
+          "title": "NASA outlines ambitious $20 billion plan for moon base",
+          "link": "https://spaceflightnow.com/2026/03/25/nasa-outlines-ambitious-20-billion-plan-for-moon-base/",
+          "date": "2026-03-25T00:56:20.000Z",
+          "snippet": "Along with plans for a moon base, senior NASA managers also outlined work to develop nuclear power systems for use on the moon and Mars to keep astronauts, habitats and other equipment warm while providing the electricity needed for research, construction and daily operations.",
+          "source": "Spaceflight Now",
+          "score": 12
+        },
+        {
           "title": "NASA PC-12 Aircraft Makes Move to Support Flight Research Across Agency",
           "link": "https://www.nasa.gov/image-article/nasa-pc-12-aircraft-makes-move-to-support-flight-research-across-agency/",
           "date": "2026-03-24T21:49:35.000Z",
           "snippet": "A NASA Pilatus PC-12 aircraft will now be based at NASA’s Armstrong Flight Research Center in Edwards, California, in order to support flight research efforts across the agency. The PC-12 was acquired in 2022 by NASA’s Glenn Research Center in Cleveland for use in advanced technology development. Th",
-          "source": "NASA Breaking News",
-          "score": 12
-        },
-        {
-          "title": "Geopolitical shifts bring opportunities and headaches for satellite execs",
-          "link": "https://spacenews.com/geopolitical-shifts-bring-opportunities-and-headaches-for-satellite-execs/",
-          "date": "2026-03-24T21:00:01.000Z",
-          "snippet": "A shifting geopolitical landscape is driving huge business opportunities for satcoms but also bringing new supply chain and regulatory challenges, industry executives said March 24 at the Satellite Conference in Washington, D.C.\nThe post Geopolitical shifts bring opportunities and headaches for sate",
-          "source": "SpaceNews",
-          "score": 12
-        },
-        {
-          "title": "3 Ways Students Can Get Involved With Artemis",
-          "link": "https://www.nasa.gov/learning-resources/3-ways-students-can-get-involved-with-artemis/",
-          "date": "2026-03-24T20:41:08.000Z",
-          "snippet": "NASA’s Artemis program will establish a sustainable lunar presence, unlock new scientific discoveries, and develop technologies for spaceflight to Mars and beyond – and students can help shape this new era of space exploration. As America launches this new Golden Age of innovation and exploration, N",
-          "source": "NASA Breaking News",
-          "score": 12
-        },
-        {
-          "title": "NASA Selects Finalists in Student Aircraft Maintenance Competition",
-          "link": "https://www.nasa.gov/aeronautics/nasa-selects-finalists-in-student-aircraft-maintenance-competition/",
-          "date": "2026-03-24T20:30:00.000Z",
-          "snippet": "Editor’s note: This advisory was updated on March 24, 2026, to update the finalists list. NASA has selected seven student teams as finalists in the 2026 Gateways to Blue Skies Competition, giving them the resources to help address a critical challenge for U.S. aviation: aircraft maintenance.  Challe",
           "source": "NASA Breaking News",
           "score": 12
         }
@@ -714,6 +770,38 @@
       "count": 15,
       "articles": [
         {
+          "title": "Ai2 launches MolmoWeb, an open-source web agent",
+          "link": "https://thenewstack.io/ai2-launches-molmoweb-an-open-source-web-agent/",
+          "date": "2026-03-24T16:07:20.000Z",
+          "snippet": "AI agents that can browse the web and complete tasks on behalf of their users have gotten significantly better over\nThe post Ai2 launches MolmoWeb, an open-source web agent appeared first on The New Stack.",
+          "source": "The New Stack",
+          "score": 13
+        },
+        {
+          "title": "Broadcom donates Velero to CNCF — and it could reshape how Kubernetes users handle backup and disaster recovery",
+          "link": "https://thenewstack.io/broadcom-velero-cncf-kubernetes/",
+          "date": "2026-03-24T15:38:12.000Z",
+          "snippet": "Broadcom VMware announced on Monday that it will donate Velero to the CNCF sandbox project, a move the company describes\nThe post Broadcom donates Velero to CNCF — and it could reshape how Kubernetes users handle backup and disaster recovery appeared first on The New Stack.",
+          "source": "The New Stack",
+          "score": 12
+        },
+        {
+          "title": "IBM, Red Hat, and Google just donated a Kubernetes blueprint for LLM inference to the CNCF",
+          "link": "https://thenewstack.io/llm-d-cncf-kubernetes-inference/",
+          "date": "2026-03-24T15:20:01.000Z",
+          "snippet": "The marriage of Kubernetes and AI has arrived in llm‑d, a replicable Kubernetes blueprint to deploy inference stacks for any\nThe post IBM, Red Hat, and Google just donated a Kubernetes blueprint for LLM inference to the CNCF appeared first on The New Stack.",
+          "source": "The New Stack",
+          "score": 12
+        },
+        {
+          "title": "Kubernetes co-founder Brendan Burns: AI-generated code will become as invisible as assembly",
+          "link": "https://thenewstack.io/ai-generated-code-invisible/",
+          "date": "2026-03-24T14:20:40.000Z",
+          "snippet": "For this edition of The New Stack Makers, I sat down with Brendan Burns, one of the co-founders of Kubernetes,\nThe post Kubernetes co-founder Brendan Burns: AI-generated code will become as invisible as assembly appeared first on The New Stack.",
+          "source": "The New Stack",
+          "score": 12
+        },
+        {
           "title": "AI Didn’t Break Your DevOps Pipeline, Your Process was Already Rotten",
           "link": "https://devops.com/ai-didnt-break-your-devops-pipeline-your-process-was-already-rotten/",
           "date": "2026-03-24T10:10:35.000Z",
@@ -722,28 +810,28 @@
           "score": 12
         },
         {
-          "title": "CNCF Welcomes 21 New Silver Members As Global Demand Surges for Observability, AI, and Secure Cloud Native Infrastructure",
-          "link": "https://www.cncf.io/announcements/2026/03/25/cncf-welcomes-21-new-silver-members-as-global-demand-surges-for-observability-ai-and-secure-cloud-native-infrastructure/",
-          "date": "2026-03-25T08:00:00.000Z",
-          "snippet": "New global members join CNCF reflecting the rise of enterprise demand for scalable, cost-efficient cloud native technologies KUBECON + CLOUDNATIVECON EUROPE, AMSTERDAM—25 MARCH, 2025—The Cloud Native Computing Foundation® (CNCF®), which builds sustainable ecosystems for cloud native...",
-          "source": "CNCF Blog",
-          "score": 11
-        },
-        {
-          "title": "Ai2 launches MolmoWeb, an open-source web agent",
-          "link": "https://thenewstack.io/ai2-launches-molmoweb-an-open-source-web-agent/",
-          "date": "2026-03-24T16:07:20.000Z",
-          "snippet": "AI agents that can browse the web and complete tasks on behalf of their users have gotten significantly better over\nThe post Ai2 launches MolmoWeb, an open-source web agent appeared first on The New Stack.",
+          "title": "How to deploy Pi-Hole with Docker and stop ads on every device on your LAN",
+          "link": "https://thenewstack.io/pihole-docker-network-adblocking/",
+          "date": "2026-03-23T14:44:36.000Z",
+          "snippet": "How do you block ads? Most people install various and sundry ad-blocking software on their computers or add browser extensions\nThe post How to deploy Pi-Hole with Docker and stop ads on every device on your LAN appeared first on The New Stack.",
           "source": "The New Stack",
-          "score": 11
+          "score": 12
         },
         {
-          "title": "Cloud Native Computing Foundation Announces Kyverno’s Graduation",
-          "link": "https://www.cncf.io/announcements/2026/03/24/cloud-native-computing-foundation-announces-kyvernos-graduation/",
-          "date": "2026-03-24T08:00:00.000Z",
-          "snippet": "Kyverno reaches graduation after demonstrating broad enterprise adoption as platform teams adopt declarative governance Key Highlights: KUBECON + CLOUDNATIVECON NORTH EUROPE, AMSTERDAM, The Netherlands – March 24, 2026 – The Cloud Native Computing Foundation® (CNCF®), which...",
-          "source": "CNCF Blog",
-          "score": 11
+          "title": "Claude can now open apps, click buttons, and complete tasks on your Mac — but Anthropic says risks remain",
+          "link": "https://thenewstack.io/claude-computer-use/",
+          "date": "2026-03-25T11:36:54.000Z",
+          "snippet": "Anthropic has released an update to Claude Code and Claude Cowork that brings computer-use capabilities to macOS desktops, enabling autonomous\nThe post Claude can now open apps, click buttons, and complete tasks on your Mac — but Anthropic says risks remain appeared first on The New Stack.",
+          "source": "The New Stack",
+          "score": 10
+        },
+        {
+          "title": "Why most AI projects fail after the demo actually works",
+          "link": "https://thenewstack.io/ai-demo-to-production/",
+          "date": "2026-03-25T11:00:00.000Z",
+          "snippet": "Building an AI demo is easy. Shipping an AI system that runs reliably in production, day after day, under load,\nThe post Why most AI projects fail after the demo actually works appeared first on The New Stack.",
+          "source": "The New Stack",
+          "score": 10
         },
         {
           "title": "Why Investing in DevOps Platforms Pays off for Businesses",
@@ -770,26 +858,26 @@
           "score": 10
         },
         {
-          "title": "Broadcom donates Velero to CNCF — and it could reshape how Kubernetes users handle backup and disaster recovery",
-          "link": "https://thenewstack.io/broadcom-velero-cncf-kubernetes/",
-          "date": "2026-03-24T15:38:12.000Z",
-          "snippet": "Broadcom VMware announced on Monday that it will donate Velero to the CNCF sandbox project, a move the company describes\nThe post Broadcom donates Velero to CNCF — and it could reshape how Kubernetes users handle backup and disaster recovery appeared first on The New Stack.",
+          "title": "WebAssembly could solve AI agents’ most dangerous security gap",
+          "link": "https://thenewstack.io/webassembly-sandboxing-ai-agents/",
+          "date": "2026-03-24T16:01:42.000Z",
+          "snippet": "AI agent-generated code poses an often-overlooked threat: the possibility that an agent will generate unchecked, potentially lethal commands. Think of\nThe post WebAssembly could solve AI agents’ most dangerous security gap appeared first on The New Stack.",
           "source": "The New Stack",
           "score": 10
         },
         {
-          "title": "IBM, Red Hat, and Google just donated a Kubernetes blueprint for LLM inference to the CNCF",
-          "link": "https://thenewstack.io/llm-d-cncf-kubernetes-inference/",
-          "date": "2026-03-24T15:20:01.000Z",
-          "snippet": "The marriage of Kubernetes and AI has arrived in llm‑d, a replicable Kubernetes blueprint to deploy inference stacks for any\nThe post IBM, Red Hat, and Google just donated a Kubernetes blueprint for LLM inference to the CNCF appeared first on The New Stack.",
+          "title": "PwC’s AI agents are now your consultants — whether you’re ready or not",
+          "link": "https://thenewstack.io/pwcs-ai-agents-are-now-your-consultants-whether-youre-ready-or-not/",
+          "date": "2026-03-24T13:00:00.000Z",
+          "snippet": "PwC is putting its AI agents directly in front of clients and cutting out the traditional back-and-forth with consultants as\nThe post PwC’s AI agents are now your consultants — whether you’re ready or not appeared first on The New Stack.",
           "source": "The New Stack",
           "score": 10
         },
         {
-          "title": "Kubernetes co-founder Brendan Burns: AI-generated code will become as invisible as assembly",
-          "link": "https://thenewstack.io/ai-generated-code-invisible/",
-          "date": "2026-03-24T14:20:40.000Z",
-          "snippet": "For this edition of The New Stack Makers, I sat down with Brendan Burns, one of the co-founders of Kubernetes,\nThe post Kubernetes co-founder Brendan Burns: AI-generated code will become as invisible as assembly appeared first on The New Stack.",
+          "title": "Exton Linux’s light version will “enlighten” you",
+          "link": "https://thenewstack.io/exton-linuxs-light-version-will-enlighten-you/",
+          "date": "2026-03-24T12:43:25.000Z",
+          "snippet": "I’ve been using Linux for a very, very long time. My Linux usage goes way back to the days of\nThe post Exton Linux’s light version will “enlighten” you appeared first on The New Stack.",
           "source": "The New Stack",
           "score": 10
         },
@@ -800,55 +888,14 @@
           "snippet": "DevOps has changed fast in the last decade. Scripts became pipelines. Pipelines became platforms. Now, AI agents in DevOps automation are leading the next wave.  Today’s cloud systems are complex. Teams manage containers, microservices and hybrid clouds. Manual work slows them down. Traditional auto",
           "source": "DevOps.com",
           "score": 10
-        },
-        {
-          "title": "Critical Cloud Becomes the World’s First “Powered by Datadog” Partner",
-          "link": "https://devops.com/critical-cloud-becomes-the-worlds-first-powered-by-datadog-partner/",
-          "date": "2026-03-24T09:00:16.000Z",
-          "snippet": "Cardiff, Wales, 24th March 2026, CyberNewswire",
-          "source": "DevOps.com",
-          "score": 10
-        },
-        {
-          "title": "CNCF and SlashData Report Finds Platform Engineering Tools Maturing as Organizations Prepare for AI-Driven Infrastructure",
-          "link": "https://www.cncf.io/announcements/2026/03/24/cncf-and-slashdata-report-finds-platform-engineering-tools-maturing-as-organizations-prepare-for-ai-driven-infrastructure/",
-          "date": "2026-03-24T08:00:00.000Z",
-          "snippet": "New CNCF Technology Radar survey shows which cloud native tools developers view as mature and ready for broad adoption Key Highlights: AMSTERDAM, KUBECON + CLOUDNATIVECON EUROPE– March 24, 2026 – The Cloud Native Computing Foundation®  (CNCF®),...",
-          "source": "CNCF Blog",
-          "score": 10
-        },
-        {
-          "title": "How to deploy Pi-Hole with Docker and stop ads on every device on your LAN",
-          "link": "https://thenewstack.io/pihole-docker-network-adblocking/",
-          "date": "2026-03-23T14:44:36.000Z",
-          "snippet": "How do you block ads? Most people install various and sundry ad-blocking software on their computers or add browser extensions\nThe post How to deploy Pi-Hole with Docker and stop ads on every device on your LAN appeared first on The New Stack.",
-          "source": "The New Stack",
-          "score": 10
-        },
-        {
-          "title": "Claude can now open apps, click buttons, and complete tasks on your Mac — but Anthropic says risks remain",
-          "link": "https://thenewstack.io/claude-computer-use/",
-          "date": "2026-03-25T11:36:54.000Z",
-          "snippet": "Anthropic has released an update to Claude Code and Claude Cowork that brings computer-use capabilities to macOS desktops, enabling autonomous\nThe post Claude can now open apps, click buttons, and complete tasks on your Mac — but Anthropic says risks remain appeared first on The New Stack.",
-          "source": "The New Stack",
-          "score": 8
         }
       ]
     },
     "powershell": {
       "label": "💠 PowerShell & Automation",
       "emoji": "💠",
-      "count": 1,
-      "articles": [
-        {
-          "title": "The PowerShell Podcast From School IT Intern to Systems Architect with Chris Thomas",
-          "link": "https://powershell.org/2026/03/the-powershell-podcast-from-school-it-intern-to-systems-architect-with-chris-thomas/",
-          "date": "2026-03-23T14:51:04.000Z",
-          "snippet": "K-12 IT veteran Chris Thomas joins The PowerShell Podcast to share his 26-year journey in educational technology, from a high school IT internship to becoming an Endpoint Cloud Systems Architect …",
-          "source": "PowerShell.org",
-          "score": 10
-        }
-      ]
+      "count": 0,
+      "articles": []
     }
   }
 }
