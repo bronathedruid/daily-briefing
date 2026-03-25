@@ -1,20 +1,12 @@
 {
   "date": "2026-03-25",
-  "generated": "2026-03-25T11:46:28.425Z",
+  "generated": "2026-03-25T11:53:14.238Z",
   "categories": {
     "ai-models": {
       "label": "🤖 AI Models & Releases",
       "emoji": "🤖",
       "count": 15,
       "articles": [
-        {
-          "title": "Import AI 450: China's electronic warfare model; traumatized LLMs; and a scaling law for cyberattacks",
-          "link": "https://importai.substack.com/p/import-ai-450-chinas-electronic-warfare",
-          "date": "2026-03-23T12:31:45.000Z",
-          "snippet": "How will timeless minds value time?",
-          "source": "Import AI Newsletter",
-          "score": 14
-        },
         {
           "title": "Sparse but Critical: A Token-Level Analysis of Distributional Shifts in RLVR Fine-Tuning of LLMs",
           "link": "https://arxiv.org/abs/2603.22446",
@@ -124,6 +116,14 @@
           "link": "https://arxiv.org/abs/2603.22303",
           "date": "2026-03-25T04:00:00.000Z",
           "snippet": "arXiv:2603.22303v1 Announce Type: cross \nAbstract: Hallucinations in large language models (LLMs) remain a central obstacle to trustworthy deployment, motivating detectors that are accurate, lightweight, and broadly applicable. Since an LLM with a prompt defines a conditional distribution, we argue",
+          "source": "arXiv cs.AI",
+          "score": 10
+        },
+        {
+          "title": "DAQ: Delta-Aware Quantization for Post-Training LLM Weight Compression",
+          "link": "https://arxiv.org/abs/2603.22324",
+          "date": "2026-03-25T04:00:00.000Z",
+          "snippet": "arXiv:2603.22324v1 Announce Type: cross \nAbstract: We introduce Delta-Aware Quantization (DAQ), a data-free post-training quantization framework that preserves the knowledge acquired during post-training. Standard quantization objectives minimize reconstruction error but are agnostic to the base mod",
           "source": "arXiv cs.AI",
           "score": 10
         }
@@ -548,14 +548,6 @@
           "score": 12
         },
         {
-          "title": "SEO’s biggest threat in 2026? Your own organization",
-          "link": "https://searchengineland.com/seos-biggest-threat-in-2026-your-own-organization-472281",
-          "date": "2026-03-24T15:00:00.000Z",
-          "snippet": "From AI overreliance to fragmented data and poor collaboration, internal issues are quietly undermining SEO performance. Here’s what to fix.",
-          "source": "Search Engine Land",
-          "score": 12
-        },
-        {
           "title": "Research Shows Where Persona Prompting Works And When It Backfires via @sejournal, @martinibuster",
           "link": "https://www.searchenginejournal.com/research-you-are-an-expert-prompts-can-damage-factual-accuracy/570397/",
           "date": "2026-03-24T12:38:07.000Z",
@@ -580,22 +572,6 @@
           "score": 12
         },
         {
-          "title": "Google releases March 2026 spam update",
-          "link": "https://searchengineland.com/google-releases-march-2026-spam-update-472411",
-          "date": "2026-03-24T19:27:54.000Z",
-          "snippet": "Google says this is a standard spam update. It’s rolling out across all languages and locations and may take only a few days.",
-          "source": "Search Engine Land",
-          "score": 11
-        },
-        {
-          "title": "The first-party data illusion by AtData",
-          "link": "https://searchengineland.com/the-first-party-data-illusion-471996",
-          "date": "2026-03-25T11:00:00.000Z",
-          "snippet": "Marketers focus on first-party data promised control. But ownership didn’t solve identity accuracy, activity visibility or customer truth.",
-          "source": "Search Engine Land",
-          "score": 10
-        },
-        {
           "title": "Google Adds AI & Bot Labels To Forum, Q&A Structured Data via @sejournal, @MattGSouthern",
           "link": "https://www.searchenginejournal.com/google-adds-ai-bot-labels-to-forum-qa-structured-data/570425/",
           "date": "2026-03-24T19:50:55.000Z",
@@ -612,27 +588,51 @@
           "score": 10
         },
         {
-          "title": "Reddit introduces collection ads, deal overlays, Shopify integration",
-          "link": "https://searchengineland.com/reddit-collection-ads-deal-overlays-shopify-472399",
-          "date": "2026-03-24T18:10:49.000Z",
-          "snippet": "Reddit is launching new Dynamic Product Ad formats and a Shopify integration to help retailers tap into the platform's audience.",
-          "source": "Search Engine Land",
+          "title": "Is AI Content Bad for SEO? No, and It Never Will Be (7 Reasons)",
+          "link": "https://ahrefs.com/blog/ai-content-is-not-bad-for-seo/",
+          "date": "2026-03-24T14:46:34.000Z",
+          "snippet": "The real issue was never AI or “automatically generated content” itself. Google penalizes the same thing it always has: content that is thin, unhelpful, and spammy. AI just makes it much easier to create that kind of content at scale.…\nRead more ›",
+          "source": "Ahrefs Blog",
           "score": 10
         },
         {
-          "title": "AI citations favor listicles, articles, product pages: Study",
-          "link": "https://searchengineland.com/ai-citations-favor-listicles-articles-product-pages-study-472364",
-          "date": "2026-03-24T16:28:18.000Z",
-          "snippet": "Study of 75,000 AI answers shows listicles, articles and product pages drive 52% of citations, with intent deciding what gets cited.",
-          "source": "Search Engine Land",
+          "title": "The Science Of How AI Picks Its Sources via @sejournal, @Kevin_Indig",
+          "link": "https://www.searchenginejournal.com/the-science-of-how-ai-picks-its-sources/570328/",
+          "date": "2026-03-24T13:30:52.000Z",
+          "snippet": "New ChatGPT citation data shows a small group of domains owns most visibility, while broad, cluster-based pages outperform single-intent content.\nThe post The Science Of How AI Picks Its Sources appeared first on Search Engine Journal.",
+          "source": "Search Engine Journal",
           "score": 10
         },
         {
-          "title": "Google is tightening political content rules for Shopping ads starting April 16",
-          "link": "https://searchengineland.com/google-is-tightening-political-content-rules-for-shopping-ads-starting-april-16-472367",
-          "date": "2026-03-24T16:22:36.000Z",
-          "snippet": "Google will soon require merchants running Shopping ads featuring certain political content to verify their accounts as election advertisers.",
-          "source": "Search Engine Land",
+          "title": "How To Determine What Paid Media Channels Are Right for You via @sejournal, @timothyjjensen",
+          "link": "https://www.searchenginejournal.com/how-to-determine-what-paid-media-channels-are-right-for-you/569731/",
+          "date": "2026-03-24T12:00:34.000Z",
+          "snippet": "Choosing the right PPC channels starts with clear goals, budget alignment, and understanding where your audience actually converts.\nThe post How To Determine What Paid Media Channels Are Right for You appeared first on Search Engine Journal.",
+          "source": "Search Engine Journal",
+          "score": 10
+        },
+        {
+          "title": "The Agency Playbook for Surviving the Agentic AI Era",
+          "link": "https://www.searchenginejournal.com/rundowns/the-agency-playbook-for-surviving-the-agentic-ai-era/",
+          "date": "2026-03-24T07:50:34.000Z",
+          "snippet": "The post The Agency Playbook for Surviving the Agentic AI Era appeared first on Search Engine Journal.",
+          "source": "Search Engine Journal",
+          "score": 10
+        },
+        {
+          "title": "Bing AI Dashboard Maps Grounding Queries To Cited Pages via @sejournal, @MattGSouthern",
+          "link": "https://www.searchenginejournal.com/bing-ai-dashboard-maps-grounding-queries-to-cited-pages/570323/",
+          "date": "2026-03-24T05:00:14.000Z",
+          "snippet": "Bing's AI Performance dashboard now maps grounding queries to cited pages, letting you connect AI citation data to specific URLs on your site.\nThe post Bing AI Dashboard Maps Grounding Queries To Cited Pages appeared first on Search Engine Journal.",
+          "source": "Search Engine Journal",
+          "score": 10
+        },
+        {
+          "title": "7 Google Ads Shortcuts Every PPC Manager Should Be Using via @sejournal, @brookeosmundson",
+          "link": "https://www.searchenginejournal.com/google-ads-shortcuts-every-ppc-manager-should-be-using/568045/",
+          "date": "2026-03-23T12:00:05.000Z",
+          "snippet": "Save time in Google Ads using seven practical shortcuts that simplify workflows and highlight optimization opportunities.\nThe post 7 Google Ads Shortcuts Every PPC Manager Should Be Using appeared first on Search Engine Journal.",
+          "source": "Search Engine Journal",
           "score": 10
         }
       ]
@@ -810,6 +810,14 @@
           "score": 12
         },
         {
+          "title": "Welcome llm-d to the CNCF: Evolving Kubernetes into SOTA AI infrastructure",
+          "link": "https://www.cncf.io/blog/2026/03/24/welcome-llm-d-to-the-cncf-evolving-kubernetes-into-sota-ai-infrastructure/",
+          "date": "2026-03-24T07:45:00.000Z",
+          "snippet": "We are thrilled to announce that llm-d has officially been accepted as a Cloud Native Computing Foundation (CNCF) Sandbox project! As generative AI transitions from research labs to production environments, platform engineering teams are facing a...",
+          "source": "CNCF Blog",
+          "score": 12
+        },
+        {
           "title": "How to deploy Pi-Hole with Docker and stop ads on every device on your LAN",
           "link": "https://thenewstack.io/pihole-docker-network-adblocking/",
           "date": "2026-03-23T14:44:36.000Z",
@@ -880,22 +888,63 @@
           "snippet": "I’ve been using Linux for a very, very long time. My Linux usage goes way back to the days of\nThe post Exton Linux’s light version will “enlighten” you appeared first on The New Stack.",
           "source": "The New Stack",
           "score": 10
-        },
-        {
-          "title": "Are AI Agents the Future of DevOps Automation?",
-          "link": "https://devops.com/are-ai-agents-the-future-of-devops-automation/",
-          "date": "2026-03-24T10:23:42.000Z",
-          "snippet": "DevOps has changed fast in the last decade. Scripts became pipelines. Pipelines became platforms. Now, AI agents in DevOps automation are leading the next wave.  Today’s cloud systems are complex. Teams manage containers, microservices and hybrid clouds. Manual work slows them down. Traditional auto",
-          "source": "DevOps.com",
-          "score": 10
         }
       ]
     },
     "powershell": {
       "label": "💠 PowerShell & Automation",
       "emoji": "💠",
-      "count": 0,
-      "articles": []
+      "count": 6,
+      "articles": [
+        {
+          "title": "Windows 11 Out‑of‑Band Update Fixes Microsoft Account Sign‑In Issues",
+          "link": "https://petri.com/windows-11-update-fixes-microsoft-account-sign-in/",
+          "date": "2026-03-24T14:32:45.000Z",
+          "snippet": "Microsoft has rolled out an out-of-band update to fix account sign-in issues in Windows 11 triggered by the March 2026 update. The emergency patch (KB5085516) is now available for devices running Windows 11 versions 24H2 and 25H2. According to Microsoft, users have reported that the March security u",
+          "source": "Petri IT",
+          "score": 10
+        },
+        {
+          "title": "How to Create and Access Shared Folders in Windows 11 (Step‑By‑Step)",
+          "link": "https://petri.com/an-introduction-to-windows-file-sharing/",
+          "date": "2026-03-24T14:22:24.000Z",
+          "snippet": "Windows file sharing allows any Windows PC to host a file share, making files available to other computers on the same network. Better still, files located within the shared folder are not solely accessible to Windows devices. Apple devices running MacOS can also access the shared folder, as can Lin",
+          "source": "Petri IT",
+          "score": 10
+        },
+        {
+          "title": "The PowerShell Podcast From School IT Intern to Systems Architect with Chris Thomas",
+          "link": "https://powershell.org/2026/03/the-powershell-podcast-from-school-it-intern-to-systems-architect-with-chris-thomas/",
+          "date": "2026-03-23T14:51:04.000Z",
+          "snippet": "K-12 IT veteran Chris Thomas joins The PowerShell Podcast to share his 26-year journey in educational technology, from a high school IT internship to becoming an Endpoint Cloud Systems Architect …",
+          "source": "PowerShell.org",
+          "score": 10
+        },
+        {
+          "title": "Microsoft Defender Enhances Identity Security with AI-Driven Threat Detection and Response",
+          "link": "https://petri.com/microsoft-defender-ai-identity-security-update/",
+          "date": "2026-03-24T20:15:05.000Z",
+          "snippet": "As cyberattacks grow faster and more identity‑driven, Microsoft is enhancing how organizations defend their digital environments. At RSA 2026, the company announced major Microsoft Defender and Security Copilot updates to help organizations defend against the latest threats. Microsoft emphasizes tha",
+          "source": "Petri IT",
+          "score": 8
+        },
+        {
+          "title": "Microsoft Extends Unified RBAC to Sentinel With Row‑Level Access Controls",
+          "link": "https://petri.com/microsoft-sentinel-unified-rbac-row-level-access/",
+          "date": "2026-03-23T15:39:18.000Z",
+          "snippet": "Microsoft Sentinel is raising the bar for secure collaboration by adding support for Unified RBAC and row-level access controls. The update enables multiple teams to operate within a shared environment while maintaining strict governance, granular visibility, and streamlined management. “This new ca",
+          "source": "Petri IT",
+          "score": 8
+        },
+        {
+          "title": "CISA Warns Attackers Abused Microsoft Intune to Wipe Devices in Stryker Cyberattack",
+          "link": "https://petri.com/cisa-microsoft-intune-abuse-stryker-cyberattack/",
+          "date": "2026-03-23T13:45:50.000Z",
+          "snippet": "The Cybersecurity and Infrastructure Security Agency has issued a new alert urging organizations to harden their endpoint management systems after a recent cyberattack on Stryker exposed critical security gaps. The advisory highlights how weaknesses in administrative controls can be exploited to car",
+          "source": "Petri IT",
+          "score": 8
+        }
+      ]
     }
   }
 }
