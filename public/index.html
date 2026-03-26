@@ -128,6 +128,13 @@
   
   <nav class="nav"><div class="nav-inner"><a href="#ai-models" class="nav-link">🤖<span class="nav-label">AI Models &amp; Releases</span><span class="nav-count">15</span></a><a href="#government-policy" class="nav-link">🏛️<span class="nav-label">Government &amp; Policy</span><span class="nav-count">15</span></a><a href="#security" class="nav-link">🔐<span class="nav-label">Cybersecurity</span><span class="nav-count">15</span></a><a href="#coding-agents" class="nav-link">🛠️<span class="nav-label">Coding Agents &amp; AI Tools</span><span class="nav-count">15</span></a><a href="#marketing-seo" class="nav-link">📈<span class="nav-label">Marketing &amp; SEO</span><span class="nav-count">15</span></a><a href="#space-rockets" class="nav-link">🚀<span class="nav-label">Space &amp; Rockets</span><span class="nav-count">15</span></a><a href="#devops" class="nav-link">⚙️<span class="nav-label">DevOps &amp; Platform Engineering</span><span class="nav-count">15</span></a><a href="#powershell" class="nav-link">💠<span class="nav-label">PowerShell &amp; Automation</span><span class="nav-count">3</span></a></div></nav>
   <div class="toolbar-spacer"></div>
+  <div id="daily-song" style="max-width:1400px;margin:0.5rem auto;padding:0 2rem;">
+    <details style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:0.75rem 1rem;">
+      <summary style="cursor:pointer;color:var(--fg2);font-size:0.85rem;">🎵 Today's AI-Generated Song</summary>
+      <audio controls preload="none" style="width:100%;margin-top:0.5rem;" src="daily-song.mp3"></audio>
+    </details>
+  </div>
+  <script>fetch('daily-song.mp3',{method:'HEAD'}).then(r=>{if(!r.ok)document.getElementById('daily-song').style.display='none'}).catch(()=>{document.getElementById('daily-song').style.display='none'})</script>
   
   <main class="main">
     
