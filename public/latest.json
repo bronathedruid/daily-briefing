@@ -1,6 +1,6 @@
 {
-  "date": "2026-03-25",
-  "generated": "2026-03-25T16:46:36.155Z",
+  "date": "2026-03-26",
+  "generated": "2026-03-26T00:03:22.547Z",
   "categories": {
     "ai-models": {
       "label": "🤖 AI Models & Releases",
@@ -45,14 +45,6 @@
           "date": "2026-03-25T04:00:00.000Z",
           "snippet": "arXiv:2410.12164v2 Announce Type: replace \nAbstract: Language models such as GPT and Llama have shown remarkable ability on diverse natural language tasks, yet their performance on complex table tasks (e.g., NL-to-Code and data cleaning) remains suboptimal. Improving performance typically requires t",
           "source": "arXiv cs.CL (NLP)",
-          "score": 12
-        },
-        {
-          "title": "ChatGPT and Gemini are fighting to be the AI bot that sells you stuff",
-          "link": "https://www.theverge.com/ai-artificial-intelligence/899677/openai-google-gemini-ai-shopping-features",
-          "date": "2026-03-24T17:13:00.000Z",
-          "snippet": "The AI-powered shopping rivalry is heating up as Google and OpenAI launch new features to help you buy things while interacting with their chatbots. Now, Google is teaming up with Gap Inc to allow its Gemini AI assistant to purchase clothes on your behalf from any of its stores, which include Gap, O",
-          "source": "The Verge AI",
           "score": 12
         },
         {
@@ -126,6 +118,14 @@
           "snippet": "arXiv:2603.22943v1 Announce Type: new \nAbstract: Personalized text-to-image generation lets users fine-tune diffusion models into repositories of concept-specific checkpoints, but serving these repositories efficiently is difficult for two reasons: natural-language requests are often ambiguous and c",
           "source": "arXiv cs.AI",
           "score": 10
+        },
+        {
+          "title": "LLM Olympiad: Why Model Evaluation Needs a Sealed Exam",
+          "link": "https://arxiv.org/abs/2603.23292",
+          "date": "2026-03-25T04:00:00.000Z",
+          "snippet": "arXiv:2603.23292v1 Announce Type: new \nAbstract: Benchmarks and leaderboards are how NLP most often communicates progress, but in the LLM era they are increasingly easy to misread. Scores can reflect benchmark-chasing, hidden evaluation choices, or accidental exposure to test content -- not just bro",
+          "source": "arXiv cs.AI",
+          "score": 10
         }
       ]
     },
@@ -134,6 +134,14 @@
       "emoji": "🏛️",
       "count": 15,
       "articles": [
+        {
+          "title": "EFF Sues for Answers About Medicare's AI Experiment",
+          "link": "https://www.eff.org/press/releases/eff-sues-answers-about-medicares-ai-experiment",
+          "date": "2026-03-25T17:20:02.000Z",
+          "snippet": "Little Is Known About AI That Could Affect Millions of Seniors' Care\n\n\n\nSAN FRANCISCO – The Electronic Frontier Foundation (EFF) today filed a Freedom of Information Act (FOIA) lawsuit against the Centers for Medicare & Medicaid Services (CMS) seeking records about a multi-state program that is usin",
+          "source": "EFF Deeplinks",
+          "score": 10
+        },
         {
           "title": "👓 Who's Really Watching What Smartglasses See? | EFFector 38.6",
           "link": "https://www.eff.org/deeplinks/2026/03/whos-really-watching-what-smartglasses-see-effector-385",
@@ -191,6 +199,46 @@
           "score": 9
         },
         {
+          "title": "Trump administration settles social media censorship case",
+          "link": "https://thehill.com/policy/technology/5801022-doj-settlement-social-media/",
+          "date": "2026-03-25T21:44:37.000Z",
+          "snippet": "The Justice Department has settled a lawsuit over allegations that the Biden administration pressured social media companies to remove or suppress speech. The settlement, filed in a Louisiana federal court, will bar the Centers for Disease Control and Prevention, the Cybersecurity and Infrastructure",
+          "source": "The Hill Tech",
+          "score": 8
+        },
+        {
+          "title": "Sanders, Ocasio-Cortez unveil bill to halt data center construction",
+          "link": "https://thehill.com/policy/technology/5801008-ai-data-center-moratorium-act/",
+          "date": "2026-03-25T21:35:32.000Z",
+          "snippet": "Sen. Bernie Sanders (I-Vt.) and Rep. Alexandria Ocasio-Cortez (D-N.Y.) plan to introduce legislation that would bar construction of all new data centers until “strong national safeguards are in place.” The pair announced the Artificial Intelligence Data Center Moratorium Act on Wednesday, which aims",
+          "source": "The Hill Tech",
+          "score": 8
+        },
+        {
+          "title": "Meta, YouTube must pay $3M to woman who got hooked on apps as a child",
+          "link": "https://arstechnica.com/tech-policy/2026/03/meta-youtube-must-pay-3m-to-woman-who-got-hooked-on-apps-as-a-child/",
+          "date": "2026-03-25T19:03:36.000Z",
+          "snippet": "Meta emerges as the biggest loser as second child safety trial verdict hits.",
+          "source": "Ars Technica Policy",
+          "score": 8
+        },
+        {
+          "title": "Supreme Court rejects Sony's attempt to kick music pirates off the Internet",
+          "link": "https://arstechnica.com/tech-policy/2026/03/supreme-court-rejects-sonys-attempt-to-kick-music-pirates-off-the-internet/",
+          "date": "2026-03-25T18:25:13.000Z",
+          "snippet": "Sony's 1984 Betamax win helps Cox beat Sony in important online piracy case.",
+          "source": "Ars Technica Policy",
+          "score": 8
+        },
+        {
+          "title": "Meta, YouTube found liable in landmark social media trial",
+          "link": "https://thehill.com/policy/technology/5800435-meta-youtube-social-media-addition-trial-liable/",
+          "date": "2026-03-25T17:38:27.000Z",
+          "snippet": "A California jury on Wednesday found social media giants Meta and YouTube liable in a landmark social media addiction trial, determining the companies were negligent in their design or operation of the platforms.  It caps off the nearly two-month trial against Meta, the parent company of Instagram,",
+          "source": "The Hill Tech",
+          "score": 8
+        },
+        {
           "title": "Meta loses trial after arguing child exploitation was “inevitable” on its apps",
           "link": "https://arstechnica.com/tech-policy/2026/03/meta-loses-trial-after-arguing-child-exploitation-was-inevitable-on-its-apps/",
           "date": "2026-03-25T14:46:43.000Z",
@@ -203,54 +251,6 @@
           "link": "https://arstechnica.com/tech-policy/2026/03/apple-begins-age-checks-in-the-uk-with-latest-ios-update/",
           "date": "2026-03-25T14:08:32.000Z",
           "snippet": "Move follows government pressure on smartphone makers to do more to protect children online.",
-          "source": "Ars Technica Policy",
-          "score": 8
-        },
-        {
-          "title": "OpenAI shutting down video generator Sora",
-          "link": "https://thehill.com/policy/technology/5799879-openai-sora-video-app-shutdown/",
-          "date": "2026-03-25T13:49:58.000Z",
-          "snippet": "OpenAI announced Tuesday it will shut down its AI-powered video generator app Sora, but it did not provide further details on the decision.  “We’re saying goodbye to Sora. To everyone who created with Sora shared it, and built community around it: thank you,” the company wrote Tuesday on the social",
-          "source": "The Hill Tech",
-          "score": 8
-        },
-        {
-          "title": "'White noise on steroids': Aurora City Council passes noise restrictions on data centers as residents clamor for change",
-          "link": "https://thehill.com/policy/technology/5799867-white-noise-on-steroids-aurora-city-council-passes-noise-restrictions-on-data-centers-as-residents-clamor-for-change/",
-          "date": "2026-03-25T13:42:02.000Z",
-          "snippet": "The City of Aurora is set to vote on regulations governing existing data centers within the municipality, addressing concerns over noise, water, energy use, pollution, and the lack of public engagement in the site selection and construction process.",
-          "source": "The Hill Tech",
-          "score": 8
-        },
-        {
-          "title": "Lawmakers ramp up fight against sports betting on prediction markets",
-          "link": "https://thehill.com/business/5798917-sports-betting-prediction-markets-cftc/",
-          "date": "2026-03-25T10:00:00.000Z",
-          "snippet": "The political battle over sports betting on prediction markets is heating up as professional leagues dive deeper into the national gambling frenzy. Lawmakers in both parties are attempting to stifle the growing popularity of sports betting on prediction markets as a top Trump administration regulato",
-          "source": "The Hill Tech",
-          "score": 8
-        },
-        {
-          "title": "Judge says Pentagon’s Anthropic ban looks like 'attempt to cripple' company",
-          "link": "https://thehill.com/policy/technology/5799357-anthropic-challenges-pentagon-designation/",
-          "date": "2026-03-24T23:36:07.000Z",
-          "snippet": "A federal judge in California hammered the Pentagon on Tuesday for its decision to label Anthropic a supply chain risk, signalling skepticism over what she described as a “troubling” move from the federal government.  U.S. District Judge Rita Lin, based in San Francisco, suggested during Tuesday’s h",
-          "source": "The Hill Tech",
-          "score": 8
-        },
-        {
-          "title": "Anthropic's Claude used by Pentagon in war with Iran, official confirms",
-          "link": "https://thehill.com/policy/defense/5799136-claude-pentagon-iran-war/",
-          "date": "2026-03-24T21:39:42.000Z",
-          "snippet": "Anthropic’s signature AI model Claude is being used by the Pentagon during the U.S. military’s ongoing war against Iran, a Pentagon official confirmed Tuesday during a Senate subcommittee hearing.  Pentagon Chief Information Officer Kirsten A. Davies confirmed to Sen. Jack Reed (D-R.I.), the ranking",
-          "source": "The Hill Tech",
-          "score": 8
-        },
-        {
-          "title": "Electronic Frontier Foundation to swap leaders as AI, ICE fights escalate",
-          "link": "https://arstechnica.com/tech-policy/2026/03/trump-made-opposing-government-spying-cool-again-effs-departing-chief-says/",
-          "date": "2026-03-24T21:00:49.000Z",
-          "snippet": "Public interest in government tech abuses is peaking. EFF's new leader plans to build on that.",
           "source": "Ars Technica Policy",
           "score": 8
         }
@@ -366,18 +366,18 @@
           "score": 12
         },
         {
-          "title": "North Korean Hackers Abuse VS Code Auto-Run Tasks to Deploy StoatWaffle Malware",
-          "link": "https://thehackernews.com/2026/03/north-korean-hackers-abuse-vs-code-auto.html",
-          "date": "2026-03-23T18:09:00.000Z",
-          "snippet": "The North Korean threat actors behind the Contagious Interview campaign, also tracked as WaterPlum, have been attributed to a malware family tracked as StoatWaffle that's distributed via malicious Microsoft Visual Studio Code (VS Code) projects.\nThe use of VS Code \"tasks.json\" to distribute malware",
-          "source": "The Hacker News",
-          "score": 12
+          "title": "New Torg Grabber infostealer malware targets 728 crypto wallets",
+          "link": "https://www.bleepingcomputer.com/news/security/new-torg-grabber-infostealer-malware-targets-728-crypto-wallets/",
+          "date": "2026-03-25T18:32:37.000Z",
+          "snippet": "A new info-stealing malware called Torg Grabber is stealing sensitive data from 850 browser extensions, more than 700 of them for cryptocurrency wallets. [...]",
+          "source": "BleepingComputer",
+          "score": 11
         },
         {
           "title": "SANS: Top 5 Most Dangerous New Attack Techniques to Watch",
           "link": "https://www.darkreading.com/threat-intelligence/sans-most-dangerous-attack-techniques",
           "date": "2026-03-25T14:40:33.000Z",
-          "snippet": "For the first time, SANS Institute's five top attack techniques all have one thing in common – AI.",
+          "snippet": "For the first time, SANS Institute's five top attack techniques all have one thing in common — AI.",
           "source": "Dark Reading",
           "score": 11
         }
@@ -389,9 +389,25 @@
       "count": 15,
       "articles": [
         {
+          "title": "Copilot usage metrics now identify active Copilot coding agent users",
+          "link": "https://github.blog/changelog/2026-03-25-copilot-usage-metrics-now-identify-active-copilot-coding-agent-users",
+          "date": "2026-03-25T18:49:10.000Z",
+          "snippet": "Copilot usage metrics now indicate which users have Copilot coding agent (CCA) activity. Enterprise and organization admins can identify which users are actively using Copilot coding agent on daily and…\nThe post Copilot usage metrics now identify active Copilot coding agent users appeared first on T",
+          "source": "GitHub Changelog",
+          "score": 14
+        },
+        {
+          "title": "Updates to GitHub Copilot interaction data usage policy",
+          "link": "https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/",
+          "date": "2026-03-25T19:02:29.000Z",
+          "snippet": "From April 24 onward, interaction data—specifically inputs, outputs, code snippets, and associated context—from Copilot Free, Pro, and Pro+ users will be used to train and improve our AI models unless they opt out.\nThe post Updates to GitHub Copilot interaction data usage policy appeared first on Th",
+          "source": "GitHub Blog",
+          "score": 12
+        },
+        {
           "title": "openclaw 2026.3.24",
           "link": "https://github.com/openclaw/openclaw/releases/tag/v2026.3.24",
-          "date": "2026-03-25T16:35:52.000Z",
+          "date": "2026-03-25T17:06:39.000Z",
           "snippet": "Breaking\nChanges\nGateway/OpenAI compatibility: add /v1/models and /v1/embeddings, and forward explicit model overrides through /v1/chat/completions and /v1/responses for broader client and RAG compatibility. Thanks @vincentkoc.\nAgents/tools: make /tools show the tools the current agent can actually",
           "source": "OpenClaw Releases",
           "score": 12
@@ -437,12 +453,44 @@
           "score": 12
         },
         {
-          "title": "openclaw 2026.3.22",
-          "link": "https://github.com/openclaw/openclaw/releases/tag/v2026.3.22",
-          "date": "2026-03-23T23:28:35.000Z",
-          "snippet": "2026.3.22\nBreaking\nPlugins/install: bare openclaw plugins install  now prefers ClawHub before npm for npm-safe names, and only falls back to npm when ClawHub does not have that package or version. Docs: https://docs.openclaw.ai/tools/clawhub\nBrowser/Chrome MCP: remove the legacy Chrome exte",
-          "source": "OpenClaw Releases",
-          "score": 12
+          "title": "datasette-files-s3 0.1a1",
+          "link": "https://simonwillison.net/2026/Mar/25/datasette-files-s3/#atom-everything",
+          "date": "2026-03-25T21:57:05.000Z",
+          "snippet": "",
+          "source": "Simon Willison",
+          "score": 10
+        },
+        {
+          "title": "Thoughts on slowing the fuck down",
+          "link": "https://simonwillison.net/2026/Mar/25/thoughts-on-slowing-the-fuck-down/#atom-everything",
+          "date": "2026-03-25T21:47:17.000Z",
+          "snippet": "",
+          "source": "Simon Willison",
+          "score": 10
+        },
+        {
+          "title": "datasette-llm 0.1a1",
+          "link": "https://simonwillison.net/2026/Mar/25/datasette-llm/#atom-everything",
+          "date": "2026-03-25T21:24:31.000Z",
+          "snippet": "",
+          "source": "Simon Willison",
+          "score": 10
+        },
+        {
+          "title": "GitHub Copilot for Jira — Public preview enhancements",
+          "link": "https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements",
+          "date": "2026-03-25T21:09:35.000Z",
+          "snippet": "Since launching the public preview of GitHub Copilot coding agent for Jira, we’ve been listening closely to customer feedback. Thank you to everyone who has taken the time to try…\nThe post GitHub Copilot for Jira — Public preview enhancements appeared first on The GitHub Blog.",
+          "source": "GitHub Changelog",
+          "score": 10
+        },
+        {
+          "title": "LiteLLM Hack: Were You One of the 47,000?",
+          "link": "https://simonwillison.net/2026/Mar/25/litellm-hack/#atom-everything",
+          "date": "2026-03-25T17:21:04.000Z",
+          "snippet": "",
+          "source": "Simon Willison",
+          "score": 10
         },
         {
           "title": "Package Managers Need to Cool Down",
@@ -456,54 +504,6 @@
           "title": "Quoting Christopher Mims",
           "link": "https://simonwillison.net/2026/Mar/24/christopher-mims/#atom-everything",
           "date": "2026-03-24T20:35:52.000Z",
-          "snippet": "",
-          "source": "Simon Willison",
-          "score": 10
-        },
-        {
-          "title": "Ask @copilot to make changes to a pull request",
-          "link": "https://github.blog/changelog/2026-03-24-ask-copilot-to-make-changes-to-any-pull-request",
-          "date": "2026-03-24T20:08:03.000Z",
-          "snippet": "You can now mention @copilot in pull requests to ask Copilot to make changes. You can ask @copilot to: Fix failing GitHub Actions workflows: @copilot Fix the failing tests Address…\nThe post Ask @copilot to make changes to a pull request appeared first on The GitHub Blog.",
-          "source": "GitHub Changelog",
-          "score": 10
-        },
-        {
-          "title": "Malicious litellm_init.pth in litellm 1.82.8 — credential stealer",
-          "link": "https://simonwillison.net/2026/Mar/24/malicious-litellm/#atom-everything",
-          "date": "2026-03-24T15:07:31.000Z",
-          "snippet": "",
-          "source": "Simon Willison",
-          "score": 10
-        },
-        {
-          "title": "Streaming experts",
-          "link": "https://simonwillison.net/2026/Mar/24/streaming-experts/#atom-everything",
-          "date": "2026-03-24T05:09:03.000Z",
-          "snippet": "",
-          "source": "Simon Willison",
-          "score": 10
-        },
-        {
-          "title": "2026.3.23",
-          "link": "https://github.com/openclaw/openclaw/releases/tag/v2026.3.23",
-          "date": "2026-03-24T04:04:27.000Z",
-          "snippet": "Breaking\nChanges\nModelStudio/Qwen: add standard (pay-as-you-go) DashScope endpoints for China and global Qwen API keys alongside the existing Coding Plan endpoints, and relabel the provider group to Qwen (Alibaba Cloud Model Studio). (#43878)\nUI/clarity: consolidate button primitives (btn--icon, btn",
-          "source": "OpenClaw Releases",
-          "score": 10
-        },
-        {
-          "title": "v2026.3.23-2",
-          "link": "https://github.com/openclaw/openclaw/releases/tag/v2026.3.23-2",
-          "date": "2026-03-24T03:06:46.000Z",
-          "snippet": "v2026.3.23-2",
-          "source": "OpenClaw Releases",
-          "score": 10
-        },
-        {
-          "title": "Quoting Neurotica",
-          "link": "https://simonwillison.net/2026/Mar/23/neurotica/#atom-everything",
-          "date": "2026-03-23T23:31:45.000Z",
           "snippet": "",
           "source": "Simon Willison",
           "score": 10
@@ -522,6 +522,14 @@
           "snippet": "Join our on-demand webinar to understand the intersection of AI and SEO. Learn how to leverage AI for improved search results.\nThe post SEO 2.0: How Content Marketing Drives Visibility in AI Search appeared first on Search Engine Journal.",
           "source": "Search Engine Journal",
           "score": 16
+        },
+        {
+          "title": "Google Analytics Launches Scenario Planner and Projections via @sejournal, @brookeosmundson",
+          "link": "https://www.searchenginejournal.com/google-analytics-launches-scenario-planner-and-projections/570520/",
+          "date": "2026-03-25T17:07:42.000Z",
+          "snippet": "Google Analytics launched Scenario Planner and Projections to help advertisers forecast performance, optimize budgets, and plan cross-channel media spend more strategically.\nThe post Google Analytics Launches Scenario Planner and Projections appeared first on Search Engine Journal.",
+          "source": "Search Engine Journal",
+          "score": 13
         },
         {
           "title": "Half Your Traffic Left. The SEO Industry Sent Thoughts and Frameworks",
@@ -560,14 +568,6 @@
           "link": "https://www.searchenginejournal.com/research-you-are-an-expert-prompts-can-damage-factual-accuracy/570397/",
           "date": "2026-03-24T12:38:07.000Z",
           "snippet": "Research finds that persona prompts \"reliably damage\" factual accuracy in certain kinds of tasks but work well in others.\nThe post Research Shows Where Persona Prompting Works And When It Backfires appeared first on Search Engine Journal.",
-          "source": "Search Engine Journal",
-          "score": 12
-        },
-        {
-          "title": "Google Responds To Error That Causes Old Branding To Persist In SERPs via @sejournal, @martinibuster",
-          "link": "https://www.searchenginejournal.com/google-responds-to-error-that-causes-old-branding-to-persist-in-serps/570315/",
-          "date": "2026-03-23T21:23:14.000Z",
-          "snippet": "Google's John Mueller responds to a question about search results that display outdated branding for a site that rebranded over ten years ago.\nThe post Google Responds To Error That Causes Old Branding To Persist In SERPs appeared first on Search Engine Journal.",
           "source": "Search Engine Journal",
           "score": 12
         },
@@ -651,20 +651,20 @@
           "score": 19
         },
         {
-          "title": "Space Development Agency slows satellite launches to focus on on-orbit performance",
-          "link": "https://spacenews.com/space-development-agency-slows-satellite-launches-to-focus-on-on-orbit-performance/",
-          "date": "2026-03-24T16:35:34.000Z",
-          "snippet": "The agency’s acting director says checkout, orbit-raising and network testing are pacing the program\nThe post Space Development Agency slows satellite launches to focus on on-orbit performance appeared first on SpaceNews.",
-          "source": "SpaceNews",
-          "score": 19
+          "title": "NASA Names Jennifer Lyons Acting Launch Services Program Manager",
+          "link": "https://www.nasa.gov/centers-and-facilities/kennedy/nasa-names-jennifer-lyons-as-acting-launch-services-program-manager/",
+          "date": "2026-03-25T19:59:37.000Z",
+          "snippet": "NASA has selected Jennifer Lyons as acting program manager for the agency’s Launch Services Program (LSP) based at Kennedy Space Center in Florida. In this role, Lyons will lead NASA’s acquisition and management of domestic commercial launch services for science and robotic exploration missions begi",
+          "source": "NASA Breaking News",
+          "score": 17
         },
         {
-          "title": "Launch Preview: Russia to debut Soyuz-5; Falcon 9 and Atlas V to launch internet satellites",
-          "link": "https://www.nasaspaceflight.com/2026/03/launch-preview-032326/",
-          "date": "2026-03-23T21:50:46.000Z",
-          "snippet": "The United States, Russia, China, New Zealand, and Norway are all set to host launches…\nThe post Launch Preview: Russia to debut Soyuz-5; Falcon 9 and Atlas V to launch internet satellites appeared first on NASASpaceFlight.com.",
+          "title": "Isar Aerospace scrubs second launch of Spectrum rocket",
+          "link": "https://www.nasaspaceflight.com/2026/03/isar-onward-and-upward/",
+          "date": "2026-03-25T17:41:57.000Z",
+          "snippet": "The European private space launch provider Isar Aerospace, headquartered in Ottobrunn, Germany, is planning to…\nThe post Isar Aerospace scrubs second launch of Spectrum rocket appeared first on NASASpaceFlight.com.",
           "source": "NASASpaceflight",
-          "score": 19
+          "score": 17
         },
         {
           "title": "Rocket Lab launch of Europe's 1st 2 'Celeste' navigation satellites scrubbed due to weather",
@@ -675,27 +675,75 @@
           "score": 17
         },
         {
-          "title": "Space Force adds cyber units to guard rocket launches",
-          "link": "https://spacenews.com/space-force-adds-cyber-units-to-guard-rocket-launches/",
-          "date": "2026-03-23T21:37:35.000Z",
-          "snippet": "‘Cyber defense’ squadrons at Cape Canaveral and Vandenberg reflect growing concern over malicious hacks\nThe post Space Force adds cyber units to guard rocket launches appeared first on SpaceNews.",
-          "source": "SpaceNews",
-          "score": 17
-        },
-        {
-          "title": "OrbitsIQ Global Announces Breakthrough in Space-Based IoT Connectivity",
-          "link": "https://spacenews.com/orbitsiq-global-announces-breakthrough-in-space-based-iot-connectivity/",
-          "date": "2026-03-24T18:57:22.000Z",
-          "snippet": "Washington, D.C., March 24, 2026 – OrbitsIQ Global (OIQ), an innovator in AI-driven secure connectivity across terrestrial and satellite networks, today announced a major technological milestone achieved in collaboration with […]\nThe post OrbitsIQ Global Announces Breakthrough in Space-Based IoT Con",
-          "source": "SpaceNews",
-          "score": 15
-        },
-        {
-          "title": "NASA-ISRO Satellite Captures Pacific Northwest Through Clouds",
-          "link": "https://www.nasa.gov/missions/nisar/nasa-isro-satellite-captures-pacific-northwest-through-clouds/",
-          "date": "2026-03-25T15:51:39.000Z",
-          "snippet": "Seattle and Portland, Oregon, are among the cloudiest cities in the United States. But that infamous cloud cover is no match for the U.S.-Indian Earth satellite NISAR (NASA-ISRO Synthetic Aperture Radar), which is designed to peer straight through clouds. Doing so allows scientists to study the Paci",
+          "title": "NASA Sets Coverage for First Artemis Crewed Mission Around Moon",
+          "link": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-first-artemis-crewed-mission-around-moon/",
+          "date": "2026-03-25T22:58:26.000Z",
+          "snippet": "A variety of prelaunch, launch, and mission events for NASA’s Artemis II mission around the Moon will stream online. The agency is targeting no earlier than Wednesday, April 1, for the test flight during a two-hour window that opens at 6:24 p.m. EDT, with additional launch opportunities through Mond",
           "source": "NASA Breaking News",
+          "score": 16
+        },
+        {
+          "title": "NASA Sets Coverage for Artemis II Moon Mission",
+          "link": "https://www.nasa.gov/missions/artemis/artemis-2/nasa-sets-coverage-for-artemis-ii-moon-mission/",
+          "date": "2026-03-25T21:55:11.000Z",
+          "snippet": "Editor’s note: NASA will continuously update this Artemis II briefings and mission events page throughout prelaunch, launch, and mission activities. NASA will provide live coverage of prelaunch, launch, and mission events for the agency’s upcoming Artemis II crewed test flight around the Moon. Launc",
+          "source": "NASA Breaking News",
+          "score": 16
+        },
+        {
+          "title": "La NASA anuncia la cobertura de la misión lunar Artemis II",
+          "link": "https://www.nasa.gov/es/la-nasa-anuncia-la-cobertura-de-la-mision-lunar-artemis-ii/",
+          "date": "2026-03-25T23:48:10.000Z",
+          "snippet": "Nota del editor: La NASA actualizará continuamente esta página de sesiones informativas y eventos de la misión Artemis II a lo largo de las actividades previas al lanzamiento, el lanzamiento y las operaciones de la misión. La NASA ofrecerá cobertura en vivo de los eventos previos al lanzamiento, el",
+          "source": "NASA Breaking News",
+          "score": 14
+        },
+        {
+          "title": "NASA outlines Moon Base plans, pivots on Gateway",
+          "link": "https://www.nasaspaceflight.com/2026/03/nasa-moon-base-pivots-gateway/",
+          "date": "2026-03-25T23:16:13.000Z",
+          "snippet": "In a major shift announced during its “Ignition” event this week, NASA unveiled a detailed…\nThe post NASA outlines Moon Base plans, pivots on Gateway appeared first on NASASpaceFlight.com.",
+          "source": "NASASpaceflight",
+          "score": 14
+        },
+        {
+          "title": "NASA Ames Experts Available for Artemis II Flight Test Interviews",
+          "link": "https://www.nasa.gov/general/nasa-ames-experts-available-for-artemis-ii-flight-test-interviews/",
+          "date": "2026-03-25T23:16:01.000Z",
+          "snippet": "NASA’s Ames Research Center in Silicon Valley invites media to interview local subject matter experts on Friday, March 27 from 10 a.m. to 2 p.m. ahead of the agency sending astronauts around the Moon for the first time in more than 50 years with the Artemis II flight test. NASA teams are gearing up",
+          "source": "NASA Breaking News",
+          "score": 14
+        },
+        {
+          "title": "Inside Artemis 2: NASA's historic astronaut moon mission explained (video series)",
+          "link": "https://www.space.com/space-exploration/artemis/inside-artemis-2-nasas-historic-astronaut-moon-mission-explained-video-series",
+          "date": "2026-03-25T22:43:03.000Z",
+          "snippet": "Get to know NASA's Artemis 2 moon mission with Space.com's exclusive four-part video series Inside Artemis II debuting March 25-March 31.",
+          "source": "Space.com",
+          "score": 14
+        },
+        {
+          "title": "Artemis Moon Tree Dedicated in Honor of Mary W. Jackson",
+          "link": "https://science.nasa.gov/learning-resources/science-activation/artemis-moon-tree-dedicated-in-honor-of-mary-w-jackson/",
+          "date": "2026-03-25T21:19:37.000Z",
+          "snippet": "On March 18, 2026, students, staff, and members of NASA’s Langley Research Center gathered at Mary W. Jackson Elementary School in Hampton to celebrate the dedication of a remarkable addition to the campus – an Artemis Moon Tree. Although formally dedicated on this day, the loblolly pine had already",
+          "source": "NASA Breaking News",
+          "score": 14
+        },
+        {
+          "title": "Here is NASA's plan for nuking Gateway and sending it to Mars",
+          "link": "https://arstechnica.com/space/2026/03/here-is-nasas-plan-for-nuking-gateway-and-sending-it-to-mars/",
+          "date": "2026-03-25T20:21:51.000Z",
+          "snippet": "Only one US-built nuclear reactor has ever flown in space, and that was more than 60 years ago.",
+          "source": "Ars Technica Space",
+          "score": 14
+        },
+        {
+          "title": "We got an audience with the \"Lunar Viceroy\" to talk how NASA will build a Moon base",
+          "link": "https://arstechnica.com/space/2026/03/we-got-an-audience-with-the-lunar-viceroy-to-talk-how-nasa-will-build-a-moon-base/",
+          "date": "2026-03-25T19:21:57.000Z",
+          "snippet": "\"It has been clear that we all need to be focused on one thing, not 10 things.\"",
+          "source": "Ars Technica Space",
           "score": 14
         },
         {
@@ -713,54 +761,6 @@
           "snippet": "In a significant NASA announcement, Administrator Jared Isaacman and agency leaders outlined plans for a…\nThe post NASA unveils Space Reactor-1 Freedom mission to Mars in 2028 appeared first on NASASpaceFlight.com.",
           "source": "NASASpaceflight",
           "score": 14
-        },
-        {
-          "title": "NASA announcing update to Artemis moon plans today: Watch it live",
-          "link": "https://www.space.com/space-exploration/artemis/nasa-announcing-update-to-artemis-moon-plans-today-watch-it-live",
-          "date": "2026-03-24T10:00:00.000Z",
-          "snippet": "NASA will hold a series of events today (March 24) that update us on the agency's plans for the moon and more, and you can watch them live.",
-          "source": "Space.com",
-          "score": 14
-        },
-        {
-          "title": "NASA proposes new strategy for commercial space stations",
-          "link": "https://spacenews.com/nasa-proposes-new-strategy-for-commercial-space-stations/",
-          "date": "2026-03-25T10:37:39.000Z",
-          "snippet": "NASA, concerned about slow development of commercial markets, is considering revamping its strategy for supporting the creation of commercial space stations to succeed the International Space Station.\nThe post NASA proposes new strategy for commercial space stations appeared first on SpaceNews.",
-          "source": "SpaceNews",
-          "score": 13
-        },
-        {
-          "title": "Parsons unveils new satellite antenna aimed at military market",
-          "link": "https://spacenews.com/parsons-unveils-new-satellite-antenna-aimed-at-military-market/",
-          "date": "2026-03-23T19:00:00.000Z",
-          "snippet": "Hybrid antenna developed by Parsons and Raven Defense combines a six-meter parabolic dish with an electronically steered phased-array feed\nThe post Parsons unveils new satellite antenna aimed at military market appeared first on SpaceNews.",
-          "source": "SpaceNews",
-          "score": 13
-        },
-        {
-          "title": "NASA Awards Astrophysics Postdoctoral Fellowships for 2026",
-          "link": "https://science.nasa.gov/missions/hubble/nasa-awards-astrophysics-postdoctoral-fellowships-for-2026/",
-          "date": "2026-03-25T16:00:08.000Z",
-          "snippet": "The highly competitive NASA Hubble Fellowship Program (NHFP) recently named 24 new fellows to its 2026 class. The NHFP enables outstanding postdoctoral scientists to pursue independent research in any area of NASA Astrophysics, using theory, observations, simulations, experimentation, or instrument",
-          "source": "NASA Breaking News",
-          "score": 12
-        },
-        {
-          "title": "Infinity Avionics Unveils Aquila: The Next-Generation Space Imaging Solution for Complex Orbital Operations",
-          "link": "https://spacenews.com/infinity-avionics-unveils-aquila-the-next-generation-space-imaging-solution-for-complex-orbital-operations/",
-          "date": "2026-03-25T14:00:00.000Z",
-          "snippet": "CANBERRA, Australia: Infinity Avionics, a leader in smart vision systems for the NewSpace economy, announced today the full commercial availability of Aquila. Following a standout debut at IAC Sydney, the […]\nThe post Infinity Avionics Unveils Aquila: The Next-Generation Space Imaging Solution for C",
-          "source": "SpaceNews",
-          "score": 12
-        },
-        {
-          "title": "Musk wants to go to the moon. But how will he build his ‘self-growing city’?",
-          "link": "https://spacenews.com/musk-wants-to-go-to-the-moon-but-how-will-he-build-his-self-growing-city/",
-          "date": "2026-03-25T13:00:00.000Z",
-          "snippet": "It goes without saying that we shouldn’t take everything Elon Musk says too seriously. There are whole websites dedicated to those times when he has ‘talked the talk’ but failed to ‘walk the walk’ — as well as those times when he has been factually untrue. But his latest claim, which is that he will",
-          "source": "SpaceNews",
-          "score": 12
         }
       ]
     },
@@ -769,6 +769,22 @@
       "emoji": "⚙️",
       "count": 15,
       "articles": [
+        {
+          "title": "AWS Firewall Manager launches in AWS Asia Pacific (New Zealand) Region",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-firewall-manager-launches-ap-nz/",
+          "date": "2026-03-25T21:00:00.000Z",
+          "snippet": "AWS Firewall Manager announces that it is now available in AWS Asia Pacific (New Zealand) Region. AWS Firewall Manager helps cloud security administrators and site reliability engineers protect applications while reducing the operational overhead of manually configuring and managing rules.\n  Working",
+          "source": "AWS What's New",
+          "score": 14
+        },
+        {
+          "title": "Amazon SageMaker Unified Studio launches support for remote connection from Cursor IDE",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/sagemaker-unified-studio-cursor-ide/",
+          "date": "2026-03-25T20:21:00.000Z",
+          "snippet": "Today, AWS announces remote connection from Cursor IDE to Amazon SageMaker Unified Studio via the AWS Toolkit extension. This new capability allows data scientists, ML engineers, and developers to leverage their Cursor setup - including its AI-powered code completion, natural language editing, and m",
+          "source": "AWS What's New",
+          "score": 13
+        },
         {
           "title": "Ai2 launches MolmoWeb, an open-source web agent",
           "link": "https://thenewstack.io/ai2-launches-molmoweb-an-open-source-web-agent/",
@@ -826,67 +842,51 @@
           "score": 12
         },
         {
-          "title": "Fivetran donates its SQLMesh data transformation framework to the Linux Foundation",
-          "link": "https://thenewstack.io/fivetran-donates-sqlmesh-lf/",
-          "date": "2026-03-25T14:39:39.000Z",
-          "snippet": "Fivetran, the company best known for its data movement platform, on Wednesday announced that it would donate SQLMesh, its open\nThe post Fivetran donates its SQLMesh data transformation framework to the Linux Foundation appeared first on The New Stack.",
+          "title": "Edera spent years calling KVM less secure. Here’s why it changed its mind.",
+          "link": "https://thenewstack.io/edera-adds-kvm-support/",
+          "date": "2026-03-25T21:22:59.000Z",
+          "snippet": "Edera, a top Xen hypervisor company, is shifting gears and will start supporting KVM as well this summer. If you\nThe post Edera spent years calling KVM less secure. Here’s why it changed its mind. appeared first on The New Stack.",
           "source": "The New Stack",
           "score": 10
         },
         {
-          "title": "HPE’s AI agents cut root cause analysis time in half",
-          "link": "https://thenewstack.io/hpe-agentic-ai-ops-burnout/",
-          "date": "2026-03-25T14:14:19.000Z",
-          "snippet": "Operational fatigue, in the face of increasing complexity and risks, is a real problem. Can partnerships with skills-based AI agents\nThe post HPE’s AI agents cut root cause analysis time in half appeared first on The New Stack.",
-          "source": "The New Stack",
+          "title": "Accelerate AI-assisted development with Agent Plugin for AWS Serverless",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/agent-plugin-aws-serverless/",
+          "date": "2026-03-25T21:00:00.000Z",
+          "snippet": "AWS announces the Agent Plugin for AWS Serverless, enabling developers to easily build, deploy, troubleshoot, and manage serverless applications using AI coding assistants like Kiro, Claude Code, and Cursor.\n \nAgent plugins extend AI coding assistants with structured, reusable capabilities by packag",
+          "source": "AWS What's New",
           "score": 10
         },
         {
-          "title": "Akuity Adds Ability to Customize Kargo Pipelines",
-          "link": "https://devops.com/akuity-adds-ability-to-customize-kargo-pipelines/",
-          "date": "2026-03-25T14:11:06.000Z",
-          "snippet": "Akuity this week at the KubeCon + CloudNativeCon Europe conference revealed it has added an ability to customize the steps used to promote applications into a production environment using a Kargo orchestration engine it developed to manage software using a GitOps workflow. Company CEO Hong Wang said",
-          "source": "DevOps.com",
+          "title": "AWS Batch now provides AMI status and supports AWS Health Planned Lifecycle Events",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-batch-ami-status-aws-health/",
+          "date": "2026-03-25T20:32:00.000Z",
+          "snippet": "AWS Batch now provides enhanced visibility into your compute environments with two new capabilities that help you maintain operational best practices. When you describe a compute environment, you can now see the status of your Batch-provided default Amazon Machine Images (AMIs), indicating when upda",
+          "source": "AWS What's New",
           "score": 10
         },
         {
-          "title": "Why online stores keep showing the wrong products — and why tensors fix it",
-          "link": "https://thenewstack.io/tensor-ranking-product-discovery/",
-          "date": "2026-03-25T13:00:00.000Z",
-          "snippet": "If I search for “black running shoes for winter,” marksandspencer.com finds me a lovely pair of lace-up boots…for women. In\nThe post Why online stores keep showing the wrong products — and why tensors fix it appeared first on The New Stack.",
-          "source": "The New Stack",
+          "title": "Amazon Bedrock AgentCore adds support for Chrome policies and custom root CA",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/agentcore-browser-policies-root-ca/",
+          "date": "2026-03-25T20:10:00.000Z",
+          "snippet": "Amazon Bedrock AgentCore now enables customers to configure Chrome Enterprise policies for AgentCore Browser and specify custom root Certificate Authority (CA) certificates for both AgentCore Browser and Code Interpreter. These enhancements help ensure enterprise requirements are met when allowing A",
+          "source": "AWS What's New",
           "score": 10
         },
         {
-          "title": "OpenClaw’s biggest security flaw is why Jentic Mini exists",
-          "link": "https://thenewstack.io/openclaw-is-a-security-mess-jentic-wants-to-fix-it/",
-          "date": "2026-03-25T12:00:00.000Z",
-          "snippet": "OpenClaw changed everything. The open-source AI agent, which went from zero to 247,000 GitHub stars in 60 days, finally delivered on\nThe post OpenClaw’s biggest security flaw is why Jentic Mini exists appeared first on The New Stack.",
-          "source": "The New Stack",
+          "title": "AWS Batch now supports quota management and preemption for SageMaker Training jobs",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-batch-quota-management-preemption-sagemaker/",
+          "date": "2026-03-25T18:40:00.000Z",
+          "snippet": "AWS Batch now supports quota management with job preemption for SageMaker Training jobs, enabling you to efficiently allocate and share compute resources across your teams and projects. If you're using GPU capacity in SageMaker Training jobs, you can now intelligently allocate compute resources, pri",
+          "source": "AWS What's New",
           "score": 10
         },
         {
-          "title": "Claude can now open apps, click buttons, and complete tasks on your Mac — but Anthropic says risks remain",
-          "link": "https://thenewstack.io/claude-computer-use/",
-          "date": "2026-03-25T11:36:54.000Z",
-          "snippet": "Anthropic has released an update to Claude Code and Claude Cowork that brings computer-use capabilities to macOS desktops, enabling autonomous\nThe post Claude can now open apps, click buttons, and complete tasks on your Mac — but Anthropic says risks remain appeared first on The New Stack.",
-          "source": "The New Stack",
-          "score": 10
-        },
-        {
-          "title": "Why most AI projects fail after the demo actually works",
-          "link": "https://thenewstack.io/ai-demo-to-production/",
-          "date": "2026-03-25T11:00:00.000Z",
-          "snippet": "Building an AI demo is easy. Shipping an AI system that runs reliably in production, day after day, under load,\nThe post Why most AI projects fail after the demo actually works appeared first on The New Stack.",
-          "source": "The New Stack",
-          "score": 10
-        },
-        {
-          "title": "Why Investing in DevOps Platforms Pays off for Businesses",
-          "link": "https://devops.com/why-investing-in-devops-platforms-pays-off-for-businesses/",
-          "date": "2026-03-25T07:14:28.000Z",
-          "snippet": "Explore why 80% of organizations are adopting Internal Developer Platforms (IDPs) by 2026. From reducing setup time by 40% to mitigating $9,000-per-minute downtime costs, discover the undeniable ROI of platform engineering, \"golden paths,\" and built-in DevSecOps.",
-          "source": "DevOps.com",
+          "title": "Amazon Route 53 Profiles now supports granular IAM permissions for resource and VPC associations",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-route-53-profiles-granular-iam/",
+          "date": "2026-03-25T18:34:00.000Z",
+          "snippet": "Amazon Route 53 Profiles now supports granular AWS Identity and Access Management (IAM) permissions, allowing you to control which users can manage specific resource types and VPC associations within your Profiles. With this launch, you can create IAM policies that restrict users to specific operati",
+          "source": "AWS What's New",
           "score": 10
         }
       ]
@@ -894,7 +894,7 @@
     "powershell": {
       "label": "💠 PowerShell & Automation",
       "emoji": "💠",
-      "count": 4,
+      "count": 5,
       "articles": [
         {
           "title": "Windows 11 Out‑of‑Band Update Fixes Microsoft Account Sign‑In Issues",
@@ -911,6 +911,14 @@
           "snippet": "Windows file sharing allows any Windows PC to host a file share, making files available to other computers on the same network. Better still, files located within the shared folder are not solely accessible to Windows devices. Apple devices running MacOS can also access the shared folder, as can Lin",
           "source": "Petri IT",
           "score": 10
+        },
+        {
+          "title": "Microsoft Makes External MFA Generally Available in Microsoft Entra ID",
+          "link": "https://petri.com/microsoft-entra-id-external-mfa/",
+          "date": "2026-03-25T18:49:22.000Z",
+          "snippet": "Microsoft has made external multi-factor authentication (MFA) generally available in Microsoft Entra ID. The update enables organizations to seamlessly integrate third-party MFA providers into their authentication workflows without losing centralized control. Previously, organizations using Microsof",
+          "source": "Petri IT",
+          "score": 8
         },
         {
           "title": "FCC Bans Foreign‑Manufactured Consumer Routers Over Security Risks",
