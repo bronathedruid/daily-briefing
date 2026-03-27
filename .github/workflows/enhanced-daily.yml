@@ -1,0 +1,480 @@
+name: Enhanced Daily Briefing Pipeline
+
+on:
+  schedule:
+    # 3 daily editions: Morning (6am EST), Afternoon (12pm EST), Evening (6pm EST)
+    - cron: '0 11 * * *'  # Morning Edition - 6am EST (11:00 UTC)
+    - cron: '0 17 * * *'  # Afternoon Edition - 12pm EST (17:00 UTC)  
+    - cron: '0 23 * * *'  # Evening Edition - 6pm EST (23:00 UTC)
+  workflow_dispatch: 
+    inputs:
+      edition:
+        description: 'Edition type'
+        required: false
+        default: 'manual'
+        type: choice
+        options:
+        - manual
+        - morning
+        - afternoon
+        - evening
+      skip_cache:
+        description: 'Skip RSS cache'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "enhanced-pipeline"
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: '22'
+  CACHE_TTL: '1800' # 30 minutes
+
+jobs:
+  # Stage 1: Collect Data
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      article-count: ${{ steps.fetch.outputs.article-count }}
+      build-id: ${{ steps.meta.outputs.build-id }}
+      edition: ${{ steps.meta.outputs.edition }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          # Install Canvas dependencies for visual generation
+          sudo apt-get update
+          sudo apt-get install -y libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+
+      - name: Determine edition
+        id: meta
+        run: |
+          BUILD_ID="build-$(date -u +%Y%m%d%H%M%S)"
+          echo "build-id=$BUILD_ID" >> $GITHUB_OUTPUT
+          
+          if [ "${{ github.event.inputs.edition }}" != "" ]; then
+            EDITION="${{ github.event.inputs.edition }}"
+          else
+            HOUR=$(date -u +%H)
+            if [ "$HOUR" -eq 11 ]; then
+              EDITION="morning"
+            elif [ "$HOUR" -eq 17 ]; then
+              EDITION="afternoon"  
+            elif [ "$HOUR" -eq 23 ]; then
+              EDITION="evening"
+            else
+              EDITION="manual"
+            fi
+          fi
+          
+          echo "edition=$EDITION" >> $GITHUB_OUTPUT
+          echo "🗞️ Building $EDITION edition (Build ID: $BUILD_ID)"
+
+      - name: Enhanced RSS Collection
+        id: fetch
+        run: |
+          echo "🔍 Fetching enhanced RSS feeds..."
+          
+          # Use enhanced feeds configuration
+          cp scripts/enhanced-feeds.json scripts/feeds.json
+          
+          # Set cache options
+          if [ "${{ github.event.inputs.skip_cache }}" = "true" ]; then
+            export RSS_CACHE_TTL=0
+          else
+            export RSS_CACHE_TTL=${{ env.CACHE_TTL }}
+          fi
+          
+          # Run enhanced fetch with AI summarization
+          START_TIME=$(date +%s)
+          npm run fetch
+          END_TIME=$(date +%s)
+          DURATION=$((END_TIME - START_TIME))
+          
+          # Extract article count
+          if [ -f "data/newspaper-latest.json" ]; then
+            ARTICLE_COUNT=$(jq '.articles | length' data/newspaper-latest.json)
+          else
+            ARTICLE_COUNT=0
+          fi
+          
+          echo "article-count=$ARTICLE_COUNT" >> $GITHUB_OUTPUT
+          echo "📰 Collected $ARTICLE_COUNT articles in ${DURATION}s"
+        timeout-minutes: 10
+        env:
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      - name: Upload data artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-${{ steps.meta.outputs.build-id }}
+          path: |
+            data/
+            !data/node_modules
+          retention-days: 7
+
+  # Stage 2: Generate Visual Content  
+  visualize:
+    needs: collect
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          # Install Canvas dependencies
+          sudo apt-get update
+          sudo apt-get install -y libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+
+      - name: Download data artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: data-${{ needs.collect.outputs.build-id }}
+          path: .
+
+      - name: Generate Visual Content
+        run: |
+          echo "🎨 Generating visual content..."
+          START_TIME=$(date +%s)
+          npm run visuals
+          END_TIME=$(date +%s)
+          DURATION=$((END_TIME - START_TIME))
+          
+          echo "✅ Visual generation completed in ${DURATION}s"
+          ls -la public/assets/
+
+      - name: Generate ACE Music Daily Song
+        run: |
+          echo "🎵 Generating daily AI song..."
+          EDITION="${{ needs.collect.outputs.edition }}"
+          
+          # Generate theme based on edition
+          if [ "$EDITION" = "morning" ]; then
+            THEME="Energetic morning tech news ambient music"
+          elif [ "$EDITION" = "afternoon" ]; then
+            THEME="Focused afternoon productivity instrumental"
+          elif [ "$EDITION" = "evening" ]; then
+            THEME="Relaxing evening tech digest background music"
+          else
+            THEME="Tech news briefing ambient instrumental"
+          fi
+          
+          # Use ACE Music if available
+          if [ -n "${{ secrets.ACE_MUSIC_API_KEY }}" ]; then
+            echo "🎼 Generating song: $THEME"
+            # ACE Music API call would go here
+            # For now, create placeholder
+            echo "Daily song generation placeholder" > public/daily-song-info.txt
+          else
+            echo "⚠️ ACE Music API key not configured, skipping song generation"
+          fi
+        env:
+          ACE_MUSIC_API_KEY: ${{ secrets.ACE_MUSIC_API_KEY }}
+
+      - name: Upload visual artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: visuals-${{ needs.collect.outputs.build-id }}
+          path: |
+            public/assets/
+            public/daily-song*
+          retention-days: 7
+
+  # Stage 3: Build Website & Email
+  build:
+    needs: [collect, visualize]
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: "*-${{ needs.collect.outputs.build-id }}"
+          merge-multiple: true
+
+      - name: Build Newspaper Website
+        run: |
+          echo "📰 Building newspaper website..."
+          START_TIME=$(date +%s)
+          npm run build
+          END_TIME=$(date +%s)
+          DURATION=$((END_TIME - START_TIME))
+          
+          echo "✅ Website built in ${DURATION}s"
+          echo "📊 Generated files:"
+          ls -la public/
+
+      - name: Generate Email Digest
+        run: |
+          echo "📧 Generating email digest..."
+          START_TIME=$(date +%s)
+          npm run email
+          END_TIME=$(date +%s)
+          DURATION=$((END_TIME - START_TIME))
+          
+          echo "✅ Email digest generated in ${DURATION}s"
+          echo "📊 Email files:"
+          ls -la public/email/
+
+      - name: Verify build quality
+        run: |
+          echo "🔍 Verifying build quality..."
+          
+          # Check if main files exist
+          if [ ! -f "public/index.html" ]; then
+            echo "❌ Main index.html missing"
+            exit 1
+          fi
+          
+          if [ ! -f "public/api.json" ]; then
+            echo "❌ Mobile API missing"
+            exit 1
+          fi
+          
+          # Check file sizes
+          INDEX_SIZE=$(stat -c%s public/index.html)
+          if [ "$INDEX_SIZE" -lt 10000 ]; then
+            echo "❌ index.html too small: ${INDEX_SIZE} bytes"
+            exit 1
+          fi
+          
+          echo "✅ Build quality verified"
+          echo "📊 index.html: ${INDEX_SIZE} bytes"
+
+      - name: Upload website artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-${{ needs.collect.outputs.build-id }}
+          path: public/
+          retention-days: 30
+
+  # Stage 4: Quality Tests
+  test:
+    needs: [collect, build]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download website artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: website-${{ needs.collect.outputs.build-id }}
+          path: public/
+
+      - name: Run Quality Tests
+        run: |
+          echo "🧪 Running quality tests..."
+          
+          # HTML validation
+          echo "📄 Validating HTML structure..."
+          if ! grep -q "newspaper-container" public/index.html; then
+            echo "❌ Newspaper structure missing"
+            exit 1
+          fi
+          
+          # JSON validation  
+          echo "📱 Validating API JSON..."
+          if ! jq empty public/api.json; then
+            echo "❌ Invalid API JSON"
+            exit 1
+          fi
+          
+          # Article count validation
+          ARTICLE_COUNT=${{ needs.collect.outputs.article-count }}
+          if [ "$ARTICLE_COUNT" -lt 50 ]; then
+            echo "⚠️ Low article count: $ARTICLE_COUNT (minimum 50 expected)"
+          fi
+          
+          echo "✅ Quality tests passed"
+
+      - name: Performance Check
+        run: |
+          echo "⚡ Checking performance..."
+          
+          # File size checks
+          INDEX_SIZE=$(stat -c%s public/index.html)
+          API_SIZE=$(stat -c%s public/api.json)
+          
+          echo "📊 File sizes:"
+          echo "  - index.html: ${INDEX_SIZE} bytes"
+          echo "  - api.json: ${API_SIZE} bytes"
+          
+          # Check for optimization opportunities
+          if [ "$INDEX_SIZE" -gt 100000 ]; then
+            echo "⚠️ Large index.html size: ${INDEX_SIZE} bytes"
+          fi
+
+  # Stage 5: Deploy
+  deploy:
+    needs: [collect, build, test]
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Download website artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: website-${{ needs.collect.outputs.build-id }}
+          path: public/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload to Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public/
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 600000  # 10 minutes
+
+  # Stage 6: Analytics & Cleanup
+  finalize:
+    needs: [collect, deploy]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download data for analytics
+        uses: actions/download-artifact@v4
+        with:
+          name: data-${{ needs.collect.outputs.build-id }}
+          path: .
+        continue-on-error: true
+
+      - name: Run Analytics
+        run: |
+          echo "📊 Running performance analytics..."
+          npm run analytics || echo "⚠️ Analytics failed, continuing..."
+        continue-on-error: true
+
+      - name: Commit Updated Data
+        run: |
+          git config user.name "Daily Briefing Bot"
+          git config user.email "bot@daily-briefing.local"
+          
+          # Add analytics and data files
+          git add analytics/ data/ public/ || true
+          
+          if ! git diff --staged --quiet; then
+            EDITION="${{ needs.collect.outputs.edition }}"
+            ARTICLE_COUNT="${{ needs.collect.outputs.article-count }}"
+            
+            git commit -m "📰 $EDITION Edition - $(date -u +%Y-%m-%d)
+
+🗞️ Edition: $EDITION  
+📊 Articles: $ARTICLE_COUNT
+🔄 Build ID: ${{ needs.collect.outputs.build-id }}
+⏰ Generated: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
+
+- Enhanced RSS aggregation with AI summarization
+- Visual content generation (hero, charts, social cards)  
+- Multi-format output (HTML, email, mobile API)
+- Performance analytics and monitoring"
+            
+            git push
+            echo "✅ Committed $EDITION edition updates"
+          else
+            echo "📰 No changes to commit"
+          fi
+
+      - name: Cleanup Artifacts
+        run: |
+          echo "🧹 Cleaning up build artifacts..."
+          # Cleanup happens automatically via retention-days settings
+
+      - name: Health Check
+        run: |
+          echo "🏥 Performing final health check..."
+          sleep 60  # Wait for deployment to propagate
+          
+          SITE_URL="https://bronathedruid.github.io/daily-briefing/"
+          
+          if curl -sf "$SITE_URL" > /dev/null; then
+            echo "✅ Website is healthy and accessible"
+            echo "🗞️ ${{ needs.collect.outputs.edition }} edition deployed successfully!"
+            echo "📰 Available at: $SITE_URL"
+          else
+            echo "❌ Website health check failed"
+            exit 1
+          fi
+
+      - name: Send Completion Notification
+        if: always()
+        run: |
+          EDITION="${{ needs.collect.outputs.edition }}"
+          ARTICLE_COUNT="${{ needs.collect.outputs.article-count }}"
+          STATUS="${{ job.status }}"
+          
+          echo "🚀 Pipeline completed with status: $STATUS"
+          echo "🗞️ $EDITION Edition: $ARTICLE_COUNT articles"
+          
+          # Future: Send notification via webhook, email, or Slack
+          # curl -X POST $WEBHOOK_URL -d "..."

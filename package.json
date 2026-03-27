@@ -1,25 +1,37 @@
 {
   "name": "daily-briefing",
-  "version": "2.0.0",
-  "description": "Automated daily news dashboard — AI, security, marketing, space, policy — Now with newspaper design!",
+  "version": "2.1.0",
+  "description": "AI-powered newspaper-style tech news aggregator with visual content and email distribution",
   "type": "module",
   "scripts": {
     "fetch": "node scripts/enhanced-fetch-news.mjs",
     "fetch:legacy": "node scripts/fetch-news.mjs",
     "build": "node scripts/generate-newspaper.mjs",
-    "build:legacy": "node scripts/generate-site.mjs",
-    "update": "npm run fetch && npm run build",
+    "build:legacy": "node scripts/generate-site.mjs", 
+    "visuals": "node scripts/visual-content-generator-svg.mjs",
+    "visuals:canvas": "node scripts/visual-content-generator.mjs",
+    "email": "node scripts/email-digest-generator.mjs",
+    "analytics": "node scripts/performance-analytics.mjs",
+    "update": "npm run fetch && npm run visuals && npm run build && npm run email",
     "update:legacy": "npm run fetch:legacy && npm run build:legacy",
-    "dev": "npm run update && npx serve public",
-    "summarize": "node scripts/ai-summarize.mjs"
+    "pipeline": "npm run fetch && npm run visuals && npm run build && npm run email && npm run analytics",
+    "dev": "npm run update && npx serve public -p 3001",
+    "summarize": "node scripts/ai-summarize.mjs",
+    "test": "node scripts/test-pipeline.mjs",
+    "feeds:check": "node scripts/enhanced-fetch-news.mjs --dry-run",
+    "feeds:update": "curl -o scripts/enhanced-feeds.json https://raw.githubusercontent.com/bronathedruid/daily-briefing/main/scripts/enhanced-feeds.json"
   },
   "dependencies": {
     "rss-parser": "^3.13.0",
     "marked": "^15.0.0",
     "sanitize-html": "^2.14.0"
   },
+  "optionalDependencies": {
+    "canvas": "^2.11.2"
+  },
   "devDependencies": {
-    "serve": "^14.2.0"
+    "serve": "^14.2.0",
+    "nodemon": "^3.0.2"
   },
   "keywords": [
     "news",
@@ -28,7 +40,21 @@
     "ai",
     "devops",
     "newspaper",
-    "github-actions"
+    "github-actions",
+    "visual-content",
+    "email-digest",
+    "performance-analytics"
   ],
-  "license": "MIT"
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bronathedruid/daily-briefing.git"
+  },
+  "homepage": "https://bronathedruid.github.io/daily-briefing/",
+  "bugs": {
+    "url": "https://github.com/bronathedruid/daily-briefing/issues"
+  }
 }

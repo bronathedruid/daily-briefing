@@ -1,0 +1,11 @@
+{
+  "generated": "2026-03-27T00:43:44.481Z",
+  "date": "2026-03-27",
+  "assets": {
+    "hero": "/Users/admin/openclaw-workspace/projects/daily-briefing/public/assets/hero-image.svg",
+    "chart": "/Users/admin/openclaw-workspace/projects/daily-briefing/public/assets/category-chart.svg",
+    "social": "/Users/admin/openclaw-workspace/projects/daily-briefing/public/assets/social-card.svg",
+    "trending": "/Users/admin/openclaw-workspace/projects/daily-briefing/public/assets/trending-topics.svg"
+  },
+  "format": "svg"
+}

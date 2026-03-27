@@ -1,0 +1,41 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="socialGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fdfcf7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f4f1ea;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#socialGrad)"/>
+  
+  <!-- Main title -->
+  <text x="600" y="150" text-anchor="middle" 
+        font-family="Georgia, serif" font-size="60" font-weight="900" 
+        fill="#1a1a1a">THE DAILY BRIEFING</text>
+  
+  <!-- Date -->
+  <text x="600" y="200" text-anchor="middle" 
+        font-family="'Courier New', monospace" font-size="28" 
+        fill="#1a1a1a">Friday, March 27, 2026</text>
+  
+  <!-- Key stats -->
+  <text x="600" y="280" text-anchor="middle" 
+        font-family="Georgia, serif" font-size="36" font-weight="bold" 
+        fill="#8b0000">109 Tech Stories Today</text>
+  
+  <!-- Feature highlights -->
+  <text x="600" y="330" text-anchor="middle" 
+        font-family="Georgia, serif" font-size="24" 
+        fill="#4a4a4a">AI Models • Security • DevOps • Space • More</text>
+  
+  <!-- Tagline -->
+  <text x="600" y="450" text-anchor="middle" 
+        font-family="Georgia, serif" font-size="20" font-style="italic" 
+        fill="#4a4a4a">Curated tech news with AI-powered summaries</text>
+  
+  <!-- Website -->
+  <text x="600" y="500" text-anchor="middle" 
+        font-family="'Courier New', monospace" font-size="18" 
+        fill="#1a1a1a">bronathedruid.github.io/daily-briefing</text>
+</svg>

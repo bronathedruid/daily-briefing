@@ -1,0 +1,200 @@
+{
+  "categories": {
+    "ai-models": {
+      "label": "🤖 AI Models & Releases",
+      "emoji": "🤖",
+      "feeds": [
+        { "name": "Google AI Blog", "url": "https://blog.google/technology/ai/rss/", "priority": 5 },
+        { "name": "HuggingFace Blog", "url": "https://huggingface.co/blog/feed.xml", "priority": 5 },
+        { "name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "priority": 4 },
+        { "name": "Ars Technica AI", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "priority": 4 },
+        { "name": "OpenAI Blog", "url": "https://openai.com/blog/rss.xml", "priority": 5 },
+        { "name": "Anthropic News", "url": "https://www.anthropic.com/news/rss.xml", "priority": 5 },
+        { "name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "priority": 5 },
+        { "name": "Microsoft AI Blog", "url": "https://blogs.microsoft.com/ai/feed/", "priority": 4 },
+        { "name": "NVIDIA AI Blog", "url": "https://blogs.nvidia.com/blog/category/artificial-intelligence/feed/", "priority": 4 },
+        { "name": "MIT AI News", "url": "https://news.mit.edu/topic/artificial-intelligence2.rss", "priority": 4 },
+        { "name": "Stanford HAI", "url": "https://hai.stanford.edu/rss.xml", "priority": 4 },
+        { "name": "arXiv cs.AI", "url": "https://rss.arxiv.org/rss/cs.AI", "priority": 3 },
+        { "name": "arXiv cs.CL (NLP)", "url": "https://rss.arxiv.org/rss/cs.CL", "priority": 3 },
+        { "name": "arXiv cs.LG (ML)", "url": "https://rss.arxiv.org/rss/cs.LG", "priority": 3 },
+        { "name": "Import AI Newsletter", "url": "https://importai.substack.com/feed", "priority": 5 },
+        { "name": "The Gradient", "url": "https://thegradient.pub/rss/", "priority": 4 },
+        { "name": "Distill.pub", "url": "https://distill.pub/rss.xml", "priority": 4 },
+        { "name": "Papers With Code", "url": "https://paperswithcode.com/feeds/latest-papers-with-code.atom", "priority": 4 },
+        { "name": "Ollama Releases", "url": "https://github.com/ollama/ollama/releases.atom", "priority": 4, "type": "github-release" },
+        { "name": "HF Transformers", "url": "https://github.com/huggingface/transformers/releases.atom", "priority": 4, "type": "github-release" },
+        { "name": "vLLM Releases", "url": "https://github.com/vllm-project/vllm/releases.atom", "priority": 3, "type": "github-release" },
+        { "name": "llama.cpp", "url": "https://github.com/ggerganov/llama.cpp/releases.atom", "priority": 3, "type": "github-release" },
+        { "name": "LangChain", "url": "https://github.com/langchain-ai/langchain/releases.atom", "priority": 3, "type": "github-release" },
+        { "name": "AutoGPT", "url": "https://github.com/Significant-Gravitas/AutoGPT/releases.atom", "priority": 3, "type": "github-release" }
+      ],
+      "keywords": ["model", "llm", "gpt", "claude", "gemini", "codex", "kimi", "mistral", "benchmark", "weights", "fine-tun", "parameter", "token", "inference", "training", "llama", "release", "multimodal", "vision", "embedding"]
+    },
+    "government-policy": {
+      "label": "🏛️ Government & Policy",
+      "emoji": "🏛️",
+      "feeds": [
+        { "name": "CISA Alerts", "url": "https://www.cisa.gov/news.xml", "priority": 5 },
+        { "name": "EFF Deeplinks", "url": "https://www.eff.org/rss/updates.xml", "priority": 5 },
+        { "name": "Ars Technica Policy", "url": "https://feeds.arstechnica.com/arstechnica/tech-policy", "priority": 4 },
+        { "name": "The Hill Tech", "url": "https://thehill.com/policy/technology/feed/", "priority": 4 },
+        { "name": "Politico AI", "url": "https://www.politico.com/rss/artificial-intelligence", "priority": 4 },
+        { "name": "Reuters Tech", "url": "https://feeds.reuters.com/reuters/technologyNews", "priority": 4 },
+        { "name": "TechCrunch Policy", "url": "https://techcrunch.com/tag/policy/feed/", "priority": 4 },
+        { "name": "Wired Politics", "url": "https://www.wired.com/feed/category/business/politics/rss", "priority": 3 },
+        { "name": "AI Policy Institute", "url": "https://aipolicy.us/feed", "priority": 4 },
+        { "name": "Future of Privacy", "url": "https://fpf.org/feed/", "priority": 3 },
+        { "name": "Center for AI Safety", "url": "https://www.safe.ai/rss", "priority": 4 },
+        { "name": "EU AI Act News", "url": "https://artificialintelligenceact.eu/feed/", "priority": 4 }
+      ],
+      "keywords": ["regulation", "executive order", "congress", "senate", "legislation", "compliance", "ai act", "policy", "federal", "government", "antitrust", "privacy", "cybersecurity", "gdpr", "ccpa", "safety"]
+    },
+    "security": {
+      "label": "🔐 Cybersecurity",
+      "emoji": "🔐",
+      "feeds": [
+        { "name": "Krebs on Security", "url": "https://krebsonsecurity.com/feed/", "priority": 5 },
+        { "name": "The Hacker News", "url": "https://feeds.feedburner.com/TheHackersNews", "priority": 5 },
+        { "name": "Schneier on Security", "url": "https://www.schneier.com/feed/atom/", "priority": 5 },
+        { "name": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/", "priority": 4 },
+        { "name": "Dark Reading", "url": "https://www.darkreading.com/rss.xml", "priority": 4 },
+        { "name": "Security Week", "url": "https://www.securityweek.com/feed/", "priority": 4 },
+        { "name": "Threatpost", "url": "https://threatpost.com/feed/", "priority": 3 },
+        { "name": "SANS ISC", "url": "https://isc.sans.edu/rssfeed.xml", "priority": 4 },
+        { "name": "Recorded Future", "url": "https://www.recordedfuture.com/feed", "priority": 4 },
+        { "name": "FireEye Threat Intel", "url": "https://www.mandiant.com/resources/blog/rss.xml", "priority": 4 },
+        { "name": "CrowdStrike Blog", "url": "https://www.crowdstrike.com/blog/feed/", "priority": 4 },
+        { "name": "Palo Alto Networks", "url": "https://unit42.paloaltonetworks.com/feed/", "priority": 4 },
+        { "name": "Cisco Talos", "url": "https://blog.talosintelligence.com/feeds/posts/default", "priority": 4 },
+        { "name": "US-CERT Alerts", "url": "https://us-cert.cisa.gov/ncas/alerts.xml", "priority": 5 },
+        { "name": "CVE Details", "url": "https://www.cvedetails.com/vulnerability-feeds.xml", "priority": 3 },
+        { "name": "ZDI Advisories", "url": "https://www.zerodayinitiative.com/rss/upcoming/", "priority": 3 }
+      ],
+      "keywords": ["vulnerability", "cve", "breach", "exploit", "ransomware", "malware", "zero-day", "patch", "security", "threat", "attack", "phishing", "social engineering", "apt", "supply chain"]
+    },
+    "coding-agents": {
+      "label": "🛠️ Coding Agents & AI Tools",
+      "emoji": "🛠️",
+      "feeds": [
+        { "name": "GitHub Blog", "url": "https://github.blog/feed/", "priority": 5 },
+        { "name": "GitHub Changelog", "url": "https://github.blog/changelog/feed/", "priority": 4 },
+        { "name": "VS Code Blog", "url": "https://code.visualstudio.com/feed.xml", "priority": 4 },
+        { "name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "priority": 5 },
+        { "name": "Latent Space", "url": "https://www.latent.space/feed", "priority": 4 },
+        { "name": "JetBrains Blog", "url": "https://blog.jetbrains.com/feed/", "priority": 3 },
+        { "name": "Stack Overflow Blog", "url": "https://stackoverflow.blog/feed/", "priority": 3 },
+        { "name": "Dev.to AI", "url": "https://dev.to/feed/tag/ai", "priority": 3 },
+        { "name": "Replit Blog", "url": "https://blog.replit.com/rss.xml", "priority": 3 },
+        { "name": "CodePen Blog", "url": "https://blog.codepen.io/feed/", "priority": 2 },
+        { "name": "OpenClaw Releases", "url": "https://github.com/openclaw/openclaw/releases.atom", "priority": 5, "type": "github-release" },
+        { "name": "Cursor IDE", "url": "https://github.com/getcursor/cursor/releases.atom", "priority": 4, "type": "github-release" },
+        { "name": "Aider Releases", "url": "https://github.com/paul-gauthier/aider/releases.atom", "priority": 4, "type": "github-release" },
+        { "name": "Continue.dev", "url": "https://github.com/continuedev/continue/releases.atom", "priority": 3, "type": "github-release" },
+        { "name": "Cody by Sourcegraph", "url": "https://github.com/sourcegraph/cody/releases.atom", "priority": 3, "type": "github-release" },
+        { "name": "Tabnine", "url": "https://www.tabnine.com/blog/rss.xml", "priority": 3 },
+        { "name": "HN Coding Agents", "url": "https://hn.algolia.com/api/v1/search?query=coding+agent+OR+claude+code+OR+copilot+OR+cursor&tags=story&numericFilters=points>20&hitsPerPage=15", "priority": 4, "type": "hn-algolia" }
+      ],
+      "keywords": ["claude code", "copilot", "codex", "cursor", "openclaw", "coding agent", "ai assistant", "ide", "vscode", "gemini cli", "agentic", "aider", "autocomplete", "pair programming"]
+    },
+    "marketing-seo": {
+      "label": "📈 Marketing & SEO",
+      "emoji": "📈",
+      "feeds": [
+        { "name": "Search Engine Journal", "url": "https://www.searchenginejournal.com/feed/", "priority": 5 },
+        { "name": "Search Engine Land", "url": "https://searchengineland.com/feed", "priority": 5 },
+        { "name": "Ahrefs Blog", "url": "https://ahrefs.com/blog/feed/", "priority": 4 },
+        { "name": "Moz Blog", "url": "https://moz.com/blog/feed", "priority": 4 },
+        { "name": "SEMrush Blog", "url": "https://www.semrush.com/blog/feed/", "priority": 4 },
+        { "name": "Backlinko", "url": "https://backlinko.com/blog/feed/", "priority": 4 },
+        { "name": "Neil Patel Blog", "url": "https://neilpatel.com/blog/feed/", "priority": 3 },
+        { "name": "HubSpot Marketing", "url": "https://blog.hubspot.com/marketing/rss.xml", "priority": 3 },
+        { "name": "Content Marketing Institute", "url": "https://contentmarketinginstitute.com/feed/", "priority": 3 },
+        { "name": "Marketing Land", "url": "https://marketingland.com/feed", "priority": 4 },
+        { "name": "Social Media Examiner", "url": "https://www.socialmediaexaminer.com/feed/", "priority": 3 },
+        { "name": "Buffer Blog", "url": "https://buffer.com/resources/rss/", "priority": 3 },
+        { "name": "Hootsuite Blog", "url": "https://blog.hootsuite.com/feed/", "priority": 3 },
+        { "name": "Google Ads Blog", "url": "https://ads-developers.googleblog.com/feeds/posts/default", "priority": 4 },
+        { "name": "Facebook Business", "url": "https://www.facebook.com/business/news/rss", "priority": 3 }
+      ],
+      "keywords": ["seo", "aeo", "serp", "ranking", "backlink", "local seo", "content marketing", "google update", "algorithm", "search", "optimization", "ai overview", "answer engine", "social media", "ppc", "conversion"]
+    },
+    "space-rockets": {
+      "label": "🚀 Space & Rockets",
+      "emoji": "🚀",
+      "feeds": [
+        { "name": "SpaceNews", "url": "https://spacenews.com/feed/", "priority": 5 },
+        { "name": "NASA Breaking News", "url": "https://www.nasa.gov/news/releases/latest/rss", "priority": 5 },
+        { "name": "Ars Technica Space", "url": "https://arstechnica.com/space/feed/", "priority": 5 },
+        { "name": "Spaceflight Now", "url": "https://spaceflightnow.com/feed/", "priority": 4 },
+        { "name": "Space.com", "url": "https://www.space.com/feeds/all", "priority": 4 },
+        { "name": "NASASpaceflight", "url": "https://www.nasaspaceflight.com/feed/", "priority": 5 },
+        { "name": "SpaceX Updates", "url": "https://www.spacex.com/news.rss", "priority": 5 },
+        { "name": "Blue Origin", "url": "https://www.blueorigin.com/news/rss", "priority": 4 },
+        { "name": "ESA News", "url": "https://www.esa.int/rss.xml", "priority": 4 },
+        { "name": "Universe Today", "url": "https://www.universetoday.com/feed/", "priority": 3 },
+        { "name": "SpacePolicyOnline", "url": "https://www.spacepolicyonline.com/feed", "priority": 3 },
+        { "name": "The Planetary Society", "url": "https://www.planetary.org/feed", "priority": 3 },
+        { "name": "SpaceRef", "url": "http://spaceref.com/news.rss", "priority": 3 },
+        { "name": "Parabolic Arc", "url": "https://parabolicarc.com/feed/", "priority": 3 }
+      ],
+      "keywords": ["spacex", "nasa", "launch", "rocket", "starship", "falcon", "orbit", "satellite", "artemis", "mars", "moon", "starlink", "crew dragon", "iss", "commercial space"]
+    },
+    "devops": {
+      "label": "⚙️ DevOps & Platform Engineering",
+      "emoji": "⚙️",
+      "feeds": [
+        { "name": "DevOps.com", "url": "https://devops.com/feed/", "priority": 4 },
+        { "name": "The New Stack", "url": "https://thenewstack.io/feed/", "priority": 5 },
+        { "name": "HashiCorp Blog", "url": "https://www.hashicorp.com/blog/feed.xml", "priority": 4 },
+        { "name": "Azure DevOps Blog", "url": "https://devblogs.microsoft.com/devops/feed/", "priority": 4 },
+        { "name": "AWS What's New", "url": "https://aws.amazon.com/about-aws/whats-new/recent/feed/", "priority": 5 },
+        { "name": "GCP Blog", "url": "https://cloudblog.withgoogle.com/rss/", "priority": 4 },
+        { "name": "CNCF Blog", "url": "https://www.cncf.io/blog/feed/", "priority": 4 },
+        { "name": "Kubernetes Blog", "url": "https://kubernetes.io/feed.xml", "priority": 4 },
+        { "name": "Docker Blog", "url": "https://www.docker.com/blog/feed/", "priority": 4 },
+        { "name": "GitLab Blog", "url": "https://about.gitlab.com/blog/atom.xml", "priority": 4 },
+        { "name": "Atlassian Blog", "url": "https://www.atlassian.com/blog/feed", "priority": 3 },
+        { "name": "CircleCI Blog", "url": "https://circleci.com/blog/feed.xml", "priority": 3 },
+        { "name": "Jenkins Blog", "url": "https://jenkins.io/node/feed", "priority": 3 },
+        { "name": "Terraform Releases", "url": "https://github.com/hashicorp/terraform/releases.atom", "priority": 4, "type": "github-release" },
+        { "name": "Kubernetes Releases", "url": "https://github.com/kubernetes/kubernetes/releases.atom", "priority": 4, "type": "github-release" },
+        { "name": "Helm Releases", "url": "https://github.com/helm/helm/releases.atom", "priority": 3, "type": "github-release" }
+      ],
+      "keywords": ["kubernetes", "docker", "terraform", "ci/cd", "pipeline", "container", "cloud", "infrastructure", "platform engineering", "gitops", "devops", "helm", "monitoring", "observability", "sre"]
+    },
+    "powershell": {
+      "label": "💠 PowerShell & Automation",
+      "emoji": "💠",
+      "feeds": [
+        { "name": "PowerShell Team Blog", "url": "https://devblogs.microsoft.com/powershell/feed/", "priority": 5 },
+        { "name": "PowerShell.org", "url": "https://powershell.org/feed/", "priority": 4 },
+        { "name": "Adam the Automator", "url": "https://adamtheautomator.com/feed/", "priority": 4 },
+        { "name": "Microsoft DevBlogs", "url": "https://devblogs.microsoft.com/feed/", "priority": 3 },
+        { "name": "Petri IT", "url": "https://petri.com/feed/", "priority": 4 },
+        { "name": "Microsoft Scripting", "url": "https://devblogs.microsoft.com/scripting/feed/", "priority": 4 },
+        { "name": "PowerShell Gallery", "url": "https://www.powershellgallery.com/packages?q=Tags%3A%22Featured%22&prerel=false&sortOrder=package-download-count", "priority": 3 },
+        { "name": "Hey Scripting Guy", "url": "https://devblogs.microsoft.com/powershell-community/feed/", "priority": 3 },
+        { "name": "4sysops", "url": "https://4sysops.com/feed/", "priority": 3 },
+        { "name": "PowerShell Releases", "url": "https://github.com/PowerShell/PowerShell/releases.atom", "priority": 4, "type": "github-release" }
+      ],
+      "keywords": ["powershell", "pwsh", "automation", "scripting", "module", "dsc", "winget", "windows", "azure automation", "desired state", "remoting"]
+    },
+    "emerging-tech": {
+      "label": "🧬 Emerging Tech",
+      "emoji": "🧬",
+      "feeds": [
+        { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/feed/", "priority": 5 },
+        { "name": "Wired", "url": "https://www.wired.com/feed/rss", "priority": 4 },
+        { "name": "IEEE Spectrum", "url": "https://spectrum.ieee.org/rss/fulltext", "priority": 4 },
+        { "name": "Nature Technology", "url": "https://feeds.nature.com/nature/rss/current", "priority": 4 },
+        { "name": "Science Daily Tech", "url": "https://www.sciencedaily.com/rss/computers_math/computer_science.xml", "priority": 3 },
+        { "name": "TechCrunch", "url": "https://techcrunch.com/feed/", "priority": 4 },
+        { "name": "VentureBeat", "url": "https://venturebeat.com/feed/", "priority": 3 },
+        { "name": "Quantum Computing Report", "url": "https://quantumcomputingreport.com/feed/", "priority": 4 },
+        { "name": "IBM Research", "url": "https://research.ibm.com/blog/rss.xml", "priority": 3 }
+      ],
+      "keywords": ["quantum", "blockchain", "robotics", "biotech", "nanotech", "augmented reality", "virtual reality", "metaverse", "iot", "edge computing", "5g", "6g"]
+    }
+  }
+}

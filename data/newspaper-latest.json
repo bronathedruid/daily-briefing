@@ -1,13 +1,13 @@
 {
   "date": "2026-03-27",
-  "generated": "2026-03-27T00:28:34.630Z",
+  "generated": "2026-03-27T00:43:44.292Z",
   "articles": [
     [
       "🤖 AI Models & Releases",
       "Watch James Manyika talk AI and creativity with LL COOL J.",
       "https://blog.google/innovation-and-ai/technology/ai/ll-cool-j-dialogues/",
       "Google AI Blog",
-      "7h ago",
+      "8h ago",
       "In the latest episode of our Dialogues on Technology and Society series, LL COOL J sits down with James Manyika."
     ],
     [
@@ -15,7 +15,7 @@
       "Transform your headphones into a live personal translator on iOS.",
       "https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/",
       "Google AI Blog",
-      "8h ago",
+      "9h ago",
       "Google Translate’s Live translate with headphones is officially arriving on iOS. And we're expanding the capability for both iOS and Android users to even more countries…."
     ],
     [
@@ -31,7 +31,7 @@
       "Search Live is expanding globally",
       "https://blog.google/products-and-platforms/products/search/search-live-global-expansion/",
       "Google AI Blog",
-      "9h ago",
+      "10h ago",
       "We’re expanding Search Live globally, to all languages and locations where AI Mode is available."
     ],
     [
@@ -49,6 +49,14 @@
       "Google AI Blog",
       "1d ago",
       "We are bringing Lyria 3 to the tools where professionals work and create every day."
+    ],
+    [
+      "🤖 AI Models & Releases",
+      "Judge sides with Anthropic to temporarily block the Pentagon&#8217;s ban",
+      "https://www.theverge.com/ai-artificial-intelligence/902149/anthropic-dod-pentagon-lawsuit-supply-chain-risk-injunction",
+      "The Verge AI",
+      "just now",
+      "After Anthropic's weeks-long standoff with the Pentagon, the company won one milestone: A judge granted Anthropic a preliminary injunction in its lawsuit, which sought to reverse its government blackl..."
     ],
     [
       "🤖 AI Models & Releases",
@@ -103,7 +111,7 @@
       "Wikipedia bans AI-generated articles",
       "https://www.theverge.com/tech/901461/wikipedia-ai-generated-article-ban",
       "The Verge AI",
-      "9h ago",
+      "10h ago",
       "Wikipedia will no longer allow editors to write or rewrite articles using AI."
     ],
     [
@@ -119,16 +127,8 @@
       "Webtoon is adding AI localization tools to its comics platform",
       "https://www.theverge.com/ai-artificial-intelligence/899108/webtoon-canvas-ai-translation-localization-yongsoo-kim",
       "The Verge AI",
-      "11h ago",
-      "Canvas, Webtoon 's platform for user-uploaded comics, is about to get a major overhaul that's designed to help creators make more money and share their art with a wider audience."
-    ],
-    [
-      "🤖 AI Models & Releases",
-      "EU backs nude app ban and delays to landmark AI rules",
-      "https://www.theverge.com/ai-artificial-intelligence/901315/eu-ai-act-delays-ban-nudify-apps",
-      "The Verge AI",
       "12h ago",
-      "European lawmakers have voted to delay key parts of the EU AI Act, the bloc's flagship law for regulating artificial intelligence, while also backing proposals to ban nudify apps."
+      "Canvas, Webtoon 's platform for user-uploaded comics, is about to get a major overhaul that's designed to help creators make more money and share their art with a wider audience."
     ],
     [
       "🤖 AI Models & Releases",
@@ -167,7 +167,7 @@
       "Memory Bear AI Memory Science Engine for Multimodal Affective Intelligence: A Technical Report",
       "https://arxiv.org/abs/2603.22306",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22306v1 Announce Type: new Abstract: Affective judgment in real interaction is rarely a purely local prediction problem."
     ],
     [
@@ -175,7 +175,7 @@
       "The Efficiency Attenuation Phenomenon: A Computational Challenge to the Language of Thought Hypothesis",
       "https://arxiv.org/abs/2603.22312",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22312v1 Announce Type: new Abstract: This paper computationally investigates whether thought requires a language-like format, as posited by the Language of Thought (LoT) hypothesis."
     ],
     [
@@ -183,7 +183,7 @@
       "Dynamic Fusion-Aware Graph Convolutional Neural Network for Multimodal Emotion Recognition in Conversations",
       "https://arxiv.org/abs/2603.22345",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22345v1 Announce Type: new Abstract: Multimodal emotion recognition in conversations (MERC) aims to identify and understand the emotions expressed by speakers during utterance interaction f..."
     ],
     [
@@ -191,7 +191,7 @@
       "Intelligence Inertia: Physical Principles and Applications",
       "https://arxiv.org/abs/2603.22347",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22347v1 Announce Type: new Abstract: While Landauer's principle establishes the fundamental thermodynamic floor for information erasure and Fisher Information provides a metric for local cu..."
     ],
     [
@@ -199,7 +199,7 @@
       "Session Risk Memory (SRM): Temporal Authorization for Deterministic Pre-Execution Safety Gates",
       "https://arxiv.org/abs/2603.22350",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22350v1 Announce Type: new Abstract: Deterministic pre-execution safety gates evaluate whether individual agent actions are compatible with their assigned roles."
     ],
     [
@@ -207,7 +207,7 @@
       "STEM Agent: A Self-Adapting, Tool-Enabled, Extensible Architecture for Multi-Protocol AI Agent Systems",
       "https://arxiv.org/abs/2603.22359",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22359v1 Announce Type: new Abstract: Current AI agent frameworks commit early to a single interaction protocol, a fixed tool integration strategy, and static user models, limiting their dep..."
     ],
     [
@@ -215,7 +215,7 @@
       "From Static Templates to Dynamic Runtime Graphs: A Survey of Workflow Optimization for LLM Agents",
       "https://arxiv.org/abs/2603.22386",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22386v1 Announce Type: new Abstract: Large language model (LLM)-based systems are becoming increasingly popular for solving tasks by constructing executable workflows that interleave LLM ca..."
     ],
     [
@@ -223,7 +223,7 @@
       "Computational Arbitrage in AI Model Markets",
       "https://arxiv.org/abs/2603.22404",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22404v1 Announce Type: new Abstract: Consider a market of competing model providers selling query access to models with varying costs and capabilities."
     ],
     [
@@ -231,7 +231,7 @@
       "Maximum Entropy Relaxation of Multi-Way Cardinality Constraints for Synthetic Population Generation",
       "https://arxiv.org/abs/2603.22558",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22558v1 Announce Type: new Abstract: Generating synthetic populations from aggregate statistics is a core component of microsimulation, agent-based modeling, policy analysis, and privacy-pr..."
     ],
     [
@@ -239,7 +239,7 @@
       "AI Mental Models: Learned Intuition and Deliberation in a Bounded Neural Architecture",
       "https://arxiv.org/abs/2603.22561",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22561v1 Announce Type: new Abstract: This paper asks whether a bounded neural architecture can exhibit a meaningful division of labor between intuition and deliberation on a classic 64-item..."
     ],
     [
@@ -247,7 +247,7 @@
       "Understanding LLM Performance Degradation in Multi-Instance Processing: The Roles of Instance Count and Context Length",
       "https://arxiv.org/abs/2603.22608",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22608v1 Announce Type: new Abstract: Users often rely on Large Language Models (LLMs) for processing multiple documents or performing analysis over a number of instances."
     ],
     [
@@ -255,7 +255,7 @@
       "Bridging the Know-Act Gap via Task-Level Autoregressive Reasoning",
       "https://arxiv.org/abs/2603.22619",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22619v1 Announce Type: new Abstract: LLMs often generate seemingly valid answers to flawed or ill-posed inputs."
     ],
     [
@@ -263,7 +263,7 @@
       "Graph-Aware Late Chunking for Retrieval-Augmented Generation in Biomedical Literature",
       "https://arxiv.org/abs/2603.22633",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22633v1 Announce Type: new Abstract: Retrieval-Augmented Generation (RAG) systems for biomedical literature are typically evaluated using ranking metrics like Mean Reciprocal Rank (MRR), wh..."
     ],
     [
@@ -271,7 +271,7 @@
       "Benchmarking Multi-Agent LLM Architectures for Financial Document Processing: A Comparative Study of Orchestration Patterns, Cost-Accuracy Tradeoffs and Production Scaling Strategies",
       "https://arxiv.org/abs/2603.22651",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22651v1 Announce Type: new Abstract: The adoption of large language models (LLMs) for structured information extraction from financial documents has accelerated rapidly, yet production depl..."
     ],
     [
@@ -279,7 +279,7 @@
       "MuQ-Eval: An Open-Source Per-Sample Quality Metric for AI Music Generation Evaluation",
       "https://arxiv.org/abs/2603.22677",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22677v1 Announce Type: new Abstract: Distributional metrics such as Fr\\'echet Audio Distance cannot score individual music clips and correlate poorly with human judgments, while the only pe..."
     ],
     [
@@ -287,7 +287,7 @@
       "HyFI: Hyperbolic Feature Interpolation for Brain-Vision Alignment",
       "https://arxiv.org/abs/2603.22721",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22721v1 Announce Type: new Abstract: Recent progress in artificial intelligence has encouraged numerous attempts to understand and decode human visual system from brain signals."
     ],
     [
@@ -295,7 +295,7 @@
       "Beyond Binary Correctness: Scaling Evaluation of Long-Horizon Agents on Subjective Enterprise Tasks",
       "https://arxiv.org/abs/2603.22744",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22744v1 Announce Type: new Abstract: Large language models excel on objectively verifiable tasks such as math and programming, where evaluation reduces to unit tests or a single correct answer."
     ],
     [
@@ -303,7 +303,7 @@
       "CLiGNet: Clinical Label-Interaction Graph Network for Medical Specialty Classification from Clinical Transcriptions",
       "https://arxiv.org/abs/2603.22752",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22752v1 Announce Type: new Abstract: Automated classification of clinical transcriptions into medical specialties is essential for routing, coding, and clinical decision support, yet prior ..."
     ],
     [
@@ -311,7 +311,7 @@
       "Can LLM Agents Generate Real-World Evidence? Evaluating Observational Studies in Medical Databases",
       "https://arxiv.org/abs/2603.22767",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22767v1 Announce Type: new Abstract: Observational studies can yield clinically actionable evidence at scale, but executing them on real-world databases is open-ended and requires coherent ..."
     ],
     [
@@ -319,7 +319,7 @@
       "AgriPestDatabase-v1.0: A Structured Insect Dataset for Training Agricultural Large Language Model",
       "https://arxiv.org/abs/2603.22777",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22777v1 Announce Type: new Abstract: Agricultural pest management increasingly relies on timely and accurate access to expert knowledge, yet high quality labeled data and continuous expert ..."
     ],
     [
@@ -327,7 +327,7 @@
       "ABSTRAL: Automatic Design of Multi-Agent Systems Through Iterative Refinement and Topology Optimization",
       "https://arxiv.org/abs/2603.22791",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22791v1 Announce Type: new Abstract: How should multi-agent systems be designed, and can that design knowledge be captured in a form that is inspectable, revisable, and transferable."
     ],
     [
@@ -335,7 +335,7 @@
       "Reliable Classroom AI via Neuro-Symbolic Multimodal Reasoning",
       "https://arxiv.org/abs/2603.22793",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22793v1 Announce Type: new Abstract: Classroom AI is rapidly expanding from low-level perception toward higher-level judgments about engagement, confusion, collaboration, and instructional quality."
     ],
     [
@@ -343,7 +343,7 @@
       "Learning What Matters Now: Dynamic Preference Inference under Contextual Shifts",
       "https://arxiv.org/abs/2603.22813",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22813v1 Announce Type: new Abstract: Humans often juggle multiple, sometimes conflicting objectives and shift their priorities as circumstances change, rather than following a fixed objective function."
     ],
     [
@@ -351,7 +351,7 @@
       "Empirical Comparison of Agent Communication Protocols for Task Orchestration",
       "https://arxiv.org/abs/2603.22823",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22823v1 Announce Type: new Abstract: Context. Nowadays, artificial intelligence agent systems are transforming from single-tool interactions to complex multi-agent orchestrations."
     ],
     [
@@ -359,7 +359,7 @@
       "Improving Safety Alignment via Balanced Direct Preference Optimization",
       "https://arxiv.org/abs/2603.22829",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22829v1 Announce Type: new Abstract: With the rapid development and widespread application of Large Language Models (LLMs), their potential safety risks have attracted widespread attention."
     ],
     [
@@ -367,7 +367,7 @@
       "PhySe-RPO: Physics and Semantics Guided Relative Policy Optimization for Diffusion-Based Surgical Smoke Removal",
       "https://arxiv.org/abs/2603.22844",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22844v2 Announce Type: new Abstract: Surgical smoke severely degrades intraoperative video quality, obscuring anatomical structures and limiting surgical perception."
     ],
     [
@@ -375,7 +375,7 @@
       "CoMaTrack: Competitive Multi-Agent Game-Theoretic Tracking with Vision-Language-Action Models",
       "https://arxiv.org/abs/2603.22846",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22846v1 Announce Type: new Abstract: Embodied Visual Tracking (EVT), a core dynamic task in embodied intelligence, requires an agent to precisely follow a language-specified target."
     ],
     [
@@ -383,7 +383,7 @@
       "Chain-of-Authorization: Internalizing Authorization into Large Language Models via Reasoning Trajectories",
       "https://arxiv.org/abs/2603.22869",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22869v1 Announce Type: new Abstract: Large Language Models (LLMs) have become core cognitive components in modern artificial intelligence (AI) systems, combining internal knowledge with ext..."
     ],
     [
@@ -391,7 +391,7 @@
       "Dynamical Systems Theory Behind a Hierarchical Reasoning Model",
       "https://arxiv.org/abs/2603.22871",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22871v1 Announce Type: new Abstract: Current large language models (LLMs) primarily rely on linear sequence generation and massive parameter counts, yet they severely struggle with complex ..."
     ],
     [
@@ -399,7 +399,7 @@
       "Continuous Optimization for Satisfiability Modulo Theories on Linear Real Arithmetic",
       "https://arxiv.org/abs/2603.22877",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22877v1 Announce Type: new Abstract: Efficient solutions for satisfiability modulo theories (SMT) are integral in industrial applications such as hardware verification and design automation."
     ],
     [
@@ -407,7 +407,7 @@
       "Separating Diagnosis from Control: Auditable Policy Adaptation in Agent-Based Simulations with LLM-Based Diagnostics",
       "https://arxiv.org/abs/2603.22904",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22904v1 Announce Type: new Abstract: Mitigating elderly loneliness requires policy interventions that achieve both adaptability and auditability."
     ],
     [
@@ -415,7 +415,7 @@
       "ProGRank: Probe-Gradient Reranking to Defend Dense-Retriever RAG from Corpus Poisoning",
       "https://arxiv.org/abs/2603.22934",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22934v1 Announce Type: new Abstract: Retrieval-Augmented Generation (RAG) improves the reliability of large language model applications by grounding generation in retrieved evidence, but it..."
     ],
     [
@@ -423,7 +423,7 @@
       "Ran Score: a LLM-based Evaluation Score for Radiology Report Generation",
       "https://arxiv.org/abs/2603.22935",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22935v1 Announce Type: new Abstract: Chest X-ray report generation and automated evaluation are limited by poor recognition of low-prevalence abnormalities and inadequate handling of clinic..."
     ],
     [
@@ -431,7 +431,7 @@
       "Optimizing Small Language Models for NL2SQL via Chain-of-Thought Fine-Tuning",
       "https://arxiv.org/abs/2603.22942",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22942v1 Announce Type: new Abstract: Translating Natural Language to SQL (NL2SQL) remains a critical bottleneck for democratization of data in enterprises."
     ],
     [
@@ -439,7 +439,7 @@
       "PersonalQ: Select, Quantize, and Serve Personalized Diffusion Models for Efficient Inference",
       "https://arxiv.org/abs/2603.22943",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22943v1 Announce Type: new Abstract: Personalized text-to-image generation lets users fine-tune diffusion models into repositories of concept-specific checkpoints, but serving these reposit..."
     ],
     [
@@ -447,7 +447,7 @@
       "Where Experts Disagree, Models Fail: Detecting Implicit Legal Citations in French Court Decisions",
       "https://arxiv.org/abs/2603.22973",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22973v1 Announce Type: new Abstract: Computational methods applied to legal scholarship hold the promise of analyzing law at scale."
     ],
     [
@@ -455,7 +455,7 @@
       "JFTA-Bench: Evaluate LLM's Ability of Tracking and Analyzing Malfunctions Using Fault Trees",
       "https://arxiv.org/abs/2603.22978",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22978v1 Announce Type: new Abstract: In the maintenance of complex systems, fault trees are used to locate problems and provide targeted solutions."
     ],
     [
@@ -463,7 +463,7 @@
       "On the use of Aggregation Operators to improve Human Identification using Dental Records",
       "https://arxiv.org/abs/2603.23003",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.23003v1 Announce Type: new Abstract: The comparison of dental records is a standardized technique in forensic dentistry used to speed up the identification of individuals in multiple-compar..."
     ],
     [
@@ -471,7 +471,7 @@
       "Can Large Language Models Reason and Optimize Under Constraints?",
       "https://arxiv.org/abs/2603.23004",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.23004v1 Announce Type: new Abstract: Large Language Models (LLMs) have demonstrated great capabilities across diverse natural language tasks; yet their ability to solve abstraction and opti..."
     ],
     [
@@ -479,7 +479,7 @@
       "Minibal: Balanced Game-Playing Without Opponent Modeling",
       "https://arxiv.org/abs/2603.23059",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "23059v1 Announce Type: new Abstract: Recent advances in game AI, such as AlphaZero and Ath\\'enan, have achieved superhuman performance across a wide range of board games."
     ],
     [
@@ -487,7 +487,7 @@
       "MedCausalX: Adaptive Causal Reasoning with Self-Reflection for Trustworthy Medical Vision-Language Models",
       "https://arxiv.org/abs/2603.23085",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "23085v1 Announce Type: new Abstract: Vision-Language Models (VLMs) have enabled interpretable medical diagnosis by integrating visual perception with linguistic reasoning."
     ],
     [
@@ -495,7 +495,7 @@
       "Between Rules and Reality: On the Context Sensitivity of LLM Moral Judgment",
       "https://arxiv.org/abs/2603.23114",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "23114v1 Announce Type: new Abstract: A human's moral decision depends heavily on the context. Yet research on LLM morality has largely studied fixed scenarios."
     ],
     [
@@ -503,7 +503,7 @@
       "Describe-Then-Act: Proactive Agent Steering via Distilled Language-Action World Models",
       "https://arxiv.org/abs/2603.23149",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "23149v1 Announce Type: new Abstract: Deploying safety-critical agents requires anticipating the consequences of actions before they are executed."
     ],
     [
@@ -511,7 +511,7 @@
       "SAiW: Source-Attributable Invisible Watermarking for Proactive Deepfake Defense",
       "https://arxiv.org/abs/2603.23178",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "23178v1 Announce Type: new Abstract: Deepfakes generated by modern generative models pose a serious threat to information integrity, digital identity, and public trust."
     ],
     [
@@ -519,7 +519,7 @@
       "PERMA: Benchmarking Personalized Memory Agents via Event-Driven Preference and Realistic Task Environments",
       "https://arxiv.org/abs/2603.23231",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "23231v1 Announce Type: new Abstract: Empowering large language models with long-term memory is crucial for building agents that adapt to users' evolving needs."
     ],
     [
@@ -527,7 +527,7 @@
       "MemCollab: Cross-Agent Memory Collaboration via Contrastive Trajectory Distillation",
       "https://arxiv.org/abs/2603.23234",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "23234v1 Announce Type: new Abstract: Large language model (LLM)-based agents rely on memory mechanisms to reuse knowledge from past problem-solving experiences."
     ],
     [
@@ -535,7 +535,7 @@
       "Online library learning in human visual puzzle solving",
       "https://arxiv.org/abs/2603.23244",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "23244v1 Announce Type: new Abstract: When learning a novel complex task, people often form efficient reusable abstractions that simplify future work, despite uncertainty about the future."
     ],
     [
@@ -543,7 +543,7 @@
       "LLM Olympiad: Why Model Evaluation Needs a Sealed Exam",
       "https://arxiv.org/abs/2603.23292",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "23292v1 Announce Type: new Abstract: Benchmarks and leaderboards are how NLP most often communicates progress, but in the LLM era they are increasingly easy to misread."
     ],
     [
@@ -551,7 +551,7 @@
       "RelayS2S: A Dual-Path Speculative Generation for Real-Time Dialogue",
       "https://arxiv.org/abs/2603.23346",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "23346v1 Announce Type: new Abstract: Real-time spoken dialogue systems face a fundamental tension between latency and response quality."
     ],
     [
@@ -559,7 +559,7 @@
       "Beyond Preset Identities: How Agents Form Stances and Boundaries in Generative Societies",
       "https://arxiv.org/abs/2603.23406",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.23406v1 Announce Type: new Abstract: While large language models simulate social behaviors, their capacity for stable stance formation and identity negotiation during complex interventions ..."
     ],
     [
@@ -567,7 +567,7 @@
       "Bilevel Autoresearch: Meta-Autoresearching Itself",
       "https://arxiv.org/abs/2603.23420",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "23420v1 Announce Type: new Abstract: If autoresearch is itself a form of research, then autoresearch can be applied to research itself."
     ],
     [
@@ -575,7 +575,7 @@
       "Mecha-nudges for Machines",
       "https://arxiv.org/abs/2603.23433",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "23433v1 Announce Type: new Abstract: Nudges are subtle changes to the way choices are presented to human decision-makers (e."
     ],
     [
@@ -583,7 +583,7 @@
       "Automated Microservice Pattern Instance Detection Using Infrastructure-as-Code Artifacts and Large Language Models",
       "https://arxiv.org/abs/2502.04188",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "04188v1 Announce Type: cross Abstract: Documenting software architecture is essential to preserve architecture knowledge, even though it is frequently costly."
     ],
     [
@@ -591,7 +591,7 @@
       "Founder effects shape the evolutionary dynamics of multimodality in open LLM families",
       "https://arxiv.org/abs/2603.22287",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22287v1 Announce Type: cross Abstract: Large language model (LLM) families are improving rapidly, yet it remains unclear how quickly multimodal capabilities emerge and propagate within open families."
     ],
     [
@@ -599,7 +599,7 @@
       "Evaluating Prompting Strategies for Chart Question Answering with Large Language Models",
       "https://arxiv.org/abs/2603.22288",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22288v1 Announce Type: cross Abstract: Prompting strategies affect LLM reasoning performance, but their role in chart-based QA remains underexplored."
     ],
     [
@@ -607,7 +607,7 @@
       "MERIT: Memory-Enhanced Retrieval for Interpretable Knowledge Tracing",
       "https://arxiv.org/abs/2603.22289",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22289v1 Announce Type: cross Abstract: Knowledge Tracing (KT) models students' evolving knowledge states to predict future performance, serving as a foundation for personalized education."
     ],
     [
@@ -615,7 +615,7 @@
       "Beyond Hard Constraints: Budget-Conditioned Reachability For Safe Offline Reinforcement Learning",
       "https://arxiv.org/abs/2603.22292",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22292v1 Announce Type: cross Abstract: Sequential decision making using Markov Decision Process underpins many realworld applications."
     ],
     [
@@ -623,7 +623,7 @@
       "TIPS: Turn-Level Information-Potential Reward Shaping for Search-Augmented LLMs",
       "https://arxiv.org/abs/2603.22293",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22293v1 Announce Type: cross Abstract: Search-augmented large language models (LLMs) trained with reinforcement learning (RL) have achieved strong results on open-domain question answering ..."
     ],
     [
@@ -631,7 +631,7 @@
       "Efficient Embedding-based Synthetic Data Generation for Complex Reasoning Tasks",
       "https://arxiv.org/abs/2603.22294",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22294v1 Announce Type: cross Abstract: Synthetic Data Generation (SDG), leveraging Large Language Models (LLMs), has recently been recognized and broadly adopted as an effective approach to..."
     ],
     [
@@ -639,7 +639,7 @@
       "Whether, Not Which: Mechanistic Interpretability Reveals Dissociable Affect Reception and Emotion Categorization in LLMs",
       "https://arxiv.org/abs/2603.22295",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22295v1 Announce Type: cross Abstract: Large language models appear to develop internal representations of emotion -- \"emotion circuits,\" \"emotion neurons,\" and structured emotional manifol..."
     ],
     [
@@ -647,7 +647,7 @@
       "Between the Layers Lies the Truth: Uncertainty Estimation in LLMs Using Intra-Layer Local Information Scores",
       "https://arxiv.org/abs/2603.22299",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22299v1 Announce Type: cross Abstract: Large language models (LLMs) are often confidently wrong, making reliable uncertainty estimation (UE) essential."
     ],
     [
@@ -655,7 +655,7 @@
       "Scaling Attention via Feature Sparsity",
       "https://arxiv.org/abs/2603.22300",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22300v1 Announce Type: cross Abstract: Scaling Transformers to ultra-long contexts is bottlenecked by the $O(n^2 d)$ cost of self-attention."
     ],
     [
@@ -663,7 +663,7 @@
       "Latent Semantic Manifolds in Large Language Models",
       "https://arxiv.org/abs/2603.22301",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22301v1 Announce Type: cross Abstract: Large Language Models (LLMs) perform internal computations in continuous vector spaces yet produce discrete tokens -- a fundamental mismatch whose geo..."
     ],
     [
@@ -671,7 +671,7 @@
       "Sample Transform Cost-Based Training-Free Hallucination Detector for Large Language Models",
       "https://arxiv.org/abs/2603.22303",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22303v1 Announce Type: cross Abstract: Hallucinations in large language models (LLMs) remain a central obstacle to trustworthy deployment, motivating detectors that are accurate, lightweigh..."
     ],
     [
@@ -679,7 +679,7 @@
       "CN-Buzz2Portfolio: A Chinese-Market Dataset and Benchmark for LLM-Based Macro and Sector Asset Allocation from Daily Trending Financial News",
       "https://arxiv.org/abs/2603.22305",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22305v1 Announce Type: cross Abstract: Large Language Models (LLMs) are rapidly transitioning from static Natural Language Processing (NLP) tasks including sentiment analysis and event extr..."
     ],
     [
@@ -687,7 +687,7 @@
       "UniFluids: Unified Neural Operator Learning with Conditional Flow-matching",
       "https://arxiv.org/abs/2603.22309",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22309v1 Announce Type: cross Abstract: Partial differential equation (PDE) simulation holds extensive significance in scientific research."
     ],
     [
@@ -695,7 +695,7 @@
       "A Multi-Modal CNN-LSTM Framework with Multi-Head Attention and Focal Loss for Real-Time Elderly Fall Detection",
       "https://arxiv.org/abs/2603.22313",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22313v1 Announce Type: cross Abstract: The increasing global aging population has intensified the demand for reliable health monitoring systems, particularly those capable of detecting crit..."
     ],
     [
@@ -703,7 +703,7 @@
       "Enhancing AI-Based Tropical Cyclone Track and Intensity Forecasting via Systematic Bias Correction",
       "https://arxiv.org/abs/2603.22314",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22314v1 Announce Type: cross Abstract: Tropical cyclones (TCs) pose severe threats to life, infrastructure, and economies in tropical and subtropical regions, underscoring the critical need..."
     ],
     [
@@ -711,7 +711,7 @@
       "Emergency Preemption Without Online Exploration: A Decision Transformer Approach",
       "https://arxiv.org/abs/2603.22315",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22315v1 Announce Type: cross Abstract: Emergency vehicle (EV) response time is a critical determinant of survival outcomes, yet deployed signal preemption strategies remain reactive and uncontrollable."
     ],
     [
@@ -719,7 +719,7 @@
       "ST-GDance++: A Scalable Spatial-Temporal Diffusion for Long-Duration Group Choreography",
       "https://arxiv.org/abs/2603.22316",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22316v1 Announce Type: cross Abstract: Group dance generation from music requires synchronizing multiple dancers while maintaining spatial coordination, making it highly relevant to applica..."
     ],
     [
@@ -727,7 +727,7 @@
       "Geometric Mixture-of-Experts with Curvature-Guided Adaptive Routing for Graph Representation Learning",
       "https://arxiv.org/abs/2603.22317",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22317v1 Announce Type: cross Abstract: Graph-structured data typically exhibits complex topological heterogeneity, making it difficult to model accurately within a single Riemannian manifold."
     ],
     [
@@ -735,7 +735,7 @@
       "Sparsely-Supervised Data Assimilation via Physics-Informed Schr\\\"odinger Bridge",
       "https://arxiv.org/abs/2603.22319",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22319v1 Announce Type: cross Abstract: Data assimilation (DA) for systems governed by partial differential equations (PDE) aims to reconstruct full spatiotemporal fields from sparse high-fi..."
     ],
     [
@@ -743,7 +743,7 @@
       "From Instructions to Assistance: a Dataset Aligning Instruction Manuals with Assembly Videos for Evaluating Multimodal LLMs",
       "https://arxiv.org/abs/2603.22321",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22321v1 Announce Type: cross Abstract: The recent advancements introduced by Large Language Models (LLMs) have transformed how Artificial Intelligence (AI) can support complex, real world t..."
     ],
     [
@@ -751,7 +751,7 @@
       "AEGIS: An Operational Infrastructure for Post-Market Governance of Adaptive Medical AI Under US and EU Regulations",
       "https://arxiv.org/abs/2603.22322",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22322v1 Announce Type: cross Abstract: Machine learning systems deployed in medical devices require governance frameworks that ensure safety while enabling continuous improvement."
     ],
     [
@@ -759,7 +759,7 @@
       "A Multi-Task Targeted Learning Framework for Lithium-Ion Battery State-of-Health and Remaining Useful Life",
       "https://arxiv.org/abs/2603.22323",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22323v1 Announce Type: cross Abstract: Accurately predicting the state-of-health (SOH) and remaining useful life (RUL) of lithium-ion batteries is crucial for ensuring the safe and efficien..."
     ],
     [
@@ -767,7 +767,7 @@
       "DAQ: Delta-Aware Quantization for Post-Training LLM Weight Compression",
       "https://arxiv.org/abs/2603.22324",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22324v1 Announce Type: cross Abstract: We introduce Delta-Aware Quantization (DAQ), a data-free post-training quantization framework that preserves the knowledge acquired during post-training."
     ],
     [
@@ -775,7 +775,7 @@
       "Hybrid Associative Memories",
       "https://arxiv.org/abs/2603.22325",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22325v1 Announce Type: cross Abstract: Recurrent neural networks (RNNs) and self-attention are both widely used sequence-mixing layers that maintain an internal memory."
     ],
     [
@@ -783,7 +783,7 @@
       "A Direct Classification Approach for Reliable Wind Ramp Event Forecasting under Severe Class Imbalance",
       "https://arxiv.org/abs/2603.22326",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22326v1 Announce Type: cross Abstract: Decision support systems are essential for maintaining grid stability in low-carbon power systems, such as wind power plants, by providing real-time a..."
     ],
     [
@@ -791,7 +791,7 @@
       "AgentSLR: Automating Systematic Literature Reviews in Epidemiology with Agentic AI",
       "https://arxiv.org/abs/2603.22327",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22327v1 Announce Type: cross Abstract: Systematic literature reviews are essential for synthesizing scientific evidence but are costly, difficult to scale and time-intensive, creating bottl..."
     ],
     [
@@ -799,7 +799,7 @@
       "Beyond the Mean: Distribution-Aware Loss Functions for Bimodal Regression",
       "https://arxiv.org/abs/2603.22328",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22328v1 Announce Type: cross Abstract: Despite the strong predictive performance achieved by machine learning models across many application domains, assessing their trustworthiness through..."
     ],
     [
@@ -807,7 +807,7 @@
       "Trained Persistent Memory for Frozen Decoder-Only LLMs",
       "https://arxiv.org/abs/2603.22329",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22329v1 Announce Type: cross Abstract: Decoder-only language models are stateless: hidden representations are discarded after every forward pass and nothing persists across sessions."
     ],
     [
@@ -815,7 +815,7 @@
       "Conformal Risk Control for Safety-Critical Wildfire Evacuation Mapping: A Comparative Study of Tabular, Spatial, and Graph-Based Models",
       "https://arxiv.org/abs/2603.22331",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22331v1 Announce Type: cross Abstract: Every wildfire prediction model deployed today shares a dangerous property: none of these methods provides formal guarantees on how much fire spread is missed."
     ],
     [
@@ -823,7 +823,7 @@
       "Large Language Models for Missing Data Imputation: Understanding Behavior, Hallucination Effects, and Control Mechanisms",
       "https://arxiv.org/abs/2603.22332",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22332v1 Announce Type: cross Abstract: Data imputation is a cornerstone technique for handling missing values in real-world datasets, which are often plagued by missingness."
     ],
     [
@@ -831,7 +831,7 @@
       "Graph Signal Processing Meets Mamba2: Adaptive Filter Bank via Delta Modulation",
       "https://arxiv.org/abs/2603.22333",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "22333v1 Announce Type: cross Abstract: State-space models (SSMs) offer efficient alternatives to attention with linear-time recurrence."
     ],
     [
@@ -839,7 +839,7 @@
       "Causal Direct Preference Optimization for Distributionally Robust Generative Recommendation",
       "https://arxiv.org/abs/2603.22335",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22335v1 Announce Type: cross Abstract: Direct Preference Optimization (DPO) guides large language models (LLMs) to generate recommendations aligned with user historical behavior distributio..."
     ],
     [
@@ -847,7 +847,7 @@
       "Graphs RAG at Scale: Beyond Retrieval-Augmented Generation With Labeled Property Graphs and Resource Description Framework for Complex and Unknown Search Spaces",
       "https://arxiv.org/abs/2603.22340",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22340v1 Announce Type: cross Abstract: Recent advances in Retrieval-Augmented Generation (RAG) have revolutionized knowledge-intensive tasks, yet traditional RAG methods struggle when the s..."
     ],
     [
@@ -855,7 +855,7 @@
       "T-MAP: Red-Teaming LLM Agents with Trajectory-aware Evolutionary Search",
       "https://arxiv.org/abs/2603.22341",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22341v1 Announce Type: cross Abstract: While prior red-teaming efforts have focused on eliciting harmful text outputs from large language models (LLMs), such approaches fail to capture agen..."
     ],
     [
@@ -863,7 +863,7 @@
       "First-Mover Bias in Gradient Boosting Explanations: Mechanism, Detection, and Resolution",
       "https://arxiv.org/abs/2603.22346",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22346v1 Announce Type: cross Abstract: We isolate and empirically characterize first-mover bias -- a path-dependent concentration of feature importance caused by sequential residual fitting..."
     ],
     [
@@ -871,7 +871,7 @@
       "WIST: Web-Grounded Iterative Self-Play Tree for Domain-Targeted Reasoning Improvement",
       "https://arxiv.org/abs/2603.22352",
       "arXiv cs.AI",
-      "20h ago",
+      "21h ago",
       "arXiv:2603.22352v1 Announce Type: cross Abstract: Recent progress in reinforcement learning with verifiable rewards (RLVR) offers a practical path to self-improvement of language models, but existing ..."
     ]
   ],

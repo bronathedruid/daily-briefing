@@ -1,0 +1,68 @@
+{
+  "feedHealth": {
+    "summary": {
+      "totalFeeds": 0,
+      "healthyFeeds": 0,
+      "healthRate": null,
+      "averageResponseTime": null,
+      "totalArticles": 0
+    },
+    "feeds": {},
+    "recommendations": []
+  },
+  "contentQuality": {
+    "articleCount": [
+      {
+        "date": "2026-03-27",
+        "count": 109
+      }
+    ],
+    "qualityTrends": {
+      "hasSnippet": [
+        {
+          "date": "2026-03-27",
+          "score": 100
+        }
+      ],
+      "hasValidUrl": [
+        {
+          "date": "2026-03-27",
+          "score": 100
+        }
+      ],
+      "hasSource": [
+        {
+          "date": "2026-03-27",
+          "score": 100
+        }
+      ],
+      "hasTimestamp": [
+        {
+          "date": "2026-03-27",
+          "score": 100
+        }
+      ]
+    },
+    "categoryTrends": {
+      "\udd16 AI Models & Releases": [
+        {
+          "date": "2026-03-27",
+          "count": 109
+        }
+      ]
+    },
+    "keywordTrends": {}
+  },
+  "buildPerformance": {
+    "summary": {
+      "totalBuilds": 0,
+      "recentBuilds": 0,
+      "averageBuildTime": 0,
+      "successRate": 0
+    },
+    "stages": {},
+    "recentActivity": [],
+    "recommendations": []
+  },
+  "generated": "2026-03-27T00:43:44.941Z"
+}

@@ -1,0 +1,89 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#fdfcf7"/>
+  
+  <text x="300" y="40" text-anchor="middle" 
+        font-family="Georgia, serif" font-size="24" font-weight="bold" 
+        fill="#1a1a1a">Trending Keywords Today</text>
+  
+  
+    <text x="380" y="200" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">announce</text>
+    
+    <text x="414.12678195541844" y="237.08203932499367" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">type</text>
+    
+    <text x="429.44271909999156" y="294.04564036679574" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">abstract</text>
+    
+    <text x="347.02282018339787" y="264.7213595499958" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">new</text>
+    
+    <text x="337.0820393249937" y="314.12678195541844" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">language</text>
+    
+    <text x="300" y="360" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">models</text>
+    
+    <text x="275.2786404500042" y="276.0845213036123" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">arxiv</text>
+    
+    <text x="229.46576972490323" y="297.08203932499373" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">cross</text>
+    
+    <text x="170.55728090000844" y="294.04564036679574" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">large</text>
+    
+    <text x="223.9154786963877" y="224.7213595499958" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">are</text>
+    
+    <text x="180" y="200.00000000000003" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">llms</text>
+    
+    <text x="147.83095739277545" y="150.55728090000838" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">llm</text>
+    
+    <text x="235.27864045000422" y="152.97717981660216" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">generation</text>
+    
+    <text x="229.46576972490323" y="102.91796067500631" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">agent</text>
+    
+    <text x="250.55728090000838" y="47.830957392775446" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">systems</text>
+    
+    <text x="300" y="120" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">model</text>
+    
+    <text x="337.0820393249937" y="85.87321804458156" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">memory</text>
+    
+    <text x="394.0456403667957" y="70.55728090000838" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">that</text>
+    
+    <text x="364.7213595499958" y="152.97717981660213" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">based</text>
+    
+    <text x="414.12678195541844" y="162.91796067500627" text-anchor="middle" 
+          font-family="Georgia, serif" font-size="32" 
+          fill="#8b0000">data</text>
+    
+</svg>
