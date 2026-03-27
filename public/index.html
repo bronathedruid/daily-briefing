@@ -293,24 +293,29 @@
     /* Bottom Left (Previous Page) */
     .corner-left {
       left: 0;
-      border-width: 60px 0 0 60px;
-      border-color: transparent transparent transparent #e0dbce;
-      box-shadow: 4px -4px 6px rgba(0,0,0,0.05);
-      transform: rotate(90deg);
+      bottom: 0;
+      width: 60px;
+      height: 60px;
+      border: 0;
+      background: linear-gradient(135deg, #e0dbce 0%, #f3efe6 46%, #cfc6b3 100%);
+      clip-path: polygon(0 100%, 0 0, 100% 100%);
+      box-shadow: 4px -4px 8px rgba(0,0,0,0.08);
+      transform: none;
       transform-origin: bottom left;
     }
     
     .corner-left::before {
       content: '⬅️ Back';
-      bottom: 10px;
-      left: 10px;
-      transform: rotate(-90deg);
+      bottom: 8px;
+      left: 8px;
+      transform: none;
       transform-origin: bottom left;
     }
 
     .corner-left:hover {
-      border-width: 90px 0 0 90px;
-      box-shadow: 6px -6px 12px rgba(0,0,0,0.1);
+      width: 88px;
+      height: 88px;
+      box-shadow: 6px -6px 12px rgba(0,0,0,0.12);
     }
 
     .corner-left:hover::before { opacity: 1; }
