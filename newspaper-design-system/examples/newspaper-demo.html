@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Daily Briefing — 2026-03-27</title>
+  
+  <!-- Newspaper Design System -->
+  <link rel="stylesheet" href="../css/newspaper-core.css">
+  <link rel="stylesheet" href="../css/newspaper-layout.css">
+  <link rel="stylesheet" href="../css/newspaper-typography.css">
+  <link rel="stylesheet" href="../css/newspaper-components.css">
+  <link rel="stylesheet" href="../css/newspaper-themes.css">
+  <link rel="stylesheet" href="../css/newspaper-print.css" media="print">
+  
+  <!-- Google Fonts for better typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Use premium fonts when available */
+    :root {
+      --newspaper-font-serif: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+      --newspaper-font-serif-alt: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
+    }
+    
+    .newspaper-headline,
+    .newspaper-banner {
+      font-family: var(--newspaper-font-serif);
+    }
+    
+    .newspaper-body {
+      font-family: var(--newspaper-font-serif-alt);
+    }
+  </style>
+</head>
+<body class="newspaper-theme">
+  <!-- Masthead -->
+  <header class="newspaper-masthead">
+    <h1 class="newspaper-masthead-title">THE DAILY BRIEFING</h1>
+    <p class="newspaper-masthead-subtitle">Your Comprehensive Technology & Security Digest</p>
+    <div class="newspaper-masthead-ornament">
+      <span>★</span>
+    </div>
+    <p class="newspaper-masthead-date">Friday, March 27, 2026 • Volume 1, No. 85 • $2.50</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="newspaper-nav">
+    <div class="newspaper-container">
+      <ul class="newspaper-nav-list">
+        <li class="newspaper-nav-item">
+          <a href="#ai-models" class="newspaper-nav-link active">
+            🤖 AI Models
+            <span class="newspaper-nav-count">12</span>
+          </a>
+        </li>
+        <li class="newspaper-nav-item">
+          <a href="#government" class="newspaper-nav-link">
+            🏛️ Government
+            <span class="newspaper-nav-count">8</span>
+          </a>
+        </li>
+        <li class="newspaper-nav-item">
+          <a href="#cybersecurity" class="newspaper-nav-link">
+            🔐 Security
+            <span class="newspaper-nav-count">15</span>
+          </a>
+        </li>
+        <li class="newspaper-nav-item">
+          <a href="#coding" class="newspaper-nav-link">
+            🛠️ Dev Tools
+            <span class="newspaper-nav-count">6</span>
+          </a>
+        </li>
+        <li class="newspaper-nav-item">
+          <a href="#space" class="newspaper-nav-link">
+            🚀 Space
+            <span class="newspaper-nav-count">4</span>
+          </a>
+        </li>
+        <li class="newspaper-nav-item">
+          <div class="newspaper-theme-toggle" onclick="toggleTheme()">
+            <span class="newspaper-theme-toggle-label">Theme</span>
+            <div class="newspaper-theme-toggle-switch"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="newspaper-container">
+    <main class="newspaper-main newspaper-layout-mixed">
+      <div class="newspaper-content">
+        
+        <!-- Lead Story -->
+        <article class="newspaper-lead-story">
+          <div class="newspaper-lead-content">
+            <span class="newspaper-kicker">🚨 Breaking News</span>
+            <h1 class="newspaper-banner">OpenAI Releases GPT-5: Major Breakthrough in AI Reasoning</h1>
+            <p class="newspaper-deck">New model demonstrates unprecedented capabilities in complex problem-solving, scientific research, and code generation with 90% improvement over GPT-4</p>
+            
+            <div class="newspaper-article-meta">
+              <span class="newspaper-byline">By Sarah Chen, AI Correspondent</span>
+              <span class="newspaper-dateline">San Francisco, CA</span>
+              <span class="newspaper-source">OpenAI Blog</span>
+              <span class="newspaper-score-badge">9.8</span>
+            </div>
+            
+            <p class="newspaper-lead">
+              In a groundbreaking announcement that has sent shockwaves through the technology industry, 
+              OpenAI today unveiled GPT-5, its most advanced artificial intelligence model to date. 
+              The new system represents a quantum leap in AI reasoning capabilities, demonstrating 
+              near-human performance in complex scientific and mathematical problem-solving.
+            </p>
+            
+            <div class="newspaper-body">
+              <p class="newspaper-dropcap">
+                Early testing reveals that GPT-5 can now tackle multi-step scientific research problems, 
+                generate production-ready code for complex applications, and engage in sophisticated 
+                reasoning about abstract concepts. The model scored 98% on advanced mathematics benchmarks 
+                and demonstrated breakthrough performance in protein folding predictions.
+              </p>
+              
+              <p>
+                "This is the moment we've been building toward," said OpenAI CEO Sam Altman during 
+                a packed press conference in San Francisco. "GPT-5 doesn't just generate text—it 
+                truly understands and reasons about the world in ways we've never seen before."
+              </p>
+            </div>
+          </div>
+          
+          <div class="newspaper-lead-image">
+            <img src="https://picsum.photos/400/300?grayscale" alt="OpenAI headquarters in San Francisco">
+            <p class="newspaper-caption">
+              OpenAI's headquarters in San Francisco, where GPT-5 was developed over 18 months 
+              by a team of 200+ researchers and engineers.
+            </p>
+          </div>
+        </article>
+
+        <!-- AI Models Section -->
+        <section id="ai-models" class="newspaper-section-container">
+          <div class="newspaper-section-header">
+            <h2 class="newspaper-section">🤖 AI Models & Releases</h2>
+            <span class="newspaper-section-count">12</span>
+          </div>
+
+          <article class="newspaper-article">
+            <header class="newspaper-article-header">
+              <h3 class="newspaper-headline">
+                <a href="#">Anthropic Announces Constitutional AI 3.0 Framework</a>
+              </h3>
+              <div class="newspaper-article-meta">
+                <span class="newspaper-byline">TechCrunch</span>
+                <span class="newspaper-dateline">2 hours ago</span>
+                <span class="newspaper-score-badge">8.7</span>
+              </div>
+            </header>
+            
+            <p class="newspaper-body">
+              Anthropic has released Constitutional AI 3.0, a new framework for training AI systems 
+              with enhanced safety and alignment capabilities. The approach uses a novel 
+              constitutional learning method that significantly reduces harmful outputs while 
+              maintaining performance across all benchmarks.
+            </p>
+            
+            <div class="newspaper-pullquote">
+              The future of AI safety lies not in restrictions, but in constitutional principles 
+              that guide intelligent behavior from the ground up.
+            </div>
+          </article>
+
+          <article class="newspaper-article">
+            <header class="newspaper-article-header">
+              <h3 class="newspaper-headline">
+                <a href="#">Google's Gemini Ultra Achieves Human-Level Performance on MMLU</a>
+              </h3>
+              <div class="newspaper-article-meta">
+                <span class="newspaper-byline">Ars Technica</span>
+                <span class="newspaper-dateline">4 hours ago</span>
+                <span class="newspaper-score-badge">8.2</span>
+              </div>
+            </header>
+            
+            <p class="newspaper-body">
+              Google's latest Gemini Ultra model has achieved a historic milestone, scoring 96.2% 
+              on the Massive Multitask Language Understanding (MMLU) benchmark—the first AI system 
+              to consistently match human expert performance across 57 diverse academic subjects.
+            </p>
+          </article>
+
+          <article class="newspaper-article">
+            <header class="newspaper-article-header">
+              <h3 class="newspaper-headline">
+                <a href="#">Mistral AI's New 8x22B Model Outperforms GPT-4 on Code Generation</a>
+              </h3>
+              <div class="newspaper-article-meta">
+                <span class="newspaper-byline">The Register</span>
+                <span class="newspaper-dateline">6 hours ago</span>
+                <span class="newspaper-score-badge">7.9</span>
+              </div>
+            </header>
+            
+            <p class="newspaper-body">
+              French AI startup Mistral has released its largest model yet, featuring 8 experts 
+              with 22 billion parameters each. In coding benchmarks, the model achieved 89% on 
+              HumanEval, surpassing GPT-4's 67% and establishing new performance standards for 
+              open-weight models.
+            </p>
+          </article>
+        </section>
+
+        <!-- Cybersecurity Section -->
+        <section id="cybersecurity" class="newspaper-section-container">
+          <div class="newspaper-section-header">
+            <h2 class="newspaper-section">🔐 Cybersecurity News</h2>
+            <span class="newspaper-section-count">15</span>
+          </div>
+
+          <article class="newspaper-article">
+            <header class="newspaper-article-header">
+              <span class="newspaper-breaking">Breaking</span>
+              <h3 class="newspaper-headline">
+                <a href="#">Critical Zero-Day Discovered in Apache Struts Framework</a>
+              </h3>
+              <div class="newspaper-article-meta">
+                <span class="newspaper-byline">Security Week</span>
+                <span class="newspaper-dateline">1 hour ago</span>
+                <span class="newspaper-score-badge">9.5</span>
+              </div>
+            </header>
+            
+            <p class="newspaper-body">
+              Security researchers have identified a critical remote code execution vulnerability 
+              in Apache Struts 2, affecting millions of enterprise applications worldwide. 
+              The CVE-2026-4491 vulnerability allows unauthenticated attackers to execute 
+              arbitrary code on vulnerable systems through malformed HTTP requests.
+            </p>
+            
+            <div class="newspaper-alert newspaper-alert-breaking">
+              <div class="newspaper-alert-title">Security Advisory</div>
+              Organizations using Apache Struts are urged to immediately apply the emergency 
+              patch released at 14:30 UTC today. No workarounds are available for this vulnerability.
+            </div>
+          </article>
+
+          <article class="newspaper-article">
+            <header class="newspaper-article-header">
+              <h3 class="newspaper-headline">
+                <a href="#">Ransomware Group Claims Breach of Major Healthcare Network</a>
+              </h3>
+              <div class="newspaper-article-meta">
+                <span class="newspaper-byline">Bleeping Computer</span>
+                <span class="newspaper-dateline">3 hours ago</span>
+                <span class="newspaper-score-badge">8.8</span>
+              </div>
+            </header>
+            
+            <p class="newspaper-body">
+              The BlackCat ransomware group has claimed responsibility for breaching MediCore 
+              Health Systems, potentially affecting patient records of over 2.3 million individuals 
+              across 15 states. The attack appears to have originated through a compromised 
+              VPN endpoint that lacked multi-factor authentication.
+            </p>
+          </article>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="newspaper-sidebar">
+        
+        <!-- Quick Headlines Widget -->
+        <div class="newspaper-widget">
+          <h3 class="newspaper-widget-title">Quick Headlines</h3>
+          <ul class="newspaper-headlines-list">
+            <li><a href="#">SpaceX Successfully Launches Starship V3 on Mars Mission</a></li>
+            <li><a href="#">GitHub Copilot X Introduces Real-Time Code Review</a></li>
+            <li><a href="#">EU Passes Comprehensive AI Regulation Framework</a></li>
+            <li><a href="#">Microsoft Azure Announces Quantum Computing Service</a></li>
+            <li><a href="#">Tesla Reveals Next-Generation Autopilot Neural Network</a></li>
+          </ul>
+        </div>
+
+        <!-- Statistics Widget -->
+        <div class="newspaper-widget">
+          <h3 class="newspaper-widget-title">Today's Stats</h3>
+          
+          <table class="newspaper-table">
+            <tr>
+              <td>Total Articles</td>
+              <td><strong>47</strong></td>
+            </tr>
+            <tr>
+              <td>Breaking News</td>
+              <td><strong>3</strong></td>
+            </tr>
+            <tr>
+              <td>Security Alerts</td>
+              <td><strong>8</strong></td>
+            </tr>
+            <tr>
+              <td>AI Updates</td>
+              <td><strong>12</strong></td>
+            </tr>
+            <tr>
+              <td>Last Updated</td>
+              <td><strong>15:42 UTC</strong></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Categories Widget -->
+        <div class="newspaper-widget">
+          <h3 class="newspaper-widget-title">Browse by Category</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <a href="#" class="newspaper-btn newspaper-btn-ghost newspaper-btn-small">
+              🤖 AI Models <span class="newspaper-badge newspaper-badge-primary">12</span>
+            </a>
+            <a href="#" class="newspaper-btn newspaper-btn-ghost newspaper-btn-small">
+              🏛️ Government <span class="newspaper-badge newspaper-badge-secondary">8</span>
+            </a>
+            <a href="#" class="newspaper-btn newspaper-btn-ghost newspaper-btn-small">
+              🔐 Cybersecurity <span class="newspaper-badge newspaper-badge-primary">15</span>
+            </a>
+            <a href="#" class="newspaper-btn newspaper-btn-ghost newspaper-btn-small">
+              🛠️ Dev Tools <span class="newspaper-badge newspaper-badge-secondary">6</span>
+            </a>
+            <a href="#" class="newspaper-btn newspaper-btn-ghost newspaper-btn-small">
+              🚀 Space <span class="newspaper-badge newspaper-badge-secondary">4</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Archive Widget -->
+        <div class="newspaper-widget">
+          <h3 class="newspaper-widget-title">Recent Issues</h3>
+          
+          <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+            <a href="#" class="newspaper-btn newspaper-btn-secondary newspaper-btn-small">
+              March 26, 2026
+            </a>
+            <a href="#" class="newspaper-btn newspaper-btn-ghost newspaper-btn-small">
+              March 25, 2026
+            </a>
+            <a href="#" class="newspaper-btn newspaper-btn-ghost newspaper-btn-small">
+              March 24, 2026
+            </a>
+            <a href="#" class="newspaper-btn newspaper-btn-ghost newspaper-btn-small">
+              March 23, 2026
+            </a>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <!-- Print Footer -->
+  <footer class="newspaper-print-footer" style="display: none;">
+    The Daily Briefing — Technology & Security Digest — Page 1 of 1 — Friday, March 27, 2026
+  </footer>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('newspaper-theme', newTheme);
+    }
+
+    // Load saved theme
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedTheme = localStorage.getItem('newspaper-theme') || 
+                        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    });
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+      if (!localStorage.getItem('newspaper-theme')) {
+        document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+      }
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

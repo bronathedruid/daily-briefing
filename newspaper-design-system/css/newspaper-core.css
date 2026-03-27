@@ -1,0 +1,211 @@
+/**
+ * newspaper-core.css
+ * Core variables, resets, and base styles for the newspaper design system
+ */
+
+/* ========================================
+   CSS CUSTOM PROPERTIES (DESIGN TOKENS)
+   ======================================== */
+
+:root {
+  /* Typography Scale */
+  --newspaper-font-serif: Georgia, 'Times New Roman', Times, serif;
+  --newspaper-font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --newspaper-font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Courier New', monospace;
+  
+  /* Font Sizes */
+  --newspaper-text-banner: 3.5rem;      /* 56px */
+  --newspaper-text-headline: 2.5rem;    /* 40px */
+  --newspaper-text-subhead: 1.75rem;    /* 28px */
+  --newspaper-text-section: 1.25rem;    /* 20px */
+  --newspaper-text-body: 1rem;          /* 16px */
+  --newspaper-text-caption: 0.875rem;   /* 14px */
+  --newspaper-text-fine: 0.75rem;       /* 12px */
+  --newspaper-text-quote: 1.5rem;       /* 24px */
+  
+  /* Line Heights */
+  --newspaper-leading-tight: 1.2;
+  --newspaper-leading-normal: 1.5;
+  --newspaper-leading-loose: 1.7;
+  
+  /* Letter Spacing */
+  --newspaper-tracking-tight: -0.025em;
+  --newspaper-tracking-normal: 0;
+  --newspaper-tracking-wide: 0.05em;
+  --newspaper-tracking-wider: 0.1em;
+  
+  /* Spacing Scale (8px base) */
+  --newspaper-space-xs: 0.25rem;    /* 4px */
+  --newspaper-space-sm: 0.5rem;     /* 8px */
+  --newspaper-space-md: 1rem;       /* 16px */
+  --newspaper-space-lg: 1.5rem;     /* 24px */
+  --newspaper-space-xl: 2rem;       /* 32px */
+  --newspaper-space-xxl: 3rem;      /* 48px */
+  --newspaper-space-xxxl: 4rem;     /* 64px */
+  
+  /* Layout */
+  --newspaper-content-width: 1200px;
+  --newspaper-content-width-wide: 1440px;
+  --newspaper-sidebar-width: 300px;
+  --newspaper-gutter: 1.5rem;
+  
+  /* Borders & Shadows */
+  --newspaper-border-width: 1px;
+  --newspaper-border-radius: 4px;
+  --newspaper-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --newspaper-shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --newspaper-shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+  
+  /* Transitions */
+  --newspaper-transition-fast: 0.15s ease-out;
+  --newspaper-transition-normal: 0.25s ease-out;
+  --newspaper-transition-slow: 0.35s ease-out;
+  
+  /* Z-Index Scale */
+  --newspaper-z-dropdown: 1000;
+  --newspaper-z-sticky: 1020;
+  --newspaper-z-fixed: 1030;
+  --newspaper-z-modal: 1040;
+  --newspaper-z-popover: 1050;
+  --newspaper-z-tooltip: 1060;
+}
+
+/* Light Theme (Default) */
+[data-theme="light"], .newspaper-theme {
+  --newspaper-color-ink: #1a1a1a;
+  --newspaper-color-paper: #fefefe;
+  --newspaper-color-red: #d32f2f;
+  --newspaper-color-red-light: #ffebee;
+  --newspaper-color-red-dark: #b71c1c;
+  
+  --newspaper-color-gray-50: #fafafa;
+  --newspaper-color-gray-100: #f8f8f8;
+  --newspaper-color-gray-200: #e8e8e8;
+  --newspaper-color-gray-300: #d0d0d0;
+  --newspaper-color-gray-400: #999999;
+  --newspaper-color-gray-500: #666666;
+  --newspaper-color-gray-600: #4a4a4a;
+  --newspaper-color-gray-700: #333333;
+  --newspaper-color-gray-800: #1f1f1f;
+  --newspaper-color-gray-900: #0f0f0f;
+  
+  /* Semantic Colors */
+  --newspaper-color-text: var(--newspaper-color-ink);
+  --newspaper-color-text-muted: var(--newspaper-color-gray-500);
+  --newspaper-color-text-light: var(--newspaper-color-gray-400);
+  --newspaper-color-background: var(--newspaper-color-paper);
+  --newspaper-color-surface: var(--newspaper-color-gray-50);
+  --newspaper-color-border: var(--newspaper-color-gray-300);
+  --newspaper-color-accent: var(--newspaper-color-red);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --newspaper-color-ink: #f0f0f0;
+  --newspaper-color-paper: #1e1e1e;
+  --newspaper-color-red: #ff5252;
+  --newspaper-color-red-light: #3a1f1f;
+  --newspaper-color-red-dark: #ff1744;
+  
+  --newspaper-color-gray-50: #2a2a2a;
+  --newspaper-color-gray-100: #2f2f2f;
+  --newspaper-color-gray-200: #363636;
+  --newspaper-color-gray-300: #4a4a4a;
+  --newspaper-color-gray-400: #888888;
+  --newspaper-color-gray-500: #aaaaaa;
+  --newspaper-color-gray-600: #cccccc;
+  --newspaper-color-gray-700: #e0e0e0;
+  --newspaper-color-gray-800: #f0f0f0;
+  --newspaper-color-gray-900: #ffffff;
+  
+  /* Semantic Colors */
+  --newspaper-color-text: var(--newspaper-color-ink);
+  --newspaper-color-text-muted: var(--newspaper-color-gray-500);
+  --newspaper-color-text-light: var(--newspaper-color-gray-400);
+  --newspaper-color-background: var(--newspaper-color-paper);
+  --newspaper-color-surface: var(--newspaper-color-gray-50);
+  --newspaper-color-border: var(--newspaper-color-gray-300);
+  --newspaper-color-accent: var(--newspaper-color-red);
+}
+
+/* ========================================
+   BASE RESET & TYPOGRAPHY
+   ======================================== */
+
+/* Modern CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-body);
+  line-height: var(--newspaper-leading-normal);
+  color: var(--newspaper-color-text);
+  background-color: var(--newspaper-color-background);
+  transition: color var(--newspaper-transition-normal), 
+              background-color var(--newspaper-transition-normal);
+}
+
+/* Remove list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Remove button styles */
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+/* Form elements */
+input, textarea, select {
+  font: inherit;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--newspaper-color-accent);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

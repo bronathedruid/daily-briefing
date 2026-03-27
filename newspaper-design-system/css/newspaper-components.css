@@ -1,0 +1,441 @@
+/**
+ * newspaper-components.css
+ * UI components styled for newspaper aesthetic
+ */
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.newspaper-btn {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--newspaper-tracking-wide);
+  border: 2px solid;
+  padding: var(--newspaper-space-sm) var(--newspaper-space-lg);
+  border-radius: var(--newspaper-border-radius);
+  cursor: pointer;
+  transition: all var(--newspaper-transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--newspaper-space-xs);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.newspaper-btn-primary {
+  background: var(--newspaper-color-red);
+  color: white;
+  border-color: var(--newspaper-color-red);
+}
+
+.newspaper-btn-primary:hover {
+  background: var(--newspaper-color-red-dark);
+  border-color: var(--newspaper-color-red-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--newspaper-shadow-md);
+}
+
+.newspaper-btn-secondary {
+  background: transparent;
+  color: var(--newspaper-color-red);
+  border-color: var(--newspaper-color-red);
+}
+
+.newspaper-btn-secondary:hover {
+  background: var(--newspaper-color-red);
+  color: white;
+}
+
+.newspaper-btn-ghost {
+  background: transparent;
+  color: var(--newspaper-color-text);
+  border-color: var(--newspaper-color-border);
+}
+
+.newspaper-btn-ghost:hover {
+  background: var(--newspaper-color-surface);
+  border-color: var(--newspaper-color-red);
+  color: var(--newspaper-color-red);
+}
+
+.newspaper-btn-small {
+  font-size: var(--newspaper-text-fine);
+  padding: var(--newspaper-space-xs) var(--newspaper-space-sm);
+}
+
+.newspaper-btn-large {
+  font-size: var(--newspaper-text-body);
+  padding: var(--newspaper-space-md) var(--newspaper-space-xl);
+}
+
+/* ========================================
+   FORMS
+   ======================================== */
+
+.newspaper-form-group {
+  margin-bottom: var(--newspaper-space-lg);
+}
+
+.newspaper-label {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--newspaper-tracking-wide);
+  color: var(--newspaper-color-text);
+  display: block;
+  margin-bottom: var(--newspaper-space-xs);
+}
+
+.newspaper-input,
+.newspaper-textarea,
+.newspaper-select {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-body);
+  color: var(--newspaper-color-text);
+  background: var(--newspaper-color-background);
+  border: 2px solid var(--newspaper-color-border);
+  border-radius: var(--newspaper-border-radius);
+  padding: var(--newspaper-space-sm) var(--newspaper-space-md);
+  width: 100%;
+  transition: all var(--newspaper-transition-fast);
+}
+
+.newspaper-input:focus,
+.newspaper-textarea:focus,
+.newspaper-select:focus {
+  border-color: var(--newspaper-color-red);
+  box-shadow: 0 0 0 2px var(--newspaper-color-red-light);
+  outline: none;
+}
+
+.newspaper-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ========================================
+   CARDS & PANELS
+   ======================================== */
+
+.newspaper-card {
+  background: var(--newspaper-color-background);
+  border: 1px solid var(--newspaper-color-border);
+  border-radius: var(--newspaper-border-radius);
+  padding: var(--newspaper-space-lg);
+  margin-bottom: var(--newspaper-space-lg);
+  position: relative;
+  transition: all var(--newspaper-transition-fast);
+}
+
+.newspaper-card:hover {
+  border-color: var(--newspaper-color-red);
+  box-shadow: var(--newspaper-shadow-md);
+}
+
+.newspaper-card-header {
+  padding-bottom: var(--newspaper-space-md);
+  margin-bottom: var(--newspaper-space-md);
+  border-bottom: 1px solid var(--newspaper-color-border);
+}
+
+.newspaper-card-title {
+  font-family: var(--newspaper-font-serif);
+  font-size: var(--newspaper-text-section);
+  font-weight: 700;
+  color: var(--newspaper-color-text);
+  margin: 0;
+}
+
+.newspaper-card-subtitle {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-caption);
+  color: var(--newspaper-color-text-muted);
+  margin-top: var(--newspaper-space-xs);
+}
+
+.newspaper-card-body {
+  line-height: var(--newspaper-leading-normal);
+}
+
+.newspaper-card-footer {
+  margin-top: var(--newspaper-space-lg);
+  padding-top: var(--newspaper-space-md);
+  border-top: 1px solid var(--newspaper-color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--newspaper-space-md);
+}
+
+/* Feature card variant */
+.newspaper-card-feature {
+  border: 2px solid var(--newspaper-color-red);
+  background: var(--newspaper-color-red-light);
+}
+
+.newspaper-card-feature .newspaper-card-title {
+  color: var(--newspaper-color-red-dark);
+}
+
+/* ========================================
+   BADGES & TAGS
+   ======================================== */
+
+.newspaper-badge {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-fine);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--newspaper-tracking-wide);
+  padding: var(--newspaper-space-xs) var(--newspaper-space-sm);
+  border-radius: var(--newspaper-border-radius);
+  display: inline-block;
+  line-height: 1;
+}
+
+.newspaper-badge-primary {
+  background: var(--newspaper-color-red);
+  color: white;
+}
+
+.newspaper-badge-secondary {
+  background: var(--newspaper-color-gray-200);
+  color: var(--newspaper-color-text);
+}
+
+.newspaper-badge-outline {
+  background: transparent;
+  color: var(--newspaper-color-red);
+  border: 1px solid var(--newspaper-color-red);
+}
+
+/* Score badges */
+.newspaper-score-badge {
+  font-family: var(--newspaper-font-mono);
+  font-size: var(--newspaper-text-fine);
+  font-weight: 600;
+  background: var(--newspaper-color-gray-100);
+  color: var(--newspaper-color-text);
+  border: 1px solid var(--newspaper-color-border);
+  padding: var(--newspaper-space-xs) var(--newspaper-space-sm);
+  border-radius: var(--newspaper-border-radius);
+}
+
+/* ========================================
+   ALERTS & NOTIFICATIONS
+   ======================================== */
+
+.newspaper-alert {
+  border: 2px solid;
+  border-radius: var(--newspaper-border-radius);
+  padding: var(--newspaper-space-md) var(--newspaper-space-lg);
+  margin-bottom: var(--newspaper-space-lg);
+  position: relative;
+}
+
+.newspaper-alert-breaking {
+  background: var(--newspaper-color-red-light);
+  border-color: var(--newspaper-color-red);
+  color: var(--newspaper-color-red-dark);
+}
+
+.newspaper-alert-info {
+  background: var(--newspaper-color-gray-100);
+  border-color: var(--newspaper-color-gray-300);
+  color: var(--newspaper-color-text);
+}
+
+.newspaper-alert-title {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-caption);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--newspaper-tracking-wide);
+  margin-bottom: var(--newspaper-space-xs);
+}
+
+/* ========================================
+   TABLES
+   ======================================== */
+
+.newspaper-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--newspaper-space-lg);
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-caption);
+}
+
+.newspaper-table th {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--newspaper-tracking-wide);
+  color: var(--newspaper-color-text);
+  background: var(--newspaper-color-gray-100);
+  padding: var(--newspaper-space-sm) var(--newspaper-space-md);
+  border: 1px solid var(--newspaper-color-border);
+  text-align: left;
+}
+
+.newspaper-table td {
+  padding: var(--newspaper-space-sm) var(--newspaper-space-md);
+  border: 1px solid var(--newspaper-color-border);
+  color: var(--newspaper-color-text);
+}
+
+.newspaper-table tr:nth-child(even) {
+  background: var(--newspaper-color-gray-50);
+}
+
+.newspaper-table tr:hover {
+  background: var(--newspaper-color-red-light);
+}
+
+/* ========================================
+   PROGRESS & LOADING
+   ======================================== */
+
+.newspaper-progress {
+  width: 100%;
+  height: 8px;
+  background: var(--newspaper-color-gray-200);
+  border-radius: var(--newspaper-border-radius);
+  overflow: hidden;
+  margin: var(--newspaper-space-sm) 0;
+}
+
+.newspaper-progress-bar {
+  height: 100%;
+  background: var(--newspaper-color-red);
+  transition: width var(--newspaper-transition-normal);
+}
+
+.newspaper-spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid var(--newspaper-color-gray-200);
+  border-top: 3px solid var(--newspaper-color-red);
+  border-radius: 50%;
+  animation: newspaper-spin 1s linear infinite;
+  margin: var(--newspaper-space-md) auto;
+}
+
+@keyframes newspaper-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ========================================
+   TOGGLES & SWITCHES
+   ======================================== */
+
+.newspaper-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--newspaper-space-sm);
+  cursor: pointer;
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-caption);
+  font-weight: 500;
+}
+
+.newspaper-toggle-switch {
+  width: 3rem;
+  height: 1.5rem;
+  background: var(--newspaper-color-gray-300);
+  border-radius: 0.75rem;
+  position: relative;
+  transition: background var(--newspaper-transition-fast);
+}
+
+.newspaper-toggle-switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: white;
+  border-radius: 50%;
+  transition: transform var(--newspaper-transition-fast);
+  box-shadow: var(--newspaper-shadow-sm);
+}
+
+.newspaper-toggle input:checked + .newspaper-toggle-switch {
+  background: var(--newspaper-color-red);
+}
+
+.newspaper-toggle input:checked + .newspaper-toggle-switch::after {
+  transform: translateX(1.5rem);
+}
+
+.newspaper-toggle input {
+  display: none;
+}
+
+/* ========================================
+   TOOLTIPS
+   ======================================== */
+
+.newspaper-tooltip {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted var(--newspaper-color-text-muted);
+}
+
+.newspaper-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--newspaper-color-gray-800);
+  color: white;
+  font-size: var(--newspaper-text-fine);
+  padding: var(--newspaper-space-xs) var(--newspaper-space-sm);
+  border-radius: var(--newspaper-border-radius);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--newspaper-transition-fast);
+  z-index: var(--newspaper-z-tooltip);
+  margin-bottom: var(--newspaper-space-xs);
+}
+
+.newspaper-tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ========================================
+   RESPONSIVE COMPONENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+  .newspaper-card {
+    padding: var(--newspaper-space-md);
+  }
+  
+  .newspaper-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .newspaper-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .newspaper-table {
+    font-size: var(--newspaper-text-fine);
+  }
+  
+  .newspaper-table th,
+  .newspaper-table td {
+    padding: var(--newspaper-space-xs) var(--newspaper-space-sm);
+  }
+}

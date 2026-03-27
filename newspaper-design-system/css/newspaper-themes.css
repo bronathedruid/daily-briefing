@@ -1,0 +1,389 @@
+/**
+ * newspaper-themes.css
+ * Light/dark theme variations maintaining newspaper authenticity
+ */
+
+/* ========================================
+   THEME TOGGLE COMPONENT
+   ======================================== */
+
+.newspaper-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--newspaper-space-sm);
+  background: var(--newspaper-color-surface);
+  border: 1px solid var(--newspaper-color-border);
+  border-radius: var(--newspaper-border-radius);
+  padding: var(--newspaper-space-xs);
+  font-size: var(--newspaper-text-caption);
+  cursor: pointer;
+  transition: all var(--newspaper-transition-fast);
+}
+
+.newspaper-theme-toggle:hover {
+  border-color: var(--newspaper-color-red);
+}
+
+.newspaper-theme-toggle-label {
+  font-family: var(--newspaper-font-sans);
+  font-weight: 500;
+  color: var(--newspaper-color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--newspaper-tracking-wide);
+  font-size: var(--newspaper-text-fine);
+}
+
+.newspaper-theme-toggle-switch {
+  width: 2.5rem;
+  height: 1.25rem;
+  background: var(--newspaper-color-gray-300);
+  border-radius: 0.625rem;
+  position: relative;
+  transition: background var(--newspaper-transition-fast);
+}
+
+.newspaper-theme-toggle-switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border-radius: 50%;
+  transition: transform var(--newspaper-transition-fast);
+  box-shadow: var(--newspaper-shadow-sm);
+}
+
+/* Icons for theme states */
+.newspaper-theme-toggle-switch::before {
+  content: '☀️';
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  opacity: 0;
+  transition: opacity var(--newspaper-transition-fast);
+}
+
+[data-theme="dark"] .newspaper-theme-toggle-switch {
+  background: var(--newspaper-color-red);
+}
+
+[data-theme="dark"] .newspaper-theme-toggle-switch::after {
+  transform: translateX(1.25rem);
+}
+
+[data-theme="dark"] .newspaper-theme-toggle-switch::before {
+  content: '🌙';
+  left: auto;
+  right: 3px;
+  opacity: 1;
+}
+
+/* ========================================
+   LIGHT THEME (DEFAULT)
+   ======================================== */
+
+[data-theme="light"],
+.newspaper-theme {
+  /* Already defined in newspaper-core.css */
+}
+
+/* Light theme specific adjustments */
+[data-theme="light"] .newspaper-masthead {
+  background: var(--newspaper-color-red);
+  background-image: 
+    linear-gradient(45deg, 
+      transparent 48%, 
+      rgba(255,255,255,0.05) 49%, 
+      rgba(255,255,255,0.05) 51%, 
+      transparent 52%);
+  background-size: 20px 20px;
+}
+
+[data-theme="light"] .newspaper-article {
+  background: white;
+  box-shadow: var(--newspaper-shadow-sm);
+}
+
+[data-theme="light"] .newspaper-article:hover {
+  box-shadow: var(--newspaper-shadow-md);
+}
+
+[data-theme="light"] .newspaper-nav {
+  background: rgba(254, 254, 254, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+/* ========================================
+   DARK THEME (NIGHT EDITION)
+   ======================================== */
+
+[data-theme="dark"] {
+  /* Custom properties already defined in newspaper-core.css */
+}
+
+/* Dark theme specific styles */
+[data-theme="dark"] .newspaper-masthead {
+  background: var(--newspaper-color-red);
+  background-image: 
+    linear-gradient(45deg, 
+      transparent 48%, 
+      rgba(0,0,0,0.1) 49%, 
+      rgba(0,0,0,0.1) 51%, 
+      transparent 52%);
+  background-size: 20px 20px;
+  border-bottom-color: var(--newspaper-color-gray-400);
+}
+
+[data-theme="dark"] .newspaper-masthead-title {
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+[data-theme="dark"] .newspaper-article {
+  background: var(--newspaper-color-gray-50);
+  border-color: var(--newspaper-color-gray-200);
+}
+
+[data-theme="dark"] .newspaper-article:hover {
+  background: var(--newspaper-color-gray-100);
+  border-color: var(--newspaper-color-red);
+}
+
+[data-theme="dark"] .newspaper-nav {
+  background: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(8px);
+  border-top-color: var(--newspaper-color-red);
+  border-bottom-color: var(--newspaper-color-gray-200);
+}
+
+[data-theme="dark"] .newspaper-card {
+  background: var(--newspaper-color-gray-50);
+  border-color: var(--newspaper-color-gray-200);
+}
+
+[data-theme="dark"] .newspaper-card:hover {
+  background: var(--newspaper-color-gray-100);
+  border-color: var(--newspaper-color-red);
+}
+
+[data-theme="dark"] .newspaper-sidebar {
+  background: var(--newspaper-color-gray-50);
+  border-color: var(--newspaper-color-gray-200);
+}
+
+[data-theme="dark"] .newspaper-footer {
+  background: var(--newspaper-color-gray-100);
+  border-top-color: var(--newspaper-color-red);
+}
+
+/* Dark theme form adjustments */
+[data-theme="dark"] .newspaper-input,
+[data-theme="dark"] .newspaper-textarea,
+[data-theme="dark"] .newspaper-select {
+  background: var(--newspaper-color-gray-50);
+  border-color: var(--newspaper-color-gray-200);
+  color: var(--newspaper-color-text);
+}
+
+[data-theme="dark"] .newspaper-input:focus,
+[data-theme="dark"] .newspaper-textarea:focus,
+[data-theme="dark"] .newspaper-select:focus {
+  background: var(--newspaper-color-background);
+  border-color: var(--newspaper-color-red);
+  box-shadow: 0 0 0 2px var(--newspaper-color-red-light);
+}
+
+/* Dark theme button adjustments */
+[data-theme="dark"] .newspaper-btn-ghost {
+  border-color: var(--newspaper-color-gray-200);
+  color: var(--newspaper-color-text);
+}
+
+[data-theme="dark"] .newspaper-btn-ghost:hover {
+  background: var(--newspaper-color-gray-100);
+  border-color: var(--newspaper-color-red);
+  color: var(--newspaper-color-red);
+}
+
+/* ========================================
+   HIGH CONTRAST MODE
+   ======================================== */
+
+@media (prefers-contrast: high) {
+  :root {
+    --newspaper-color-border: #000000;
+    --newspaper-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --newspaper-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  [data-theme="light"] {
+    --newspaper-color-text: #000000;
+    --newspaper-color-background: #ffffff;
+    --newspaper-color-red: #cc0000;
+  }
+  
+  [data-theme="dark"] {
+    --newspaper-color-text: #ffffff;
+    --newspaper-color-background: #000000;
+    --newspaper-color-red: #ff3333;
+  }
+  
+  .newspaper-article {
+    border-width: 2px;
+  }
+  
+  .newspaper-btn {
+    border-width: 3px;
+  }
+}
+
+/* ========================================
+   PRINT THEME OVERRIDES
+   ======================================== */
+
+@media print {
+  /* Force light theme for print */
+  [data-theme="dark"] {
+    --newspaper-color-text: #000000 !important;
+    --newspaper-color-background: #ffffff !important;
+    --newspaper-color-red: #cc0000 !important;
+    --newspaper-color-gray-100: #f5f5f5 !important;
+    --newspaper-color-border: #cccccc !important;
+  }
+  
+  .newspaper-theme-toggle {
+    display: none !important;
+  }
+  
+  .newspaper-nav {
+    display: none !important;
+  }
+  
+  .newspaper-masthead {
+    background: white !important;
+    color: black !important;
+    border-bottom: 3px solid black !important;
+  }
+  
+  .newspaper-article {
+    background: white !important;
+    border: 1px solid black !important;
+    box-shadow: none !important;
+    margin-bottom: 1rem !important;
+    page-break-inside: avoid;
+  }
+  
+  .newspaper-headline a {
+    color: black !important;
+  }
+  
+  .newspaper-section {
+    color: black !important;
+    border-bottom-color: black !important;
+  }
+  
+  .newspaper-section::after {
+    background: black !important;
+  }
+  
+  .newspaper-btn {
+    border: 2px solid black !important;
+    background: white !important;
+    color: black !important;
+  }
+  
+  .newspaper-card {
+    border: 1px solid black !important;
+    background: white !important;
+  }
+  
+  /* Hide interactive elements in print */
+  .newspaper-nav,
+  .newspaper-theme-toggle,
+  .newspaper-btn:not(.print-show),
+  .newspaper-form-group {
+    display: none !important;
+  }
+}
+
+/* ========================================
+   SYSTEM PREFERENCE DETECTION
+   ======================================== */
+
+/* Default to system preference if no theme is explicitly set */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --newspaper-color-ink: #f0f0f0;
+    --newspaper-color-paper: #1e1e1e;
+    --newspaper-color-red: #ff5252;
+    --newspaper-color-red-light: #3a1f1f;
+    --newspaper-color-red-dark: #ff1744;
+    
+    --newspaper-color-gray-50: #2a2a2a;
+    --newspaper-color-gray-100: #2f2f2f;
+    --newspaper-color-gray-200: #363636;
+    --newspaper-color-gray-300: #4a4a4a;
+    --newspaper-color-gray-400: #888888;
+    --newspaper-color-gray-500: #aaaaaa;
+    --newspaper-color-gray-600: #cccccc;
+    --newspaper-color-gray-700: #e0e0e0;
+    --newspaper-color-gray-800: #f0f0f0;
+    --newspaper-color-gray-900: #ffffff;
+    
+    --newspaper-color-text: var(--newspaper-color-ink);
+    --newspaper-color-text-muted: var(--newspaper-color-gray-500);
+    --newspaper-color-text-light: var(--newspaper-color-gray-400);
+    --newspaper-color-background: var(--newspaper-color-paper);
+    --newspaper-color-surface: var(--newspaper-color-gray-50);
+    --newspaper-color-border: var(--newspaper-color-gray-300);
+    --newspaper-color-accent: var(--newspaper-color-red);
+  }
+}
+
+/* ========================================
+   THEME TRANSITION ANIMATIONS
+   ======================================== */
+
+.newspaper-theme-transition {
+  transition: 
+    color var(--newspaper-transition-normal),
+    background-color var(--newspaper-transition-normal),
+    border-color var(--newspaper-transition-normal),
+    box-shadow var(--newspaper-transition-normal);
+}
+
+/* Apply transition to all themed elements */
+body,
+.newspaper-article,
+.newspaper-card,
+.newspaper-nav,
+.newspaper-sidebar,
+.newspaper-input,
+.newspaper-textarea,
+.newspaper-select,
+.newspaper-btn {
+  transition: 
+    color var(--newspaper-transition-normal),
+    background-color var(--newspaper-transition-normal),
+    border-color var(--newspaper-transition-normal),
+    box-shadow var(--newspaper-transition-normal);
+}
+
+/* Reduce theme transitions for motion-sensitive users */
+@media (prefers-reduced-motion: reduce) {
+  .newspaper-theme-transition,
+  body,
+  .newspaper-article,
+  .newspaper-card,
+  .newspaper-nav,
+  .newspaper-sidebar,
+  .newspaper-input,
+  .newspaper-textarea,
+  .newspaper-select,
+  .newspaper-btn {
+    transition-duration: 0.05s !important;
+  }
+}

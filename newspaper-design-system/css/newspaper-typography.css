@@ -1,0 +1,333 @@
+/**
+ * newspaper-typography.css
+ * Typography system for authentic newspaper styling
+ */
+
+/* ========================================
+   HEADLINE TYPOGRAPHY
+   ======================================== */
+
+/* Banner Headlines - Major Breaking News */
+.newspaper-banner {
+  font-family: var(--newspaper-font-serif);
+  font-size: var(--newspaper-text-banner);
+  font-weight: 900;
+  line-height: var(--newspaper-leading-tight);
+  letter-spacing: var(--newspaper-tracking-tight);
+  color: var(--newspaper-color-text);
+  margin-bottom: var(--newspaper-space-lg);
+  text-align: center;
+  border-bottom: 3px solid var(--newspaper-color-red);
+  padding-bottom: var(--newspaper-space-md);
+}
+
+/* Main Headlines */
+.newspaper-headline {
+  font-family: var(--newspaper-font-serif);
+  font-size: var(--newspaper-text-headline);
+  font-weight: 700;
+  line-height: var(--newspaper-leading-tight);
+  letter-spacing: var(--newspaper-tracking-tight);
+  color: var(--newspaper-color-text);
+  margin-bottom: var(--newspaper-space-md);
+}
+
+.newspaper-headline a {
+  color: inherit;
+  transition: color var(--newspaper-transition-fast);
+}
+
+.newspaper-headline a:hover {
+  color: var(--newspaper-color-red);
+}
+
+/* Sub Headlines */
+.newspaper-subhead {
+  font-family: var(--newspaper-font-serif);
+  font-size: var(--newspaper-text-subhead);
+  font-weight: 600;
+  line-height: var(--newspaper-leading-normal);
+  color: var(--newspaper-color-gray-600);
+  margin-bottom: var(--newspaper-space-sm);
+}
+
+/* Section Headers */
+.newspaper-section {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-section);
+  font-weight: 800;
+  line-height: var(--newspaper-leading-normal);
+  text-transform: uppercase;
+  letter-spacing: var(--newspaper-tracking-wide);
+  color: var(--newspaper-color-red);
+  margin-bottom: var(--newspaper-space-md);
+  padding-bottom: var(--newspaper-space-xs);
+  border-bottom: 2px solid var(--newspaper-color-red);
+  position: relative;
+}
+
+.newspaper-section::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 3rem;
+  height: 2px;
+  background: var(--newspaper-color-text);
+}
+
+/* ========================================
+   BODY TYPOGRAPHY
+   ======================================== */
+
+/* Body Text */
+.newspaper-body {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-body);
+  line-height: var(--newspaper-leading-loose);
+  color: var(--newspaper-color-text);
+  margin-bottom: var(--newspaper-space-md);
+}
+
+.newspaper-body p + p {
+  margin-top: var(--newspaper-space-md);
+}
+
+/* Lead Paragraph */
+.newspaper-lead {
+  font-size: 1.125rem; /* Slightly larger than body */
+  font-weight: 500;
+  line-height: var(--newspaper-leading-normal);
+  color: var(--newspaper-color-text);
+  margin-bottom: var(--newspaper-space-lg);
+}
+
+/* Bylines & Metadata */
+.newspaper-byline {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-caption);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--newspaper-tracking-wide);
+  color: var(--newspaper-color-text-muted);
+  margin-bottom: var(--newspaper-space-sm);
+}
+
+.newspaper-dateline {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-fine);
+  color: var(--newspaper-color-text-light);
+  margin-bottom: var(--newspaper-space-xs);
+}
+
+.newspaper-source {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-caption);
+  font-weight: 600;
+  color: var(--newspaper-color-red);
+  text-transform: uppercase;
+  letter-spacing: var(--newspaper-tracking-wide);
+}
+
+/* Captions */
+.newspaper-caption {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-caption);
+  font-style: italic;
+  line-height: var(--newspaper-leading-normal);
+  color: var(--newspaper-color-text-muted);
+  margin-top: var(--newspaper-space-xs);
+  padding: var(--newspaper-space-xs) var(--newspaper-space-sm);
+  background: var(--newspaper-color-gray-100);
+  border-left: 3px solid var(--newspaper-color-red);
+}
+
+/* ========================================
+   SPECIAL TYPOGRAPHY ELEMENTS
+   ======================================== */
+
+/* Pull Quotes */
+.newspaper-pullquote {
+  font-family: var(--newspaper-font-serif);
+  font-size: var(--newspaper-text-quote);
+  font-style: italic;
+  font-weight: 400;
+  line-height: var(--newspaper-leading-normal);
+  color: var(--newspaper-color-text);
+  text-align: center;
+  margin: var(--newspaper-space-xl) 0;
+  padding: var(--newspaper-space-lg);
+  border-top: 3px solid var(--newspaper-color-red);
+  border-bottom: 3px solid var(--newspaper-color-red);
+  position: relative;
+}
+
+.newspaper-pullquote::before {
+  content: '"';
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--newspaper-color-red);
+  background: var(--newspaper-color-background);
+  padding: 0 var(--newspaper-space-sm);
+}
+
+/* Drop Caps */
+.newspaper-dropcap::first-letter {
+  float: left;
+  font-family: var(--newspaper-font-serif);
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 0.8;
+  color: var(--newspaper-color-red);
+  margin: 0.1rem 0.1rem 0 0;
+  padding: 0.1rem;
+}
+
+/* Kickers (Small text above headlines) */
+.newspaper-kicker {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--newspaper-tracking-wider);
+  color: var(--newspaper-color-red);
+  margin-bottom: var(--newspaper-space-xs);
+  display: block;
+}
+
+/* Deck (Subtext below headlines) */
+.newspaper-deck {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-body);
+  font-weight: 400;
+  line-height: var(--newspaper-leading-normal);
+  color: var(--newspaper-color-text-muted);
+  margin-bottom: var(--newspaper-space-md);
+  font-style: italic;
+}
+
+/* ========================================
+   SPECIALIZED TEXT STYLES
+   ======================================== */
+
+/* Breaking News Banner */
+.newspaper-breaking {
+  font-family: var(--newspaper-font-sans);
+  font-size: var(--newspaper-text-caption);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: var(--newspaper-tracking-wider);
+  color: white;
+  background: var(--newspaper-color-red);
+  padding: var(--newspaper-space-xs) var(--newspaper-space-sm);
+  border-radius: var(--newspaper-border-radius);
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* Editorial/Opinion Text */
+.newspaper-editorial {
+  font-style: italic;
+  border-left: 4px solid var(--newspaper-color-red);
+  padding-left: var(--newspaper-space-md);
+  margin: var(--newspaper-space-lg) 0;
+}
+
+/* Corrections */
+.newspaper-correction {
+  font-size: var(--newspaper-text-caption);
+  color: var(--newspaper-color-text-muted);
+  background: var(--newspaper-color-gray-100);
+  padding: var(--newspaper-space-sm);
+  border: 1px solid var(--newspaper-color-border);
+  border-radius: var(--newspaper-border-radius);
+  margin: var(--newspaper-space-md) 0;
+}
+
+.newspaper-correction::before {
+  content: 'CORRECTION: ';
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--newspaper-color-red);
+}
+
+/* ========================================
+   RESPONSIVE TYPOGRAPHY
+   ======================================== */
+
+@media (max-width: 768px) {
+  .newspaper-banner {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  
+  .newspaper-headline {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  
+  .newspaper-subhead {
+    font-size: 1.25rem;
+  }
+  
+  .newspaper-pullquote {
+    font-size: 1.25rem;
+    margin: var(--newspaper-space-lg) 0;
+    padding: var(--newspaper-space-md);
+  }
+  
+  .newspaper-dropcap::first-letter {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .newspaper-banner {
+    font-size: 2rem;
+  }
+  
+  .newspaper-headline {
+    font-size: 1.5rem;
+  }
+  
+  .newspaper-section {
+    font-size: 1rem;
+  }
+}
+
+/* ========================================
+   PRINT TYPOGRAPHY
+   ======================================== */
+
+@media print {
+  .newspaper-banner,
+  .newspaper-headline,
+  .newspaper-subhead {
+    color: black !important;
+    break-after: avoid;
+  }
+  
+  .newspaper-body {
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+  
+  .newspaper-caption {
+    font-size: 9pt;
+    background: none !important;
+    border-left: 1pt solid black;
+  }
+  
+  .newspaper-byline {
+    font-size: 9pt;
+  }
+}

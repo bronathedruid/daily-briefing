@@ -1,1579 +1,586 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Briefing — 2026-03-26</title>
+  <title>The Daily Briefing — 2026-03-27</title>
   <style>
+    /* --- NEWSPAPER STYLING --- */
     :root {
-      --bg: #0d1117; --bg2: #161b22; --bg3: #21262d;
-      --fg: #e6edf3; --fg2: #8b949e; --fg3: #484f58;
-      --accent: #58a6ff; --accent2: #3fb950; --accent3: #d29922;
-      --border: #30363d; --radius: 8px;
-      --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-      --mono: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+      --bg-paper: #f4f1ea;
+      --bg-paper-light: #fdfcf7;
+      --ink: #1a1a1a;
+      --ink-light: #4a4a4a;
+      --accent: #8b0000;
+      --font-headline: 'Georgia', 'Times New Roman', serif;
+      --font-body: 'Georgia', serif;
+      --font-meta: 'Courier New', Courier, monospace;
     }
-    [data-theme="light"] {
-      --bg: #ffffff; --bg2: #f6f8fa; --bg3: #eaeef2;
-      --fg: #1f2328; --fg2: #656d76; --fg3: #8b949e;
-      --accent: #0969da; --accent2: #1a7f37; --accent3: #9a6700;
-      --border: #d0d7de;
-    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: var(--bg); color: var(--fg); font-family: var(--font); line-height: 1.5; }
-    
-    .header {
-      background: var(--bg2); border-bottom: 1px solid var(--border);
-      padding: 1.5rem 2rem; position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+
+    body { 
+      background-color: var(--bg-paper); 
+      color: var(--ink); 
+      font-family: var(--font-body); 
+      line-height: 1.6; 
+      padding: 2rem;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .header-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .header h1 { font-size: 1.4rem; font-weight: 700; }
-    .header h1 span { color: var(--accent); }
-    .header-meta { color: var(--fg2); font-size: 0.85rem; display: flex; gap: 1.5rem; align-items: center; }
-    .header-meta .stat { font-weight: 600; color: var(--accent2); }
-    
-    .theme-toggle {
-      background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius);
-      color: var(--fg); padding: 0.4rem 0.8rem; cursor: pointer; font-size: 0.85rem;
+
+    .newspaper-container {
+      position: relative; 
+      width: 100%;
+      max-width: 1300px;
+      background: var(--bg-paper-light);
+      padding: 2rem 3rem 4rem 3rem; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05), inset 0 0 50px rgba(0,0,0,0.02);
+      border: 1px solid #e0dbce;
+      perspective: 2500px; 
     }
-    
-    .nav {
-      background: var(--bg2); border-bottom: 1px solid var(--border);
-      padding: 0.75rem 2rem; overflow-x: auto; white-space: nowrap;
-      position: fixed; top: var(--header-h, 64px); left: 0; right: 0; z-index: 99;
+
+    /* Masthead & Hero Image */
+    .masthead {
+      text-align: center;
+      border-bottom: 4px double var(--ink);
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
     }
-    .nav-inner { max-width: 1400px; margin: 0 auto; display: flex; gap: 0.5rem; }
-    .nav-link {
-      display: inline-flex; align-items: center; gap: 0.3rem;
-      padding: 0.4rem 0.8rem; border-radius: var(--radius);
-      background: var(--bg3); color: var(--fg2); text-decoration: none;
-      font-size: 0.8rem; transition: all 0.2s;
+
+    .masthead-meta {
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      font-family: var(--font-meta);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding: 0.5rem 0;
+      margin-bottom: 1rem;
+      color: var(--ink-light);
     }
-    .nav-link:hover { color: var(--fg); background: var(--border); }
-    .nav-count { background: var(--bg); padding: 0.1rem 0.4rem; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
-    
-    .main { max-width: 1400px; margin: 0 auto; padding: 1.5rem 2rem; }
-    
-    .category {
-      margin-bottom: 2rem; background: var(--bg2); border: 1px solid var(--border);
-      border-radius: var(--radius); overflow: hidden;
+
+    .masthead h1 {
+      font-family: var(--font-headline);
+      font-size: 4.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 0.5rem;
     }
-    .category h2 {
-      padding: 1rem 1.25rem; background: var(--bg3); border-bottom: 1px solid var(--border);
-      font-size: 1.05rem; display: flex; align-items: center; gap: 0.5rem;
+
+    .hero-container {
+      margin-top: 1.5rem;
+      border-top: 2px solid var(--ink);
+      border-bottom: 2px solid var(--ink);
+      padding: 0.5rem 0;
     }
-    .count {
-      background: var(--accent); color: var(--bg); padding: 0.1rem 0.5rem;
-      border-radius: 10px; font-size: 0.75rem; margin-left: auto;
+
+    .hero-image {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(120%) brightness(0.9); 
+      display: block;
     }
-    
-    .articles { padding: 0.5rem; }
+
+    .hero-caption {
+      font-family: var(--font-meta);
+      font-size: 0.75rem;
+      text-align: right;
+      margin-top: 0.25rem;
+      color: var(--ink-light);
+      text-transform: uppercase;
+    }
+
+    /* Pages & Columns */
+    .page-content {
+      column-count: 3;
+      column-gap: 3rem;
+      column-rule: 1px solid #d3cec1;
+      min-height: 60vh; 
+      transform-style: preserve-3d;
+    }
+
+    /* --- 3D PAGE TURN ANIMATIONS --- */
+    .flip-next-out {
+      animation: flipOutLeft 0.5s ease-in forwards;
+      transform-origin: left center;
+    }
+    .flip-next-in {
+      animation: flipInRight 0.5s ease-out forwards;
+      transform-origin: right center;
+    }
+    .flip-prev-out {
+      animation: flipOutRight 0.5s ease-in forwards;
+      transform-origin: right center;
+    }
+    .flip-prev-in {
+      animation: flipInLeft 0.5s ease-out forwards;
+      transform-origin: left center;
+    }
+
+    @keyframes flipOutLeft {
+      0% { transform: rotateY(0deg); opacity: 1; }
+      100% { transform: rotateY(-90deg); opacity: 0; }
+    }
+    @keyframes flipInRight {
+      0% { transform: rotateY(90deg); opacity: 0; }
+      100% { transform: rotateY(0deg); opacity: 1; }
+    }
+    @keyframes flipOutRight {
+      0% { transform: rotateY(0deg); opacity: 1; }
+      100% { transform: rotateY(90deg); opacity: 0; }
+    }
+    @keyframes flipInLeft {
+      0% { transform: rotateY(-90deg); opacity: 0; }
+      100% { transform: rotateY(0deg); opacity: 1; }
+    }
+
+    /* Articles */
     .article {
-      padding: 0.75rem; border-radius: 6px; transition: background 0.15s;
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
     }
-    .article:hover { background: var(--bg3); }
-    .article + .article { border-top: 1px solid var(--border); }
-    .article-header { display: flex; align-items: flex-start; gap: 0.5rem; }
-    .article-title { color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.95rem; flex: 1; }
-    .article-title:hover { text-decoration: underline; }
-    .score {
-      background: var(--bg3); color: var(--fg2); padding: 0.1rem 0.4rem;
-      border-radius: 4px; font-size: 0.7rem; font-family: var(--mono); flex-shrink: 0;
+
+    .article-category {
+      font-family: var(--font-meta);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+      display: block;
+      border-bottom: 1px solid #d3cec1;
+      padding-bottom: 0.2rem;
     }
-    .article-meta { display: flex; gap: 1rem; margin-top: 0.25rem; font-size: 0.8rem; color: var(--fg2); }
-    .source { font-weight: 500; }
-    .snippet { color: var(--fg2); font-size: 0.85rem; margin-top: 0.3rem; line-height: 1.4; }
+
+    .article-title {
+      font-family: var(--font-headline);
+      font-size: 1.3rem;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+      color: var(--ink);
+      text-decoration: none;
+      display: block;
+    }
+
+    .article-title:hover {
+      text-decoration: underline;
+    }
+
+    .article-snippet {
+      font-size: 0.95rem;
+      color: var(--ink-light);
+      text-align: justify;
+      display: -webkit-box;
+      -webkit-line-clamp: 4; 
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+
+    .article-meta-foot {
+      display: flex;
+      justify-content: space-between;
+      font-style: italic;
+      font-size: 0.8rem;
+      color: var(--ink-light);
+      margin-top: 0.5rem;
+    }
+
+    /* --- DOG-EAR PAGE FOLDS --- */
+    .page-corner {
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      z-index: 10;
+    }
+
+    .page-corner::before {
+      content: '';
+      position: absolute;
+      opacity: 0;
+      font-family: var(--font-meta);
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: var(--ink);
+      white-space: nowrap;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    /* Bottom Right (Next Page) */
+    .corner-right {
+      right: 0;
+      border-width: 0 0 60px 60px;
+      border-color: transparent transparent #e0dbce #fdfcf7;
+      box-shadow: -4px -4px 6px rgba(0,0,0,0.05);
+    }
+
+    .corner-right::before {
+      content: 'Turn Page ➔';
+      bottom: -40px;
+      right: 10px;
+    }
+
+    .corner-right:hover {
+      border-width: 0 0 90px 90px;
+      box-shadow: -6px -6px 12px rgba(0,0,0,0.1);
+    }
+
+    .corner-right:hover::before { opacity: 1; }
+
+    /* Bottom Left (Previous Page) */
+    .corner-left {
+      left: 0;
+      border-width: 60px 0 0 60px;
+      border-color: transparent transparent transparent #e0dbce;
+      box-shadow: 4px -4px 6px rgba(0,0,0,0.05);
+      transform: rotate(90deg);
+      transform-origin: bottom left;
+    }
     
-    .archive {
-      margin-top: 2rem; padding: 1.5rem; background: var(--bg2);
-      border: 1px solid var(--border); border-radius: var(--radius);
+    .corner-left::before {
+      content: '⬅️ Back';
+      bottom: 10px;
+      left: 10px;
+      transform: rotate(-90deg);
+      transform-origin: bottom left;
     }
-    .archive h3 { margin-bottom: 0.75rem; font-size: 0.95rem; color: var(--fg2); }
-    .archive-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .archive-link {
-      padding: 0.3rem 0.7rem; background: var(--bg3); color: var(--fg2);
-      border-radius: var(--radius); text-decoration: none; font-size: 0.8rem;
-      font-family: var(--mono);
+
+    .corner-left:hover {
+      border-width: 90px 0 0 90px;
+      box-shadow: 6px -6px 12px rgba(0,0,0,0.1);
     }
-    .archive-link:hover { color: var(--accent); }
-    
-    .footer {
-      text-align: center; padding: 2rem; color: var(--fg3); font-size: 0.8rem;
-      border-top: 1px solid var(--border); margin-top: 2rem;
+
+    .corner-left:hover::before { opacity: 1; }
+
+    /* Hidden state for disabled corners */
+    .corner-hidden {
+      opacity: 0 !important;
+      pointer-events: none;
     }
-    .footer a { color: var(--fg2); }
-    
-    @media (max-width: 768px) {
-      .header { padding: 1rem; }
-      .nav { padding: 0.5rem 1rem; }
-      .main { padding: 1rem; }
-      .nav-label { display: none; }
-      .header-meta { font-size: 0.75rem; gap: 0.75rem; }
+
+    .page-indicator {
+      text-align: center;
+      font-family: var(--font-meta);
+      font-size: 0.85rem;
+      margin-top: 2rem;
+      color: var(--ink-light);
+      border-top: 1px solid #d3cec1;
+      padding-top: 1rem;
+    }
+
+    /* --- PRINTING ANIMATION STYLES --- */
+    .reveal-title, .reveal-body { opacity: 0; }
+
+    .is-printing-title {
+      visibility: visible;
+      opacity: 1;
+      clip-path: inset(0 100% 0 0);
+      animation: printWipe 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    }
+
+    .is-printing-body {
+      visibility: visible;
+      opacity: 1;
+      clip-path: inset(0 0 100% 0);
+      animation: printLines 1.2s steps(5, end) forwards;
+    }
+
+    @keyframes printWipe {
+      0% { clip-path: inset(0 100% 0 0); opacity: 1; }
+      100% { clip-path: inset(-10% -10% -10% -10%); opacity: 1; }
+    }
+
+    @keyframes printLines {
+      0% { clip-path: inset(0 0 100% 0); opacity: 1; }
+      100% { clip-path: inset(-10% -10% -10% -10%); opacity: 1; }
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .page-content { column-count: 2; }
+      .masthead h1 { font-size: 3.5rem; }
+    }
+    @media (max-width: 650px) {
+      .page-content { column-count: 1; }
+      .masthead h1 { font-size: 2.2rem; }
+      .newspaper-container { padding: 1.5rem; padding-bottom: 4rem; }
+      .masthead-meta { font-size: 0.65rem; }
+      .hero-image { height: 200px; }
+      .corner-right::before, .corner-left::before { display: none; }
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <div class="header-inner">
-      <h1>📰 Daily <span>Briefing</span></h1>
-      <div class="header-meta">
-        <span>2026-03-26</span>
-        <span><span class="stat">108</span> articles</span>
-        <span>Updated Mar 26, 04:45 PM</span>
-        <button class="theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
+  <div class="newspaper-container">
+    <header class="masthead">
+      <div class="masthead-meta reveal-title">
+        <span>Vol. CXCVI, No. 87</span>
+        <span>Ormond Beach, FL</span>
+        <span>Friday, March 27, 2026</span>
       </div>
-    </div>
-  </header>
-  
-  <nav class="nav"><div class="nav-inner"><a href="#ai-models" class="nav-link">🤖<span class="nav-label">AI Models &amp; Releases</span><span class="nav-count">15</span></a><a href="#government-policy" class="nav-link">🏛️<span class="nav-label">Government &amp; Policy</span><span class="nav-count">15</span></a><a href="#security" class="nav-link">🔐<span class="nav-label">Cybersecurity</span><span class="nav-count">15</span></a><a href="#coding-agents" class="nav-link">🛠️<span class="nav-label">Coding Agents &amp; AI Tools</span><span class="nav-count">15</span></a><a href="#marketing-seo" class="nav-link">📈<span class="nav-label">Marketing &amp; SEO</span><span class="nav-count">15</span></a><a href="#space-rockets" class="nav-link">🚀<span class="nav-label">Space &amp; Rockets</span><span class="nav-count">15</span></a><a href="#devops" class="nav-link">⚙️<span class="nav-label">DevOps &amp; Platform Engineering</span><span class="nav-count">15</span></a><a href="#powershell" class="nav-link">💠<span class="nav-label">PowerShell &amp; Automation</span><span class="nav-count">3</span></a></div></nav>
-  <div class="toolbar-spacer"></div>
-  <div id="daily-song" style="max-width:1400px;margin:0.5rem auto;padding:0 2rem;">
-    <details style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:0.75rem 1rem;">
-      <summary style="cursor:pointer;color:var(--fg2);font-size:0.85rem;">🎵 Today's AI-Generated Song</summary>
-      <audio controls preload="none" style="width:100%;margin-top:0.5rem;" src="daily-song.mp3"></audio>
-    </details>
+      <h1 class="reveal-title">The Daily Briefing</h1>
+      <div class="masthead-meta reveal-title" style="justify-content: center; border: none; font-style: italic;">
+        "All 109 articles fit to print."
+      </div>
+      
+      <div class="hero-container reveal-title" id="front-page-hero">
+        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1200&auto=format&fit=crop" alt="Vintage Typewriter" class="hero-image">
+        <div class="hero-caption">Global Tech Infrastructure & News Updates</div>
+      </div>
+    </header>
+
+    <main class="page-content" id="newspaper-grid">
+    </main>
+
+    <div class="page-indicator" id="pageIndicator">Page 1 of X</div>
+
+    <div class="page-corner corner-left corner-hidden" id="cornerLeft" onclick="changePage(-1)"></div>
+    <div class="page-corner corner-right" id="cornerRight" onclick="changePage(1)"></div>
   </div>
-  <script>fetch('daily-song.mp3',{method:'HEAD'}).then(r=>{if(!r.ok)document.getElementById('daily-song').style.display='none'}).catch(()=>{document.getElementById('daily-song').style.display='none'})</script>
-  
-  <main class="main">
-    
-      <section class="category" id="ai-models">
-        <h2>🤖 AI Models &amp; Releases <span class="count">15</span></h2>
-        <div class="articles">
-      <div class="article">
-        <div class="article-header">
-          <a href="https://arxiv.org/abs/2603.21576" target="_blank" rel="noopener" class="article-title">PRISM: Breaking the O(n) Memory Wall in Long-Context LLM Inference via O(1) Photonic Block Selection</a>
-          <span class="score" title="Relevance score">13</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">arXiv cs.CL (NLP)</span>
-          <span class="time">13h ago</span>
-        </div>
-        <p class="snippet">arXiv:2603.21576v2 Announce Type: replace-cross 
-Abstract: Long-context LLM inference is bottlenecked not by compute but by the O(n) memory bandwidth cost of scanning the KV cache at every decode step…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://blog.google/innovation-and-ai/technology/developers-tools/lyria-3-developers/" target="_blank" rel="noopener" class="article-title">Build with Lyria 3, our newest music generation model</a>
-          <span class="score" title="Relevance score">13</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Google AI Blog</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">Lyria 3 is now available in paid preview through the Gemini API and for testing in Google AI Studio.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.theverge.com/column/901314/meta-new-ray-ban-ai-glasses" target="_blank" rel="noopener" class="article-title">Meta gets ready to launch two new Ray-Ban AI glasses</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Verge AI</span>
-          <span class="time">just now</span>
-        </div>
-        <p class="snippet">Second-generation Ray-Ban Meta glasses. | Photo by Amelia Holowaty Krales / The Verge	
 
-This is Lowpass by Janko Roettgers, a newsletter on the ever-evolving intersection of tech and entertainment, sy…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://deepmind.google/blog/gemini-3-1-flash-live-making-audio-ai-more-natural-and-reliable/" target="_blank" rel="noopener" class="article-title">Gemini 3.1 Flash Live: Making audio AI more natural and reliable</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Google DeepMind</span>
-          <span class="time">1h ago</span>
-        </div>
-        <p class="snippet">Our latest voice model has improved precision and lower latency to make voice interactions more fluid, natural and precise.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://arxiv.org/abs/2603.22446" target="_blank" rel="noopener" class="article-title">Sparse but Critical: A Token-Level Analysis of Distributional Shifts in RLVR Fine-Tuning of LLMs</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">arXiv cs.AI</span>
-          <span class="time">13h ago</span>
-        </div>
-        <p class="snippet">arXiv:2603.22446v1 Announce Type: cross 
-Abstract: Reinforcement learning with verifiable rewards (RLVR) has significantly improved reasoning in large language models (LLMs), yet the token-level mecha…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://arxiv.org/abs/2603.22755" target="_blank" rel="noopener" class="article-title">KALAVAI: Predicting When Independent Specialist Fusion Works -- A Quantitative Model for Post-Hoc Cooperative LLM Training</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">arXiv cs.AI</span>
-          <span class="time">13h ago</span>
-        </div>
-        <p class="snippet">arXiv:2603.22755v1 Announce Type: cross 
-Abstract: Independently trained domain specialists can be fused post-hoc into a single model that outperforms any individual specialist, and the gain is predic…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://arxiv.org/abs/2510.15994" target="_blank" rel="noopener" class="article-title">MCP Security Bench (MSB): Benchmarking Attacks Against Model Context Protocol in LLM Agents</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">arXiv cs.AI</span>
-          <span class="time">13h ago</span>
-        </div>
-        <p class="snippet">arXiv:2510.15994v2 Announce Type: replace-cross 
-Abstract: The Model Context Protocol (MCP) standardizes how large language model (LLM) agents discover, describe, and call external tools. While MCP un…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://arxiv.org/abs/2603.22305" target="_blank" rel="noopener" class="article-title">CN-Buzz2Portfolio: A Chinese-Market Dataset and Benchmark for LLM-Based Macro and Sector Asset Allocation from Daily Trending Financial News</a>
-          <span class="score" title="Relevance score">11</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">arXiv cs.AI</span>
-          <span class="time">13h ago</span>
-        </div>
-        <p class="snippet">arXiv:2603.22305v1 Announce Type: cross 
-Abstract: Large Language Models (LLMs) are rapidly transitioning from static Natural Language Processing (NLP) tasks including sentiment analysis and event ext…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/" target="_blank" rel="noopener" class="article-title">Transform your headphones into a live personal translator on iOS.</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Google AI Blog</span>
-          <span class="time">1h ago</span>
-        </div>
-        <p class="snippet">Google Translate’s Live translate with headphones is officially arriving on iOS! And we're expanding the capability for both iOS and Android users to even more countries…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://blog.google/products-and-platforms/products/search/search-live-global-expansion/" target="_blank" rel="noopener" class="article-title">Search Live is expanding globally</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Google AI Blog</span>
-          <span class="time">2h ago</span>
-        </div>
-        <p class="snippet">We’re expanding Search Live globally, to all languages and locations where AI Mode is available.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://arxiv.org/abs/2603.22651" target="_blank" rel="noopener" class="article-title">Benchmarking Multi-Agent LLM Architectures for Financial Document Processing: A Comparative Study of Orchestration Patterns, Cost-Accuracy Tradeoffs and Production Scaling Strategies</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">arXiv cs.AI</span>
-          <span class="time">13h ago</span>
-        </div>
-        <p class="snippet">arXiv:2603.22651v1 Announce Type: new 
-Abstract: The adoption of large language models (LLMs) for structured information extraction from financial documents has accelerated rapidly, yet production dep…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://arxiv.org/abs/2603.22777" target="_blank" rel="noopener" class="article-title">AgriPestDatabase-v1.0: A Structured Insect Dataset for Training Agricultural Large Language Model</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">arXiv cs.AI</span>
-          <span class="time">13h ago</span>
-        </div>
-        <p class="snippet">arXiv:2603.22777v1 Announce Type: new 
-Abstract: Agricultural pest management increasingly relies on timely and accurate access to expert knowledge, yet high quality labeled data and continuous expert…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://arxiv.org/abs/2603.22942" target="_blank" rel="noopener" class="article-title">Optimizing Small Language Models for NL2SQL via Chain-of-Thought Fine-Tuning</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">arXiv cs.AI</span>
-          <span class="time">13h ago</span>
-        </div>
-        <p class="snippet">arXiv:2603.22942v1 Announce Type: new 
-Abstract: Translating Natural Language to SQL (NL2SQL) remains a critical bottleneck for democratization of data in enterprises. Although Large Language Models (…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://arxiv.org/abs/2603.22943" target="_blank" rel="noopener" class="article-title">PersonalQ: Select, Quantize, and Serve Personalized Diffusion Models for Efficient Inference</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">arXiv cs.AI</span>
-          <span class="time">13h ago</span>
-        </div>
-        <p class="snippet">arXiv:2603.22943v1 Announce Type: new 
-Abstract: Personalized text-to-image generation lets users fine-tune diffusion models into repositories of concept-specific checkpoints, but serving these reposi…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://arxiv.org/abs/2603.23292" target="_blank" rel="noopener" class="article-title">LLM Olympiad: Why Model Evaluation Needs a Sealed Exam</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">arXiv cs.AI</span>
-          <span class="time">13h ago</span>
-        </div>
-        <p class="snippet">arXiv:2603.23292v1 Announce Type: new 
-Abstract: Benchmarks and leaderboards are how NLP most often communicates progress, but in the LLM era they are increasingly easy to misread. Scores can reflect …</p>
-      </div>
-    </div>
-      </section>
-    
-      <section class="category" id="government-policy">
-        <h2>🏛️ Government &amp; Policy <span class="count">15</span></h2>
-        <div class="articles">
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehill.com/policy/technology/5801982-schumer-cotton-chinese-robotics/" target="_blank" rel="noopener" class="article-title">Senators introducing ban on government use of Chinese robots</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hill Tech</span>
-          <span class="time">2h ago</span>
-        </div>
-        <p class="snippet">Sen. Tom Cotton (R-Ark.) and Senate Minority Leader Chuck Schumer (D-N.Y.) introduced legislation Thursday that would ban the federal government from obtaining or operating unmanned Chinese robots. Th…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.eff.org/press/releases/eff-sues-answers-about-medicares-ai-experiment" target="_blank" rel="noopener" class="article-title">EFF Sues for Answers About Medicare's AI Experiment</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">EFF Deeplinks</span>
-          <span class="time">23h ago</span>
-        </div>
-        <p class="snippet">Little Is Known About AI That Could Affect Millions of Seniors' Care
-
-
-
-SAN FRANCISCO – The Electronic Frontier Foundation (EFF) today filed a Freedom of Information Act (FOIA) lawsuit against the Cen…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.eff.org/deeplinks/2026/03/whos-really-watching-what-smartglasses-see-effector-385" target="_blank" rel="noopener" class="article-title">👓 Who's Really Watching What Smartglasses See? | EFFector 38.6</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">EFF Deeplinks</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">After years of tech industry experiments, smartglasses with embedded cameras and microphones have finally gone mainstream. And, disturbingly, sometimes it's not just their owners who are watching what…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.eff.org/deeplinks/2026/03/digital-hopes-real-power-reflecting-legacy-arab-spring-0" target="_blank" rel="noopener" class="article-title">Digital Hopes, Real Power: Reflecting on the Legacy of the Arab Spring</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">EFF Deeplinks</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">This is the first installment of a blog series reflecting on the global digital legacy of the 2011 Arab uprisings.
-A new generation of protesters, raised on social media and often fluent in the tools …</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.eff.org/press/releases/nicole-ozer-named-electronic-frontier-foundations-executive-director" target="_blank" rel="noopener" class="article-title">Nicole Ozer Named as Electronic Frontier Foundation’s Executive Director</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">EFF Deeplinks</span>
-          <span class="time">2d ago</span>
-        </div>
-        <p class="snippet">Ozer, With Decades of Experience in Technology and Civil Liberties Law, Will Succeed Cindy Cohn as Organization’s Leader 
-
-
-
-SAN FRANCISCO – Nicole Ozer has been appointed as executive director of the…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehill.com/policy/technology/5799252-meta-found-liable-children-safety/" target="_blank" rel="noopener" class="article-title">Meta found liable in New Mexico child safety trial</a>
-          <span class="score" title="Relevance score">9</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hill Tech</span>
-          <span class="time">2d ago</span>
-        </div>
-        <p class="snippet">Meta was found liable by a jury in New Mexico on Tuesday for compromising children’s safety online.  The parent company for Instagram, Facebook and WhatsApp has been ordered to pay $375 million in dam…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://arstechnica.com/tech-policy/2026/03/trump-fcc-prohibits-import-and-sale-of-new-wi-fi-routers-made-outside-us/" target="_blank" rel="noopener" class="article-title">FCC imposes sweeping ban on foreign-made routers, affecting all new models</a>
-          <span class="score" title="Relevance score">9</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Ars Technica Policy</span>
-          <span class="time">2d ago</span>
-        </div>
-        <p class="snippet">Trump admin to decide which router makers get exemptions from FCC import ban.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehill.com/policy/technology/5802191-loomers-criticism-zuckerberg-trump/" target="_blank" rel="noopener" class="article-title">Loomer: Zuckerberg addition to tech council 'slap in the face to MAGA'</a>
-          <span class="score" title="Relevance score">8</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hill Tech</span>
-          <span class="time">just now</span>
-        </div>
-        <p class="snippet">Conservative activist Laura Loomer said Wednesday that Mark Zuckerberg's appointment to the inaugural President’s Council of Advisors on Science and Technology is a “slap in the face” to MAGA.  “We we…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehill.com/policy/technology/5800616-iran-war-helium-chip-supply/" target="_blank" rel="noopener" class="article-title">Iran war disrupts helium supply, threatening chip supply chain</a>
-          <span class="score" title="Relevance score">8</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hill Tech</span>
-          <span class="time">7h ago</span>
-        </div>
-        <p class="snippet">The war in Iran is threatening a small but crucial part of the complex supply chain that helps produce the world’s chips, as the conflict limits access to a large chunk of the world’s helium. Qatar pr…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehill.com/policy/technology/5801409-rep-moulton-bans-staff-trading/" target="_blank" rel="noopener" class="article-title">Moulton bans staff from trading on prediction markets</a>
-          <span class="score" title="Relevance score">8</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hill Tech</span>
-          <span class="time">14h ago</span>
-        </div>
-        <p class="snippet">Rep. Seth Moulton (D-Mass.) is banning his staff from trading on prediction markets, which have recently come under congressional scrutiny. “Effective today, Congressman Moulton is instituting an offi…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehill.com/policy/technology/5801022-doj-settlement-social-media/" target="_blank" rel="noopener" class="article-title">Trump administration settles social media censorship case</a>
-          <span class="score" title="Relevance score">8</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hill Tech</span>
-          <span class="time">19h ago</span>
-        </div>
-        <p class="snippet">The Justice Department has settled a lawsuit over allegations that the Biden administration pressured social media companies to remove or suppress speech. The settlement, filed in a Louisiana federal …</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehill.com/policy/technology/5801008-ai-data-center-moratorium-act/" target="_blank" rel="noopener" class="article-title">Sanders, Ocasio-Cortez unveil bill to halt data center construction</a>
-          <span class="score" title="Relevance score">8</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hill Tech</span>
-          <span class="time">19h ago</span>
-        </div>
-        <p class="snippet">Sen. Bernie Sanders (I-Vt.) and Rep. Alexandria Ocasio-Cortez (D-N.Y.) plan to introduce legislation that would bar construction of all new data centers until “strong national safeguards are in place.…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://arstechnica.com/tech-policy/2026/03/meta-youtube-must-pay-3m-to-woman-who-got-hooked-on-apps-as-a-child/" target="_blank" rel="noopener" class="article-title">Meta, YouTube must pay $3M to woman who got hooked on apps as a child</a>
-          <span class="score" title="Relevance score">8</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Ars Technica Policy</span>
-          <span class="time">22h ago</span>
-        </div>
-        <p class="snippet">Meta emerges as the biggest loser as second child safety trial verdict hits.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://arstechnica.com/tech-policy/2026/03/supreme-court-rejects-sonys-attempt-to-kick-music-pirates-off-the-internet/" target="_blank" rel="noopener" class="article-title">Supreme Court rejects Sony's attempt to kick music pirates off the Internet</a>
-          <span class="score" title="Relevance score">8</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Ars Technica Policy</span>
-          <span class="time">22h ago</span>
-        </div>
-        <p class="snippet">Sony's 1984 Betamax win helps Cox beat Sony in important online piracy case.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehill.com/policy/technology/5800435-meta-youtube-social-media-addition-trial-liable/" target="_blank" rel="noopener" class="article-title">Meta, YouTube found liable in landmark social media trial</a>
-          <span class="score" title="Relevance score">8</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hill Tech</span>
-          <span class="time">23h ago</span>
-        </div>
-        <p class="snippet">A California jury on Wednesday found social media giants Meta and YouTube liable in a landmark social media addiction trial, determining the companies were negligent in their design or operation of th…</p>
-      </div>
-    </div>
-      </section>
-    
-      <section class="category" id="security">
-        <h2>🔐 Cybersecurity <span class="count">15</span></h2>
-        <div class="articles">
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehackernews.com/2026/03/coruna-ios-kit-reuses-2023.html" target="_blank" rel="noopener" class="article-title">Coruna iOS Kit Reuses 2023 Triangulation Exploit Code in New Mass Attacks</a>
-          <span class="score" title="Relevance score">15</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hacker News</span>
-          <span class="time">6h ago</span>
-        </div>
-        <p class="snippet">The kernel exploit for two security vulnerabilities used in the recently uncovered Apple iOS exploit kit known as Coruna is an updated version of the same exploit that was used in the Operation Triang…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehackernews.com/2026/03/russian-hacker-sentenced-to-2-years-for.html" target="_blank" rel="noopener" class="article-title">Russian Hacker Sentenced to 2 Years for TA551 Botnet-Driven Ransomware Attacks</a>
-          <span class="score" title="Relevance score">14</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hacker News</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">The U.S. Department of Justice (DoJ) said a Russian national has been sentenced to two years in prison for managing a botnet that was used to launch ransomware attacks against U.S. companies.
-Ilya Ang…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.darkreading.com/cloud-security/csa-launches-csai-ai-security" target="_blank" rel="noopener" class="article-title">CSA Launches CSAI Foundation for AI Security</a>
-          <span class="score" title="Relevance score">13</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Dark Reading</span>
-          <span class="time">2d ago</span>
-        </div>
-        <p class="snippet">The Cloud Security Alliance creates a dedicated nonprofit to govern autonomous AI agent ecosystems through risk intelligence and certification.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehackernews.com/2026/03/webinar-stop-guessing-learn-to-validate.html" target="_blank" rel="noopener" class="article-title">[Webinar] Stop Guessing. Learn to Validate Your Defenses Against Real Attacks</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hacker News</span>
-          <span class="time">4h ago</span>
-        </div>
-        <p class="snippet">Most teams have security tools in place. Alerts are firing, dashboards look clean, threat intel is flowing in. On the surface, everything feels under control.
-But one question usually stays unanswered…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.bleepingcomputer.com/news/security/coruna-ios-exploit-framework-linked-to-triangulation-attacks/" target="_blank" rel="noopener" class="article-title">Coruna iOS exploit framework linked to Triangulation attacks</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">BleepingComputer</span>
-          <span class="time">4h ago</span>
-        </div>
-        <p class="snippet">The Coruna exploit kit is an evolution of the framework used in the Operation Triangulation espionage campaign, which in 2023 targeted iPhones via zero-click iMessage exploits. [...]</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehackernews.com/2026/03/threatsday-bulletin-pqc-push-ai-vuln.html" target="_blank" rel="noopener" class="article-title">ThreatsDay Bulletin: PQC Push, AI Vuln Hunting, Pirated Traps, Phishing Kits &amp; 20 More Stories</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hacker News</span>
-          <span class="time">5h ago</span>
-        </div>
-        <p class="snippet">Some weeks in security feel loud. This one feels sneaky. Less big dramatic fireworks, more of that slow creeping sense that too many people are getting way too comfortable abusing things they probably…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehackernews.com/2026/03/glassworm-malware-uses-solana-dead.html" target="_blank" rel="noopener" class="article-title">GlassWorm Malware Uses Solana Dead Drops to Deliver RAT and Steal Browser, Crypto Data</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hacker News</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">Cybersecurity researchers have flagged a new evolution of the GlassWorm campaign that delivers a multi-stage framework capable of comprehensive data theft and installing a remote access trojan (RAT), …</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.securityweek.com/ai-speeds-attacks-but-identity-remains-cybersecuritys-weakest-link/" target="_blank" rel="noopener" class="article-title">AI Speeds Attacks, But Identity Remains Cybersecurity’s Weakest Link</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Security Week</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">PwC finds AI is amplifying speed and scale of attacks, as identity theft evolves into a cybercriminal supply chain.
-The post AI Speeds Attacks, But Identity Remains Cybersecurity’s Weakest Link appear…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.securityweek.com/ios-macos-26-4-roll-out-with-fresh-security-updates/" target="_blank" rel="noopener" class="article-title">iOS, macOS 26.4 Roll Out With Fresh Security Patches</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Security Week</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">Apple released security fixes for older devices as well, in iOS 18.7.7, iPadOS 18.7.7, macOS Sequoia 15.7.5, and macOS Sonoma 14.8.5.
-The post iOS, macOS 26.4 Roll Out With Fresh Security Patches appe…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.darkreading.com/cybersecurity-operations/ai-native-security-counter-attacks" target="_blank" rel="noopener" class="article-title">AI-Native Security Is a Must to Counter AI-Based Attacks</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Dark Reading</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">Attacks by artificial intelligence agents are a reality. Experts at Nvidia's GTC conference say defenders need to use the same tools to fight them off.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehackernews.com/2026/03/the-kill-chain-is-obsolete-when-your-ai.html" target="_blank" rel="noopener" class="article-title">The Kill Chain Is Obsolete When Your AI Agent Is the Threat</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hacker News</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">In September 2025, Anthropic disclosed that a state-sponsored threat actor used an AI coding agent to execute an autonomous cyber espionage campaign against 30 global targets. The AI handled 80-90% of…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehackernews.com/2026/03/tax-search-ads-deliver-screenconnect.html" target="_blank" rel="noopener" class="article-title">Tax Search Ads Deliver ScreenConnect Malware Using Huawei Driver to Disable EDR</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hacker News</span>
-          <span class="time">2d ago</span>
-        </div>
-        <p class="snippet">A large-scale malvertising campaign active since January 2026 has been observed targeting U.S.-based individuals searching for tax-related documents to serve rogue installers for ConnectWise ScreenCon…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.bleepingcomputer.com/news/security/new-torg-grabber-infostealer-malware-targets-728-crypto-wallets/" target="_blank" rel="noopener" class="article-title">New Torg Grabber infostealer malware targets 728 crypto wallets</a>
-          <span class="score" title="Relevance score">11</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">BleepingComputer</span>
-          <span class="time">22h ago</span>
-        </div>
-        <p class="snippet">A new info-stealing malware called Torg Grabber is stealing sensitive data from 850 browser extensions, more than 700 of them for cryptocurrency wallets. [...]</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.darkreading.com/threat-intelligence/sans-most-dangerous-attack-techniques" target="_blank" rel="noopener" class="article-title">SANS: Top 5 Most Dangerous New Attack Techniques to Watch</a>
-          <span class="score" title="Relevance score">11</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Dark Reading</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">For the first time, SANS Institute's five top attack techniques all have one thing in common — AI.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thehackernews.com/2026/03/fcc-bans-new-foreign-made-routers-over.html" target="_blank" rel="noopener" class="article-title">FCC Bans New Foreign-Made Routers Over Supply Chain and Cyber Risk Concerns</a>
-          <span class="score" title="Relevance score">11</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The Hacker News</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">The U.S. Federal Communications Commission (FCC) said on Monday that it was banning the import of new, foreign-made consumer routers, citing &quot;unacceptable&quot; risks to cyber and national security.
-The ac…</p>
-      </div>
-    </div>
-      </section>
-    
-      <section class="category" id="coding-agents">
-        <h2>🛠️ Coding Agents &amp; AI Tools <span class="count">15</span></h2>
-        <div class="articles">
-      <div class="article">
-        <div class="article-header">
-          <a href="https://github.blog/changelog/2026-03-25-copilot-usage-metrics-now-identify-active-copilot-coding-agent-users" target="_blank" rel="noopener" class="article-title">Copilot usage metrics now identify active Copilot coding agent users</a>
-          <span class="score" title="Relevance score">14</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">GitHub Changelog</span>
-          <span class="time">22h ago</span>
-        </div>
-        <p class="snippet">Copilot usage metrics now indicate which users have Copilot coding agent (CCA) activity. Enterprise and organization admins can identify which users are actively using Copilot coding agent on daily an…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.latent.space/p/ainews-the-biggest-claude-launch" target="_blank" rel="noopener" class="article-title">[AINews] The Biggest Claude Launch of All Time</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Latent Space</span>
-          <span class="time">13h ago</span>
-        </div>
-        <p class="snippet">We thought about this carefully before choosing hyperbole; but it is warranted.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/" target="_blank" rel="noopener" class="article-title">Updates to GitHub Copilot interaction data usage policy</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">GitHub Blog</span>
-          <span class="time">22h ago</span>
-        </div>
-        <p class="snippet">From April 24 onward, interaction data—specifically inputs, outputs, code snippets, and associated context—from Copilot Free, Pro, and Pro+ users will be used to train and improve our AI models unless…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.3.24" target="_blank" rel="noopener" class="article-title">openclaw 2026.3.24</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">OpenClaw Releases</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">Breaking
-Changes
-Gateway/OpenAI compatibility: add /v1/models and /v1/embeddings, and forward explicit model overrides through /v1/chat/completions and /v1/responses for broader client and RAG compati…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.3.24-beta.2" target="_blank" rel="noopener" class="article-title">openclaw 2026.3.24-beta.2</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">OpenClaw Releases</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">Fixes
-Outbound media/local files: align outbound media access with the configured fs policy so host-local files and inbound-media paths keep sending when workspaceOnly is off, while strict workspace-o…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.3.24-beta.1" target="_blank" rel="noopener" class="article-title">openclaw 2026.3.24-beta.1</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">OpenClaw Releases</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">2026.3.24-beta.1
-Breaking
-Changes
-Gateway/OpenAI compatibility: add /v1/models and /v1/embeddings, and forward explicit model overrides through /v1/chat/completions and /v1/responses for broader clien…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://simonwillison.net/2026/Mar/24/auto-mode-for-claude-code/#atom-everything" target="_blank" rel="noopener" class="article-title">Auto mode for Claude Code</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Simon Willison</span>
-          <span class="time">2d ago</span>
-        </div>
-        
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://github.blog/changelog/2026-03-24-manage-copilot-coding-agent-repository-access-via-the-api" target="_blank" rel="noopener" class="article-title">Manage Copilot coding agent repository access via the API</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">GitHub Changelog</span>
-          <span class="time">2d ago</span>
-        </div>
-        <p class="snippet">Organization owners who want to manage Copilot coding agent access at scale can now do so programmatically with the new Copilot coding agent management REST APIs, available in public preview.…
-The pos…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://simonwillison.net/2026/Mar/26/quantization-from-the-ground-up/#atom-everything" target="_blank" rel="noopener" class="article-title">Quantization from the ground up</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Simon Willison</span>
-          <span class="time">just now</span>
-        </div>
-        
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://github.blog/security/supply-chain-security/a-year-of-open-source-vulnerability-trends-cves-advisories-and-malware/" target="_blank" rel="noopener" class="article-title">A year of open source vulnerability trends: CVEs, advisories, and malware</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">GitHub Blog</span>
-          <span class="time">1h ago</span>
-        </div>
-        <p class="snippet">Reviewed advisories hit a four-year low, malware advisories surged, and CNA publishing grew—here’s what changed and what it means for your triage and response. 
-The post A year of open source vulnerab…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://simonwillison.net/2026/Mar/25/datasette-files-s3/#atom-everything" target="_blank" rel="noopener" class="article-title">datasette-files-s3 0.1a1</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Simon Willison</span>
-          <span class="time">19h ago</span>
-        </div>
-        
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://simonwillison.net/2026/Mar/25/thoughts-on-slowing-the-fuck-down/#atom-everything" target="_blank" rel="noopener" class="article-title">Thoughts on slowing the fuck down</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Simon Willison</span>
-          <span class="time">19h ago</span>
-        </div>
-        
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://simonwillison.net/2026/Mar/25/datasette-llm/#atom-everything" target="_blank" rel="noopener" class="article-title">datasette-llm 0.1a1</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Simon Willison</span>
-          <span class="time">19h ago</span>
-        </div>
-        
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements" target="_blank" rel="noopener" class="article-title">GitHub Copilot for Jira — Public preview enhancements</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">GitHub Changelog</span>
-          <span class="time">20h ago</span>
-        </div>
-        <p class="snippet">Since launching the public preview of GitHub Copilot coding agent for Jira, we’ve been listening closely to customer feedback. Thank you to everyone who has taken the time to try…
-The post GitHub Copi…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://simonwillison.net/2026/Mar/25/litellm-hack/#atom-everything" target="_blank" rel="noopener" class="article-title">LiteLLM Hack: Were You One of the 47,000?</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Simon Willison</span>
-          <span class="time">23h ago</span>
-        </div>
-        
-      </div>
-    </div>
-      </section>
-    
-      <section class="category" id="marketing-seo">
-        <h2>📈 Marketing &amp; SEO <span class="count">15</span></h2>
-        <div class="articles">
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.searchenginejournal.com/google-analytics-launches-scenario-planner-and-projections/570520/" target="_blank" rel="noopener" class="article-title">Google Analytics Launches Scenario Planner and Projections via @sejournal, @brookeosmundson</a>
-          <span class="score" title="Relevance score">13</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Search Engine Journal</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">Google Analytics launched Scenario Planner and Projections to help advertisers forecast performance, optimize budgets, and plan cross-channel media spend more strategically.
-The post Google Analytics …</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.searchenginejournal.com/how-to-avoid-top-down-seo-systems-failures-with-the-visibility-governance-maturity-model/570509/" target="_blank" rel="noopener" class="article-title">How To Avoid Top Down SEO Systems Failures With The Visibility Governance Maturity Model via @sejournal, @theshelleywalsh</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Search Engine Journal</span>
-          <span class="time">3h ago</span>
-        </div>
-        <p class="snippet">In this IMHO interview, Ash Nallawalla explains why governance is the missing layer behind most visibility breakdowns.
-The post How To Avoid Top Down SEO Systems Failures With The Visibility Governanc…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.searchenginejournal.com/when-the-training-data-cutoff-becomes-a-ranking-factor/570438/" target="_blank" rel="noopener" class="article-title">When The Training Data Cutoff Becomes A Ranking Factor via @sejournal, @DuaneForrester</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Search Engine Journal</span>
-          <span class="time">4h ago</span>
-        </div>
-        <p class="snippet">Content published before and after a model’s cutoff lives in different systems, shaping how brands appear in AI-generated answers.
-The post When The Training Data Cutoff Becomes A Ranking Factor appea…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.searchenginejournal.com/half-your-traffic-left-the-seo-industry-sent-thoughts-and-frameworks/570380/" target="_blank" rel="noopener" class="article-title">Half Your Traffic Left. The SEO Industry Sent Thoughts and Frameworks</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Search Engine Journal</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">Nearly half of publisher search traffic has disappeared post-AI Overviews, raising urgent questions about how content gets funded next.
-The post Half Your Traffic Left. The SEO Industry Sent Thoughts …</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.searchenginejournal.com/zero-party-data-how-to-use-first-party-insights-to-power-intent-based-content-strategy/568189/" target="_blank" rel="noopener" class="article-title">How Zero-Party &amp; First-Party Data Can Fuel Your Intent-Based SEO Strategy via @sejournal, @rio_seo</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Search Engine Journal</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">Marketing leaders are grounding SEO in zero- and first-party data to better align content with real-world customer behavior and needs.
-The post How Zero-Party &amp; First-Party Data Can Fuel Your Intent-B…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.searchenginejournal.com/is-your-website-ready-for-ai-search-a-practical-audit-for-cmos/570413/" target="_blank" rel="noopener" class="article-title">Is Your Website Ready for AI Search? A Practical Audit for CMOs via @sejournal, @lorenbaker</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Search Engine Journal</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">Is your website ready for the AI-powered search revolution? Discover practical insights on adapting your CMS for modern needs.
-The post Is Your Website Ready for AI Search? A Practical Audit for CMOs …</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.searchenginejournal.com/are-we-due-another-florida-style-update/570102/" target="_blank" rel="noopener" class="article-title">Are We Due Another Florida-Style Update? via @sejournal, @TaylorDanRW</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Search Engine Journal</span>
-          <span class="time">5h ago</span>
-        </div>
-        <p class="snippet">Why the return of scaled, low-differentiation content is putting pressure on Google’s systems and raising the risk of a broader intervention.
-The post Are We Due Another Florida-Style Update? appeared…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://blog.hubspot.com/marketing/seed-keywords" target="_blank" rel="noopener" class="article-title">Seed Keywords: The Starting Point for SEO Research</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">HubSpot Marketing</span>
-          <span class="time">6h ago</span>
-        </div>
-        <p class="snippet">Every successful content strategy starts with a short list of simple words. Before I ever open a keyword research tool, I write down a handful of phrases that describe what my business does or what my…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.searchenginejournal.com/googles-march-spam-update-felt-muted-but-may-signal-bigger-changes/570541/" target="_blank" rel="noopener" class="article-title">Google’s March Spam Update Felt Muted But May Signal Bigger Changes via @sejournal, @martinibuster</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Search Engine Journal</span>
-          <span class="time">6h ago</span>
-        </div>
-        <p class="snippet">Why Google's recently finished Spam Update could be the beginning of something bigger that is yet to come.
-The post Google’s March Spam Update Felt Muted But May Signal Bigger Changes appeared first o…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.semrush.com/blog/seo-techniques/" target="_blank" rel="noopener" class="article-title">12 SEO Techniques to Boost Your Visibility and Traffic [2026]</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">SEMrush Blog</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">Learn 12 proven SEO techniques for 2026, including how to optimize for AI search, fix technical issues, and earn brand mentions that boost visibility.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.searchenginejournal.com/google-adds-ai-bot-labels-to-forum-qa-structured-data/570425/" target="_blank" rel="noopener" class="article-title">Google Adds AI &amp; Bot Labels To Forum, Q&amp;A Structured Data via @sejournal, @MattGSouthern</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Search Engine Journal</span>
-          <span class="time">2d ago</span>
-        </div>
-        <p class="snippet">Google updated its Discussion Forum and Q&amp;A Page structured data docs with new properties, including a way to label AI- and machine-generated content. 
-The post Google Adds AI &amp; Bot Labels To Forum, Q…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.searchenginejournal.com/google-begins-rolling-out-the-march-2026-spam-update/570428/" target="_blank" rel="noopener" class="article-title">Google’s March 2026 Spam Update Is Already Complete via @sejournal, @MattGSouthern</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Search Engine Journal</span>
-          <span class="time">2d ago</span>
-        </div>
-        <p class="snippet">Google has finished rolling out the March 2026 spam update. The update applies globally and to all languages, with rollout taking a few days.
-The post Google’s March 2026 Spam Update Is Already Comple…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://ahrefs.com/blog/what-ai-writing-tools-get-wrong-and-the-stack-i-use/" target="_blank" rel="noopener" class="article-title">What AI Writing Tools Get Wrong (And The Stack I Use Instead)</a>
-          <span class="score" title="Relevance score">8</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Ahrefs Blog</span>
-          <span class="time">1h ago</span>
-        </div>
-        <p class="snippet">The hard part in content marketing is the information—ideas, verified facts, and reference material. And that’s exactly where these tools fall short. I learned this after generating 40 articles throug…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.semrush.com/blog/google-ai-agent/" target="_blank" rel="noopener" class="article-title">Google’s releasing Google-Agent: Here’s what to know</a>
-          <span class="score" title="Relevance score">8</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">SEMrush Blog</span>
-          <span class="time">9h ago</span>
-        </div>
-        <p class="snippet">Google recently added Google-Agent to its user-triggered fetchers documentation, hinting at the future.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.semrush.com/blog/top-marketing-conferences-to-attend/" target="_blank" rel="noopener" class="article-title">Top 10 Marketing Conferences to Attend in 2026</a>
-          <span class="score" title="Relevance score">8</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">SEMrush Blog</span>
-          <span class="time">2d ago</span>
-        </div>
-        <p class="snippet">Discover the top 10 marketing conferences to attend in 2026, including dates, prices, and what makes each event worth your time.</p>
-      </div>
-    </div>
-      </section>
-    
-      <section class="category" id="space-rockets">
-        <h2>🚀 Space &amp; Rockets <span class="count">15</span></h2>
-        <div class="articles">
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.space.com/news/live/artemis-2-nasa-moon-mission-launch-updates-march-26-2026" target="_blank" rel="noopener" class="article-title">Artemis 2 moon mission latest news: NASA prepares for April 1 launch for lunar astronauts</a>
-          <span class="score" title="Relevance score">20</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Space.com</span>
-          <span class="time">1h ago</span>
-        </div>
-        <p class="snippet">Thursday, March 26, 2026: See our latest news and updates on NASA's Artemis 2 moon mission's progress to launch on April 1.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.space.com/space-exploration/artemis/1-week-away-nasa-gearing-up-to-launch-artemis-2-astronauts-around-the-moon-on-april-1" target="_blank" rel="noopener" class="article-title">1 week away! NASA gearing up to launch Artemis 2 astronauts around the moon on April 1</a>
-          <span class="score" title="Relevance score">19</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Space.com</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">The launch of the first crewed moon mission since the Apollo era is just a week away! NASA is preparing to launch its Artemis 2 flight on April 1.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.nasa.gov/centers-and-facilities/kennedy/nasa-names-jennifer-lyons-as-acting-launch-services-program-manager/" target="_blank" rel="noopener" class="article-title">NASA Names Jennifer Lyons Acting Launch Services Program Manager</a>
-          <span class="score" title="Relevance score">17</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">NASA Breaking News</span>
-          <span class="time">21h ago</span>
-        </div>
-        <p class="snippet">NASA has selected Jennifer Lyons as acting program manager for the agency’s Launch Services Program (LSP) based at Kennedy Space Center in Florida. In this role, Lyons will lead NASA’s acquisition and…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.nasaspaceflight.com/2026/03/isar-onward-and-upward/" target="_blank" rel="noopener" class="article-title">Isar Aerospace scrubs second launch of Spectrum rocket</a>
-          <span class="score" title="Relevance score">17</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">NASASpaceflight</span>
-          <span class="time">23h ago</span>
-        </div>
-        <p class="snippet">The European private space launch provider Isar Aerospace, headquartered in Ottobrunn, Germany, is planning to…
-The post Isar Aerospace scrubs second launch of Spectrum rocket appeared first on NASASp…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.space.com/space-exploration/launches-spacecraft/rocket-lab-electron-launch-european-space-agency-celeste-navigation-satellites" target="_blank" rel="noopener" class="article-title">Rocket Lab launch of Europe's 1st 2 'Celeste' navigation satellites scrubbed due to weather</a>
-          <span class="score" title="Relevance score">17</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Space.com</span>
-          <span class="time">2d ago</span>
-        </div>
-        <p class="snippet">Rocket Lab had planned to launch the first two satellites for Europe's Celeste navigation constellation early Wednesday morning (March 25), but Mother Nature didn't cooperate.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.nasa.gov/news-release/nasa-sets-coverage-for-first-artemis-crewed-mission-around-moon/" target="_blank" rel="noopener" class="article-title">NASA Sets Coverage for First Artemis Crewed Mission Around Moon</a>
-          <span class="score" title="Relevance score">16</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">NASA Breaking News</span>
-          <span class="time">18h ago</span>
-        </div>
-        <p class="snippet">A variety of prelaunch, launch, and mission events for NASA’s Artemis II mission around the Moon will stream online. The agency is targeting no earlier than Wednesday, April 1, for the test flight dur…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.nasa.gov/missions/artemis/artemis-2/nasa-sets-coverage-for-artemis-ii-moon-mission/" target="_blank" rel="noopener" class="article-title">NASA Sets Coverage for Artemis II Moon Mission</a>
-          <span class="score" title="Relevance score">16</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">NASA Breaking News</span>
-          <span class="time">19h ago</span>
-        </div>
-        <p class="snippet">Editor’s note: NASA will continuously update this Artemis II briefings and mission events page throughout prelaunch, launch, and mission activities. NASA will provide live coverage of prelaunch, launc…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://spacenews.com/space-force-weighs-launch-alternatives-as-vulcan-faces-potential-months-long-grounding/" target="_blank" rel="noopener" class="article-title">Space Force weighs launch alternatives as Vulcan faces potential months-long grounding</a>
-          <span class="score" title="Relevance score">15</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">SpaceNews</span>
-          <span class="time">18h ago</span>
-        </div>
-        <p class="snippet">Officials explore shifting missions, extending satellites already in orbit
-The post Space Force weighs launch alternatives as Vulcan faces potential months-long grounding appeared first on SpaceNews.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://spacenews.com/orbitsiq-global-announces-breakthrough-in-space-based-iot-connectivity/" target="_blank" rel="noopener" class="article-title">OrbitsIQ Global Announces Breakthrough in Space-Based IoT Connectivity</a>
-          <span class="score" title="Relevance score">15</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">SpaceNews</span>
-          <span class="time">2d ago</span>
-        </div>
-        <p class="snippet">Washington, D.C., March 24, 2026 – OrbitsIQ Global (OIQ), an innovator in AI-driven secure connectivity across terrestrial and satellite networks, today announced a major technological milestone achie…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.nasa.gov/news-release/la-nasa-anuncia-la-cobertura-de-la-de-la-primera-mision-tripulada-artemis-alrededor-de-la-luna/" target="_blank" rel="noopener" class="article-title">La NASA anuncia la cobertura de la de la primera misión tripulada Artemis alrededor de la Luna</a>
-          <span class="score" title="Relevance score">14</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">NASA Breaking News</span>
-          <span class="time">2h ago</span>
-        </div>
-        <p class="snippet">Diversos eventos previos al lanzamiento, del lanzamiento y de la misión Artemis II de la NASA alrededor de la Luna se transmitirán en línea. La agencia tiene como fecha objetivo no antes del miércoles…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.space.com/space-exploration/artemis/who-is-artemis-meet-the-goddess-who-inspired-nasas-return-to-the-moon" target="_blank" rel="noopener" class="article-title">Who is Artemis? Meet the Greek goddess who inspired NASA's return to the moon</a>
-          <span class="score" title="Relevance score">14</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Space.com</span>
-          <span class="time">4h ago</span>
-        </div>
-        <p class="snippet">From Greek mythology to modern spaceflight, Artemis and her twin brother Apollo connect humanity's first lunar missions to the next era of exploration with Artemis 2 and beyond.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://spacenews.com/nasa-to-test-nuclear-electric-propulsion-with-2028-mission-to-mars/" target="_blank" rel="noopener" class="article-title">NASA to test nuclear electric propulsion with 2028 mission to Mars</a>
-          <span class="score" title="Relevance score">14</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">SpaceNews</span>
-          <span class="time">5h ago</span>
-        </div>
-        <p class="snippet">NASA’s new exploration strategy includes the rapid development of a nuclear-powered mission to Mars in 2028, leveraging hardware originally built for the lunar Gateway.
-The post NASA to test nuclear e…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.nasa.gov/es/la-nasa-anuncia-la-cobertura-de-la-mision-lunar-artemis-ii/" target="_blank" rel="noopener" class="article-title">La NASA anuncia la cobertura de la misión lunar Artemis II</a>
-          <span class="score" title="Relevance score">14</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">NASA Breaking News</span>
-          <span class="time">17h ago</span>
-        </div>
-        <p class="snippet">Nota del editor: La NASA actualizará continuamente esta página de sesiones informativas y eventos de la misión Artemis II a lo largo de las actividades previas al lanzamiento, el lanzamiento y las ope…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.nasaspaceflight.com/2026/03/nasa-moon-base-pivots-gateway/" target="_blank" rel="noopener" class="article-title">NASA outlines Moon Base plans, pivots on Gateway</a>
-          <span class="score" title="Relevance score">14</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">NASASpaceflight</span>
-          <span class="time">17h ago</span>
-        </div>
-        <p class="snippet">In a major shift announced during its “Ignition” event this week, NASA unveiled a detailed…
-The post NASA outlines Moon Base plans, pivots on Gateway appeared first on NASASpaceFlight.com.</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.nasa.gov/general/nasa-ames-experts-available-for-artemis-ii-flight-test-interviews/" target="_blank" rel="noopener" class="article-title">NASA Ames Experts Available for Artemis II Flight Test Interviews</a>
-          <span class="score" title="Relevance score">14</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">NASA Breaking News</span>
-          <span class="time">17h ago</span>
-        </div>
-        <p class="snippet">NASA’s Ames Research Center in Silicon Valley invites media to interview local subject matter experts on Friday, March 27 from 10 a.m. to 2 p.m. ahead of the agency sending astronauts around the Moon …</p>
-      </div>
-    </div>
-      </section>
-    
-      <section class="category" id="devops">
-        <h2>⚙️ DevOps &amp; Platform Engineering <span class="count">15</span></h2>
-        <div class="articles">
-      <div class="article">
-        <div class="article-header">
-          <a href="https://aws.amazon.com/about-aws/whats-new/2026/03/aws-firewall-manager-launches-ap-nz/" target="_blank" rel="noopener" class="article-title">AWS Firewall Manager launches in AWS Asia Pacific (New Zealand) Region</a>
-          <span class="score" title="Relevance score">14</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">AWS What's New</span>
-          <span class="time">20h ago</span>
-        </div>
-        <p class="snippet">AWS Firewall Manager announces that it is now available in AWS Asia Pacific (New Zealand) Region. AWS Firewall Manager helps cloud security administrators and site reliability engineers protect applic…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://aws.amazon.com/about-aws/whats-new/2026/03/sagemaker-unified-studio-cursor-ide/" target="_blank" rel="noopener" class="article-title">Amazon SageMaker Unified Studio launches support for remote connection from Cursor IDE</a>
-          <span class="score" title="Relevance score">13</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">AWS What's New</span>
-          <span class="time">20h ago</span>
-        </div>
-        <p class="snippet">Today, AWS announces remote connection from Cursor IDE to Amazon SageMaker Unified Studio via the AWS Toolkit extension. This new capability allows data scientists, ML engineers, and developers to lev…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thenewstack.io/ai-agent-validation-bottleneck/" target="_blank" rel="noopener" class="article-title">Enterprise dev teams are about to hit a wall. And CI pipelines can’t save them.</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The New Stack</span>
-          <span class="time">3h ago</span>
-        </div>
-        <p class="snippet">Over the last two years, the economics of software development have inverted. Producing code has become fast, but validating it
-The post Enterprise dev teams are about to hit a wall. And CI pipelines …</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thenewstack.io/ai-workloads-kubernetes-infrastructure-drift/" target="_blank" rel="noopener" class="article-title">Your Kubernetes isn’t ready for AI workloads, and drift is the reason</a>
-          <span class="score" title="Relevance score">12</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The New Stack</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">If you’re a platform engineering leader managing Kubernetes at scale, a new pressure has entered the room. The business wants
-The post Your Kubernetes isn’t ready for AI workloads, and drift is the re…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://devops.com/security-as-code-is-becoming-the-new-baseline-continuous-compliance-in-devops/" target="_blank" rel="noopener" class="article-title">Security as Code is Becoming the New Baseline: Continuous Compliance in DevOps</a>
-          <span class="score" title="Relevance score">11</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">DevOps.com</span>
-          <span class="time">11h ago</span>
-        </div>
-        <p class="snippet">There was a time when compliance meant a quarterly ritual. Someone from security would walk over with a spreadsheet, ask a few questions, tick a few boxes and disappear until the next audit cycle. The…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thenewstack.io/closing-cloud-operational-gap/" target="_blank" rel="noopener" class="article-title">The operational gap is real, and it’s getting wider</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The New Stack</span>
-          <span class="time">2h ago</span>
-        </div>
-        <p class="snippet">Why the env zero and CloudQuery merger isn’t just a product story; It’s the thesis that the cloud operations market
-The post The operational gap is real, and it’s getting wider appeared first on The N…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://www.cncf.io/blog/2026/03/26/the-platform-under-the-model-how-cloud-native-powers-ai-engineering-in-production/" target="_blank" rel="noopener" class="article-title">The platform under the model: How cloud native powers AI engineering in production</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">CNCF Blog</span>
-          <span class="time">8h ago</span>
-        </div>
-        <p class="snippet">AI workloads are increasingly running on Kubernetes in production, but for many teams, the path from a working model to a reliable system remains unclear. The cloud native ecosystem – its projects, pa…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://thenewstack.io/edera-adds-kvm-support/" target="_blank" rel="noopener" class="article-title">Edera spent years calling KVM less secure. Here’s why it changed its mind.</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">The New Stack</span>
-          <span class="time">19h ago</span>
-        </div>
-        <p class="snippet">Edera, a top Xen hypervisor company, is shifting gears and will start supporting KVM as well this summer. If you
-The post Edera spent years calling KVM less secure. Here’s why it changed its mind. app…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://aws.amazon.com/about-aws/whats-new/2026/03/agent-plugin-aws-serverless/" target="_blank" rel="noopener" class="article-title">Accelerate AI-assisted development with Agent Plugin for AWS Serverless</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">AWS What's New</span>
-          <span class="time">20h ago</span>
-        </div>
-        <p class="snippet">AWS announces the Agent Plugin for AWS Serverless, enabling developers to easily build, deploy, troubleshoot, and manage serverless applications using AI coding assistants like Kiro, Claude Code, and …</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://aws.amazon.com/about-aws/whats-new/2026/03/aws-batch-ami-status-aws-health/" target="_blank" rel="noopener" class="article-title">AWS Batch now provides AMI status and supports AWS Health Planned Lifecycle Events</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">AWS What's New</span>
-          <span class="time">20h ago</span>
-        </div>
-        <p class="snippet">AWS Batch now provides enhanced visibility into your compute environments with two new capabilities that help you maintain operational best practices. When you describe a compute environment, you can …</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://aws.amazon.com/about-aws/whats-new/2026/03/agentcore-browser-policies-root-ca/" target="_blank" rel="noopener" class="article-title">Amazon Bedrock AgentCore adds support for Chrome policies and custom root CA</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">AWS What's New</span>
-          <span class="time">21h ago</span>
-        </div>
-        <p class="snippet">Amazon Bedrock AgentCore now enables customers to configure Chrome Enterprise policies for AgentCore Browser and specify custom root Certificate Authority (CA) certificates for both AgentCore Browser …</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://aws.amazon.com/about-aws/whats-new/2026/03/aws-batch-quota-management-preemption-sagemaker/" target="_blank" rel="noopener" class="article-title">AWS Batch now supports quota management and preemption for SageMaker Training jobs</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">AWS What's New</span>
-          <span class="time">22h ago</span>
-        </div>
-        <p class="snippet">AWS Batch now supports quota management with job preemption for SageMaker Training jobs, enabling you to efficiently allocate and share compute resources across your teams and projects. If you're usin…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-route-53-profiles-granular-iam/" target="_blank" rel="noopener" class="article-title">Amazon Route 53 Profiles now supports granular IAM permissions for resource and VPC associations</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">AWS What's New</span>
-          <span class="time">22h ago</span>
-        </div>
-        <p class="snippet">Amazon Route 53 Profiles now supports granular AWS Identity and Access Management (IAM) permissions, allowing you to control which users can manage specific resource types and VPC associations within …</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-quick-now-available-in-the-aws-tokyo-region/" target="_blank" rel="noopener" class="article-title">Amazon Quick Now Available in the AWS Tokyo Region</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">AWS What's New</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">Amazon Quick is now available in the AWS Asia Pacific (Tokyo) region (ap-northeast-1). This launch allows customers in Japan to access the full power of Amazon Quick while meeting local and regional r…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-aurora-postgresql-aws-free-tier/" target="_blank" rel="noopener" class="article-title">Amazon Aurora PostgreSQL now available with the AWS Free Tier</a>
-          <span class="score" title="Relevance score">10</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">AWS What's New</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">Amazon Aurora PostgreSQL is now available on the AWS Free Tier, which offers new customers $100 in AWS credits upon sign-up and the ability to earn an additional $100 in credits by using services incl…</p>
-      </div>
-    </div>
-      </section>
-    
-      <section class="category" id="powershell">
-        <h2>💠 PowerShell &amp; Automation <span class="count">3</span></h2>
-        <div class="articles">
-      <div class="article">
-        <div class="article-header">
-          <a href="https://petri.com/microsoft-entra-id-external-mfa/" target="_blank" rel="noopener" class="article-title">Microsoft Makes External MFA Generally Available in Microsoft Entra ID</a>
-          <span class="score" title="Relevance score">8</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Petri IT</span>
-          <span class="time">22h ago</span>
-        </div>
-        <p class="snippet">Microsoft has made external multi-factor authentication (MFA) generally available in Microsoft Entra ID. The update enables organizations to seamlessly integrate third-party MFA providers into their a…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://petri.com/fcc-ban-foreign-consumer-routers-security-risks/" target="_blank" rel="noopener" class="article-title">FCC Bans Foreign‑Manufactured Consumer Routers Over Security Risks</a>
-          <span class="score" title="Relevance score">8</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Petri IT</span>
-          <span class="time">1d ago</span>
-        </div>
-        <p class="snippet">The Federal Communications Commission (FCC) has imposed a ban on certain foreign-made consumer routers entering the United States, citing rising cybersecurity concerns. The regulator said the decision…</p>
-      </div>
-    
-      <div class="article">
-        <div class="article-header">
-          <a href="https://petri.com/microsoft-defender-ai-identity-security-update/" target="_blank" rel="noopener" class="article-title">Microsoft Defender Enhances Identity Security with AI-Driven Threat Detection and Response</a>
-          <span class="score" title="Relevance score">8</span>
-        </div>
-        <div class="article-meta">
-          <span class="source">Petri IT</span>
-          <span class="time">2d ago</span>
-        </div>
-        <p class="snippet">As cyberattacks grow faster and more identity‑driven, Microsoft is enhancing how organizations defend their digital environments. At RSA 2026, the company announced major Microsoft Defender and Securi…</p>
-      </div>
-    </div>
-      </section>
-    
-    
-    
-    <div class="archive">
-      <h3>📅 Archive</h3>
-      <div class="archive-links"><a href="?date=2026-03-26" class="archive-link">2026-03-26</a><a href="?date=2026-03-25" class="archive-link">2026-03-25</a></div>
-    </div>
-  </main>
-  
-  <footer class="footer">
-    <p>Auto-generated by <a href="https://github.com/bronathedruid/daily-briefing">daily-briefing</a> · 
-    Powered by RSS feeds & GitHub Actions · Built for Alan</p>
-  </footer>
-  
   <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      const current = html.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
+    // --- DATA PAYLOAD ---
+    const db = [
+      ["🤖 AI Models & Releases", "Watch James Manyika talk AI and creativity with LL COOL J.", "https://blog.google/innovation-and-ai/technology/ai/ll-cool-j-dialogues/", "Google AI Blog", "7h ago", "In the latest episode of our Dialogues on Technology and Society series, LL COOL J sits down with James Manyika."],
+    ["🤖 AI Models & Releases", "Transform your headphones into a live personal translator on iOS.", "https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/", "Google AI Blog", "8h ago", "Google Translate’s Live translate with headphones is officially arriving on iOS. And we\'re expanding the capability for both iOS and Android users to even more countries…."],
+    ["🤖 AI Models & Releases", "Gemini 3.1 Flash Live: Making audio AI more natural and reliable", "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/", "Google AI Blog", "9h ago", "1 Flash Live is now available across Google products."],
+    ["🤖 AI Models & Releases", "Search Live is expanding globally", "https://blog.google/products-and-platforms/products/search/search-live-global-expansion/", "Google AI Blog", "9h ago", "We’re expanding Search Live globally, to all languages and locations where AI Mode is available."],
+    ["🤖 AI Models & Releases", "Build with Lyria 3, our newest music generation model", "https://blog.google/innovation-and-ai/technology/developers-tools/lyria-3-developers/", "Google AI Blog", "1d ago", "Lyria 3 is now available in paid preview through the Gemini API and for testing in Google AI Studio."],
+    ["🤖 AI Models & Releases", "Lyria 3 Pro: Create longer tracks in more Google products", "https://blog.google/innovation-and-ai/technology/ai/lyria-3-pro/", "Google AI Blog", "1d ago", "We are bringing Lyria 3 to the tools where professionals work and create every day."],
+    ["🤖 AI Models & Releases", "David Sacks is no longer the White House AI and Crypto Czar", "https://www.theverge.com/policy/902140/david-sacks-out-ai-crypto-czar", "The Verge AI", "1h ago", "David Sacks, the venture capitalist and tech billionaire who\'d become Silicon Valley\'s primary advocate inside the White House and a key architect of its aggressive AI policy initiatives, revealed on ..."],
+    ["🤖 AI Models & Releases", "Google is making it easier to import another AI’s memory into Gemini", "https://www.theverge.com/ai-artificial-intelligence/902085/google-gemini-import-memory-chat-history", "The Verge AI", "3h ago", "After Anthropic updated its tool for copying another AI\'s memory into Claude earlier this month, Google Gemini is rolling out new \"Import Memory\" and \"Import Chat History\" features on desktop that can..."],
+    ["🤖 AI Models & Releases", "Apple will reportedly allow other AI chatbots to plug into Siri", "https://www.theverge.com/tech/902048/apple-siri-ai-chatbot-update-ios-27", "The Verge AI", "3h ago", "Siri currently has an integration with OpenAI’s ChatGPT. | Photo: Allison Johnson / The Verge Apple\'s iOS 27 update will allow users to choose the AI chatbot they want to link with Siri."],
+    ["🤖 AI Models & Releases", "Apple’s AI Playlist Playground is bad at music", "https://www.theverge.com/report/902005/apple-ai-playlist-playground-bad-at-music", "The Verge AI", "4h ago", "Apple Music: \"What do you want to hear. \" Me: \"Atmospheric instrumental black metal to write to."],
+    ["🤖 AI Models & Releases", "Google&#8217;s &#8216;live&#8217; AI search assistant can handle conversations in dozens more languages", "https://www.theverge.com/tech/901816/google-search-live-ai-assistant-expansion", "The Verge AI", "6h ago", "Google is expanding access to Search Live, a feature that lets you search for information using your voice and camera."],
+    ["🤖 AI Models & Releases", "Meta gets ready to launch two new Ray-Ban AI glasses", "https://www.theverge.com/column/901314/meta-new-ray-ban-ai-glasses", "The Verge AI", "8h ago", "Second-generation Ray-Ban Meta glasses. | Photo by Amelia Holowaty Krales / The Verge This is Lowpass by Janko Roettgers , a newsletter on the ever-evolving intersection of tech and entertainment, syn..."],
+    ["🤖 AI Models & Releases", "Wikipedia bans AI-generated articles", "https://www.theverge.com/tech/901461/wikipedia-ai-generated-article-ban", "The Verge AI", "9h ago", "Wikipedia will no longer allow editors to write or rewrite articles using AI."],
+    ["🤖 AI Models & Releases", "Senators are pushing to find out how much electricity data centers actually use", "https://www.theverge.com/policy/901404/senators-warren-hawley-eia-letter-data-centers", "The Verge AI", "10h ago", "An Amazon data center in Oregon. | Image: Amazon On Thursday, senators Elizabeth Warren (D-MA) and Josh Hawley (R-MO) sent a letter to the Energy Information Administration (EIA) asking it to collect ..."],
+    ["🤖 AI Models & Releases", "Webtoon is adding AI localization tools to its comics platform", "https://www.theverge.com/ai-artificial-intelligence/899108/webtoon-canvas-ai-translation-localization-yongsoo-kim", "The Verge AI", "11h ago", "Canvas, Webtoon \'s platform for user-uploaded comics, is about to get a major overhaul that\'s designed to help creators make more money and share their art with a wider audience."],
+    ["🤖 AI Models & Releases", "EU backs nude app ban and delays to landmark AI rules", "https://www.theverge.com/ai-artificial-intelligence/901315/eu-ai-act-delays-ban-nudify-apps", "The Verge AI", "12h ago", "European lawmakers have voted to delay key parts of the EU AI Act, the bloc\'s flagship law for regulating artificial intelligence, while also backing proposals to ban nudify apps."],
+    ["🤖 AI Models & Releases", "Google bumps up Q Day deadline to 2029, far sooner than previously thought", "https://arstechnica.com/security/2026/03/google-bumps-up-q-day-estimate-to-2029-far-sooner-than-previously-thought/", "Ars Technica AI", "1d ago", "Company warns entire industry to move off RSA and EC more quickly."],
+    ["🤖 AI Models & Releases", "Gemini 3.1 Flash Live: Making audio AI more natural and reliable", "https://deepmind.google/blog/gemini-3-1-flash-live-making-audio-ai-more-natural-and-reliable/", "Google DeepMind", "9h ago", "Our latest voice model has improved precision and lower latency to make voice interactions more fluid, natural and precise."],
+    ["🤖 AI Models & Releases", "Protecting people from harmful manipulation", "https://deepmind.google/blog/protecting-people-from-harmful-manipulation/", "Google DeepMind", "1d ago", "Google DeepMind researches AI\'s harmful manipulation risks across areas like finance and health, leading to new safety measures."],
+    ["🤖 AI Models & Releases", "Lyria 3 Pro: Create longer tracks in more", "https://deepmind.google/blog/lyria-3-pro-create-longer-tracks-in-more/", "Google DeepMind", "1d ago", "Introducing Lyria 3 Pro, which unlocks longer tracks with structural awareness. We’re also bringing Lyria to more Google products and surfaces."],
+    ["🤖 AI Models & Releases", "Memory Bear AI Memory Science Engine for Multimodal Affective Intelligence: A Technical Report", "https://arxiv.org/abs/2603.22306", "arXiv cs.AI", "20h ago", "22306v1 Announce Type: new Abstract: Affective judgment in real interaction is rarely a purely local prediction problem."],
+    ["🤖 AI Models & Releases", "The Efficiency Attenuation Phenomenon: A Computational Challenge to the Language of Thought Hypothesis", "https://arxiv.org/abs/2603.22312", "arXiv cs.AI", "20h ago", "22312v1 Announce Type: new Abstract: This paper computationally investigates whether thought requires a language-like format, as posited by the Language of Thought (LoT) hypothesis."],
+    ["🤖 AI Models & Releases", "Dynamic Fusion-Aware Graph Convolutional Neural Network for Multimodal Emotion Recognition in Conversations", "https://arxiv.org/abs/2603.22345", "arXiv cs.AI", "20h ago", "arXiv:2603.22345v1 Announce Type: new Abstract: Multimodal emotion recognition in conversations (MERC) aims to identify and understand the emotions expressed by speakers during utterance interaction f..."],
+    ["🤖 AI Models & Releases", "Intelligence Inertia: Physical Principles and Applications", "https://arxiv.org/abs/2603.22347", "arXiv cs.AI", "20h ago", "arXiv:2603.22347v1 Announce Type: new Abstract: While Landauer\'s principle establishes the fundamental thermodynamic floor for information erasure and Fisher Information provides a metric for local cu..."],
+    ["🤖 AI Models & Releases", "Session Risk Memory (SRM): Temporal Authorization for Deterministic Pre-Execution Safety Gates", "https://arxiv.org/abs/2603.22350", "arXiv cs.AI", "20h ago", "22350v1 Announce Type: new Abstract: Deterministic pre-execution safety gates evaluate whether individual agent actions are compatible with their assigned roles."],
+    ["🤖 AI Models & Releases", "STEM Agent: A Self-Adapting, Tool-Enabled, Extensible Architecture for Multi-Protocol AI Agent Systems", "https://arxiv.org/abs/2603.22359", "arXiv cs.AI", "20h ago", "arXiv:2603.22359v1 Announce Type: new Abstract: Current AI agent frameworks commit early to a single interaction protocol, a fixed tool integration strategy, and static user models, limiting their dep..."],
+    ["🤖 AI Models & Releases", "From Static Templates to Dynamic Runtime Graphs: A Survey of Workflow Optimization for LLM Agents", "https://arxiv.org/abs/2603.22386", "arXiv cs.AI", "20h ago", "arXiv:2603.22386v1 Announce Type: new Abstract: Large language model (LLM)-based systems are becoming increasingly popular for solving tasks by constructing executable workflows that interleave LLM ca..."],
+    ["🤖 AI Models & Releases", "Computational Arbitrage in AI Model Markets", "https://arxiv.org/abs/2603.22404", "arXiv cs.AI", "20h ago", "22404v1 Announce Type: new Abstract: Consider a market of competing model providers selling query access to models with varying costs and capabilities."],
+    ["🤖 AI Models & Releases", "Maximum Entropy Relaxation of Multi-Way Cardinality Constraints for Synthetic Population Generation", "https://arxiv.org/abs/2603.22558", "arXiv cs.AI", "20h ago", "arXiv:2603.22558v1 Announce Type: new Abstract: Generating synthetic populations from aggregate statistics is a core component of microsimulation, agent-based modeling, policy analysis, and privacy-pr..."],
+    ["🤖 AI Models & Releases", "AI Mental Models: Learned Intuition and Deliberation in a Bounded Neural Architecture", "https://arxiv.org/abs/2603.22561", "arXiv cs.AI", "20h ago", "arXiv:2603.22561v1 Announce Type: new Abstract: This paper asks whether a bounded neural architecture can exhibit a meaningful division of labor between intuition and deliberation on a classic 64-item..."],
+    ["🤖 AI Models & Releases", "Understanding LLM Performance Degradation in Multi-Instance Processing: The Roles of Instance Count and Context Length", "https://arxiv.org/abs/2603.22608", "arXiv cs.AI", "20h ago", "22608v1 Announce Type: new Abstract: Users often rely on Large Language Models (LLMs) for processing multiple documents or performing analysis over a number of instances."],
+    ["🤖 AI Models & Releases", "Bridging the Know-Act Gap via Task-Level Autoregressive Reasoning", "https://arxiv.org/abs/2603.22619", "arXiv cs.AI", "20h ago", "22619v1 Announce Type: new Abstract: LLMs often generate seemingly valid answers to flawed or ill-posed inputs."],
+    ["🤖 AI Models & Releases", "Graph-Aware Late Chunking for Retrieval-Augmented Generation in Biomedical Literature", "https://arxiv.org/abs/2603.22633", "arXiv cs.AI", "20h ago", "arXiv:2603.22633v1 Announce Type: new Abstract: Retrieval-Augmented Generation (RAG) systems for biomedical literature are typically evaluated using ranking metrics like Mean Reciprocal Rank (MRR), wh..."],
+    ["🤖 AI Models & Releases", "Benchmarking Multi-Agent LLM Architectures for Financial Document Processing: A Comparative Study of Orchestration Patterns, Cost-Accuracy Tradeoffs and Production Scaling Strategies", "https://arxiv.org/abs/2603.22651", "arXiv cs.AI", "20h ago", "arXiv:2603.22651v1 Announce Type: new Abstract: The adoption of large language models (LLMs) for structured information extraction from financial documents has accelerated rapidly, yet production depl..."],
+    ["🤖 AI Models & Releases", "MuQ-Eval: An Open-Source Per-Sample Quality Metric for AI Music Generation Evaluation", "https://arxiv.org/abs/2603.22677", "arXiv cs.AI", "20h ago", "arXiv:2603.22677v1 Announce Type: new Abstract: Distributional metrics such as Fr\\\'echet Audio Distance cannot score individual music clips and correlate poorly with human judgments, while the only pe..."],
+    ["🤖 AI Models & Releases", "HyFI: Hyperbolic Feature Interpolation for Brain-Vision Alignment", "https://arxiv.org/abs/2603.22721", "arXiv cs.AI", "20h ago", "22721v1 Announce Type: new Abstract: Recent progress in artificial intelligence has encouraged numerous attempts to understand and decode human visual system from brain signals."],
+    ["🤖 AI Models & Releases", "Beyond Binary Correctness: Scaling Evaluation of Long-Horizon Agents on Subjective Enterprise Tasks", "https://arxiv.org/abs/2603.22744", "arXiv cs.AI", "20h ago", "22744v1 Announce Type: new Abstract: Large language models excel on objectively verifiable tasks such as math and programming, where evaluation reduces to unit tests or a single correct answer."],
+    ["🤖 AI Models & Releases", "CLiGNet: Clinical Label-Interaction Graph Network for Medical Specialty Classification from Clinical Transcriptions", "https://arxiv.org/abs/2603.22752", "arXiv cs.AI", "20h ago", "arXiv:2603.22752v1 Announce Type: new Abstract: Automated classification of clinical transcriptions into medical specialties is essential for routing, coding, and clinical decision support, yet prior ..."],
+    ["🤖 AI Models & Releases", "Can LLM Agents Generate Real-World Evidence? Evaluating Observational Studies in Medical Databases", "https://arxiv.org/abs/2603.22767", "arXiv cs.AI", "20h ago", "arXiv:2603.22767v1 Announce Type: new Abstract: Observational studies can yield clinically actionable evidence at scale, but executing them on real-world databases is open-ended and requires coherent ..."],
+    ["🤖 AI Models & Releases", "AgriPestDatabase-v1.0: A Structured Insect Dataset for Training Agricultural Large Language Model", "https://arxiv.org/abs/2603.22777", "arXiv cs.AI", "20h ago", "arXiv:2603.22777v1 Announce Type: new Abstract: Agricultural pest management increasingly relies on timely and accurate access to expert knowledge, yet high quality labeled data and continuous expert ..."],
+    ["🤖 AI Models & Releases", "ABSTRAL: Automatic Design of Multi-Agent Systems Through Iterative Refinement and Topology Optimization", "https://arxiv.org/abs/2603.22791", "arXiv cs.AI", "20h ago", "22791v1 Announce Type: new Abstract: How should multi-agent systems be designed, and can that design knowledge be captured in a form that is inspectable, revisable, and transferable."],
+    ["🤖 AI Models & Releases", "Reliable Classroom AI via Neuro-Symbolic Multimodal Reasoning", "https://arxiv.org/abs/2603.22793", "arXiv cs.AI", "20h ago", "22793v1 Announce Type: new Abstract: Classroom AI is rapidly expanding from low-level perception toward higher-level judgments about engagement, confusion, collaboration, and instructional quality."],
+    ["🤖 AI Models & Releases", "Learning What Matters Now: Dynamic Preference Inference under Contextual Shifts", "https://arxiv.org/abs/2603.22813", "arXiv cs.AI", "20h ago", "22813v1 Announce Type: new Abstract: Humans often juggle multiple, sometimes conflicting objectives and shift their priorities as circumstances change, rather than following a fixed objective function."],
+    ["🤖 AI Models & Releases", "Empirical Comparison of Agent Communication Protocols for Task Orchestration", "https://arxiv.org/abs/2603.22823", "arXiv cs.AI", "20h ago", "22823v1 Announce Type: new Abstract: Context. Nowadays, artificial intelligence agent systems are transforming from single-tool interactions to complex multi-agent orchestrations."],
+    ["🤖 AI Models & Releases", "Improving Safety Alignment via Balanced Direct Preference Optimization", "https://arxiv.org/abs/2603.22829", "arXiv cs.AI", "20h ago", "22829v1 Announce Type: new Abstract: With the rapid development and widespread application of Large Language Models (LLMs), their potential safety risks have attracted widespread attention."],
+    ["🤖 AI Models & Releases", "PhySe-RPO: Physics and Semantics Guided Relative Policy Optimization for Diffusion-Based Surgical Smoke Removal", "https://arxiv.org/abs/2603.22844", "arXiv cs.AI", "20h ago", "22844v2 Announce Type: new Abstract: Surgical smoke severely degrades intraoperative video quality, obscuring anatomical structures and limiting surgical perception."],
+    ["🤖 AI Models & Releases", "CoMaTrack: Competitive Multi-Agent Game-Theoretic Tracking with Vision-Language-Action Models", "https://arxiv.org/abs/2603.22846", "arXiv cs.AI", "20h ago", "22846v1 Announce Type: new Abstract: Embodied Visual Tracking (EVT), a core dynamic task in embodied intelligence, requires an agent to precisely follow a language-specified target."],
+    ["🤖 AI Models & Releases", "Chain-of-Authorization: Internalizing Authorization into Large Language Models via Reasoning Trajectories", "https://arxiv.org/abs/2603.22869", "arXiv cs.AI", "20h ago", "arXiv:2603.22869v1 Announce Type: new Abstract: Large Language Models (LLMs) have become core cognitive components in modern artificial intelligence (AI) systems, combining internal knowledge with ext..."],
+    ["🤖 AI Models & Releases", "Dynamical Systems Theory Behind a Hierarchical Reasoning Model", "https://arxiv.org/abs/2603.22871", "arXiv cs.AI", "20h ago", "arXiv:2603.22871v1 Announce Type: new Abstract: Current large language models (LLMs) primarily rely on linear sequence generation and massive parameter counts, yet they severely struggle with complex ..."],
+    ["🤖 AI Models & Releases", "Continuous Optimization for Satisfiability Modulo Theories on Linear Real Arithmetic", "https://arxiv.org/abs/2603.22877", "arXiv cs.AI", "20h ago", "22877v1 Announce Type: new Abstract: Efficient solutions for satisfiability modulo theories (SMT) are integral in industrial applications such as hardware verification and design automation."],
+    ["🤖 AI Models & Releases", "Separating Diagnosis from Control: Auditable Policy Adaptation in Agent-Based Simulations with LLM-Based Diagnostics", "https://arxiv.org/abs/2603.22904", "arXiv cs.AI", "20h ago", "22904v1 Announce Type: new Abstract: Mitigating elderly loneliness requires policy interventions that achieve both adaptability and auditability."],
+    ["🤖 AI Models & Releases", "ProGRank: Probe-Gradient Reranking to Defend Dense-Retriever RAG from Corpus Poisoning", "https://arxiv.org/abs/2603.22934", "arXiv cs.AI", "20h ago", "arXiv:2603.22934v1 Announce Type: new Abstract: Retrieval-Augmented Generation (RAG) improves the reliability of large language model applications by grounding generation in retrieved evidence, but it..."],
+    ["🤖 AI Models & Releases", "Ran Score: a LLM-based Evaluation Score for Radiology Report Generation", "https://arxiv.org/abs/2603.22935", "arXiv cs.AI", "20h ago", "arXiv:2603.22935v1 Announce Type: new Abstract: Chest X-ray report generation and automated evaluation are limited by poor recognition of low-prevalence abnormalities and inadequate handling of clinic..."],
+    ["🤖 AI Models & Releases", "Optimizing Small Language Models for NL2SQL via Chain-of-Thought Fine-Tuning", "https://arxiv.org/abs/2603.22942", "arXiv cs.AI", "20h ago", "22942v1 Announce Type: new Abstract: Translating Natural Language to SQL (NL2SQL) remains a critical bottleneck for democratization of data in enterprises."],
+    ["🤖 AI Models & Releases", "PersonalQ: Select, Quantize, and Serve Personalized Diffusion Models for Efficient Inference", "https://arxiv.org/abs/2603.22943", "arXiv cs.AI", "20h ago", "arXiv:2603.22943v1 Announce Type: new Abstract: Personalized text-to-image generation lets users fine-tune diffusion models into repositories of concept-specific checkpoints, but serving these reposit..."],
+    ["🤖 AI Models & Releases", "Where Experts Disagree, Models Fail: Detecting Implicit Legal Citations in French Court Decisions", "https://arxiv.org/abs/2603.22973", "arXiv cs.AI", "20h ago", "22973v1 Announce Type: new Abstract: Computational methods applied to legal scholarship hold the promise of analyzing law at scale."],
+    ["🤖 AI Models & Releases", "JFTA-Bench: Evaluate LLM\'s Ability of Tracking and Analyzing Malfunctions Using Fault Trees", "https://arxiv.org/abs/2603.22978", "arXiv cs.AI", "20h ago", "22978v1 Announce Type: new Abstract: In the maintenance of complex systems, fault trees are used to locate problems and provide targeted solutions."],
+    ["🤖 AI Models & Releases", "On the use of Aggregation Operators to improve Human Identification using Dental Records", "https://arxiv.org/abs/2603.23003", "arXiv cs.AI", "20h ago", "arXiv:2603.23003v1 Announce Type: new Abstract: The comparison of dental records is a standardized technique in forensic dentistry used to speed up the identification of individuals in multiple-compar..."],
+    ["🤖 AI Models & Releases", "Can Large Language Models Reason and Optimize Under Constraints?", "https://arxiv.org/abs/2603.23004", "arXiv cs.AI", "20h ago", "arXiv:2603.23004v1 Announce Type: new Abstract: Large Language Models (LLMs) have demonstrated great capabilities across diverse natural language tasks; yet their ability to solve abstraction and opti..."],
+    ["🤖 AI Models & Releases", "Minibal: Balanced Game-Playing Without Opponent Modeling", "https://arxiv.org/abs/2603.23059", "arXiv cs.AI", "20h ago", "23059v1 Announce Type: new Abstract: Recent advances in game AI, such as AlphaZero and Ath\\\'enan, have achieved superhuman performance across a wide range of board games."],
+    ["🤖 AI Models & Releases", "MedCausalX: Adaptive Causal Reasoning with Self-Reflection for Trustworthy Medical Vision-Language Models", "https://arxiv.org/abs/2603.23085", "arXiv cs.AI", "20h ago", "23085v1 Announce Type: new Abstract: Vision-Language Models (VLMs) have enabled interpretable medical diagnosis by integrating visual perception with linguistic reasoning."],
+    ["🤖 AI Models & Releases", "Between Rules and Reality: On the Context Sensitivity of LLM Moral Judgment", "https://arxiv.org/abs/2603.23114", "arXiv cs.AI", "20h ago", "23114v1 Announce Type: new Abstract: A human\'s moral decision depends heavily on the context. Yet research on LLM morality has largely studied fixed scenarios."],
+    ["🤖 AI Models & Releases", "Describe-Then-Act: Proactive Agent Steering via Distilled Language-Action World Models", "https://arxiv.org/abs/2603.23149", "arXiv cs.AI", "20h ago", "23149v1 Announce Type: new Abstract: Deploying safety-critical agents requires anticipating the consequences of actions before they are executed."],
+    ["🤖 AI Models & Releases", "SAiW: Source-Attributable Invisible Watermarking for Proactive Deepfake Defense", "https://arxiv.org/abs/2603.23178", "arXiv cs.AI", "20h ago", "23178v1 Announce Type: new Abstract: Deepfakes generated by modern generative models pose a serious threat to information integrity, digital identity, and public trust."],
+    ["🤖 AI Models & Releases", "PERMA: Benchmarking Personalized Memory Agents via Event-Driven Preference and Realistic Task Environments", "https://arxiv.org/abs/2603.23231", "arXiv cs.AI", "20h ago", "23231v1 Announce Type: new Abstract: Empowering large language models with long-term memory is crucial for building agents that adapt to users\' evolving needs."],
+    ["🤖 AI Models & Releases", "MemCollab: Cross-Agent Memory Collaboration via Contrastive Trajectory Distillation", "https://arxiv.org/abs/2603.23234", "arXiv cs.AI", "20h ago", "23234v1 Announce Type: new Abstract: Large language model (LLM)-based agents rely on memory mechanisms to reuse knowledge from past problem-solving experiences."],
+    ["🤖 AI Models & Releases", "Online library learning in human visual puzzle solving", "https://arxiv.org/abs/2603.23244", "arXiv cs.AI", "20h ago", "23244v1 Announce Type: new Abstract: When learning a novel complex task, people often form efficient reusable abstractions that simplify future work, despite uncertainty about the future."],
+    ["🤖 AI Models & Releases", "LLM Olympiad: Why Model Evaluation Needs a Sealed Exam", "https://arxiv.org/abs/2603.23292", "arXiv cs.AI", "20h ago", "23292v1 Announce Type: new Abstract: Benchmarks and leaderboards are how NLP most often communicates progress, but in the LLM era they are increasingly easy to misread."],
+    ["🤖 AI Models & Releases", "RelayS2S: A Dual-Path Speculative Generation for Real-Time Dialogue", "https://arxiv.org/abs/2603.23346", "arXiv cs.AI", "20h ago", "23346v1 Announce Type: new Abstract: Real-time spoken dialogue systems face a fundamental tension between latency and response quality."],
+    ["🤖 AI Models & Releases", "Beyond Preset Identities: How Agents Form Stances and Boundaries in Generative Societies", "https://arxiv.org/abs/2603.23406", "arXiv cs.AI", "20h ago", "arXiv:2603.23406v1 Announce Type: new Abstract: While large language models simulate social behaviors, their capacity for stable stance formation and identity negotiation during complex interventions ..."],
+    ["🤖 AI Models & Releases", "Bilevel Autoresearch: Meta-Autoresearching Itself", "https://arxiv.org/abs/2603.23420", "arXiv cs.AI", "20h ago", "23420v1 Announce Type: new Abstract: If autoresearch is itself a form of research, then autoresearch can be applied to research itself."],
+    ["🤖 AI Models & Releases", "Mecha-nudges for Machines", "https://arxiv.org/abs/2603.23433", "arXiv cs.AI", "20h ago", "23433v1 Announce Type: new Abstract: Nudges are subtle changes to the way choices are presented to human decision-makers (e."],
+    ["🤖 AI Models & Releases", "Automated Microservice Pattern Instance Detection Using Infrastructure-as-Code Artifacts and Large Language Models", "https://arxiv.org/abs/2502.04188", "arXiv cs.AI", "20h ago", "04188v1 Announce Type: cross Abstract: Documenting software architecture is essential to preserve architecture knowledge, even though it is frequently costly."],
+    ["🤖 AI Models & Releases", "Founder effects shape the evolutionary dynamics of multimodality in open LLM families", "https://arxiv.org/abs/2603.22287", "arXiv cs.AI", "20h ago", "22287v1 Announce Type: cross Abstract: Large language model (LLM) families are improving rapidly, yet it remains unclear how quickly multimodal capabilities emerge and propagate within open families."],
+    ["🤖 AI Models & Releases", "Evaluating Prompting Strategies for Chart Question Answering with Large Language Models", "https://arxiv.org/abs/2603.22288", "arXiv cs.AI", "20h ago", "22288v1 Announce Type: cross Abstract: Prompting strategies affect LLM reasoning performance, but their role in chart-based QA remains underexplored."],
+    ["🤖 AI Models & Releases", "MERIT: Memory-Enhanced Retrieval for Interpretable Knowledge Tracing", "https://arxiv.org/abs/2603.22289", "arXiv cs.AI", "20h ago", "22289v1 Announce Type: cross Abstract: Knowledge Tracing (KT) models students\' evolving knowledge states to predict future performance, serving as a foundation for personalized education."],
+    ["🤖 AI Models & Releases", "Beyond Hard Constraints: Budget-Conditioned Reachability For Safe Offline Reinforcement Learning", "https://arxiv.org/abs/2603.22292", "arXiv cs.AI", "20h ago", "22292v1 Announce Type: cross Abstract: Sequential decision making using Markov Decision Process underpins many realworld applications."],
+    ["🤖 AI Models & Releases", "TIPS: Turn-Level Information-Potential Reward Shaping for Search-Augmented LLMs", "https://arxiv.org/abs/2603.22293", "arXiv cs.AI", "20h ago", "arXiv:2603.22293v1 Announce Type: cross Abstract: Search-augmented large language models (LLMs) trained with reinforcement learning (RL) have achieved strong results on open-domain question answering ..."],
+    ["🤖 AI Models & Releases", "Efficient Embedding-based Synthetic Data Generation for Complex Reasoning Tasks", "https://arxiv.org/abs/2603.22294", "arXiv cs.AI", "20h ago", "arXiv:2603.22294v1 Announce Type: cross Abstract: Synthetic Data Generation (SDG), leveraging Large Language Models (LLMs), has recently been recognized and broadly adopted as an effective approach to..."],
+    ["🤖 AI Models & Releases", "Whether, Not Which: Mechanistic Interpretability Reveals Dissociable Affect Reception and Emotion Categorization in LLMs", "https://arxiv.org/abs/2603.22295", "arXiv cs.AI", "20h ago", "arXiv:2603.22295v1 Announce Type: cross Abstract: Large language models appear to develop internal representations of emotion -- \"emotion circuits,\" \"emotion neurons,\" and structured emotional manifol..."],
+    ["🤖 AI Models & Releases", "Between the Layers Lies the Truth: Uncertainty Estimation in LLMs Using Intra-Layer Local Information Scores", "https://arxiv.org/abs/2603.22299", "arXiv cs.AI", "20h ago", "22299v1 Announce Type: cross Abstract: Large language models (LLMs) are often confidently wrong, making reliable uncertainty estimation (UE) essential."],
+    ["🤖 AI Models & Releases", "Scaling Attention via Feature Sparsity", "https://arxiv.org/abs/2603.22300", "arXiv cs.AI", "20h ago", "22300v1 Announce Type: cross Abstract: Scaling Transformers to ultra-long contexts is bottlenecked by the $O(n^2 d)$ cost of self-attention."],
+    ["🤖 AI Models & Releases", "Latent Semantic Manifolds in Large Language Models", "https://arxiv.org/abs/2603.22301", "arXiv cs.AI", "20h ago", "arXiv:2603.22301v1 Announce Type: cross Abstract: Large Language Models (LLMs) perform internal computations in continuous vector spaces yet produce discrete tokens -- a fundamental mismatch whose geo..."],
+    ["🤖 AI Models & Releases", "Sample Transform Cost-Based Training-Free Hallucination Detector for Large Language Models", "https://arxiv.org/abs/2603.22303", "arXiv cs.AI", "20h ago", "arXiv:2603.22303v1 Announce Type: cross Abstract: Hallucinations in large language models (LLMs) remain a central obstacle to trustworthy deployment, motivating detectors that are accurate, lightweigh..."],
+    ["🤖 AI Models & Releases", "CN-Buzz2Portfolio: A Chinese-Market Dataset and Benchmark for LLM-Based Macro and Sector Asset Allocation from Daily Trending Financial News", "https://arxiv.org/abs/2603.22305", "arXiv cs.AI", "20h ago", "arXiv:2603.22305v1 Announce Type: cross Abstract: Large Language Models (LLMs) are rapidly transitioning from static Natural Language Processing (NLP) tasks including sentiment analysis and event extr..."],
+    ["🤖 AI Models & Releases", "UniFluids: Unified Neural Operator Learning with Conditional Flow-matching", "https://arxiv.org/abs/2603.22309", "arXiv cs.AI", "20h ago", "22309v1 Announce Type: cross Abstract: Partial differential equation (PDE) simulation holds extensive significance in scientific research."],
+    ["🤖 AI Models & Releases", "A Multi-Modal CNN-LSTM Framework with Multi-Head Attention and Focal Loss for Real-Time Elderly Fall Detection", "https://arxiv.org/abs/2603.22313", "arXiv cs.AI", "20h ago", "arXiv:2603.22313v1 Announce Type: cross Abstract: The increasing global aging population has intensified the demand for reliable health monitoring systems, particularly those capable of detecting crit..."],
+    ["🤖 AI Models & Releases", "Enhancing AI-Based Tropical Cyclone Track and Intensity Forecasting via Systematic Bias Correction", "https://arxiv.org/abs/2603.22314", "arXiv cs.AI", "20h ago", "arXiv:2603.22314v1 Announce Type: cross Abstract: Tropical cyclones (TCs) pose severe threats to life, infrastructure, and economies in tropical and subtropical regions, underscoring the critical need..."],
+    ["🤖 AI Models & Releases", "Emergency Preemption Without Online Exploration: A Decision Transformer Approach", "https://arxiv.org/abs/2603.22315", "arXiv cs.AI", "20h ago", "22315v1 Announce Type: cross Abstract: Emergency vehicle (EV) response time is a critical determinant of survival outcomes, yet deployed signal preemption strategies remain reactive and uncontrollable."],
+    ["🤖 AI Models & Releases", "ST-GDance++: A Scalable Spatial-Temporal Diffusion for Long-Duration Group Choreography", "https://arxiv.org/abs/2603.22316", "arXiv cs.AI", "20h ago", "arXiv:2603.22316v1 Announce Type: cross Abstract: Group dance generation from music requires synchronizing multiple dancers while maintaining spatial coordination, making it highly relevant to applica..."],
+    ["🤖 AI Models & Releases", "Geometric Mixture-of-Experts with Curvature-Guided Adaptive Routing for Graph Representation Learning", "https://arxiv.org/abs/2603.22317", "arXiv cs.AI", "20h ago", "22317v1 Announce Type: cross Abstract: Graph-structured data typically exhibits complex topological heterogeneity, making it difficult to model accurately within a single Riemannian manifold."],
+    ["🤖 AI Models & Releases", "Sparsely-Supervised Data Assimilation via Physics-Informed Schr\\\"odinger Bridge", "https://arxiv.org/abs/2603.22319", "arXiv cs.AI", "20h ago", "arXiv:2603.22319v1 Announce Type: cross Abstract: Data assimilation (DA) for systems governed by partial differential equations (PDE) aims to reconstruct full spatiotemporal fields from sparse high-fi..."],
+    ["🤖 AI Models & Releases", "From Instructions to Assistance: a Dataset Aligning Instruction Manuals with Assembly Videos for Evaluating Multimodal LLMs", "https://arxiv.org/abs/2603.22321", "arXiv cs.AI", "20h ago", "arXiv:2603.22321v1 Announce Type: cross Abstract: The recent advancements introduced by Large Language Models (LLMs) have transformed how Artificial Intelligence (AI) can support complex, real world t..."],
+    ["🤖 AI Models & Releases", "AEGIS: An Operational Infrastructure for Post-Market Governance of Adaptive Medical AI Under US and EU Regulations", "https://arxiv.org/abs/2603.22322", "arXiv cs.AI", "20h ago", "22322v1 Announce Type: cross Abstract: Machine learning systems deployed in medical devices require governance frameworks that ensure safety while enabling continuous improvement."],
+    ["🤖 AI Models & Releases", "A Multi-Task Targeted Learning Framework for Lithium-Ion Battery State-of-Health and Remaining Useful Life", "https://arxiv.org/abs/2603.22323", "arXiv cs.AI", "20h ago", "arXiv:2603.22323v1 Announce Type: cross Abstract: Accurately predicting the state-of-health (SOH) and remaining useful life (RUL) of lithium-ion batteries is crucial for ensuring the safe and efficien..."],
+    ["🤖 AI Models & Releases", "DAQ: Delta-Aware Quantization for Post-Training LLM Weight Compression", "https://arxiv.org/abs/2603.22324", "arXiv cs.AI", "20h ago", "22324v1 Announce Type: cross Abstract: We introduce Delta-Aware Quantization (DAQ), a data-free post-training quantization framework that preserves the knowledge acquired during post-training."],
+    ["🤖 AI Models & Releases", "Hybrid Associative Memories", "https://arxiv.org/abs/2603.22325", "arXiv cs.AI", "20h ago", "22325v1 Announce Type: cross Abstract: Recurrent neural networks (RNNs) and self-attention are both widely used sequence-mixing layers that maintain an internal memory."],
+    ["🤖 AI Models & Releases", "A Direct Classification Approach for Reliable Wind Ramp Event Forecasting under Severe Class Imbalance", "https://arxiv.org/abs/2603.22326", "arXiv cs.AI", "20h ago", "arXiv:2603.22326v1 Announce Type: cross Abstract: Decision support systems are essential for maintaining grid stability in low-carbon power systems, such as wind power plants, by providing real-time a..."],
+    ["🤖 AI Models & Releases", "AgentSLR: Automating Systematic Literature Reviews in Epidemiology with Agentic AI", "https://arxiv.org/abs/2603.22327", "arXiv cs.AI", "20h ago", "arXiv:2603.22327v1 Announce Type: cross Abstract: Systematic literature reviews are essential for synthesizing scientific evidence but are costly, difficult to scale and time-intensive, creating bottl..."],
+    ["🤖 AI Models & Releases", "Beyond the Mean: Distribution-Aware Loss Functions for Bimodal Regression", "https://arxiv.org/abs/2603.22328", "arXiv cs.AI", "20h ago", "arXiv:2603.22328v1 Announce Type: cross Abstract: Despite the strong predictive performance achieved by machine learning models across many application domains, assessing their trustworthiness through..."],
+    ["🤖 AI Models & Releases", "Trained Persistent Memory for Frozen Decoder-Only LLMs", "https://arxiv.org/abs/2603.22329", "arXiv cs.AI", "20h ago", "22329v1 Announce Type: cross Abstract: Decoder-only language models are stateless: hidden representations are discarded after every forward pass and nothing persists across sessions."],
+    ["🤖 AI Models & Releases", "Conformal Risk Control for Safety-Critical Wildfire Evacuation Mapping: A Comparative Study of Tabular, Spatial, and Graph-Based Models", "https://arxiv.org/abs/2603.22331", "arXiv cs.AI", "20h ago", "22331v1 Announce Type: cross Abstract: Every wildfire prediction model deployed today shares a dangerous property: none of these methods provides formal guarantees on how much fire spread is missed."],
+    ["🤖 AI Models & Releases", "Large Language Models for Missing Data Imputation: Understanding Behavior, Hallucination Effects, and Control Mechanisms", "https://arxiv.org/abs/2603.22332", "arXiv cs.AI", "20h ago", "22332v1 Announce Type: cross Abstract: Data imputation is a cornerstone technique for handling missing values in real-world datasets, which are often plagued by missingness."],
+    ["🤖 AI Models & Releases", "Graph Signal Processing Meets Mamba2: Adaptive Filter Bank via Delta Modulation", "https://arxiv.org/abs/2603.22333", "arXiv cs.AI", "20h ago", "22333v1 Announce Type: cross Abstract: State-space models (SSMs) offer efficient alternatives to attention with linear-time recurrence."],
+    ["🤖 AI Models & Releases", "Causal Direct Preference Optimization for Distributionally Robust Generative Recommendation", "https://arxiv.org/abs/2603.22335", "arXiv cs.AI", "20h ago", "arXiv:2603.22335v1 Announce Type: cross Abstract: Direct Preference Optimization (DPO) guides large language models (LLMs) to generate recommendations aligned with user historical behavior distributio..."],
+    ["🤖 AI Models & Releases", "Graphs RAG at Scale: Beyond Retrieval-Augmented Generation With Labeled Property Graphs and Resource Description Framework for Complex and Unknown Search Spaces", "https://arxiv.org/abs/2603.22340", "arXiv cs.AI", "20h ago", "arXiv:2603.22340v1 Announce Type: cross Abstract: Recent advances in Retrieval-Augmented Generation (RAG) have revolutionized knowledge-intensive tasks, yet traditional RAG methods struggle when the s..."],
+    ["🤖 AI Models & Releases", "T-MAP: Red-Teaming LLM Agents with Trajectory-aware Evolutionary Search", "https://arxiv.org/abs/2603.22341", "arXiv cs.AI", "20h ago", "arXiv:2603.22341v1 Announce Type: cross Abstract: While prior red-teaming efforts have focused on eliciting harmful text outputs from large language models (LLMs), such approaches fail to capture agen..."],
+    ["🤖 AI Models & Releases", "First-Mover Bias in Gradient Boosting Explanations: Mechanism, Detection, and Resolution", "https://arxiv.org/abs/2603.22346", "arXiv cs.AI", "20h ago", "arXiv:2603.22346v1 Announce Type: cross Abstract: We isolate and empirically characterize first-mover bias -- a path-dependent concentration of feature importance caused by sequential residual fitting..."],
+    ["🤖 AI Models & Releases", "WIST: Web-Grounded Iterative Self-Play Tree for Domain-Targeted Reasoning Improvement", "https://arxiv.org/abs/2603.22352", "arXiv cs.AI", "20h ago", "arXiv:2603.22352v1 Announce Type: cross Abstract: Recent progress in reinforcement learning with verifiable rewards (RLVR) offers a practical path to self-improvement of language models, but existing ..."]
+    ];
+
+    const ARTICLES_PER_PAGE = 12; 
+    const totalPages = Math.ceil(db.length / ARTICLES_PER_PAGE);
+    let currentPage = 1;
+    let isFlipping = false;
+
+    function renderPage(pageNum) {
+      const grid = document.getElementById('newspaper-grid');
+      grid.innerHTML = ''; 
+
+      // Toggle Hero Image visibility
+      const hero = document.getElementById('front-page-hero');
+      hero.style.display = pageNum === 1 ? 'block' : 'none';
+
+      const startIndex = (pageNum - 1) * ARTICLES_PER_PAGE;
+      const endIndex = startIndex + ARTICLES_PER_PAGE;
+      const pageArticles = db.slice(startIndex, endIndex);
+
+      pageArticles.forEach(item => {
+        const [category, title, url, source, time, snippet] = item;
+        
+        const articleHTML = `
+        <article class="article">
+          <span class="article-category reveal-title">${category}</span>
+          <a href="${url}" target="_blank" class="article-title reveal-title">${title}</a>
+          <p class="article-snippet reveal-body">${snippet}</p>
+          <div class="article-meta-foot reveal-body">
+            <span>${source}</span>
+            <span>${time}</span>
+          </div>
+        </article>
+        `;
+        grid.insertAdjacentHTML('beforeend', articleHTML);
+      });
+
+      // Update Pagination UI
+      document.getElementById('pageIndicator').innerText = `Page ${pageNum} of ${totalPages}`;
+
+      // Show/Hide Dog Ears
+      const leftEar = document.getElementById('cornerLeft');
+      const rightEar = document.getElementById('cornerRight');
+      
+      pageNum === 1 ? leftEar.classList.add('corner-hidden') : leftEar.classList.remove('corner-hidden');
+      pageNum === totalPages ? rightEar.classList.add('corner-hidden') : rightEar.classList.remove('corner-hidden');
     }
-    // Restore theme preference
-    const saved = localStorage.getItem('theme');
-    if (saved) document.documentElement.setAttribute('data-theme', saved);
-    
-    // Measure header+nav and set spacer height
-    function fixLayout() {
-      const header = document.querySelector('.header');
-      const nav = document.querySelector('.nav');
-      const spacer = document.querySelector('.toolbar-spacer');
-      if (header && nav && spacer) {
-        const hh = header.offsetHeight;
-        document.documentElement.style.setProperty('--header-h', hh + 'px');
-        spacer.style.height = (hh + nav.offsetHeight) + 'px';
-        document.documentElement.style.scrollPaddingTop = (hh + nav.offsetHeight + 16) + 'px';
-      }
+
+    function triggerPrintAnimation(container) {
+      const titles = container.querySelectorAll('.reveal-title');
+      const bodies = container.querySelectorAll('.reveal-body');
+      
+      titles.forEach(el => { el.classList.remove('is-printing-title'); void el.offsetWidth; });
+      bodies.forEach(el => { el.classList.remove('is-printing-body'); void el.offsetWidth; });
+
+      let titleDelay = 50;
+      titles.forEach((el) => {
+        setTimeout(() => el.classList.add('is-printing-title'), titleDelay);
+        titleDelay += 30; 
+      });
+
+      let bodyDelay = titleDelay + 200; 
+      bodies.forEach((el) => {
+        setTimeout(() => el.classList.add('is-printing-body'), bodyDelay);
+        bodyDelay += 100; 
+      });
     }
-    fixLayout();
-    window.addEventListener('resize', fixLayout);
-    
-    // Handle archive date param
-    const params = new URLSearchParams(window.location.search);
-    const dateParam = params.get('date');
-    if (dateParam) {
-      // Could fetch historical data if needed
-      console.log('Viewing archive:', dateParam);
+
+    function changePage(direction) {
+      if (isFlipping) return;
+      isFlipping = true;
+
+      const grid = document.getElementById('newspaper-grid');
+      
+      const outClass = direction === 1 ? 'flip-next-out' : 'flip-prev-out';
+      const inClass = direction === 1 ? 'flip-next-in' : 'flip-prev-in';
+
+      grid.classList.add(outClass);
+
+      setTimeout(() => {
+        currentPage += direction;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        renderPage(currentPage);
+        
+        grid.classList.remove(outClass);
+        grid.classList.add(inClass);
+
+        setTimeout(() => {
+          grid.classList.remove(inClass);
+          isFlipping = false;
+          
+          triggerPrintAnimation(grid);
+        }, 500);
+
+      }, 500); 
     }
+
+    // Initialize
+    document.addEventListener("DOMContentLoaded", () => {
+      const mastheadTitles = document.querySelectorAll('.masthead .reveal-title');
+      let mDelay = 0;
+      mastheadTitles.forEach(el => {
+        setTimeout(() => el.classList.add('is-printing-title'), mDelay);
+        mDelay += 100;
+      });
+
+      renderPage(currentPage);
+      triggerPrintAnimation(document.getElementById('newspaper-grid'));
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft' && currentPage > 1) changePage(-1);
+      if (e.key === 'ArrowRight' && currentPage < totalPages) changePage(1);
+    });
   </script>
 </body>
 </html>

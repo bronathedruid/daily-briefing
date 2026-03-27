@@ -1,0 +1,556 @@
+/**
+ * newspaper-print.css
+ * Print-optimized styles for authentic newspaper output
+ */
+
+@media print {
+  /* ========================================
+     PRINT FUNDAMENTALS
+     ======================================== */
+  
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  
+  @page {
+    margin: 0.75in;
+    size: letter;
+  }
+  
+  @page :first {
+    margin-top: 0.5in;
+  }
+  
+  html {
+    font-size: 11pt;
+  }
+  
+  body {
+    font-family: 'Times New Roman', Times, serif !important;
+    line-height: 1.3;
+    color: #000000 !important;
+    background: white !important;
+  }
+  
+  /* ========================================
+     PRINT LAYOUT
+     ======================================== */
+  
+  .newspaper-container {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .newspaper-main {
+    display: block !important;
+    margin: 0 !important;
+    gap: 0 !important;
+  }
+  
+  /* Force single column for print */
+  .newspaper-layout-2col,
+  .newspaper-layout-3col,
+  .newspaper-layout-4col,
+  .newspaper-layout-mixed {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+  
+  .newspaper-lead-story {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  /* ========================================
+     PRINT MASTHEAD
+     ======================================== */
+  
+  .newspaper-masthead {
+    background: white !important;
+    color: black !important;
+    border-bottom: 3pt solid black !important;
+    padding: 1rem 0 !important;
+    page-break-after: avoid;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .newspaper-masthead-title {
+    font-family: 'Times New Roman', serif !important;
+    font-size: 36pt !important;
+    font-weight: 900 !important;
+    color: black !important;
+    text-shadow: none !important;
+    letter-spacing: 2pt;
+    margin: 0;
+  }
+  
+  .newspaper-masthead-subtitle {
+    font-family: Arial, sans-serif !important;
+    font-size: 10pt !important;
+    color: black !important;
+    margin: 0.5rem 0;
+    font-style: italic;
+  }
+  
+  .newspaper-masthead-date {
+    font-family: Arial, sans-serif !important;
+    font-size: 9pt !important;
+    color: black !important;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+  
+  /* Print ornament */
+  .newspaper-masthead-ornament {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0.75rem 0;
+    gap: 1rem;
+  }
+  
+  .newspaper-masthead-ornament::before,
+  .newspaper-masthead-ornament::after {
+    content: '';
+    flex: 1;
+    height: 1pt;
+    background: black !important;
+    max-width: 3in;
+  }
+  
+  .newspaper-masthead-ornament span {
+    font-size: 14pt;
+    font-weight: 900;
+    color: black !important;
+  }
+  
+  /* ========================================
+     PRINT TYPOGRAPHY
+     ======================================== */
+  
+  .newspaper-banner {
+    font-family: 'Times New Roman', serif !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    line-height: 1.1 !important;
+    color: black !important;
+    text-align: center;
+    margin: 1rem 0 !important;
+    padding: 0.5rem 0;
+    border-bottom: 2pt solid black !important;
+    page-break-after: avoid;
+  }
+  
+  .newspaper-headline {
+    font-family: 'Times New Roman', serif !important;
+    font-size: 18pt !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    color: black !important;
+    margin: 0.75rem 0 0.5rem 0 !important;
+    page-break-after: avoid;
+  }
+  
+  .newspaper-subhead {
+    font-family: 'Times New Roman', serif !important;
+    font-size: 14pt !important;
+    font-weight: 600 !important;
+    color: #333333 !important;
+    margin: 0.5rem 0 !important;
+    page-break-after: avoid;
+  }
+  
+  .newspaper-section {
+    font-family: Arial, sans-serif !important;
+    font-size: 12pt !important;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    color: black !important;
+    margin: 1rem 0 0.75rem 0 !important;
+    padding-bottom: 0.25rem;
+    border-bottom: 2pt solid black !important;
+    page-break-after: avoid;
+  }
+  
+  .newspaper-section::after {
+    content: '';
+    position: absolute;
+    bottom: -2pt;
+    left: 0;
+    width: 1.5in;
+    height: 2pt;
+    background: black !important;
+  }
+  
+  .newspaper-body {
+    font-family: 'Times New Roman', serif !important;
+    font-size: 10pt !important;
+    line-height: 1.4 !important;
+    color: black !important;
+    margin: 0.5rem 0 !important;
+    text-align: justify;
+    hyphens: auto;
+  }
+  
+  .newspaper-lead {
+    font-size: 11pt !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+  }
+  
+  .newspaper-byline {
+    font-family: Arial, sans-serif !important;
+    font-size: 8pt !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+    color: #666666 !important;
+    margin: 0.25rem 0 !important;
+  }
+  
+  .newspaper-dateline {
+    font-family: Arial, sans-serif !important;
+    font-size: 8pt !important;
+    color: #888888 !important;
+    margin: 0.25rem 0 !important;
+  }
+  
+  .newspaper-source {
+    font-family: Arial, sans-serif !important;
+    font-size: 8pt !important;
+    font-weight: 700 !important;
+    color: black !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+  }
+  
+  .newspaper-caption {
+    font-family: Arial, sans-serif !important;
+    font-size: 8pt !important;
+    font-style: italic;
+    line-height: 1.2 !important;
+    color: #555555 !important;
+    background: none !important;
+    border-left: 2pt solid black !important;
+    padding: 0.25rem 0 0.25rem 0.5rem !important;
+    margin: 0.5rem 0 !important;
+  }
+  
+  /* ========================================
+     PRINT ARTICLES
+     ======================================== */
+  
+  .newspaper-article {
+    background: white !important;
+    border: 1pt solid black !important;
+    padding: 0.75rem !important;
+    margin: 0 0 1rem 0 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    transform: none !important;
+  }
+  
+  .newspaper-article:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  .newspaper-article-header {
+    border-bottom: 0.5pt solid #cccccc !important;
+    margin-bottom: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  
+  .newspaper-article-meta {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 8pt !important;
+    color: #666666 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .newspaper-article-score {
+    background: #f0f0f0 !important;
+    color: black !important;
+    font-family: 'Courier New', monospace !important;
+    font-size: 8pt !important;
+    border: 0.5pt solid #cccccc !important;
+    padding: 0.125rem 0.25rem !important;
+    font-weight: 600;
+  }
+  
+  .newspaper-lead-story {
+    border: 2pt solid black !important;
+    padding: 1rem !important;
+    margin-bottom: 1.5rem !important;
+    background: #f8f8f8 !important;
+    page-break-inside: avoid;
+  }
+  
+  /* ========================================
+     PRINT IMAGES & MEDIA
+     ======================================== */
+  
+  .newspaper-lead-image img,
+  .newspaper-article img {
+    width: 100% !important;
+    height: auto !important;
+    filter: grayscale(100%) contrast(1.3) !important;
+    border: 1pt solid black !important;
+    margin: 0.5rem 0 !important;
+    page-break-inside: avoid;
+  }
+  
+  /* ========================================
+     PRINT SPECIAL ELEMENTS
+     ======================================== */
+  
+  .newspaper-pullquote {
+    font-family: 'Times New Roman', serif !important;
+    font-size: 14pt !important;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.2 !important;
+    color: black !important;
+    text-align: center;
+    margin: 1rem 0 !important;
+    padding: 1rem !important;
+    border-top: 2pt solid black !important;
+    border-bottom: 2pt solid black !important;
+    background: #f5f5f5 !important;
+    page-break-inside: avoid;
+  }
+  
+  .newspaper-pullquote::before {
+    content: '"' !important;
+    position: static !important;
+    font-size: 24pt !important;
+    font-weight: 900 !important;
+    color: black !important;
+    background: none !important;
+    padding: 0 !important;
+    transform: none !important;
+    display: inline;
+  }
+  
+  .newspaper-dropcap::first-letter {
+    float: left;
+    font-family: 'Times New Roman', serif !important;
+    font-size: 48pt !important;
+    font-weight: 900 !important;
+    line-height: 0.8;
+    color: black !important;
+    margin: 0.1rem 0.1rem 0 0;
+    padding: 0.1rem;
+  }
+  
+  .newspaper-kicker {
+    font-family: Arial, sans-serif !important;
+    font-size: 8pt !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    color: black !important;
+    margin-bottom: 0.25rem !important;
+  }
+  
+  .newspaper-deck {
+    font-family: Arial, sans-serif !important;
+    font-size: 9pt !important;
+    font-weight: 400;
+    line-height: 1.3 !important;
+    color: #444444 !important;
+    font-style: italic;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  /* ========================================
+     PRINT COMPONENTS
+     ======================================== */
+  
+  .newspaper-card {
+    background: white !important;
+    border: 1pt solid black !important;
+    padding: 0.75rem !important;
+    margin: 0 0 1rem 0 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+  
+  .newspaper-card-header {
+    border-bottom: 0.5pt solid #cccccc !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .newspaper-card-title {
+    font-family: 'Times New Roman', serif !important;
+    font-size: 12pt !important;
+    font-weight: 700 !important;
+    color: black !important;
+  }
+  
+  .newspaper-badge {
+    background: #f0f0f0 !important;
+    color: black !important;
+    border: 0.5pt solid black !important;
+    font-size: 7pt !important;
+    padding: 0.125rem 0.25rem !important;
+  }
+  
+  .newspaper-badge-primary {
+    background: black !important;
+    color: white !important;
+  }
+  
+  /* ========================================
+     PRINT TABLES
+     ======================================== */
+  
+  .newspaper-table {
+    font-size: 8pt !important;
+    border-collapse: collapse;
+    width: 100% !important;
+    margin: 0.5rem 0 1rem 0 !important;
+  }
+  
+  .newspaper-table th {
+    background: #f0f0f0 !important;
+    color: black !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    font-size: 8pt !important;
+    padding: 0.25rem 0.5rem !important;
+    border: 1pt solid black !important;
+  }
+  
+  .newspaper-table td {
+    padding: 0.25rem 0.5rem !important;
+    border: 0.5pt solid #cccccc !important;
+    font-size: 8pt !important;
+    color: black !important;
+  }
+  
+  .newspaper-table tr:nth-child(even) {
+    background: #f8f8f8 !important;
+  }
+  
+  /* ========================================
+     PRINT HIDDEN ELEMENTS
+     ======================================== */
+  
+  .newspaper-nav,
+  .newspaper-theme-toggle,
+  .newspaper-btn:not(.print-visible),
+  .newspaper-form-group,
+  .newspaper-sidebar,
+  .newspaper-footer,
+  .newspaper-alert,
+  .newspaper-spinner,
+  .newspaper-toggle,
+  .newspaper-tooltip,
+  [data-print-hide="true"] {
+    display: none !important;
+  }
+  
+  /* ========================================
+     PRINT PAGE BREAKS
+     ======================================== */
+  
+  .newspaper-section-container {
+    page-break-before: auto;
+    page-break-inside: avoid;
+  }
+  
+  .newspaper-article {
+    page-break-inside: avoid;
+  }
+  
+  .newspaper-lead-story {
+    page-break-inside: avoid;
+    page-break-before: auto;
+  }
+  
+  .newspaper-headline {
+    page-break-after: avoid;
+  }
+  
+  .newspaper-pullquote {
+    page-break-inside: avoid;
+  }
+  
+  /* Force page break for large sections */
+  .print-page-break {
+    page-break-before: always;
+  }
+  
+  /* ========================================
+     PRINT FOOTER
+     ======================================== */
+  
+  .newspaper-print-footer {
+    display: block !important;
+    position: fixed;
+    bottom: 0.5in;
+    left: 0.75in;
+    right: 0.75in;
+    font-family: Arial, sans-serif !important;
+    font-size: 8pt !important;
+    color: #666666 !important;
+    text-align: center;
+    border-top: 0.5pt solid #cccccc !important;
+    padding-top: 0.25rem;
+  }
+  
+  /* ========================================
+     PRINT QUALITY OPTIMIZATIONS
+     ======================================== */
+  
+  /* Ensure proper text rendering */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold !important;
+    color: black !important;
+  }
+  
+  /* Optimize link appearance for print */
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+  
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 8pt !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+  
+  /* Ensure proper spacing */
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  /* Optimize for black and white printing */
+  * {
+    background: white !important;
+    color: black !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Preserve essential colors for emphasis */
+  .newspaper-section,
+  .newspaper-masthead-title,
+  .newspaper-headline,
+  .print-preserve-color {
+    color: black !important;
+  }
+}
