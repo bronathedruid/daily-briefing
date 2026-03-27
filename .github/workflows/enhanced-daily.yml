@@ -426,19 +426,8 @@ jobs:
           if ! git diff --staged --quiet; then
             EDITION="${{ needs.collect.outputs.edition }}"
             ARTICLE_COUNT="${{ needs.collect.outputs.article-count }}"
-            
-            git commit -m "📰 $EDITION Edition - $(date -u +%Y-%m-%d)
-
-🗞️ Edition: $EDITION  
-📊 Articles: $ARTICLE_COUNT
-🔄 Build ID: ${{ needs.collect.outputs.build-id }}
-⏰ Generated: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
-
-- Enhanced RSS aggregation with AI summarization
-- Visual content generation (hero, charts, social cards)  
-- Multi-format output (HTML, email, mobile API)
-- Performance analytics and monitoring"
-            
+            BUILD_ID="${{ needs.collect.outputs.build-id }}"
+            git commit -m "📰 ${EDITION} Edition $(date -u +%Y-%m-%d) | ${ARTICLE_COUNT} articles | ${BUILD_ID}"
             git push
             echo "✅ Committed $EDITION edition updates"
           else
