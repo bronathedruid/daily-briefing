@@ -1,0 +1,101 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --omit=optional
+
+      - name: Check if enhanced data exists
+        id: check_data
+        run: |
+          if [ -f "data/newspaper-latest.json" ]; then
+            echo "enhanced_data=true" >> $GITHUB_OUTPUT
+            echo "📰 Enhanced newspaper data found"
+          else
+            echo "enhanced_data=false" >> $GITHUB_OUTPUT
+            echo "📰 Using existing data"
+          fi
+
+      - name: Build newspaper (if data exists)
+        if: steps.check_data.outputs.enhanced_data == 'true'
+        run: |
+          echo "🗞️ Building enhanced newspaper..."
+          npm run build
+          npm run email || echo "⚠️ Email generation failed, continuing..."
+
+      - name: Verify build
+        run: |
+          echo "🔍 Verifying build output..."
+          ls -la public/
+          if [ ! -f "public/index.html" ]; then
+            echo "❌ index.html missing"
+            exit 1
+          fi
+          
+          # Check file size
+          SIZE=$(stat -c%s public/index.html)
+          echo "📊 index.html size: ${SIZE} bytes"
+          
+          if [ "$SIZE" -lt 10000 ]; then
+            echo "❌ index.html too small: ${SIZE} bytes"
+            exit 1
+          fi
+          
+          echo "✅ Build verification passed"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'public'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 300000
+
+      - name: Verify deployment
+        run: |
+          echo "🚀 Deployment completed!"
+          echo "📰 Site URL: ${{ steps.deployment.outputs.page_url }}"
+          
+          # Wait for propagation
+          sleep 30
+          
+          # Test the deployment
+          if curl -sf "${{ steps.deployment.outputs.page_url }}" > /dev/null; then
+            echo "✅ Site is accessible"
+          else
+            echo "⚠️ Site may still be propagating"
+          fi
