@@ -90,11 +90,58 @@ function generateNewspaperHtml(data) {
       position: relative; 
       width: 100%;
       max-width: 1300px;
-      background: var(--bg-paper-light);
+      background:
+        radial-gradient(circle at top left, rgba(120, 96, 58, 0.05), transparent 18%),
+        radial-gradient(circle at top right, rgba(120, 96, 58, 0.045), transparent 16%),
+        radial-gradient(circle at bottom left, rgba(90, 72, 44, 0.055), transparent 18%),
+        radial-gradient(circle at bottom right, rgba(90, 72, 44, 0.06), transparent 20%),
+        linear-gradient(180deg, rgba(255,255,255,0.18), rgba(0,0,0,0.015)),
+        var(--bg-paper-light);
       padding: 2rem 3rem 4rem 3rem; 
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05), inset 0 0 50px rgba(0,0,0,0.02);
-      border: 1px solid #e0dbce;
-      perspective: 2500px; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05), inset 0 0 50px rgba(0,0,0,0.02), inset 0 0 0 1px rgba(124, 101, 65, 0.08);
+      border: 1px solid #ddd5c6;
+      perspective: 2500px;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .newspaper-container::before,
+    .newspaper-container::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .newspaper-container::before {
+      background:
+        radial-gradient(120% 14px at 50% 0%, rgba(76, 55, 30, 0.14), transparent 70%),
+        radial-gradient(120% 16px at 50% 100%, rgba(76, 55, 30, 0.16), transparent 72%),
+        radial-gradient(16px 120% at 0% 50%, rgba(76, 55, 30, 0.13), transparent 68%),
+        radial-gradient(18px 120% at 100% 50%, rgba(76, 55, 30, 0.14), transparent 70%);
+      mix-blend-mode: multiply;
+      opacity: 0.7;
+    }
+
+    .newspaper-container::after {
+      inset: 6px;
+      background:
+        repeating-linear-gradient(90deg,
+          transparent 0 22px,
+          rgba(92, 72, 41, 0.018) 22px 23px,
+          transparent 23px 47px,
+          rgba(92, 72, 41, 0.012) 47px 48px),
+        radial-gradient(circle at 8% 12%, rgba(92, 72, 41, 0.05) 0 1px, transparent 2px),
+        radial-gradient(circle at 91% 18%, rgba(92, 72, 41, 0.045) 0 1.2px, transparent 2.2px),
+        radial-gradient(circle at 14% 88%, rgba(92, 72, 41, 0.04) 0 1px, transparent 2px),
+        radial-gradient(circle at 87% 84%, rgba(92, 72, 41, 0.05) 0 1.3px, transparent 2.3px);
+      opacity: 0.45;
+      mask: linear-gradient(to bottom, transparent, black 18px, black calc(100% - 18px), transparent),
+            linear-gradient(to right, transparent, black 18px, black calc(100% - 18px), transparent);
+      mask-composite: intersect;
+      -webkit-mask: linear-gradient(to bottom, transparent, black 18px, black calc(100% - 18px), transparent),
+                    linear-gradient(to right, transparent, black 18px, black calc(100% - 18px), transparent);
+      -webkit-mask-composite: source-in;
     }
 
     /* Masthead & Hero Image */
