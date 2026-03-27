@@ -1,6 +1,6 @@
 {
-  "date": "2026-03-26",
-  "generated": "2026-03-26T16:45:06.359Z",
+  "date": "2026-03-27",
+  "generated": "2026-03-27T00:00:43.596Z",
   "categories": {
     "ai-models": {
       "label": "🤖 AI Models & Releases",
@@ -72,6 +72,22 @@
           "score": 11
         },
         {
+          "title": "Google is making it easier to import another AI’s memory into Gemini",
+          "link": "https://www.theverge.com/ai-artificial-intelligence/902085/google-gemini-import-memory-chat-history",
+          "date": "2026-03-26T21:44:37.000Z",
+          "snippet": "After Anthropic updated its tool for copying another AI's memory into Claude earlier this month, Google Gemini is rolling out new \"Import Memory\" and \"Import Chat History\" features on desktop that can help users quickly copy over everything their current AI already knows about them.  To use the \"Imp",
+          "source": "The Verge AI",
+          "score": 10
+        },
+        {
+          "title": "Watch James Manyika talk AI and creativity with LL COOL J.",
+          "link": "https://blog.google/innovation-and-ai/technology/ai/ll-cool-j-dialogues/",
+          "date": "2026-03-26T17:00:00.000Z",
+          "snippet": "In the latest episode of our Dialogues on Technology and Society series, LL COOL J sits down with James Manyika.",
+          "source": "Google AI Blog",
+          "score": 10
+        },
+        {
           "title": "Transform your headphones into a live personal translator on iOS.",
           "link": "https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/",
           "date": "2026-03-26T16:00:00.000Z",
@@ -110,22 +126,6 @@
           "snippet": "arXiv:2603.22942v1 Announce Type: new \nAbstract: Translating Natural Language to SQL (NL2SQL) remains a critical bottleneck for democratization of data in enterprises. Although Large Language Models (LLMs) like Gemini 2.5 and other LLMs have demonstrated impressive zero-shot capabilities, their high",
           "source": "arXiv cs.AI",
           "score": 10
-        },
-        {
-          "title": "PersonalQ: Select, Quantize, and Serve Personalized Diffusion Models for Efficient Inference",
-          "link": "https://arxiv.org/abs/2603.22943",
-          "date": "2026-03-26T04:00:00.000Z",
-          "snippet": "arXiv:2603.22943v1 Announce Type: new \nAbstract: Personalized text-to-image generation lets users fine-tune diffusion models into repositories of concept-specific checkpoints, but serving these repositories efficiently is difficult for two reasons: natural-language requests are often ambiguous and c",
-          "source": "arXiv cs.AI",
-          "score": 10
-        },
-        {
-          "title": "LLM Olympiad: Why Model Evaluation Needs a Sealed Exam",
-          "link": "https://arxiv.org/abs/2603.23292",
-          "date": "2026-03-26T04:00:00.000Z",
-          "snippet": "arXiv:2603.23292v1 Announce Type: new \nAbstract: Benchmarks and leaderboards are how NLP most often communicates progress, but in the LLM era they are increasingly easy to misread. Scores can reflect benchmark-chasing, hidden evaluation choices, or accidental exposure to test content -- not just bro",
-          "source": "arXiv cs.AI",
-          "score": 10
         }
       ]
     },
@@ -134,6 +134,22 @@
       "emoji": "🏛️",
       "count": 15,
       "articles": [
+        {
+          "title": "Traffic Violation! License Plate Reader Mission Creep Is Already Here",
+          "link": "https://www.eff.org/deeplinks/2026/03/traffic-violation-license-plate-reader-mission-creep-already-here",
+          "date": "2026-03-26T20:19:26.000Z",
+          "snippet": "A new report from 404 Media sheds light on how automated license plate readers (ALPRs) could be used beyond the press releases and glossy marketing materials put out by law enforcement agencies and ALPR vendors. In December 2025, Georgia State Patrol ticketed a motorcyclist for holding a cell phone",
+          "source": "EFF Deeplinks",
+          "score": 10
+        },
+        {
+          "title": "Supreme Court Agrees With EFF: ISPs Don't Have To Be Copyright Enforcers",
+          "link": "https://www.eff.org/deeplinks/2026/03/supreme-court-agrees-eff-isps-dont-have-be-copyright-enforcers",
+          "date": "2026-03-26T16:31:08.000Z",
+          "snippet": "If your ISP can be liable for huge amounts of money for not terminating your access to the internet because of accusations that you—or someone in your household or college network—has committed copyright infringement, that is dangerous. We live in a world where high speed internet access is a necess",
+          "source": "EFF Deeplinks",
+          "score": 10
+        },
         {
           "title": "Senators introducing ban on government use of Chinese robots",
           "link": "https://thehill.com/policy/technology/5801982-schumer-cotton-chinese-robotics/",
@@ -167,28 +183,52 @@
           "score": 10
         },
         {
-          "title": "Nicole Ozer Named as Electronic Frontier Foundation’s Executive Director",
-          "link": "https://www.eff.org/press/releases/nicole-ozer-named-electronic-frontier-foundations-executive-director",
-          "date": "2026-03-24T21:00:00.000Z",
-          "snippet": "Ozer, With Decades of Experience in Technology and Civil Liberties Law, Will Succeed Cindy Cohn as Organization’s Leader \n\n\n\nSAN FRANCISCO – Nicole Ozer has been appointed as executive director of the Electronic Frontier Foundation effective June 1. \nOzer is a legal expert on privacy and surveillanc",
-          "source": "EFF Deeplinks",
-          "score": 10
-        },
-        {
-          "title": "Meta found liable in New Mexico child safety trial",
-          "link": "https://thehill.com/policy/technology/5799252-meta-found-liable-children-safety/",
-          "date": "2026-03-24T23:08:54.000Z",
-          "snippet": "Meta was found liable by a jury in New Mexico on Tuesday for compromising children’s safety online.  The parent company for Instagram, Facebook and WhatsApp has been ordered to pay $375 million in damages for violating New Mexico’s Unfair Practices Act, which prohibits unfair, deceptive and misleadi",
+          "title": "Judge blocks Pentagon’s supply chain risk designation for Anthropic",
+          "link": "https://thehill.com/policy/technology/5803486-anthropic-lawsuit-pentagon-claude/",
+          "date": "2026-03-26T23:41:16.000Z",
+          "snippet": "A federal judge sided with Anthropic in its fight with the Pentagon on Thursday, blocking its designation of the artificial intelligence company as a supply chain risk, for now. U.S. District Judge Rita Lin also blocked President Trump’s order that the government cut all contracts with Anthropic, de",
           "source": "The Hill Tech",
-          "score": 9
+          "score": 8
         },
         {
-          "title": "FCC imposes sweeping ban on foreign-made routers, affecting all new models",
-          "link": "https://arstechnica.com/tech-policy/2026/03/trump-fcc-prohibits-import-and-sale-of-new-wi-fi-routers-made-outside-us/",
-          "date": "2026-03-24T19:16:23.000Z",
-          "snippet": "Trump admin to decide which router makers get exemptions from FCC import ban.",
+          "title": "Elon Musk loses big in court; X boycott perfectly legal",
+          "link": "https://arstechnica.com/tech-policy/2026/03/elon-musk-loses-big-in-court-x-boycott-perfectly-legal/",
+          "date": "2026-03-26T21:50:26.000Z",
+          "snippet": "X admonished for \"fishing expedition\" as judge dismisses ad boycott lawsuit.",
           "source": "Ars Technica Policy",
-          "score": 9
+          "score": 8
+        },
+        {
+          "title": "Spotify seeks $300M from Anna's Archive, which ignores all court proceedings",
+          "link": "https://arstechnica.com/tech-policy/2026/03/spotify-lawsuit-tries-to-kick-annas-archive-off-the-web-without-much-success/",
+          "date": "2026-03-26T21:27:16.000Z",
+          "snippet": "Even with court orders, music firms struggle to eliminate notorious shadow library.",
+          "source": "Ars Technica Policy",
+          "score": 8
+        },
+        {
+          "title": "Judge dismisses X lawsuit accusing advertisers of illegal boycott",
+          "link": "https://thehill.com/policy/technology/5802971-elon-musk-x-lawsuit-dismissed/",
+          "date": "2026-03-26T19:59:03.000Z",
+          "snippet": "A federal judge on Thursday dismissed a lawsuit brought by Elon Musk’s social platform X against a coalition of advertisers that organized a boycott against the social media company. U.S. District Judge Jane Boyle found that X did not suffer any antitrust injury and that the court did not have juris",
+          "source": "The Hill Tech",
+          "score": 8
+        },
+        {
+          "title": "Schumer eyes green tax credits, data center reforms if Democrats retake majority",
+          "link": "https://thehill.com/policy/energy-environment/5802754-schumer-green-tax-credits-data-center-reform-midterms/",
+          "date": "2026-03-26T18:40:53.000Z",
+          "snippet": "Senate Minority Leader Chuck Schumer (D-N.Y.) said that if Democrats retake the majority in Congress, they will seek to reinstate and expand green tax credits that were wiped out by Republicans. Schumer, as he laid out his environmental vision for a Democratic majority on Wednesday evening, said he",
+          "source": "The Hill Tech",
+          "score": 8
+        },
+        {
+          "title": "OpenAI “indefinitely” shelves plans for erotic ChatGPT",
+          "link": "https://arstechnica.com/tech-policy/2026/03/chatgpt-wont-talk-dirty-any-time-soon-as-sexy-mode-turns-off-investors-report-says/",
+          "date": "2026-03-26T16:21:10.000Z",
+          "snippet": "Some staff reportedly questioned how sexy ChatGPT benefits humanity.",
+          "source": "Ars Technica Policy",
+          "score": 8
         },
         {
           "title": "Loomer: Zuckerberg addition to tech council 'slap in the face to MAGA'",
@@ -213,46 +253,6 @@
           "snippet": "Rep. Seth Moulton (D-Mass.) is banning his staff from trading on prediction markets, which have recently come under congressional scrutiny. “Effective today, Congressman Moulton is instituting an office-wide policy prohibiting his congressional staff from participating in prediction market platforms",
           "source": "The Hill Tech",
           "score": 8
-        },
-        {
-          "title": "Trump administration settles social media censorship case",
-          "link": "https://thehill.com/policy/technology/5801022-doj-settlement-social-media/",
-          "date": "2026-03-25T21:44:37.000Z",
-          "snippet": "The Justice Department has settled a lawsuit over allegations that the Biden administration pressured social media companies to remove or suppress speech. The settlement, filed in a Louisiana federal court, will bar the Centers for Disease Control and Prevention, the Cybersecurity and Infrastructure",
-          "source": "The Hill Tech",
-          "score": 8
-        },
-        {
-          "title": "Sanders, Ocasio-Cortez unveil bill to halt data center construction",
-          "link": "https://thehill.com/policy/technology/5801008-ai-data-center-moratorium-act/",
-          "date": "2026-03-25T21:35:32.000Z",
-          "snippet": "Sen. Bernie Sanders (I-Vt.) and Rep. Alexandria Ocasio-Cortez (D-N.Y.) plan to introduce legislation that would bar construction of all new data centers until “strong national safeguards are in place.” The pair announced the Artificial Intelligence Data Center Moratorium Act on Wednesday, which aims",
-          "source": "The Hill Tech",
-          "score": 8
-        },
-        {
-          "title": "Meta, YouTube must pay $3M to woman who got hooked on apps as a child",
-          "link": "https://arstechnica.com/tech-policy/2026/03/meta-youtube-must-pay-3m-to-woman-who-got-hooked-on-apps-as-a-child/",
-          "date": "2026-03-25T19:03:36.000Z",
-          "snippet": "Meta emerges as the biggest loser as second child safety trial verdict hits.",
-          "source": "Ars Technica Policy",
-          "score": 8
-        },
-        {
-          "title": "Supreme Court rejects Sony's attempt to kick music pirates off the Internet",
-          "link": "https://arstechnica.com/tech-policy/2026/03/supreme-court-rejects-sonys-attempt-to-kick-music-pirates-off-the-internet/",
-          "date": "2026-03-25T18:25:13.000Z",
-          "snippet": "Sony's 1984 Betamax win helps Cox beat Sony in important online piracy case.",
-          "source": "Ars Technica Policy",
-          "score": 8
-        },
-        {
-          "title": "Meta, YouTube found liable in landmark social media trial",
-          "link": "https://thehill.com/policy/technology/5800435-meta-youtube-social-media-addition-trial-liable/",
-          "date": "2026-03-25T17:38:27.000Z",
-          "snippet": "A California jury on Wednesday found social media giants Meta and YouTube liable in a landmark social media addiction trial, determining the companies were negligent in their design or operation of the platforms.  It caps off the nearly two-month trial against Meta, the parent company of Instagram,",
-          "source": "The Hill Tech",
-          "score": 8
         }
       ]
     },
@@ -262,12 +262,12 @@
       "count": 15,
       "articles": [
         {
-          "title": "Coruna iOS Kit Reuses 2023 Triangulation Exploit Code in New Mass Attacks",
+          "title": "Coruna iOS Kit Reuses 2023 Triangulation Exploit Code in Recent Mass Attacks",
           "link": "https://thehackernews.com/2026/03/coruna-ios-kit-reuses-2023.html",
           "date": "2026-03-26T11:07:00.000Z",
           "snippet": "The kernel exploit for two security vulnerabilities used in the recently uncovered Apple iOS exploit kit known as Coruna is an updated version of the same exploit that was used in the Operation Triangulation campaign back in 2023, according to new findings from Kaspersky.\n\"When Coruna was first repo",
           "source": "The Hacker News",
-          "score": 15
+          "score": 14
         },
         {
           "title": "Russian Hacker Sentenced to 2 Years for TA551 Botnet-Driven Ransomware Attacks",
@@ -278,12 +278,12 @@
           "score": 14
         },
         {
-          "title": "CSA Launches CSAI Foundation for AI Security",
-          "link": "https://www.darkreading.com/cloud-security/csa-launches-csai-ai-security",
-          "date": "2026-03-24T22:34:28.000Z",
-          "snippet": "The Cloud Security Alliance creates a dedicated nonprofit to govern autonomous AI agent ecosystems through risk intelligence and certification.",
+          "title": "Automotive Cybersecurity Threats Grow in Era of Connected, Autonomous Vehicles",
+          "link": "https://www.darkreading.com/vulnerabilities-threats/automotive-cybersecurity-threats-grow-connected-autonomous-vehicles",
+          "date": "2026-03-26T19:48:21.000Z",
+          "snippet": "More than a decade since the 2015 Jeep hack, the cybersecurity of vehicles remains of the utmost importance.",
           "source": "Dark Reading",
-          "score": 13
+          "score": 12
         },
         {
           "title": "[Webinar] Stop Guessing. Learn to Validate Your Defenses Against Real Attacks",
@@ -350,12 +350,12 @@
           "score": 12
         },
         {
-          "title": "Tax Search Ads Deliver ScreenConnect Malware Using Huawei Driver to Disable EDR",
-          "link": "https://thehackernews.com/2026/03/tax-search-ads-deliver-screenconnect.html",
-          "date": "2026-03-24T17:05:00.000Z",
-          "snippet": "A large-scale malvertising campaign active since January 2026 has been observed targeting U.S.-based individuals searching for tax-related documents to serve rogue installers for ConnectWise ScreenConnect that drop a tool named HwAudKiller to blind security programs using the bring your own vulnerab",
-          "source": "The Hacker News",
-          "score": 12
+          "title": "CISA: New Langflow flaw actively exploited to hijack AI workflows",
+          "link": "https://www.bleepingcomputer.com/news/security/cisa-new-langflow-flaw-actively-exploited-to-hijack-ai-workflows/",
+          "date": "2026-03-26T19:17:43.000Z",
+          "snippet": "The Cybersecurity and Infrastructure Security Agency (CISA) is warning that hackers are actively exploiting a critical vulnerability identified as CVE-2026-33017, which affects the Langflow framework for building AI agents. [...]",
+          "source": "BleepingComputer",
+          "score": 11
         },
         {
           "title": "New Torg Grabber infostealer malware targets 728 crypto wallets",
@@ -437,20 +437,28 @@
           "score": 12
         },
         {
-          "title": "Auto mode for Claude Code",
-          "link": "https://simonwillison.net/2026/Mar/24/auto-mode-for-claude-code/#atom-everything",
-          "date": "2026-03-24T23:57:33.000Z",
-          "snippet": "",
-          "source": "Simon Willison",
-          "score": 12
+          "title": "Ask @copilot to resolve merge conflicts on pull requests",
+          "link": "https://github.blog/changelog/2026-03-26-ask-copilot-to-resolve-merge-conflicts-on-pull-requests",
+          "date": "2026-03-26T17:32:22.000Z",
+          "snippet": "Copilot coding agent can now resolve merge conflicts on pull requests. To ask Copilot to resolve merge conflicts, mention @copilot in a comment and tell it what to do: @copilot…\nThe post Ask @copilot to resolve merge conflicts on pull requests appeared first on The GitHub Blog.",
+          "source": "GitHub Changelog",
+          "score": 10
         },
         {
-          "title": "Manage Copilot coding agent repository access via the API",
-          "link": "https://github.blog/changelog/2026-03-24-manage-copilot-coding-agent-repository-access-via-the-api",
-          "date": "2026-03-24T20:07:01.000Z",
-          "snippet": "Organization owners who want to manage Copilot coding agent access at scale can now do so programmatically with the new Copilot coding agent management REST APIs, available in public preview.…\nThe post Manage Copilot coding agent repository access via the API appeared first on The GitHub Blog.",
+          "title": "View Agentic Workflow configs in the Actions run summary",
+          "link": "https://github.blog/changelog/2026-03-26-view-agentic-workflow-configs-in-the-actions-run-summary",
+          "date": "2026-03-26T17:00:12.000Z",
+          "snippet": "You can now view your Agentic Workflow markdown configs directly in the GitHub Actions run summary for any agentic workflow. This update makes it easier to review runs by: Reducing…\nThe post View Agentic Workflow configs in the Actions run summary appeared first on The GitHub Blog.",
           "source": "GitHub Changelog",
-          "score": 12
+          "score": 10
+        },
+        {
+          "title": "What’s coming to our GitHub Actions 2026 security roadmap",
+          "link": "https://github.blog/news-insights/product-news/whats-coming-to-our-github-actions-2026-security-roadmap/",
+          "date": "2026-03-26T16:49:14.000Z",
+          "snippet": "A look at GitHub Actions’ 2026 roadmap, outlining how secure defaults, policy controls, and CI/CD observability harden the software supply chain end to end.\nThe post What’s coming to our GitHub Actions 2026 security roadmap appeared first on The GitHub Blog.",
+          "source": "GitHub Blog",
+          "score": 10
         },
         {
           "title": "Quantization from the ground up",
@@ -499,14 +507,6 @@
           "snippet": "Since launching the public preview of GitHub Copilot coding agent for Jira, we’ve been listening closely to customer feedback. Thank you to everyone who has taken the time to try…\nThe post GitHub Copilot for Jira — Public preview enhancements appeared first on The GitHub Blog.",
           "source": "GitHub Changelog",
           "score": 10
-        },
-        {
-          "title": "LiteLLM Hack: Were You One of the 47,000?",
-          "link": "https://simonwillison.net/2026/Mar/25/litellm-hack/#atom-everything",
-          "date": "2026-03-25T17:21:04.000Z",
-          "snippet": "",
-          "source": "Simon Willison",
-          "score": 10
         }
       ]
     },
@@ -522,6 +522,14 @@
           "snippet": "Google Analytics launched Scenario Planner and Projections to help advertisers forecast performance, optimize budgets, and plan cross-channel media spend more strategically.\nThe post Google Analytics Launches Scenario Planner and Projections appeared first on Search Engine Journal.",
           "source": "Search Engine Journal",
           "score": 13
+        },
+        {
+          "title": "Google Takes Search Live Global With Gemini 3.1 Flash Live via @sejournal, @MattGSouthern",
+          "link": "https://www.searchenginejournal.com/google-takes-search-live-global-with-gemini-3-1-flash-live/570602/",
+          "date": "2026-03-26T19:11:08.000Z",
+          "snippet": "Google expands Search Live to 200+ countries, powered by its new Gemini 3.1 Flash Live model with multilingual voice and camera search in AI Mode. \nThe post Google Takes Search Live Global With Gemini 3.1 Flash Live appeared first on Search Engine Journal.",
+          "source": "Search Engine Journal",
+          "score": 12
         },
         {
           "title": "How To Avoid Top Down SEO Systems Failures With The Visibility Governance Maturity Model via @sejournal, @theshelleywalsh",
@@ -564,6 +572,22 @@
           "score": 12
         },
         {
+          "title": "Google Adds New Performance Max Controls And Reporting Features via @sejournal, @brookeosmundson",
+          "link": "https://www.searchenginejournal.com/google-adds-new-performance-max-controls-and-reporting-features/570588/",
+          "date": "2026-03-26T16:56:16.000Z",
+          "snippet": "Google introduces Performance Max updates, including audience exclusions, budget projections, and expanded reporting to give advertisers more visibility and control over campaign performance.\nThe post Google Adds New Performance Max Controls And Reporting Features appeared first on Search Engine Jou",
+          "source": "Search Engine Journal",
+          "score": 11
+        },
+        {
+          "title": "Google Web Guide: What It Is, How It Works, and What It Means for SEO",
+          "link": "https://ahrefs.com/blog/google-web-guide/",
+          "date": "2026-03-26T16:50:05.000Z",
+          "snippet": "It’s a big change in how Google interprets intent and presents information. Think of it as a dynamically-generated, “magazine” SERP, that curates AI summaries and organic results. What’s different about Web Guide is that—unlike AI Overviews or AI Mode—it actually…\nRead more ›",
+          "source": "Ahrefs Blog",
+          "score": 10
+        },
+        {
           "title": "Are We Due Another Florida-Style Update? via @sejournal, @TaylorDanRW",
           "link": "https://www.searchenginejournal.com/are-we-due-another-florida-style-update/570102/",
           "date": "2026-03-26T12:00:44.000Z",
@@ -596,42 +620,18 @@
           "score": 10
         },
         {
-          "title": "Google Adds AI & Bot Labels To Forum, Q&A Structured Data via @sejournal, @MattGSouthern",
-          "link": "https://www.searchenginejournal.com/google-adds-ai-bot-labels-to-forum-qa-structured-data/570425/",
-          "date": "2026-03-24T19:50:55.000Z",
-          "snippet": "Google updated its Discussion Forum and Q&A Page structured data docs with new properties, including a way to label AI- and machine-generated content. \nThe post Google Adds AI & Bot Labels To Forum, Q&A Structured Data appeared first on Search Engine Journal.",
-          "source": "Search Engine Journal",
-          "score": 10
-        },
-        {
-          "title": "Google’s March 2026 Spam Update Is Already Complete via @sejournal, @MattGSouthern",
-          "link": "https://www.searchenginejournal.com/google-begins-rolling-out-the-march-2026-spam-update/570428/",
-          "date": "2026-03-24T19:38:20.000Z",
-          "snippet": "Google has finished rolling out the March 2026 spam update. The update applies globally and to all languages, with rollout taking a few days.\nThe post Google’s March 2026 Spam Update Is Already Complete appeared first on Search Engine Journal.",
-          "source": "Search Engine Journal",
-          "score": 10
-        },
-        {
-          "title": "What AI Writing Tools Get Wrong (And The Stack I Use Instead)",
-          "link": "https://ahrefs.com/blog/what-ai-writing-tools-get-wrong-and-the-stack-i-use/",
-          "date": "2026-03-26T15:43:42.000Z",
-          "snippet": "The hard part in content marketing is the information—ideas, verified facts, and reference material. And that’s exactly where these tools fall short. I learned this after generating 40 articles through Claude. I’d tried the writing tools first, but they…\nRead more ›",
-          "source": "Ahrefs Blog",
-          "score": 8
-        },
-        {
-          "title": "Google’s releasing Google-Agent: Here’s what to know",
-          "link": "https://www.semrush.com/blog/google-ai-agent/",
-          "date": "2026-03-26T07:53:00.000Z",
-          "snippet": "Google recently added Google-Agent to its user-triggered fetchers documentation, hinting at the future.",
+          "title": "Will Google replace your landing pages with AI versions?",
+          "link": "https://www.semrush.com/blog/google-ai-generated-landing-pages-patent/",
+          "date": "2026-03-26T20:10:00.000Z",
+          "snippet": "A recent Google patent describes a system for replacing brand landing pages with AI-generated pages.",
           "source": "SEMrush Blog",
           "score": 8
         },
         {
-          "title": "Top 10 Marketing Conferences to Attend in 2026",
-          "link": "https://www.semrush.com/blog/top-marketing-conferences-to-attend/",
-          "date": "2026-03-24T17:50:00.000Z",
-          "snippet": "Discover the top 10 marketing conferences to attend in 2026, including dates, prices, and what makes each event worth your time.",
+          "title": "Universal Commerce Protocol (UCP): What You Need to Know",
+          "link": "https://www.semrush.com/blog/universal-commerce-protocol/",
+          "date": "2026-03-26T19:58:00.000Z",
+          "snippet": "Google’s Universal Commerce Protocol (UCP) was updated in March 2026. Learn what UCP is, what changed, and how to prepare your business.",
           "source": "SEMrush Blog",
           "score": 8
         }
@@ -643,12 +643,28 @@
       "count": 15,
       "articles": [
         {
+          "title": "NASA Releases Artemis II Moon Mission Launch Countdown",
+          "link": "https://www.nasa.gov/general/nasa-releases-artemis-ii-moon-mission-launch-countdown/",
+          "date": "2026-03-26T20:12:30.000Z",
+          "snippet": "Before NASA sends its astronauts Reid Wiseman, Victor Glover, Christina Koch, and CSA (Canadian Space Agency) astronaut Jeremy Hansen on their Artemis II mission around the Moon, the launch team at NASA’s Kennedy Space Center in Florida and teams across the country will begin counting down about two",
+          "source": "NASA Breaking News",
+          "score": 22
+        },
+        {
           "title": "Artemis 2 moon mission latest news: NASA prepares for April 1 launch for lunar astronauts",
           "link": "https://www.space.com/news/live/artemis-2-nasa-moon-mission-launch-updates-march-26-2026",
           "date": "2026-03-26T16:11:02.000Z",
           "snippet": "Thursday, March 26, 2026: See our latest news and updates on NASA's Artemis 2 moon mission's progress to launch on April 1.",
           "source": "Space.com",
           "score": 20
+        },
+        {
+          "title": "Live Coverage: SpaceX to launch batch of Starlink satellites from the West Coast",
+          "link": "https://spaceflightnow.com/2026/03/26/spacex-to-launch-batch-of-starlink-satellites-from-the-west-coast/",
+          "date": "2026-03-26T16:50:00.000Z",
+          "snippet": "Liftoff of the Starlink 17-17 mission from Vandenberg Space Force Base, in California is scheduled during a launch window that opens at 4:03 p.m. PDT (7:03 p.m. EDT / 2303 UTC).",
+          "source": "Spaceflight Now",
+          "score": 19
         },
         {
           "title": "1 week away! NASA gearing up to launch Artemis 2 astronauts around the moon on April 1",
@@ -659,11 +675,11 @@
           "score": 19
         },
         {
-          "title": "NASA Names Jennifer Lyons Acting Launch Services Program Manager",
-          "link": "https://www.nasa.gov/centers-and-facilities/kennedy/nasa-names-jennifer-lyons-as-acting-launch-services-program-manager/",
-          "date": "2026-03-25T19:59:37.000Z",
-          "snippet": "NASA has selected Jennifer Lyons as acting program manager for the agency’s Launch Services Program (LSP) based at Kennedy Space Center in Florida. In this role, Lyons will lead NASA’s acquisition and management of domestic commercial launch services for science and robotic exploration missions begi",
-          "source": "NASA Breaking News",
+          "title": "China sends radar mapping and GNSS augmentation sats into orbit with pair of launches",
+          "link": "https://spacenews.com/china-sends-radar-mapping-and-gnss-augmentation-sats-into-orbit-with-pair-of-launches/",
+          "date": "2026-03-26T17:51:51.000Z",
+          "snippet": "China conducted a pair of launches in recent days, adding new satellites to the SuperView and CentiSpace low Earth orbit infrastructure constellations.\nThe post China sends radar mapping and GNSS augmentation sats into orbit with pair of launches appeared first on SpaceNews.",
+          "source": "SpaceNews",
           "score": 17
         },
         {
@@ -675,42 +691,10 @@
           "score": 17
         },
         {
-          "title": "Rocket Lab launch of Europe's 1st 2 'Celeste' navigation satellites scrubbed due to weather",
-          "link": "https://www.space.com/space-exploration/launches-spacecraft/rocket-lab-electron-launch-european-space-agency-celeste-navigation-satellites",
-          "date": "2026-03-24T20:00:00.000Z",
-          "snippet": "Rocket Lab had planned to launch the first two satellites for Europe's Celeste navigation constellation early Wednesday morning (March 25), but Mother Nature didn't cooperate.",
-          "source": "Space.com",
-          "score": 17
-        },
-        {
-          "title": "NASA Sets Coverage for First Artemis Crewed Mission Around Moon",
-          "link": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-first-artemis-crewed-mission-around-moon/",
-          "date": "2026-03-25T22:58:26.000Z",
-          "snippet": "A variety of prelaunch, launch, and mission events for NASA’s Artemis II mission around the Moon will stream online. The agency is targeting no earlier than Wednesday, April 1, for the test flight during a two-hour window that opens at 6:24 p.m. EDT, with additional launch opportunities through Mond",
-          "source": "NASA Breaking News",
-          "score": 16
-        },
-        {
-          "title": "NASA Sets Coverage for Artemis II Moon Mission",
-          "link": "https://www.nasa.gov/missions/artemis/artemis-2/nasa-sets-coverage-for-artemis-ii-moon-mission/",
-          "date": "2026-03-25T21:55:11.000Z",
-          "snippet": "Editor’s note: NASA will continuously update this Artemis II briefings and mission events page throughout prelaunch, launch, and mission activities. NASA will provide live coverage of prelaunch, launch, and mission events for the agency’s upcoming Artemis II crewed test flight around the Moon. Launc",
-          "source": "NASA Breaking News",
-          "score": 16
-        },
-        {
           "title": "Space Force weighs launch alternatives as Vulcan faces potential months-long grounding",
           "link": "https://spacenews.com/space-force-weighs-launch-alternatives-as-vulcan-faces-potential-months-long-grounding/",
           "date": "2026-03-25T22:55:37.000Z",
           "snippet": "Officials explore shifting missions, extending satellites already in orbit\nThe post Space Force weighs launch alternatives as Vulcan faces potential months-long grounding appeared first on SpaceNews.",
-          "source": "SpaceNews",
-          "score": 15
-        },
-        {
-          "title": "OrbitsIQ Global Announces Breakthrough in Space-Based IoT Connectivity",
-          "link": "https://spacenews.com/orbitsiq-global-announces-breakthrough-in-space-based-iot-connectivity/",
-          "date": "2026-03-24T18:57:22.000Z",
-          "snippet": "Washington, D.C., March 24, 2026 – OrbitsIQ Global (OIQ), an innovator in AI-driven secure connectivity across terrestrial and satellite networks, today announced a major technological milestone achieved in collaboration with […]\nThe post OrbitsIQ Global Announces Breakthrough in Space-Based IoT Con",
           "source": "SpaceNews",
           "score": 15
         },
@@ -739,14 +723,6 @@
           "score": 14
         },
         {
-          "title": "La NASA anuncia la cobertura de la misión lunar Artemis II",
-          "link": "https://www.nasa.gov/es/la-nasa-anuncia-la-cobertura-de-la-mision-lunar-artemis-ii/",
-          "date": "2026-03-25T23:48:10.000Z",
-          "snippet": "Nota del editor: La NASA actualizará continuamente esta página de sesiones informativas y eventos de la misión Artemis II a lo largo de las actividades previas al lanzamiento, el lanzamiento y las operaciones de la misión. La NASA ofrecerá cobertura en vivo de los eventos previos al lanzamiento, el",
-          "source": "NASA Breaking News",
-          "score": 14
-        },
-        {
           "title": "NASA outlines Moon Base plans, pivots on Gateway",
           "link": "https://www.nasaspaceflight.com/2026/03/nasa-moon-base-pivots-gateway/",
           "date": "2026-03-25T23:16:13.000Z",
@@ -755,12 +731,36 @@
           "score": 14
         },
         {
-          "title": "NASA Ames Experts Available for Artemis II Flight Test Interviews",
-          "link": "https://www.nasa.gov/general/nasa-ames-experts-available-for-artemis-ii-flight-test-interviews/",
-          "date": "2026-03-25T23:16:01.000Z",
-          "snippet": "NASA’s Ames Research Center in Silicon Valley invites media to interview local subject matter experts on Friday, March 27 from 10 a.m. to 2 p.m. ahead of the agency sending astronauts around the Moon for the first time in more than 50 years with the Artemis II flight test. NASA teams are gearing up",
-          "source": "NASA Breaking News",
+          "title": "Inside Artemis 2: NASA's historic astronaut moon mission explained (video series)",
+          "link": "https://www.space.com/space-exploration/artemis/inside-artemis-2-nasas-historic-astronaut-moon-mission-explained-video-series",
+          "date": "2026-03-25T22:43:03.000Z",
+          "snippet": "Get to know NASA's Artemis 2 moon mission with Space.com's exclusive four-part video series Inside Artemis II debuting March 25-March 31.",
+          "source": "Space.com",
           "score": 14
+        },
+        {
+          "title": "Here is NASA's plan for nuking Gateway and sending it to Mars",
+          "link": "https://arstechnica.com/space/2026/03/here-is-nasas-plan-for-nuking-gateway-and-sending-it-to-mars/",
+          "date": "2026-03-25T20:21:51.000Z",
+          "snippet": "Only one US-built nuclear reactor has ever flown in space, and that was more than 60 years ago.",
+          "source": "Ars Technica Space",
+          "score": 14
+        },
+        {
+          "title": "We got an audience with the \"Lunar Viceroy\" to talk how NASA will build a Moon base",
+          "link": "https://arstechnica.com/space/2026/03/we-got-an-audience-with-the-lunar-viceroy-to-talk-how-nasa-will-build-a-moon-base/",
+          "date": "2026-03-25T19:21:57.000Z",
+          "snippet": "\"It has been clear that we all need to be focused on one thing, not 10 things.\"",
+          "source": "Ars Technica Space",
+          "score": 14
+        },
+        {
+          "title": "Terran Orbital Introduces New Star Tracker Product Line at SATSHOW 2026",
+          "link": "https://spacenews.com/terran-orbital-introduces-new-star-tracker-product-line-at-satshow-2026/",
+          "date": "2026-03-25T18:16:23.000Z",
+          "snippet": "IRVINE, Calif., March 25, 2026 — Terran Orbital Corporation, a Lockheed Martin company, today announced the introduction of its new star tracker product line at SATSHOW 2026, expanding the company’s […]\nThe post Terran Orbital Introduces New Star Tracker Product Line at SATSHOW 2026 appeared first o",
+          "source": "SpaceNews",
+          "score": 13
         }
       ]
     },
@@ -778,6 +778,22 @@
           "score": 14
         },
         {
+          "title": "Amazon SageMaker Studio launches support for Kiro and Cursor IDEs as remote IDEs",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-sagemaker-studio-kiro-cursor/",
+          "date": "2026-03-26T19:53:00.000Z",
+          "snippet": "Today, AWS announces the ability to remotely connect from Kiro and Cursor IDEs to Amazon SageMaker Studio. This new capability allows data scientists, ML engineers, and developers to leverage their Kiro and Cursor setup - including its spec-driven development, conversational coding, and automated fe",
+          "source": "AWS What's New",
+          "score": 13
+        },
+        {
+          "title": "Aurora DSQL launches connector that simplifies building Ruby applications",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aurora-dsql-connector-for-ruby/",
+          "date": "2026-03-26T17:00:00.000Z",
+          "snippet": "Today we are announcing the release of the Aurora DSQL Connector for Ruby (pg gem) that makes it easy to build Ruby applications on Aurora DSQL. The Ruby Connector streamlines authentication and eliminates security risks associated with traditional user-generated passwords by automatically generatin",
+          "source": "AWS What's New",
+          "score": 13
+        },
+        {
           "title": "Amazon SageMaker Unified Studio launches support for remote connection from Cursor IDE",
           "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/sagemaker-unified-studio-cursor-ide/",
           "date": "2026-03-25T20:21:00.000Z",
@@ -786,11 +802,27 @@
           "score": 13
         },
         {
+          "title": "Amazon EC2 M8a instances now available in AWS GovCloud (US-West) region",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-m8a-instances-govcloud-us-west-region/",
+          "date": "2026-03-26T15:00:00.000Z",
+          "snippet": "Starting today, the general-purpose Amazon EC2 M8a instances are available in AWS GovCloud (US-West) region. M8a instances are powered by 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, deliver up to 30% higher performance, and up to 19% better price-perf",
+          "source": "AWS What's New",
+          "score": 12
+        },
+        {
           "title": "Enterprise dev teams are about to hit a wall. And CI pipelines can’t save them.",
           "link": "https://thenewstack.io/ai-agent-validation-bottleneck/",
           "date": "2026-03-26T14:00:00.000Z",
           "snippet": "Over the last two years, the economics of software development have inverted. Producing code has become fast, but validating it\nThe post Enterprise dev teams are about to hit a wall. And CI pipelines can’t save them. appeared first on The New Stack.",
           "source": "The New Stack",
+          "score": 12
+        },
+        {
+          "title": "AWS Storage Gateway Terraform modules now support Amazon Linux 2023",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/storage-gateway-terraform-al2023/",
+          "date": "2026-03-26T10:00:00.000Z",
+          "snippet": "AWS Storage Gateway Terraform modules now enable Amazon Linux 2023-based deployments, delivering improved security, reliability, and operational simplicity for Infrastructure as Code (IaC) provisioning. The updated modules support all gateway types including Amazon S3 File Gateway, Tape Gateway, and",
+          "source": "AWS What's New",
           "score": 12
         },
         {
@@ -810,83 +842,51 @@
           "score": 11
         },
         {
+          "title": "AWS Lambda increases the file descriptor limit to 4,096 for functions running on Lambda Managed Instances",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-Lambda-file-descriptors-increase-4096/",
+          "date": "2026-03-26T16:15:00.000Z",
+          "snippet": "AWS Lambda increases the file descriptor limit from 1,024 to 4,096, a 4x increase, for functions running on Lambda Managed Instances (LMI). This capability enables customers to run I/O intensive workloads such as high-concurrency web services, and file-heavy data processing pipelines, without runnin",
+          "source": "AWS What's New",
+          "score": 10
+        },
+        {
+          "title": "AWS AppConfig adds enhanced targeting during feature flag rollout",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/appconfig-enhanced-targeting-feature-flag-rollout/",
+          "date": "2026-03-26T16:00:00.000Z",
+          "snippet": "AWS AppConfig enhances its deployment capabilities with new controls that allow customers to target feature flag and configuration data values to specific segments or individual users during the lifecycle of a gradual roll-out.\n  One of AWS AppConfig’s key safety guardrails is the ability for custom",
+          "source": "AWS What's New",
+          "score": 10
+        },
+        {
+          "title": "The AWS Advanced JDBC Wrapper now supports automatic query caching with Valkey",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-jdbc-caching-with-valkey/",
+          "date": "2026-03-26T15:57:00.000Z",
+          "snippet": "The AWS Advanced JDBC Wrapper now supports automatically caching JDBC queries with Valkey, including Amazon ElastiCache for Valkey caches. Previously, developers who needed to cache JDBC query result sets had to manually write code to store and retrieve data from the cache for each query. Now you ca",
+          "source": "AWS What's New",
+          "score": 10
+        },
+        {
+          "title": "Amazon EC2 R8gd instances are now available in additional AWS Regions",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-r8gd-aws-regions/",
+          "date": "2026-03-26T15:39:00.000Z",
+          "snippet": "Amazon Elastic Compute Cloud (Amazon EC2) R8gd instances with up to 11.4 TB of local NVMe-based SSD block-level storage are now available in US West (N. California), Asia Pacific (Seoul, Hong Kong, Jakarta), Africa (Cape Town), and Canada West (Calgary) AWS Regions. These instances are powered by AW",
+          "source": "AWS What's New",
+          "score": 10
+        },
+        {
+          "title": "Amazon EC2 M8a instances now available in AWS Europe (Ireland) region",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-ec2-m8a-instances-europe-ireland-region/",
+          "date": "2026-03-26T15:00:12.000Z",
+          "snippet": "Starting today, the general-purpose Amazon EC2 M8a instances are available in AWS Europe (Ireland) region. M8a instances are powered by 5th Gen AMD EPYC processors (formerly code named Turin) with a maximum frequency of 4.5 GHz, deliver up to 30% higher performance, and up to 19% better price-perfor",
+          "source": "AWS What's New",
+          "score": 10
+        },
+        {
           "title": "The operational gap is real, and it’s getting wider",
           "link": "https://thenewstack.io/closing-cloud-operational-gap/",
           "date": "2026-03-26T15:00:00.000Z",
           "snippet": "Why the env zero and CloudQuery merger isn’t just a product story; It’s the thesis that the cloud operations market\nThe post The operational gap is real, and it’s getting wider appeared first on The New Stack.",
           "source": "The New Stack",
-          "score": 10
-        },
-        {
-          "title": "The platform under the model: How cloud native powers AI engineering in production",
-          "link": "https://www.cncf.io/blog/2026/03/26/the-platform-under-the-model-how-cloud-native-powers-ai-engineering-in-production/",
-          "date": "2026-03-26T09:07:14.000Z",
-          "snippet": "AI workloads are increasingly running on Kubernetes in production, but for many teams, the path from a working model to a reliable system remains unclear. The cloud native ecosystem – its projects, patterns, and community –...",
-          "source": "CNCF Blog",
-          "score": 10
-        },
-        {
-          "title": "Edera spent years calling KVM less secure. Here’s why it changed its mind.",
-          "link": "https://thenewstack.io/edera-adds-kvm-support/",
-          "date": "2026-03-25T21:22:59.000Z",
-          "snippet": "Edera, a top Xen hypervisor company, is shifting gears and will start supporting KVM as well this summer. If you\nThe post Edera spent years calling KVM less secure. Here’s why it changed its mind. appeared first on The New Stack.",
-          "source": "The New Stack",
-          "score": 10
-        },
-        {
-          "title": "Accelerate AI-assisted development with Agent Plugin for AWS Serverless",
-          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/agent-plugin-aws-serverless/",
-          "date": "2026-03-25T21:00:00.000Z",
-          "snippet": "AWS announces the Agent Plugin for AWS Serverless, enabling developers to easily build, deploy, troubleshoot, and manage serverless applications using AI coding assistants like Kiro, Claude Code, and Cursor.\n \nAgent plugins extend AI coding assistants with structured, reusable capabilities by packag",
-          "source": "AWS What's New",
-          "score": 10
-        },
-        {
-          "title": "AWS Batch now provides AMI status and supports AWS Health Planned Lifecycle Events",
-          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-batch-ami-status-aws-health/",
-          "date": "2026-03-25T20:32:00.000Z",
-          "snippet": "AWS Batch now provides enhanced visibility into your compute environments with two new capabilities that help you maintain operational best practices. When you describe a compute environment, you can now see the status of your Batch-provided default Amazon Machine Images (AMIs), indicating when upda",
-          "source": "AWS What's New",
-          "score": 10
-        },
-        {
-          "title": "Amazon Bedrock AgentCore adds support for Chrome policies and custom root CA",
-          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/agentcore-browser-policies-root-ca/",
-          "date": "2026-03-25T20:10:00.000Z",
-          "snippet": "Amazon Bedrock AgentCore now enables customers to configure Chrome Enterprise policies for AgentCore Browser and specify custom root Certificate Authority (CA) certificates for both AgentCore Browser and Code Interpreter. These enhancements help ensure enterprise requirements are met when allowing A",
-          "source": "AWS What's New",
-          "score": 10
-        },
-        {
-          "title": "AWS Batch now supports quota management and preemption for SageMaker Training jobs",
-          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/aws-batch-quota-management-preemption-sagemaker/",
-          "date": "2026-03-25T18:40:00.000Z",
-          "snippet": "AWS Batch now supports quota management with job preemption for SageMaker Training jobs, enabling you to efficiently allocate and share compute resources across your teams and projects. If you're using GPU capacity in SageMaker Training jobs, you can now intelligently allocate compute resources, pri",
-          "source": "AWS What's New",
-          "score": 10
-        },
-        {
-          "title": "Amazon Route 53 Profiles now supports granular IAM permissions for resource and VPC associations",
-          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-route-53-profiles-granular-iam/",
-          "date": "2026-03-25T18:34:00.000Z",
-          "snippet": "Amazon Route 53 Profiles now supports granular AWS Identity and Access Management (IAM) permissions, allowing you to control which users can manage specific resource types and VPC associations within your Profiles. With this launch, you can create IAM policies that restrict users to specific operati",
-          "source": "AWS What's New",
-          "score": 10
-        },
-        {
-          "title": "Amazon Quick Now Available in the AWS Tokyo Region",
-          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-quick-now-available-in-the-aws-tokyo-region/",
-          "date": "2026-03-25T17:02:00.000Z",
-          "snippet": "Amazon Quick is now available in the AWS Asia Pacific (Tokyo) region (ap-northeast-1). This launch allows customers in Japan to access the full power of Amazon Quick while meeting local and regional requirements for data sovereignty.\n \nAmazon Quick provides business users an agentic teammate that qu",
-          "source": "AWS What's New",
-          "score": 10
-        },
-        {
-          "title": "Amazon Aurora PostgreSQL now available with the AWS Free Tier",
-          "link": "https://aws.amazon.com/about-aws/whats-new/2026/03/amazon-aurora-postgresql-aws-free-tier/",
-          "date": "2026-03-25T17:00:00.000Z",
-          "snippet": "Amazon Aurora PostgreSQL is now available on the AWS Free Tier, which offers new customers $100 in AWS credits upon sign-up and the ability to earn an additional $100 in credits by using services including Amazon RDS.\n  With a Free Plan account, you can create an Aurora PostgreSQL serverless cluster",
-          "source": "AWS What's New",
           "score": 10
         }
       ]
@@ -894,7 +894,7 @@
     "powershell": {
       "label": "💠 PowerShell & Automation",
       "emoji": "💠",
-      "count": 3,
+      "count": 2,
       "articles": [
         {
           "title": "Microsoft Makes External MFA Generally Available in Microsoft Entra ID",
@@ -909,14 +909,6 @@
           "link": "https://petri.com/fcc-ban-foreign-consumer-routers-security-risks/",
           "date": "2026-03-25T12:46:35.000Z",
           "snippet": "The Federal Communications Commission (FCC) has imposed a ban on certain foreign-made consumer routers entering the United States, citing rising cybersecurity concerns. The regulator said the decision follows a series of attacks that targeted critical infrastructure. The FCC added foreign‑manufactur",
-          "source": "Petri IT",
-          "score": 8
-        },
-        {
-          "title": "Microsoft Defender Enhances Identity Security with AI-Driven Threat Detection and Response",
-          "link": "https://petri.com/microsoft-defender-ai-identity-security-update/",
-          "date": "2026-03-24T20:15:05.000Z",
-          "snippet": "As cyberattacks grow faster and more identity‑driven, Microsoft is enhancing how organizations defend their digital environments. At RSA 2026, the company announced major Microsoft Defender and Security Copilot updates to help organizations defend against the latest threats. Microsoft emphasizes tha",
           "source": "Petri IT",
           "score": 8
         }
