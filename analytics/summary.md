@@ -1,4 +1,4 @@
-# Daily Briefing Analytics - 3/27/2026
+# Daily Briefing Analytics - 3/28/2026
 
 ## 📡 Feed Health
 - **Total Feeds**: 0
@@ -17,4 +17,4 @@
 - Category distribution and keyword analysis included
 
 ---
-*Generated: 2026-03-27T23:35:14.884Z*
+*Generated: 2026-03-28T11:29:10.384Z*
