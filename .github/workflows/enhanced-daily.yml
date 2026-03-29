@@ -461,9 +461,37 @@ jobs:
           EDITION="${{ needs.collect.outputs.edition }}"
           ARTICLE_COUNT="${{ needs.collect.outputs.article-count }}"
           STATUS="${{ job.status }}"
+          SITE_URL="https://bronathedruid.github.io/daily-briefing/"
           
           echo "🚀 Pipeline completed with status: $STATUS"
           echo "🗞️ $EDITION Edition: $ARTICLE_COUNT articles"
           
-          # Future: Send notification via webhook, email, or Slack
-          # curl -X POST $WEBHOOK_URL -d "..."
+          # Send completion webhook to OpenClaw
+          if [ "$STATUS" = "success" ]; then
+            # Get top 3 most interesting articles for highlights
+            HIGHLIGHTS=$(cat data/latest.json | jq -r '
+              [.articles[] | select(.category != null and .title != null and (.title | length) > 10) | 
+               {title: .title, link: .link, summary: (.summary // .content[0:100] + "..."), category: .category}] |
+              sort_by(.title | length) | reverse | .[0:3] |
+              map("• **\(.title)** (\(.category)): \(.summary) [Read more](\(.link))") |
+              join("\n")
+            ' 2>/dev/null || echo "• Latest tech news and AI developments")
+            
+            # Send to OpenClaw Telegram notification
+            curl -s -X POST "http://localhost:18789/v1/sessions/send" \
+              -H "Content-Type: application/json" \
+              -d "{
+                \"sessionKey\": \"telegram:-1003851372202\",
+                \"message\": \"📰 **Today's Daily Briefing is live!**\n\n🗞️ **${EDITION} Edition** with **${ARTICLE_COUNT} articles**\n\n📖 **Read here:** ${SITE_URL}\n\n✨ **Today's highlights I found fascinating:**\n\n${HIGHLIGHTS}\",
+                \"timeoutSeconds\": 30
+              }" || echo "⚠️ Webhook notification failed"
+          else
+            # Send failure notification
+            curl -s -X POST "http://localhost:18789/v1/sessions/send" \
+              -H "Content-Type: application/json" \
+              -d "{
+                \"sessionKey\": \"telegram:-1003851372202\",
+                \"message\": \"⚠️ **Daily Briefing Pipeline Failed**\n\n🗞️ **${EDITION} Edition** build failed\n📊 Status: ${STATUS}\n\n🔧 Check GitHub Actions for details: https://github.com/bronathedruid/daily-briefing/actions\",
+                \"timeoutSeconds\": 30
+              }" || echo "⚠️ Failure notification failed"
+          fi

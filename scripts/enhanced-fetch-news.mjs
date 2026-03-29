@@ -57,7 +57,17 @@ async function aiSummarize(content, title) {
     
     if (process.env.OPENCLAW_GATEWAY_URL || process.env.NODE_ENV !== 'production') {
       // Try OpenClaw summarization
-      const prompt = `Summarize this article in 1-2 sentences (max 200 chars) in newspaper style:\n\nTitle: ${title}\nContent: ${content.slice(0, 1000)}`;
+      const prompt = `Write a compelling 1-2 sentence summary of this tech news article for a daily briefing newsletter. Focus on the IMPACT and WHY IT MATTERS, not technical jargon. Make it accessible to a smart business reader who isn't deeply technical. Max 180 characters.
+
+Title: ${title}
+Content: ${content.slice(0, 2000)}
+
+Examples of good summaries:
+- "OpenAI released GPT-5 with significantly better reasoning capabilities, potentially reshaping how businesses automate complex decision-making."
+- "Google's new quantum chip achieved a breakthrough in error correction, bringing practical quantum computing closer to reality."
+- "Meta's latest AI model can generate full video games from text descriptions, opening new possibilities for content creation."
+
+Write your summary:`;
       
       const response = await fetch(`${gatewayUrl}/v1/chat/completions`, {
         method: 'POST',
