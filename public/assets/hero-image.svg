@@ -24,7 +24,7 @@
   <!-- Date -->
   <text x="600" y="120" text-anchor="middle" 
         font-family="'Courier New', monospace" font-size="20" 
-        fill="#1a1a1a">FRIDAY, MARCH 27, 2026</text>
+        fill="#1a1a1a">SUNDAY, MARCH 29, 2026</text>
   
   <!-- Decorative line -->
   <line x1="300" y1="140" x2="900" y2="140" stroke="#1a1a1a" stroke-width="2"/>
@@ -37,7 +37,7 @@
     
     <text x="250" y="225" text-anchor="middle" 
           font-family="Georgia, serif" font-size="32" font-weight="bold" 
-          fill="#8b0000">109</text>
+          fill="#8b0000">74</text>
     
     <text x="250" y="255" text-anchor="middle" 
           font-family="Georgia, serif" font-size="16" 
@@ -73,7 +73,7 @@
     
     <text x="910" y="225" text-anchor="middle" 
           font-family="Georgia, serif" font-size="32" font-weight="bold" 
-          fill="#8b0000">01:30 PM</text>
+          fill="#8b0000">08:03 PM</text>
     
     <text x="910" y="255" text-anchor="middle" 
           font-family="Georgia, serif" font-size="16" 

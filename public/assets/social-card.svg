@@ -17,12 +17,12 @@
   <!-- Date -->
   <text x="600" y="200" text-anchor="middle" 
         font-family="'Courier New', monospace" font-size="28" 
-        fill="#1a1a1a">Friday, March 27, 2026</text>
+        fill="#1a1a1a">Sunday, March 29, 2026</text>
   
   <!-- Key stats -->
   <text x="600" y="280" text-anchor="middle" 
         font-family="Georgia, serif" font-size="36" font-weight="bold" 
-        fill="#8b0000">109 Tech Stories Today</text>
+        fill="#8b0000">74 Tech Stories Today</text>
   
   <!-- Feature highlights -->
   <text x="600" y="330" text-anchor="middle" 

@@ -22,7 +22,7 @@
       },
       {
         "date": "2026-03-29",
-        "count": 109
+        "count": 74
       }
     ],
     "qualityTrends": {
@@ -37,7 +37,7 @@
         },
         {
           "date": "2026-03-29",
-          "score": 100
+          "score": 93
         }
       ],
       "hasValidUrl": [
@@ -95,7 +95,43 @@
         },
         {
           "date": "2026-03-29",
-          "count": 109
+          "count": 14
+        }
+      ],
+      "\udfdb️ Government & Policy": [
+        {
+          "date": "2026-03-29",
+          "count": 6
+        }
+      ],
+      "\udd10 Cybersecurity": [
+        {
+          "date": "2026-03-29",
+          "count": 9
+        }
+      ],
+      "\udee0️ Coding Agents & AI Tools": [
+        {
+          "date": "2026-03-29",
+          "count": 12
+        }
+      ],
+      "\udcc8 Marketing & SEO": [
+        {
+          "date": "2026-03-29",
+          "count": 3
+        }
+      ],
+      "\ude80 Space & Rockets": [
+        {
+          "date": "2026-03-29",
+          "count": 22
+        }
+      ],
+      "️ DevOps & Platform Engineering": [
+        {
+          "date": "2026-03-29",
+          "count": 8
         }
       ]
     },
@@ -112,5 +148,9 @@
     "recentActivity": [],
     "recommendations": []
   },
+<<<<<<< Updated upstream
   "generated": "2026-03-29T17:26:04.542Z"
+=======
+  "generated": "2026-03-29T20:03:31.459Z"
+>>>>>>> Stashed changes
 }

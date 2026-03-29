@@ -15,10 +15,100 @@
     
     <text x="190" y="120" text-anchor="end" 
           font-family="Georgia, serif" font-size="16" 
-          fill="#1a1a1a">� AI Models & Releases</text>
+          fill="#1a1a1a">� Space & Rockets</text>
     
     <text x="710" y="120" text-anchor="start" 
           font-family="Georgia, serif" font-size="16" 
-          fill="#1a1a1a">109</text>
+          fill="#1a1a1a">22</text>
+    
+    <!-- Category bar 2 -->
+    <rect x="200" y="145" width="500" height="30" 
+          fill="rgba(139, 0, 0, 0.1)" stroke="none"/>
+    
+    <rect x="200" y="145" width="318.1818181818182" height="30" 
+          fill="#8b0000" stroke="none"/>
+    
+    <text x="190" y="165" text-anchor="end" 
+          font-family="Georgia, serif" font-size="16" 
+          fill="#1a1a1a">� AI Models & Releases</text>
+    
+    <text x="528.1818181818182" y="165" text-anchor="start" 
+          font-family="Georgia, serif" font-size="16" 
+          fill="#1a1a1a">14</text>
+    
+    <!-- Category bar 3 -->
+    <rect x="200" y="190" width="500" height="30" 
+          fill="rgba(139, 0, 0, 0.1)" stroke="none"/>
+    
+    <rect x="200" y="190" width="272.7272727272727" height="30" 
+          fill="#8b0000" stroke="none"/>
+    
+    <text x="190" y="210" text-anchor="end" 
+          font-family="Georgia, serif" font-size="16" 
+          fill="#1a1a1a">�️ Coding Agents & AI Tools</text>
+    
+    <text x="482.7272727272727" y="210" text-anchor="start" 
+          font-family="Georgia, serif" font-size="16" 
+          fill="#1a1a1a">12</text>
+    
+    <!-- Category bar 4 -->
+    <rect x="200" y="235" width="500" height="30" 
+          fill="rgba(139, 0, 0, 0.1)" stroke="none"/>
+    
+    <rect x="200" y="235" width="204.54545454545456" height="30" 
+          fill="#8b0000" stroke="none"/>
+    
+    <text x="190" y="255" text-anchor="end" 
+          font-family="Georgia, serif" font-size="16" 
+          fill="#1a1a1a">� Cybersecurity</text>
+    
+    <text x="414.54545454545456" y="255" text-anchor="start" 
+          font-family="Georgia, serif" font-size="16" 
+          fill="#1a1a1a">9</text>
+    
+    <!-- Category bar 5 -->
+    <rect x="200" y="280" width="500" height="30" 
+          fill="rgba(139, 0, 0, 0.1)" stroke="none"/>
+    
+    <rect x="200" y="280" width="181.8181818181818" height="30" 
+          fill="#8b0000" stroke="none"/>
+    
+    <text x="190" y="300" text-anchor="end" 
+          font-family="Georgia, serif" font-size="16" 
+          fill="#1a1a1a">️ DevOps & Platform Engineering</text>
+    
+    <text x="391.8181818181818" y="300" text-anchor="start" 
+          font-family="Georgia, serif" font-size="16" 
+          fill="#1a1a1a">8</text>
+    
+    <!-- Category bar 6 -->
+    <rect x="200" y="325" width="500" height="30" 
+          fill="rgba(139, 0, 0, 0.1)" stroke="none"/>
+    
+    <rect x="200" y="325" width="136.36363636363635" height="30" 
+          fill="#8b0000" stroke="none"/>
+    
+    <text x="190" y="345" text-anchor="end" 
+          font-family="Georgia, serif" font-size="16" 
+          fill="#1a1a1a">�️ Government & Policy</text>
+    
+    <text x="346.3636363636364" y="345" text-anchor="start" 
+          font-family="Georgia, serif" font-size="16" 
+          fill="#1a1a1a">6</text>
+    
+    <!-- Category bar 7 -->
+    <rect x="200" y="370" width="500" height="30" 
+          fill="rgba(139, 0, 0, 0.1)" stroke="none"/>
+    
+    <rect x="200" y="370" width="68.18181818181817" height="30" 
+          fill="#8b0000" stroke="none"/>
+    
+    <text x="190" y="390" text-anchor="end" 
+          font-family="Georgia, serif" font-size="16" 
+          fill="#1a1a1a">� Marketing & SEO</text>
+    
+    <text x="278.1818181818182" y="390" text-anchor="start" 
+          font-family="Georgia, serif" font-size="16" 
+          fill="#1a1a1a">3</text>
     
 </svg>
