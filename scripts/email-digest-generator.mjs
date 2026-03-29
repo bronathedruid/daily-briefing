@@ -203,8 +203,8 @@ function generateMobileAPI(data) {
     // Newspaper format
     processedArticles = data.articles.map(([category, title, link, source, time, snippet], index) => ({
       id: index + 1,
-      category: category.replace(/^[🤖🏛️🔐🛠️📈🚀⚙️💠🧬]\s*/, ''),
-      categoryEmoji: category.match(/^[🤖🏛️🔐🛠️📈🚀⚙️💠🧬]/)?.[0] || '📰',
+      category: category.replace(/^.{1,2}\s*/, ''),
+      categoryEmoji: '📰',
       title,
       url: link,
       source,
@@ -218,7 +218,7 @@ function generateMobileAPI(data) {
     let articleId = 1;
     Object.values(data.categories).forEach(category => {
       const categoryEmoji = category.emoji || '📰';
-      const categoryName = category.label.replace(/^[🤖🏛️🔐🛠️📈🚀⚙️💠🧬]\s*/, '');
+      const categoryName = category.label.replace(/^.{1,2}\s*/, '');
       
       category.articles.forEach((article, index) => {
         processedArticles.push({
