@@ -13,14 +13,6 @@
   "contentQuality": {
     "articleCount": [
       {
-        "date": "2026-03-27",
-        "count": 109
-      },
-      {
-        "date": "2026-03-28",
-        "count": 109
-      },
-      {
         "date": "2026-03-29",
         "count": 74
       }
@@ -28,27 +20,11 @@
     "qualityTrends": {
       "hasSnippet": [
         {
-          "date": "2026-03-27",
-          "score": 100
-        },
-        {
-          "date": "2026-03-28",
-          "score": 100
-        },
-        {
           "date": "2026-03-29",
           "score": 93
         }
       ],
       "hasValidUrl": [
-        {
-          "date": "2026-03-27",
-          "score": 100
-        },
-        {
-          "date": "2026-03-28",
-          "score": 100
-        },
         {
           "date": "2026-03-29",
           "score": 100
@@ -56,27 +32,11 @@
       ],
       "hasSource": [
         {
-          "date": "2026-03-27",
-          "score": 100
-        },
-        {
-          "date": "2026-03-28",
-          "score": 100
-        },
-        {
           "date": "2026-03-29",
           "score": 100
         }
       ],
       "hasTimestamp": [
-        {
-          "date": "2026-03-27",
-          "score": 100
-        },
-        {
-          "date": "2026-03-28",
-          "score": 100
-        },
         {
           "date": "2026-03-29",
           "score": 100
@@ -85,14 +45,6 @@
     },
     "categoryTrends": {
       "\udd16 AI Models & Releases": [
-        {
-          "date": "2026-03-27",
-          "count": 109
-        },
-        {
-          "date": "2026-03-28",
-          "count": 109
-        },
         {
           "date": "2026-03-29",
           "count": 14
@@ -148,9 +100,5 @@
     "recentActivity": [],
     "recommendations": []
   },
-<<<<<<< Updated upstream
-  "generated": "2026-03-29T17:26:04.542Z"
-=======
-  "generated": "2026-03-29T20:03:31.459Z"
->>>>>>> Stashed changes
+  "generated": "2026-03-29T20:13:24.772Z"
 }
