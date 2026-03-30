@@ -444,7 +444,7 @@ jobs:
           echo "🏥 Performing final health check..."
           sleep 60  # Wait for deployment to propagate
           
-          SITE_URL="https://bronathedruid.github.io/daily-briefing/"
+          SITE_URL="https://thed0e.github.io/daily-briefing/"
           
           if curl -sf "$SITE_URL" > /dev/null; then
             echo "✅ Website is healthy and accessible"
@@ -461,7 +461,7 @@ jobs:
           EDITION="${{ needs.collect.outputs.edition }}"
           ARTICLE_COUNT="${{ needs.collect.outputs.article-count }}"
           STATUS="${{ job.status }}"
-          SITE_URL="https://bronathedruid.github.io/daily-briefing/"
+          SITE_URL="https://thed0e.github.io/daily-briefing/"
           
           echo "🚀 Pipeline completed with status: $STATUS"
           echo "🗞️ $EDITION Edition: $ARTICLE_COUNT articles"
@@ -491,7 +491,7 @@ jobs:
               -H "Content-Type: application/json" \
               -d "{
                 \"sessionKey\": \"telegram:-1003851372202\",
-                \"message\": \"⚠️ **Daily Briefing Pipeline Failed**\n\n🗞️ **${EDITION} Edition** build failed\n📊 Status: ${STATUS}\n\n🔧 Check GitHub Actions for details: https://github.com/bronathedruid/daily-briefing/actions\",
+                \"message\": \"⚠️ **Daily Briefing Pipeline Failed**\n\n🗞️ **${EDITION} Edition** build failed\n📊 Status: ${STATUS}\n\n🔧 Check GitHub Actions for details: https://github.com/thed0e/daily-briefing/actions\",
                 \"timeoutSeconds\": 30
               }" || echo "⚠️ Failure notification failed"
           fi
